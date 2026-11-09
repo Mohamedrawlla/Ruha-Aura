@@ -1,0 +1,5602 @@
+[
+  {
+    "product_id": "01a1b167-8b12-73c3-9795-dfc96b71eaee",
+    "name": "Tulip Floral Fancy Hair Clip Set – 1 Large and 2 Mini Clips",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/product/01a1b167-8b12-73c3-9795-dfc96b71eaee/cover_1793977692608.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": true,
+    "variant_count": 3,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b167-8b13-73c3-a280-474bfc5cf4df",
+        "name": "Sky Blue & Cream",
+        "mrp": 149,
+        "selling_price": 99,
+        "in_stock": true,
+        "options": {
+          "color": "Sky Blue & Cream"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1b167-8b13-73c3-a280-474bfc5cf4df/1793977715_image_cropper_1793977692608.jpg",
+        "available_stock_qty": 1
+      },
+      {
+        "id": "01a1b167-8b13-73c4-8c79-776b7e5aac70",
+        "name": "Pastel Blue & Cream",
+        "mrp": 149,
+        "selling_price": 99,
+        "in_stock": true,
+        "options": {
+          "color": "Pastel Blue & Cream"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1b167-8b13-73c4-8c79-776b7e5aac70/1793977715_image_cropper_1793977702605.jpg",
+        "available_stock_qty": 1
+      },
+      {
+        "id": "01a1b167-8b13-73c5-9386-99a49b15c7e9",
+        "name": "Purple & Pink",
+        "mrp": 149,
+        "selling_price": 99,
+        "in_stock": true,
+        "options": {
+          "color": "Purple & Pink"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1b167-8b13-73c5-9386-99a49b15c7e9/1793977715_image_cropper_1793977710183.jpg",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "tulip-floral-fancy-hair-clip-set-1-large-and-2-mini-clips"
+  },
+  {
+    "product_id": "01a1b15d-25a8-73b4-8784-21d4577ae320",
+    "name": "Ombre Rose Floral Hair Clip Set – 1 Large and 2 Mini Clips",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/product/01a1b15d-25a8-73b4-8784-21d4577ae320/1793977034_image_cropper_1793976606088.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": true,
+    "variant_count": 6,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b15d-25a9-73b4-809c-9090c41ce5fd",
+        "name": "Sky Blue & Lavender",
+        "mrp": 129,
+        "selling_price": 89,
+        "in_stock": true,
+        "options": {
+          "color": "Sky Blue & Lavender"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1b15d-25a9-73b4-809c-9090c41ce5fd/1793977035_image_cropper_1793976902204.jpg",
+        "available_stock_qty": 2
+      },
+      {
+        "id": "01a1b15d-25a9-73b5-9bfd-6e731920b930",
+        "name": "Red & Lavender",
+        "mrp": 129,
+        "selling_price": 89,
+        "in_stock": true,
+        "options": {
+          "color": "Red & Lavender"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1b15d-25a9-73b5-9bfd-6e731920b930/1793977035_image_cropper_1793976923426.jpg",
+        "available_stock_qty": 1
+      },
+      {
+        "id": "01a1b15d-25a9-73b6-9e3c-50ccd867b213",
+        "name": "Pink Ombre Rose",
+        "mrp": 129,
+        "selling_price": 89,
+        "in_stock": true,
+        "options": {
+          "color": "Pink Ombre Rose"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1b15d-25a9-73b6-9e3c-50ccd867b213/1793977035_image_cropper_1793976947322.jpg",
+        "available_stock_qty": 1
+      },
+      {
+        "id": "01a1b15d-25a9-73b7-a9c7-bf632e6abaa3",
+        "name": "Lavender & White",
+        "mrp": 129,
+        "selling_price": 89,
+        "in_stock": true,
+        "options": {
+          "color": "Lavender & White"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1b15d-25a9-73b7-a9c7-bf632e6abaa3/1793977035_image_cropper_1793976968342.jpg",
+        "available_stock_qty": 1
+      },
+      {
+        "id": "01a1b15d-25a9-73b8-826e-0c5dd3daacda",
+        "name": "Sky Blue & Beige",
+        "mrp": 129,
+        "selling_price": 89,
+        "in_stock": true,
+        "options": {
+          "color": "Sky Blue & Beige"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1b15d-25a9-73b8-826e-0c5dd3daacda/1793977035_image_cropper_1793976984003.jpg",
+        "available_stock_qty": 2
+      },
+      {
+        "id": "01a1b15d-25a9-73b9-ae1f-03db50040ac7",
+        "name": "Pink & White",
+        "mrp": 129,
+        "selling_price": 89,
+        "in_stock": true,
+        "options": {
+          "color": "Pink & White"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1b15d-25a9-73b9-ae1f-03db50040ac7/1793977035_image_cropper_1793976999414.jpg",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "ombre-rose-floral-hair-clip-set-1-large-and-2-mini-clips"
+  },
+  {
+    "product_id": "01a1b152-d601-73b3-8ead-d03ad1486631",
+    "name": "Sequin Petal Satin Scrunchies",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha49-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d601-73b4-82c0-a8bb39edb5fa",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 22,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha49-1.webp",
+        "available_stock_qty": 7
+      }
+    ],
+    "review_count": "0",
+    "slug": "sequin-petal-satin-scrunchies"
+  },
+  {
+    "product_id": "01a1b152-d588-73b3-9567-a9c69c52effa",
+    "name": "Printed Fabric Fashion Scrunchies",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha46-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d589-73b3-b2f2-1ed7b457dfe2",
+        "name": "1 Piece",
+        "mrp": 25,
+        "selling_price": 15,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha46-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "printed-fabric-fashion-scrunchies"
+  },
+  {
+    "product_id": "01a1b152-d506-73b3-9d46-19fb613f50ab",
+    "name": "Polka Dot Satin Scrunchies",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha45-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d507-73b3-b62b-2aeb12870617",
+        "name": "1 Piece",
+        "mrp": 29,
+        "selling_price": 18,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha45-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "polka-dot-satin-scrunchies"
+  },
+  {
+    "product_id": "01a1b152-d48a-73b3-b596-433acdd1031c",
+    "name": "Bow Print Fashion Scrunchies",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha44-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d48b-73b3-9e37-ea409824e131",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 20,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha44-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "bow-print-fashion-scrunchies"
+  },
+  {
+    "product_id": "01a1b152-d415-73b2-8137-2766545c899d",
+    "name": "Heart Print Fashion Scrunchies",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha43-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d415-73b3-8a29-59ac4fa531c7",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 20,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha43-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "heart-print-fashion-scrunchies"
+  },
+  {
+    "product_id": "01a1b152-d39c-73b2-8f61-78b3a94124c4",
+    "name": "Pearl Charm Satin Scrunchies",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha42-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d39d-73b2-942d-fb82176ee7e3",
+        "name": "1 Piece",
+        "mrp": 50,
+        "selling_price": 35,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha42-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "pearl-charm-satin-scrunchies"
+  },
+  {
+    "product_id": "01a1b152-d2ce-73b2-a647-716b46348075",
+    "name": "Pastel Luxe Satin Scrunchies",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha41-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d2cf-73b2-a61a-240f57c3ad92",
+        "name": "1 Piece",
+        "mrp": 35,
+        "selling_price": 18,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha41-1.webp",
+        "available_stock_qty": 12
+      }
+    ],
+    "review_count": "0",
+    "slug": "pastel-luxe-satin-scrunchies"
+  },
+  {
+    "product_id": "01a1b152-d209-73b2-894f-ccbe96359610",
+    "name": "Pearl Luxe Satin Scrunchies",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha40-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d20a-73b2-a76d-b544b287514d",
+        "name": "1 Piece",
+        "mrp": 50,
+        "selling_price": 25,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha40-1.webp",
+        "available_stock_qty": 12
+      }
+    ],
+    "review_count": "0",
+    "slug": "pearl-luxe-satin-scrunchies"
+  },
+  {
+    "product_id": "01a1b152-d14d-73b2-9d26-d47761af4480",
+    "name": "Colourful Soft Hair Elastics Set",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raha39-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d14e-73b2-8421-54b1062222e4",
+        "name": "1 Set",
+        "mrp": 60,
+        "selling_price": 30,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha39-1.webp",
+        "available_stock_qty": 6
+      }
+    ],
+    "review_count": "0",
+    "slug": "colourful-soft-hair-elastics-set"
+  },
+  {
+    "product_id": "01a1b152-d093-73b2-b607-c12634618900",
+    "name": "Braided Double Colour Hair Claw Clips",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha38-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d094-73b2-880b-bf75de9d6f28",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 22,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha38-1.webp",
+        "available_stock_qty": 16
+      }
+    ],
+    "review_count": "0",
+    "slug": "braided-double-colour-hair-claw-clips"
+  },
+  {
+    "product_id": "01a1b152-d00e-73b2-b812-276e6f86cf28",
+    "name": "Gold Trim Floral Hair Claw Clips",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha37-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-d00f-73b2-9bcb-9f26e3b24893",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 20,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha37-1.webp",
+        "available_stock_qty": 22
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-trim-floral-hair-claw-clips"
+  },
+  {
+    "product_id": "01a1b152-cf9d-73b2-8cb2-b1ecb615e387",
+    "name": "Multicolour Spiral Hair Tie Set",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raha36-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-cf9e-73b2-9add-6489788a9e64",
+        "name": "1 Set",
+        "mrp": 30,
+        "selling_price": 15,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha36-1.webp",
+        "available_stock_qty": 28
+      }
+    ],
+    "review_count": "0",
+    "slug": "multicolour-spiral-hair-tie-set"
+  },
+  {
+    "product_id": "01a1b152-cf2b-73b2-b6b2-bca4349d6ed6",
+    "name": "Braided Bow Design Hair Claw Clips",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha35-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-cf2c-73b2-852e-2eb07269036a",
+        "name": "1 Piece",
+        "mrp": 29,
+        "selling_price": 15,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha35-1.webp",
+        "available_stock_qty": 11
+      }
+    ],
+    "review_count": "0",
+    "slug": "braided-bow-design-hair-claw-clips"
+  },
+  {
+    "product_id": "01a1b152-ceb2-73b2-bb72-1e8248cd85b6",
+    "name": "Floral Bloom Matte Hair Claw Clips",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha34-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-ceb3-73b2-99ca-490c07e7c010",
+        "name": "1 Piece",
+        "mrp": 29,
+        "selling_price": 15,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha34-1.webp",
+        "available_stock_qty": 32
+      }
+    ],
+    "review_count": "0",
+    "slug": "floral-bloom-matte-hair-claw-clips"
+  },
+  {
+    "product_id": "01a1b152-ce3e-73b2-a0a2-5cd9e37ac0b5",
+    "name": "Daisy Bloom Flower Hair Claw Clips",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha33-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-ce3f-73b2-ae58-4088bcbe3dc8",
+        "name": "1 Piece",
+        "mrp": 70,
+        "selling_price": 35,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha33-1.webp",
+        "available_stock_qty": 5
+      }
+    ],
+    "review_count": "0",
+    "slug": "daisy-bloom-flower-hair-claw-clips"
+  },
+  {
+    "product_id": "01a1b152-cdc5-73b2-a2ea-683b08c2a688",
+    "name": "Bunny Star Mini Hair Clip Set",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raha32-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-cdc6-73b2-af84-4d0d0808eb05",
+        "name": "1 Set",
+        "mrp": 89,
+        "selling_price": 49,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha32-1.webp",
+        "available_stock_qty": 8
+      }
+    ],
+    "review_count": "0",
+    "slug": "bunny-star-mini-hair-clip-set"
+  },
+  {
+    "product_id": "01a1b152-cd3d-73b2-95ea-20f284508105",
+    "name": "Tulle Bow Hair Clip and Mini Claw Clips Set for Girls",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raha31-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-cd3e-73b2-9bcc-4f806417d0c2",
+        "name": "1 Set",
+        "mrp": 40,
+        "selling_price": 20,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha31-1.webp",
+        "available_stock_qty": 12
+      }
+    ],
+    "review_count": "0",
+    "slug": "tulle-bow-hair-clip-and-mini-claw-clips-set-for-girls"
+  },
+  {
+    "product_id": "01a1b152-ccc0-73b2-8761-b193f00c3c8d",
+    "name": "Pearl Centre Floral Fabric Hair Clips – 3 Flower Design",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha30-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-ccc1-73b2-8cbe-9c2274b27c4a",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 20,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha30-1.webp",
+        "available_stock_qty": 12
+      }
+    ],
+    "review_count": "0",
+    "slug": "pearl-centre-floral-fabric-hair-clips-3-flower-design"
+  },
+  {
+    "product_id": "01a1b152-cc46-73b2-95c5-dc9e9ea2ade3",
+    "name": "Jasmine Bud Hair Clips with Red Rose Design",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha29-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-cc47-73b2-96e2-5fba7176401c",
+        "name": "1 Piece",
+        "mrp": 60,
+        "selling_price": 50,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha29-1.webp",
+        "available_stock_qty": 6
+      }
+    ],
+    "review_count": "0",
+    "slug": "jasmine-bud-hair-clips-with-red-rose-design"
+  },
+  {
+    "product_id": "01a1b152-cbc8-73b2-a133-ad522551dd0d",
+    "name": "Daisy Flower Hair Claw Clips – Matte Collection",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha28-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-cbc9-73b2-9fc0-63e28917d865",
+        "name": "1 Piece",
+        "mrp": 20,
+        "selling_price": 8,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha28-1.webp",
+        "available_stock_qty": 30
+      }
+    ],
+    "review_count": "0",
+    "slug": "daisy-flower-hair-claw-clips-matte-collection"
+  },
+  {
+    "product_id": "01a1b152-cafc-73b2-b7d9-8a2c15b72fe1",
+    "name": "Mini Butterfly Hair Claw Clips – Pastel Collection",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha26-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-cafd-73b2-9581-6158445f8339",
+        "name": "1 Piece",
+        "mrp": 15,
+        "selling_price": 6,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha26-1.webp",
+        "available_stock_qty": 23
+      }
+    ],
+    "review_count": "0",
+    "slug": "mini-butterfly-hair-claw-clips-pastel-collection"
+  },
+  {
+    "product_id": "01a1b152-ca81-73b2-841b-1ffcfdcfb50b",
+    "name": "Floral Beaded Hair Claw Clip – Elegant Flower Design",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha25-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-ca82-73b2-8c5f-1a5e9cf294d2",
+        "name": "1 Piece",
+        "mrp": 45,
+        "selling_price": 22,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha25-1.webp",
+        "available_stock_qty": 15
+      }
+    ],
+    "review_count": "0",
+    "slug": "floral-beaded-hair-claw-clip-elegant-flower-design"
+  },
+  {
+    "product_id": "01a1b152-ca05-73b2-8ecb-9724880cbaee",
+    "name": "Elegant Butterfly Design Hair Claw Clips",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha24-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-ca07-73b2-b119-2046d2fd6a02",
+        "name": "1 Piece",
+        "mrp": 45,
+        "selling_price": 22,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha24-1.webp",
+        "available_stock_qty": 20
+      }
+    ],
+    "review_count": "0",
+    "slug": "elegant-butterfly-design-hair-claw-clips"
+  },
+  {
+    "product_id": "01a1b152-c98c-73b2-b5a1-dd8a702b1734",
+    "name": "Hibiscus Flower Hair Claw Clip – Pastel Colours",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha23-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c98d-73b2-8a8b-36d74472b9d6",
+        "name": "1 Piece",
+        "mrp": 30,
+        "selling_price": 15,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha23-1.webp",
+        "available_stock_qty": 22
+      }
+    ],
+    "review_count": "0",
+    "slug": "hibiscus-flower-hair-claw-clip-pastel-colours"
+  },
+  {
+    "product_id": "01a1b152-c8e2-73b2-976c-cdb743067a76",
+    "name": "3D Rose Flower Claw Clips – Elegant Floral Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha22-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c8e3-73b2-a855-8478926b1f83",
+        "name": "1 Piece",
+        "mrp": 50,
+        "selling_price": 35,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha22-1.webp",
+        "available_stock_qty": 20
+      }
+    ],
+    "review_count": "0",
+    "slug": "3d-rose-flower-claw-clips-elegant-floral-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-c84c-73b2-a2a1-32af11135a52",
+    "name": "Fan Shape Mini Claw Clips – Trendy Pastel Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha21-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c84d-73b2-b879-ba0f5bc2364f",
+        "name": "1 Piece",
+        "mrp": 30,
+        "selling_price": 13,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha21-1.webp",
+        "available_stock_qty": 40
+      }
+    ],
+    "review_count": "0",
+    "slug": "fan-shape-mini-claw-clips-trendy-pastel-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-c7d0-73b2-be99-bdab371d5058",
+    "name": "Gradient Flower Hair Clips – Pastel Floral Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha20-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c7d1-73b2-9a63-0f9446a85c75",
+        "name": "1 Piece",
+        "mrp": 55,
+        "selling_price": 35,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha20-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "gradient-flower-hair-clips-pastel-floral-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-c74f-73b2-9978-341a19e4d772",
+    "name": "Colourful Flower and Mini Claw Hair Clips Combo – Pack of 5",
+    "brand": "RuhaAura",
+    "unit_name": "pack",
+    "image": "https://media.yentto.com/products/ruha_aura/raha19-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c750-73b2-be3c-408837150033",
+        "name": "Pack of 5",
+        "mrp": 50,
+        "selling_price": 30,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha19-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "colourful-flower-and-mini-claw-hair-clips-combo-pack-of-5"
+  },
+  {
+    "product_id": "01a1b152-c6aa-73b2-b883-90cf57085df1",
+    "name": "Organza Pearl Bow Hair Clips – Elegant Rhinestone Ribbon Bows",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha18-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c6ab-73b2-8a37-588fc09aca21",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 20,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha18-1.webp",
+        "available_stock_qty": 4
+      }
+    ],
+    "review_count": "0",
+    "slug": "organza-pearl-bow-hair-clips-elegant-rhinestone-ribbon-bows"
+  },
+  {
+    "product_id": "01a1b152-c614-73b1-913a-6f7b72e67b1b",
+    "name": "Pearl Bow Hair Clips Set – Pastel Decorative Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha17-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c614-73b2-a0b4-4958b5248dc2",
+        "name": "1 Piece",
+        "mrp": 60,
+        "selling_price": 35,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha17-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "pearl-bow-hair-clips-set-pastel-decorative-accessories"
+  },
+  {
+    "product_id": "01a1b152-c56a-73b1-88de-8cb8c4cd3f01",
+    "name": "Satin Pearl Bow Hair Clips – Elegant Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha16-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c56b-73b1-8fb2-1bae9d9cb48e",
+        "name": "1 Piece",
+        "mrp": 60,
+        "selling_price": 30,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha16-1.webp",
+        "available_stock_qty": 12
+      }
+    ],
+    "review_count": "0",
+    "slug": "satin-pearl-bow-hair-clips-elegant-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-c4e0-73b1-bac0-8b725780adb0",
+    "name": "Butterfly Rhinestone Hair Claw Clip – Pearl Chain Design",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha15-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c4e1-73b1-b3fd-4027c687fdbf",
+        "name": "1 Piece",
+        "mrp": 89,
+        "selling_price": 49,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha15-1.webp",
+        "available_stock_qty": 11
+      }
+    ],
+    "review_count": "0",
+    "slug": "butterfly-rhinestone-hair-claw-clip-pearl-chain-design"
+  },
+  {
+    "product_id": "01a1b152-c440-73b0-bf6e-c6ff1c0d975d",
+    "name": "Pastel Beaded Flower Hair Clips – Floral Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha14-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c440-73b1-88e8-679889639d85",
+        "name": "1 Piece",
+        "mrp": 50,
+        "selling_price": 25,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha14-1.webp",
+        "available_stock_qty": 12
+      }
+    ],
+    "review_count": "0",
+    "slug": "pastel-beaded-flower-hair-clips-floral-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-c39b-73af-acfa-a9ad24728925",
+    "name": "Decorative Hair Pins – Pearl, Floral and Heart Designs",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/raha13-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c39b-73b0-aa8c-311ed05800b2",
+        "name": "1 Pair",
+        "mrp": 69,
+        "selling_price": 39,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha13-1.webp",
+        "available_stock_qty": 3
+      }
+    ],
+    "review_count": "0",
+    "slug": "decorative-hair-pins-pearl-floral-and-heart-designs"
+  },
+  {
+    "product_id": "01a1b152-c308-73af-919e-979bc56498a2",
+    "name": "Pearl and Rhinestone Mini Hair Clips – Butterfly, Flower & Heart",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/raha12-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c309-73af-96bd-0cb18293ddfd",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 49,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha12-1.webp",
+        "available_stock_qty": 3
+      }
+    ],
+    "review_count": "0",
+    "slug": "pearl-and-rhinestone-mini-hair-clips-butterfly-flower-and-heart"
+  },
+  {
+    "product_id": "01a1b152-c28d-73af-84e3-e66c1a1e92b2",
+    "name": "Bow Flower Mini Claw Clips – Matte Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha11-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c28e-73af-89b4-a868691ad5a2",
+        "name": "1 Piece",
+        "mrp": 20,
+        "selling_price": 8,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha11-1.webp",
+        "available_stock_qty": 6
+      }
+    ],
+    "review_count": "0",
+    "slug": "bow-flower-mini-claw-clips-matte-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-c1f9-73af-a2dc-d86a839d552a",
+    "name": "Heart Mini Claw Clips – Cute Matte Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha10-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c1fa-73af-baeb-bcba47c3cf88",
+        "name": "1 Piece",
+        "mrp": 20,
+        "selling_price": 8,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha10-1.webp",
+        "available_stock_qty": 23
+      }
+    ],
+    "review_count": "0",
+    "slug": "heart-mini-claw-clips-cute-matte-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-c17d-73af-b67c-7663ea013ba8",
+    "name": "Bow Tie Mini Claw Clips – Cute Matte Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha9-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c17e-73af-a790-47245e925a27",
+        "name": "1 Piece",
+        "mrp": 20,
+        "selling_price": 8,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha9-1.webp",
+        "available_stock_qty": 23
+      }
+    ],
+    "review_count": "0",
+    "slug": "bow-tie-mini-claw-clips-cute-matte-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-c0e4-73ae-9f70-6dd58572f309",
+    "name": "Striped Triangle Claw Clips – Trendy Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha8-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c0e4-73af-8302-1fd1cd2dc33d",
+        "name": "1 Piece",
+        "mrp": 35,
+        "selling_price": 16,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha8-1.webp",
+        "available_stock_qty": 6
+      }
+    ],
+    "review_count": "0",
+    "slug": "striped-triangle-claw-clips-trendy-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-c047-73ad-8804-3daab6fd0495",
+    "name": "Mini Transparent Claw Clips – Colourful Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha7-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-c047-73ae-b95f-8623bdfa3298",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 15,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha7-1.webp",
+        "available_stock_qty": 20
+      }
+    ],
+    "review_count": "0",
+    "slug": "mini-transparent-claw-clips-colourful-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-bfac-73ad-8080-6659a6ae6bc5",
+    "name": "Glitter Butterfly Rectangle Claw Clips – Stylish Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha6-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-bfad-73ad-a3fc-92c170504d8d",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 22,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha6-1.webp",
+        "available_stock_qty": 3
+      }
+    ],
+    "review_count": "0",
+    "slug": "glitter-butterfly-rectangle-claw-clips-stylish-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-bf14-73ad-9fe2-07b69babf904",
+    "name": "Heart Shape Claw Clips – Trendy Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha5-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-bf15-73ad-ab83-2b7a6696850a",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 29,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha5-1.webp",
+        "available_stock_qty": 11
+      }
+    ],
+    "review_count": "0",
+    "slug": "heart-shape-claw-clips-trendy-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-be99-73ad-8315-88221de3ace4",
+    "name": "Floral Mini Claw Clips – Cute Flower Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha4-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-be9a-73ad-a970-acff7aef8d83",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 25,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha4-1.webp",
+        "available_stock_qty": 8
+      }
+    ],
+    "review_count": "0",
+    "slug": "floral-mini-claw-clips-cute-flower-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-bdfb-73ad-ae09-c9ab59ed7fa9",
+    "name": "U-Shape Hair Clips – Trendy Colourful Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha3-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-bdfe-73ad-97ba-d325f78e1b1d",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 20,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha3-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "u-shape-hair-clips-trendy-colourful-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-bd75-73ad-9fcb-3de1b4d25278",
+    "name": "Transparent Rectangle Claw Clips – Trendy Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-bd76-73ad-b488-bff73372e55b",
+        "name": "1 Piece",
+        "mrp": 40,
+        "selling_price": 18,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha2-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "transparent-rectangle-claw-clips-trendy-hair-accessories"
+  },
+  {
+    "product_id": "01a1b152-bbee-73ad-891d-c4c8170e1bed",
+    "name": "Floral Claw Clips – Elegant Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/raha1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1b152-bbf0-73ad-b2b5-6a903b428923",
+        "name": "1 Piece",
+        "mrp": 25,
+        "selling_price": 15,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raha1-1.webp",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "floral-claw-clips-elegant-hair-accessories"
+  },
+  {
+    "product_id": "01a1af8a-c7cb-73ab-8773-2bd698d3cc53",
+    "name": "Gold-Tone Crystal Flower Hair Vine with Side Combs",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rahv-28-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c7cc-73ab-9cff-2d0675e7fc4b",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 169,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rahv-28-1.webp",
+        "available_stock_qty": 3
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-flower-hair-vine-with-side-combs"
+  },
+  {
+    "product_id": "01a1af8a-c735-73ab-b3fa-e2824dbd4c96",
+    "name": "Gold-Tone Cherry, Bow and Pearl Wreath Stud Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-27-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c736-73ab-9557-8be6e267e1cf",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-27-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-cherry-bow-and-pearl-wreath-stud-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c665-73ab-9c04-7a8a3cd64ba8",
+    "name": "Gold-Tone Tulip, Heart and Flower Stud Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-26-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c666-73ab-b391-ef9174e747f5",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-26-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-tulip-heart-and-flower-stud-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c5d7-73ab-9dd5-6b8f318d5a38",
+    "name": "Gold-Tone Black Bar, Bow and Flower Stud Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-25-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c5d8-73ab-83d2-b717b7019181",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-25-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-black-bar-bow-and-flower-stud-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c53c-73ab-9a2f-bb82bdd2b2a7",
+    "name": "Gold-Tone Moon, Star and Crystal Heart Stud Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-24-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c53d-73ab-a64f-c0c854fde5c8",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-24-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-moon-star-and-crystal-heart-stud-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c4a1-73ab-bae7-9f4e06bb2aad",
+    "name": "Seashell, Starfish and Crystal Drop Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-23-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c4a2-73ab-9d8a-5266bd6a4824",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-23-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "seashell-starfish-and-crystal-drop-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c412-73ab-9fa7-81f4aa2499d8",
+    "name": "Gold-Tone Rose, Butterfly and Black Heart Stud Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-22-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c413-73ab-9eb6-eccc1bdc7077",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-22-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-rose-butterfly-and-black-heart-stud-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c383-73aa-960b-81e64284fd95",
+    "name": "Gold-Tone Rose, Heart and Butterfly Stud Earrings Set – 12 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-21-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c383-73ab-9103-5fc58d9ae23a",
+        "name": "Set of 12 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-21-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-rose-heart-and-butterfly-stud-earrings-set-12-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c2e3-73aa-bca3-939df0674908",
+    "name": "Gold-Tone Black Heart, Triangle and Flower Stud Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-20-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c2e4-73aa-b461-8595d8585aed",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-20-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-black-heart-triangle-and-flower-stud-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c24b-73a9-89c5-382b4340c0ab",
+    "name": "Gold-Tone Black Flower, Bow and Butterfly Stud Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-19-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c24b-73aa-846f-aad073a81861",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-19-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-black-flower-bow-and-butterfly-stud-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c198-73a9-a0ac-042412543a48",
+    "name": "Gold-Tone Butterfly, Daisy and Black Heart Stud Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-18-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c19a-73a9-9e67-e386b5a727eb",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-18-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-butterfly-daisy-and-black-heart-stud-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c0d8-73a9-858b-301f9aa996b9",
+    "name": "Gold-Tone Butterfly, Leaf Hoop and Flower Stud Earrings Set – 12 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-17-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c0d9-73a9-ad6c-1f50101983c0",
+        "name": "Set of 12 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-17-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-butterfly-leaf-hoop-and-flower-stud-earrings-set-12-pairs"
+  },
+  {
+    "product_id": "01a1af8a-c038-73a9-91dd-a182e1f7a74d",
+    "name": "Gold-Tone Moon, Star, Heart and Bow Stud Earrings Set – 12 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-16-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-c039-73a9-888e-9b9f3c70d47e",
+        "name": "Set of 12 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-16-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-moon-star-heart-and-bow-stud-earrings-set-12-pairs"
+  },
+  {
+    "product_id": "01a1af8a-bf77-73a9-80a5-ccf0eae1ff7d",
+    "name": "Gold-Tone Rose, Butterfly and Starfish Stud Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-15-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-bf78-73a9-b083-0d78812fcc4a",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-15-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-rose-butterfly-and-starfish-stud-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-be9f-73a9-8a78-08387de59b22",
+    "name": "Gold-Tone Daisy Pearl and Crystal Flower Stud Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-14-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-bea0-73a9-8763-4d6e9f530547",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-14-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-daisy-pearl-and-crystal-flower-stud-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-bdf7-73a8-b06a-e5de20d7bfe0",
+    "name": "Pink Crystal Heart Drop and Stud Earrings Set – 7 Pairs",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/raec-13-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-bdf7-73a9-9cb7-7e3d93f4597c",
+        "name": "Set of 7 Pairs",
+        "mrp": 199,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/raec-13-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "pink-crystal-heart-drop-and-stud-earrings-set-7-pairs"
+  },
+  {
+    "product_id": "01a1af8a-bd51-73a8-a9ca-608a9cc1d6b3",
+    "name": "5 Days of Elegance Silver-Tone Anti-Tarnish Floral Stud Gift Set",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-12-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-bd52-73a8-acaf-aa4dc5d3d058",
+        "name": "Set of 5 Pairs",
+        "mrp": 149,
+        "selling_price": 129,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-12-1.webp",
+        "available_stock_qty": 5
+      }
+    ],
+    "review_count": "0",
+    "slug": "5-days-of-elegance-silver-tone-anti-tarnish-floral-stud-gift-set"
+  },
+  {
+    "product_id": "01a1af8a-bc93-73a8-8049-beea194ac8e0",
+    "name": "Gold-Tone Crystal Leaf Swirl Pearl Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-11-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-bc95-73a8-a21d-a519db3339c6",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-11-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-leaf-swirl-pearl-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a1af8a-bbc8-73a8-995c-03e41cfb13e6",
+    "name": "Gold-Tone Pearl Wreath Crystal Accent Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-10-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-bbc9-73a8-b13f-daf08980bd2c",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-10-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pearl-wreath-crystal-accent-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a1af8a-bb11-73a8-b7d2-06af2e7be35e",
+    "name": "Gold-Tone Pearl Bow Crystal Drop Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-09-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-bb12-73a8-bf25-d0d9567097ae",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-09-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pearl-bow-crystal-drop-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a1af8a-ba74-73a8-9b8a-4cca4cd19d1d",
+    "name": "Silver-Tone Crystal Pearl Ribbon Bow Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-08-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-ba75-73a8-847b-066c8944ff32",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-08-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "silver-tone-crystal-pearl-ribbon-bow-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a1af8a-b9d7-73a8-9134-86584fc22574",
+    "name": "Gold-Tone Oval Double Pearl Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-07-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-b9d8-73a8-b027-d9b82146a24a",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-07-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-oval-double-pearl-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a1af8a-b926-73a8-a9b2-b6bd8beaecc5",
+    "name": "Silver-Tone Rose Pearl Wreath Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-06-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-b927-73a8-80c1-63ccd8cfe481",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-06-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "silver-tone-rose-pearl-wreath-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a1af8a-b857-73a8-98f0-7b5d1f666d15",
+    "name": "Silver-Tone Crystal Bow White Petal Drop Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-05-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-b858-73a8-b5ea-51929af178ee",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-05-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "silver-tone-crystal-bow-white-petal-drop-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a1af8a-b7b9-73a7-bbfa-07e8505796f3",
+    "name": "Gold-Tone Crystal Bow Pearl Drop Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-04-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-b7b9-73a8-b338-0bd7886059fe",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-04-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-bow-pearl-drop-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a1af8a-b71d-73a7-8215-5649847473d0",
+    "name": "Gold-Tone Pearl Inlay Crystal Bow Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-03-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-b71e-73a7-a532-5e0b3c2c69ec",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-03-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pearl-inlay-crystal-bow-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a1af8a-b66c-73a7-920f-1bb58731c788",
+    "name": "Gold-Tone Crystal Ribbon Loop Pearl Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-02-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-b66d-73a7-a5a9-8e71608b15b9",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-02-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-ribbon-loop-pearl-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a1af8a-b550-73a7-a5e9-1f6f3d9dd0a6",
+    "name": "Silver-Tone Crystal Bow Pearl Drop Anti-Tarnish Earrings",
+    "brand": "RuhaAura",
+    "unit_name": "pair",
+    "image": "https://media.yentto.com/products/ruha_aura/rae-01-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1af8a-b551-73a7-bc8d-3028ea69a1ea",
+        "name": "1 Pair",
+        "mrp": 89,
+        "selling_price": 59,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rae-01-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "silver-tone-crystal-bow-pearl-drop-anti-tarnish-earrings"
+  },
+  {
+    "product_id": "01a18340-02f6-77d3-bd99-75396478c3b3",
+    "name": "Gold-Tone Seashell & Green Stone Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-14-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18340-02f7-77d3-9ca4-814deab72eea",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-14-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-seashell-and-green-stone-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a18340-0265-77d3-b04c-d05bc17a2911",
+    "name": "Gold-Tone Black Butterfly Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-13-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18340-0266-77d3-a4f1-1ead3f296ee8",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-13-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-black-butterfly-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a18340-01fb-77d3-8105-6219412598a6",
+    "name": "Gold-Tone Heart Charm Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-12-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18340-01fc-77d3-9bfd-ed041cc06e0d",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 189,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-12-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-heart-charm-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a18340-018e-77d3-8fe1-74a73352f72a",
+    "name": "Gold-Tone Heart & Bow Drop Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-11-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18340-018f-77d3-827e-fd54ba0ded5d",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 189,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-11-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-heart-and-bow-drop-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a18340-0121-77d3-bb1e-40ea409872ba",
+    "name": "Gold-Tone Triple Bow Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-10-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18340-0122-77d3-828c-5212a68c4be1",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 219,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-10-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-triple-bow-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a18340-00b8-77d3-9752-4d623b7c6a4a",
+    "name": "Gold-Tone Infinity & Crystal Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-09-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18340-00b9-77d3-8fbd-1c79dff0ccb5",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 219,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-09-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-infinity-and-crystal-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a18340-0055-77d3-8f8f-f7a5bd2e956a",
+    "name": "Gold-Tone Double Infinity Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-08-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18340-0056-77d3-ae57-bfcf59d37cf0",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 219,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-08-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-double-infinity-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a1833f-ffc9-77d3-83a1-207f459cc6a6",
+    "name": "Gold-Tone Black & White Clover Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-07-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1833f-ffca-77d3-9fc7-331efb9257ad",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 169,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-07-1.webp",
+        "available_stock_qty": 5
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-black-and-white-clover-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a1833f-ff42-77d3-af60-f68ad3ce1f05",
+    "name": "Gold-Tone Black & Green Clover Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-06-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1833f-ff43-77d3-8567-747de39074ce",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 169,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-06-1.webp",
+        "available_stock_qty": 5
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-black-and-green-clover-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a1833f-fed5-77d3-898a-aae91c944ba9",
+    "name": "Gold-Tone Crystal Bar Double Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-05-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1833f-fed6-77d3-b0c0-1a4c3881ddbf",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 169,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-05-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-bar-double-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a1833f-fe50-77d3-bfac-2e59db3c363c",
+    "name": "Gold-Tone Crystal Clover Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-04-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1833f-fe51-77d3-ba38-9b51a6744559",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 169,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-04-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-clover-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a1833f-fdc1-77d3-b697-3f69593f0f83",
+    "name": "Gold-Tone Mini Bow Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-03-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a1833f-fdc2-77d3-b31c-fd1fbd70455f",
+        "name": "1 piece",
+        "mrp": 219,
+        "selling_price": 169,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-03-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-mini-bow-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a1833f-fd3a-77d3-896a-f2e207e32c5a",
+    "name": "Gold-Tone Four-Leaf Clover Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-02-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1833f-fd3c-77d3-817d-9ea7607a6678",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 169,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-02-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-four-leaf-clover-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a1833f-fc84-77d3-98b5-7c66a3e62942",
+    "name": "Gold-Tone Crystal Bow Ball Chain Anti-Tarnish Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rcb-01-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1833f-fc85-77d3-964f-b97e750ba907",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 169,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rcb-01-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-bow-ball-chain-anti-tarnish-bracelet"
+  },
+  {
+    "product_id": "01a1829a-ca8a-7bfc-bcad-a120f1a2e147",
+    "name": "Gold-Tone Crystal Twist Infinity Anti-Tarnish Ring",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rar-09-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-ca8b-7bfc-a2a6-5649dabdd7d9",
+        "name": "1 Piece",
+        "mrp": 169,
+        "selling_price": 120,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rar-09-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-twist-infinity-anti-tarnish-ring"
+  },
+  {
+    "product_id": "01a1829a-ca19-7bfc-aa77-3daba265b0cb",
+    "name": "Gold-Tone Crystal Wave Solitaire Anti-Tarnish Ring",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rar-08-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-ca1b-7bfc-8c64-02753a5c331d",
+        "name": "1 Piece",
+        "mrp": 169,
+        "selling_price": 120,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rar-08-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-wave-solitaire-anti-tarnish-ring"
+  },
+  {
+    "product_id": "01a1829a-c99a-7bfc-b41c-f5fb90addb4b",
+    "name": "Gold-Tone Solitaire Baguette Band Anti-Tarnish Ring",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rar-07-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c99b-7bfc-b914-984c259ff115",
+        "name": "1 Piece",
+        "mrp": 169,
+        "selling_price": 120,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rar-07-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-solitaire-baguette-band-anti-tarnish-ring"
+  },
+  {
+    "product_id": "01a1829a-c901-7bfc-b1d4-1ca5d0868702",
+    "name": "Gold-Tone Crystal Swirl Fan Anti-Tarnish Ring",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rar-06-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c902-7bfc-82ba-bc2f09c8a09c",
+        "name": "1 Piece",
+        "mrp": 169,
+        "selling_price": 120,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rar-06-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-swirl-fan-anti-tarnish-ring"
+  },
+  {
+    "product_id": "01a1829a-c8a0-7bfc-9f06-3145639abae4",
+    "name": "Gold-Tone Baguette Crystal Square Anti-Tarnish Ring",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rar-05-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c8a3-7bfc-9ec7-da0d0f5b056a",
+        "name": "1 Piece",
+        "mrp": 169,
+        "selling_price": 120,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rar-05-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-baguette-crystal-square-anti-tarnish-ring"
+  },
+  {
+    "product_id": "01a1829a-c840-7bfc-98f9-6a3c35e7f7c6",
+    "name": "Gold-Tone Double Stone Crystal Anti-Tarnish Ring",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rar-04-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a1829a-c841-7bfc-b096-e6227423da5d",
+        "name": "1 Piece",
+        "mrp": 169,
+        "selling_price": 120,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rar-04-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-double-stone-crystal-anti-tarnish-ring"
+  },
+  {
+    "product_id": "01a1829a-c7db-7bfc-a0ea-2ce3483d3609",
+    "name": "Gold-Tone Cushion Halo Crystal Anti-Tarnish Ring",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rar-03-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c7dd-7bfc-9680-91eb901e7c56",
+        "name": "1 Piece",
+        "mrp": 169,
+        "selling_price": 120,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rar-03-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-cushion-halo-crystal-anti-tarnish-ring"
+  },
+  {
+    "product_id": "01a1829a-c77c-7bfc-be4e-c0236b33b231",
+    "name": "Gold-Tone Oval Halo Crystal Anti-Tarnish Ring",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rar-02-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c77d-7bfc-a407-eb3a897975cd",
+        "name": "1 Piece",
+        "mrp": 169,
+        "selling_price": 120,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rar-02-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-oval-halo-crystal-anti-tarnish-ring"
+  },
+  {
+    "product_id": "01a1829a-c716-7bfc-bd0d-0dfc923990c3",
+    "name": "Gold-Tone Crystal Bypass Anti-Tarnish Ring",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rar-01-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c718-7bfc-99d8-bbdbbbb598e8",
+        "name": "1 Piece",
+        "mrp": 169,
+        "selling_price": 120,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rar-01-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-bypass-anti-tarnish-ring"
+  },
+  {
+    "product_id": "01a1829a-c6af-7bfc-86fd-bdec0dc0daf8",
+    "name": "Gold-Tone Twin Butterfly Lattice Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-42-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c6b0-7bfc-b391-6d1308ac6ebe",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-42-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-twin-butterfly-lattice-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c638-7bfc-b489-3bec70b440e2",
+    "name": "Gold-Tone Crystal Butterfly Filigree Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-41-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c63a-7bfc-83d7-4f91fb2405c2",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-41-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-butterfly-filigree-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c5d6-7bfc-97e4-5b3da527decb",
+    "name": "Gold-Tone Black Enamel Circle Chain Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-40-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c5d7-7bfc-96e8-292a81d2f9ab",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-40-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-black-enamel-circle-chain-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c570-7bfc-8df3-0177e2cd1f59",
+    "name": "Gold-Tone Crystal Butterfly & Pearl Chain Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-39-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c572-7bfc-8624-bae8b984df78",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-39-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-butterfly-and-pearl-chain-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c511-7bfc-933b-1e04ebf61abd",
+    "name": "Gold-Tone Crystal Rectangle Plaque Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-38-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c512-7bfc-b9d3-f62960b5c32d",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-38-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-rectangle-plaque-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c4ae-7bfc-994e-279564679bac",
+    "name": "Gold-Tone Butterfly & Pearl Heart Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-37-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c4af-7bfc-a6c7-3cf462f571aa",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-37-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-butterfly-and-pearl-heart-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c447-7bfc-96a4-b847472824e5",
+    "name": "Gold-Tone Crystal Four-Leaf Clover Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-36-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c448-7bfc-b9f5-a2c421736dab",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-36-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-four-leaf-clover-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c3de-7bfc-9b0a-e6734286e417",
+    "name": "Gold-Tone Black Stone & Crystal Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-35-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c3df-7bfc-8f27-ca40622b754b",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-35-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-black-stone-and-crystal-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c375-7bfc-ae28-f7175a60d9cb",
+    "name": "Gold-Tone Crystal Fern Leaf Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-34-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a1829a-c376-7bfc-902b-abacef7cfd50",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-34-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-fern-leaf-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c30f-7bfc-979f-be5bc4e3a190",
+    "name": "Gold-Tone Crystal Triple Heart Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-33-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c310-7bfc-87c6-53f5199391b8",
+        "name": "1 piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-33-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-triple-heart-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c2a6-7bfc-bfac-33aacb711b1d",
+    "name": "Gold-Tone Butterfly Leaf Vine Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-32-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c2a7-7bfc-ae26-5b839ddc784a",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-32-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-butterfly-leaf-vine-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c23f-7bfc-9838-80f1c7cd0f04",
+    "name": "Gold-Tone Crystal Pave Heart Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-31-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c240-7bfc-b45c-df6c3692b96a",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-31-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-pave-heart-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c1da-7bfc-8c97-b97434cf9440",
+    "name": "Gold-Tone Butterfly & Crystal Drop Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-30-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c1db-7bfc-a940-b36afd0d1645",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-30-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-butterfly-and-crystal-drop-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c179-7bfc-aa79-9f95b11233fe",
+    "name": "Gold-Tone Crystal Heart Chain Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-29-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c17a-7bfc-9e23-94e236287a51",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-29-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-heart-chain-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c119-7bfc-9fb6-129550ff746f",
+    "name": "Gold-Tone Butterfly Heart Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-28-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c11a-7bfc-9fe3-741b32fcfa9f",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-28-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-butterfly-heart-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c0b8-7bfc-8cf6-73e9332616ca",
+    "name": "Gold-Tone Crystal Tree of Life Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-27-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c0b9-7bfc-b95b-4d89ef3548b9",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-27-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-tree-of-life-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-c05b-7bfb-b245-9a9888f7d68d",
+    "name": "Gold-Tone Twin Butterfly Layered Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-26-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-c05b-7bfc-b8de-d2c33fe7e121",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-26-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-twin-butterfly-layered-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bff3-7bfb-a13c-e76535e1a250",
+    "name": "Gold-Tone Crystal Square Chain Link Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-25-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-bff4-7bfb-853b-7aa97849579e",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-25-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-square-chain-link-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bf92-7bfb-96c9-0fecb7e7dc4f",
+    "name": "Gold-Tone Crystal Flower Medallion Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-24-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-bf93-7bfb-8b64-949c58e80e28",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 229,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-24-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-flower-medallion-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bf25-7bfb-81b4-f59dabaf6457",
+    "name": "Gold-Tone Crystal Double Infinity Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-23-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-bf26-7bfb-817d-893d4e23fc54",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 229,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-23-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-double-infinity-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bec4-7bfa-a039-7cf0595ff458",
+    "name": "Gold-Tone Butterfly Crystal Layered Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-22-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-bec4-7bfb-ba34-db7f99f868ff",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 229,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-22-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-butterfly-crystal-layered-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-be5f-7bf9-9d52-bb393198062a",
+    "name": "Gold-Tone Crystal U-Link Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-21-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-be5f-7bfa-8a56-ee752391abeb",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 229,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-21-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-u-link-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bdfc-7bf9-bb3c-2dc8fb914cca",
+    "name": "Gold-Tone Crystal Butterfly Chain Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-20-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a1829a-bdfd-7bf9-ad3e-c1cc82e7d5dc",
+        "name": "1 piece",
+        "mrp": 269,
+        "selling_price": 229,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-20-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-butterfly-chain-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bd9a-7bf9-bab1-630132814e1a",
+    "name": "Rose Gold-Tone Green Clover Crystal Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-19-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-bd9b-7bf9-b288-72d6055e7887",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 229,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-19-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "rose-gold-tone-green-clover-crystal-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bd37-7bf9-a715-1af3ded96098",
+    "name": "Gold-Tone Crystal Infinity Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-18-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-bd39-7bf9-a009-df031cbc715f",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 229,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-18-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-infinity-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bca6-7bf9-9303-d82cecf8e843",
+    "name": "Gold-Tone Crystal Leaf Arrow Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-17-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-bca7-7bf9-a049-a7034d0292e6",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 229,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-17-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-leaf-arrow-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bc37-7bf9-b331-92b8b8d07bd5",
+    "name": "Gold-Tone Clover Chain Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-16-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-bc38-7bf9-9c20-670975d63fce",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 229,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-16-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-clover-chain-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bbb0-7bf9-b8b8-05bf6beafa53",
+    "name": "Gold-Tone Crystal Line Open Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-15-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-bbb1-7bf9-b07a-22224ad8205d",
+        "name": "1 Piece",
+        "mrp": 269,
+        "selling_price": 229,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-15-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-line-open-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-bb46-7bf9-b6a2-ff382aedbf6c",
+    "name": "Gold-Tone Crystal Double Heart Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-14-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-bb47-7bf9-9729-be809af315ea",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-14-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-double-heart-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-ba92-7bf9-9c38-9ae4418ee30d",
+    "name": "Gold-Tone Crystal Butterfly Swirl Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-13-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-ba93-7bf9-8ca0-b72ed262b860",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-13-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-butterfly-swirl-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b9ed-7bf9-8700-55a3a5b77b1b",
+    "name": "Gold-Tone Crystal Square Link Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-12-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b9ef-7bf9-92ba-586a00c14089",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-12-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-square-link-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b955-7bf9-89d2-8c5bec497d23",
+    "name": "Gold-Tone Interlocking Ring Crystal Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-05-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b956-7bf9-9497-ff43c2ca13da",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-05-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-interlocking-ring-crystal-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b8cc-7bf9-acca-43315b8cfcb0",
+    "name": "Gold-Tone Triple Flower Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-04-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b8cd-7bf9-ae1a-1a39d4975b3f",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-04-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-triple-flower-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b82c-7bf9-b91f-56de9694eaad",
+    "name": "Gold-Tone Butterfly & Leaf Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-03-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b82d-7bf9-b37d-b382e38543bf",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-03-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-butterfly-and-leaf-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b7a1-7bf9-a61f-e5c043aa0d14",
+    "name": "Gold-Tone Pink Enamel Bamboo Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-11-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b7a2-7bf9-9dc2-508ead2ea493",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-11-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pink-enamel-bamboo-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b711-7bf9-8775-5b086555809d",
+    "name": "Gold-Tone Greek Key Crystal Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-10-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b712-7bf9-a61b-f867da06824d",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-10-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-greek-key-crystal-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b69c-7bf9-a4f4-f3161f21253c",
+    "name": "Gold-Tone Multicolour Stone Layered Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-09-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b69d-7bf9-9db7-5d95cb0280e1",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-09-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-multicolour-stone-layered-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b5eb-7bf9-baf7-fb6120909e71",
+    "name": "Gold-Tone Crystal Butterfly Wrap Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-08-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b5ec-7bf9-9dcd-90996b530ba8",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-08-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-butterfly-wrap-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b57e-7bf9-807c-d1f1bfd70c6d",
+    "name": "Gold-Tone Crystal Pave Floating Stone Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-07-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b57f-7bf9-9b10-2e87373c3288",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-07-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-pave-floating-stone-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b518-7bf8-9a49-ac968b39c571",
+    "name": "Gold-Tone Black Enamel Circle Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-06-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b518-7bf9-8ded-e7d5d39e5800",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-06-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-black-enamel-circle-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b489-7bf8-b1e9-90c93fa65ce5",
+    "name": "Gold-Tone Slim Screw Motif Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-02-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b48a-7bf8-867b-53805e62d413",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-02-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-slim-screw-motif-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1829a-b38e-7bf8-8a12-8056cd6bb251",
+    "name": "Gold-Tone Screw Motif Crystal Anti-Tarnish Kada Bracelet",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/rak-01-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1829a-b390-7bf8-b789-0a92b2452f12",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/rak-01-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-screw-motif-crystal-anti-tarnish-kada-bracelet"
+  },
+  {
+    "product_id": "01a1813e-ad50-7bed-83e8-f6964109da19",
+    "name": "Gold-Tone Open Heart Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-272-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a1813e-ad51-7bed-9f23-bcb8335a7be5",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-272-2-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-open-heart-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a1813e-ac4c-7bed-bd02-db3a16d31b0e",
+    "name": "Gold-Tone Crystal Square Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-272-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1813e-ac4e-7bed-81b9-d62915275e4f",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-272-1-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-square-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-0bb7-7bed-9807-423d69595cae",
+    "name": "Gold-Tone Crystal Infinity Anti-Tarnish Necklace & Earrings Set",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2160-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-0bb8-7bed-ab5c-43974a3ddfd9",
+        "name": "1 Set",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2160-2-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-infinity-anti-tarnish-necklace-and-earrings-set"
+  },
+  {
+    "product_id": "01a18127-0b25-7bec-ac21-4bbe0488643c",
+    "name": "Gold-Tone Infinity Anti-Tarnish Necklace & Earrings Set",
+    "brand": "RuhaAura",
+    "unit_name": "set",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2160-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-0b25-7bed-927e-ac8709470311",
+        "name": "1 Set",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2160-1-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-infinity-anti-tarnish-necklace-and-earrings-set"
+  },
+  {
+    "product_id": "01a18127-0a9b-7bec-9ec0-59b4bf54ccf9",
+    "name": "Gold-Tone Crystal Rectangle Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2100-10-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-0a9c-7bec-ae6a-ac93777d094e",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2100-10-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-rectangle-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-0a11-7bec-989f-fb9b73916453",
+    "name": "Gold-Tone Pearl Square Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2100-9-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-0a12-7bec-87eb-15e8baf1eb5d",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2100-9-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pearl-square-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-0980-7bec-810e-d9f3350d14a9",
+    "name": "Gold-Tone Pearl Double Ring Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2100-8-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a18127-0981-7bec-95f2-2283272e20a3",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2100-8-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pearl-double-ring-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-08fb-7bec-8dc5-148bc565f5e1",
+    "name": "Gold-Tone Heart Bow Drop Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2100-7-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-08fc-7bec-b9e9-4941f55d13c1",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2100-7-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-heart-bow-drop-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-086f-7beb-9049-68ea9df9f4b7",
+    "name": "Gold-Tone Crystal V-Bar Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2100-6-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-086f-7bec-87e5-aabbb7bb65d1",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2100-6-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-v-bar-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-07de-7beb-b386-7a1a8ea94692",
+    "name": "Gold-Tone Crystal Snowflake Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2100-5-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-07df-7beb-9abf-8dc9439f7477",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2100-5-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-snowflake-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-0725-7beb-9b68-ea9724b3c50d",
+    "name": "Gold-Tone Pearl Cross Bar Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2100-4-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-0727-7beb-ba99-50083322d3dc",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2100-4-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pearl-cross-bar-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-0682-7beb-b241-56828c1aa850",
+    "name": "Gold-Tone Pearl & Star Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2100-3-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-0683-7beb-8ff2-2dd37c6e20d7",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2100-3-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pearl-and-star-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-05f0-7beb-9849-a03ead241ed0",
+    "name": "Gold-Tone Bow Drop Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2100-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-05f1-7beb-85aa-00f5fa5afba0",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2100-2-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-bow-drop-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-0568-7beb-bed7-8baa4e1f0d67",
+    "name": "Gold-Tone Bow Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2100-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-0569-7beb-bbf3-5c54c6263a0c",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2100-1-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-bow-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-04a1-7beb-a0ff-c529b19c5b94",
+    "name": "Gold-Tone Rose Medallion Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2115-5-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-04a2-7beb-8060-6976ae3e2649",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2115-5-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-rose-medallion-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18127-0408-7beb-8728-2328b116436e",
+    "name": "Gold-Tone Infinity Ball Chain Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2115-4-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-0409-7beb-b47b-7d54ac43901c",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2115-4-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-infinity-ball-chain-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18127-037d-7beb-82f1-c6777e258e7e",
+    "name": "Gold-Tone Mini Heart Charm Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2115-3-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-037e-7beb-bcee-943337f82fb5",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2115-3-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-mini-heart-charm-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18127-02ec-7beb-ba9e-5b851d2ce0a6",
+    "name": "Gold-Tone Crystal Clover Ball Chain Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2115-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a18127-02ed-7beb-a77a-abe2beaf5915",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2115-2-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-clover-ball-chain-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18127-025f-7beb-b26c-6737e1c28630",
+    "name": "Gold-Tone Clover Ball Chain Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2115-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a18127-0260-7beb-a146-70aa2159ccf0",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2115-1-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-clover-ball-chain-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18127-01d2-7beb-82e3-ca3c2c6e6e6c",
+    "name": "Gold-Tone Crystal Flower Cluster Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2120-8-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a18127-01d3-7beb-b7b3-eaed25526502",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2120-8-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-flower-cluster-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18127-012c-7beb-852f-194df437ea62",
+    "name": "Gold-Tone Double Heart Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2120-7-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18127-012d-7beb-9f70-37f9c49dc608",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2120-7-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-double-heart-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-fff2-7beb-bc08-baed7d8d0913",
+    "name": "Gold-Tone Crystal Teardrop Cluster Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2120-6-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-fff4-7beb-a228-4bd4e04a9d1d",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2120-6-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-teardrop-cluster-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18126-ff3c-7beb-be1a-1ffd7efefd6a",
+    "name": "Gold-Tone Crystal Heart Station Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2120-5-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-ff44-7beb-9061-efbe590dcc7d",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2120-5-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-heart-station-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18126-fe74-7bea-8a35-a404022ed6eb",
+    "name": "Gold-Tone Crystal Heart Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2120-4-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-fe74-7beb-9e84-f02e90ebb805",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2120-4-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-heart-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-fde8-7bea-8ae2-86a0e3d635d9",
+    "name": "Gold-Tone Pearl Ribbon Crystal Station Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2120-3-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a18126-fde9-7bea-89e5-6506f1981056",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2120-3-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pearl-ribbon-crystal-station-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18126-fd49-7bea-bdd5-30b83cab78f7",
+    "name": "Gold-Tone Pink Baguette Stone Station Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2120-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-fd4a-7bea-b04a-c8accf0b99d1",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2120-2-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pink-baguette-stone-station-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18126-fcbb-7bea-931f-a0b5c3e74975",
+    "name": "Gold-Tone Pink Heart Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2120-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-fcbc-7bea-b560-e8ac649c394e",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2120-1-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pink-heart-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-fc25-7bea-9de5-927d60705955",
+    "name": "Gold-Tone Purple Rectangle Stone Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2110-3-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-fc26-7bea-bb6d-ce397af73bb0",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2110-3-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-purple-rectangle-stone-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-fb82-7bea-8a7e-170e21dbba62",
+    "name": "Gold-Tone Pink Crystal Flower Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2110-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-fb83-7bea-9879-c5db6a9d5b67",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2110-2-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-pink-crystal-flower-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-faf0-7bea-9ac5-3db238fa8ce9",
+    "name": "Gold-Tone Cut-Out Flower Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2110-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-faf1-7bea-8ad8-2af1031a510c",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2110-1-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-cut-out-flower-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-fa68-7bea-a997-4944676e3455",
+    "name": "Gold-Tone Puffed Heart Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-295-3-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-fa69-7bea-ba74-1b766a2af459",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-295-3-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-puffed-heart-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f9d0-7be9-a7cc-a4a1e442bb95",
+    "name": "Gold-Tone Interlocking Rings Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-295-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f9d0-7bea-bbb4-1f6424491075",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-295-2-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-interlocking-rings-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f92c-7be8-8886-704392a397ad",
+    "name": "Gold-Tone Angel Wing Pink Heart Lariat Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-295-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f92c-7be9-ac86-ae55f11bd5ef",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-295-1-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-angel-wing-pink-heart-lariat-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18126-f81c-7be8-b352-1920e7b6ae8c",
+    "name": "Gold-Tone Tulip Flower Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2108-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f81d-7be8-8681-52b8260f198f",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2108-1-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-tulip-flower-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f751-7be8-bba3-717ef7ad092b",
+    "name": "Gold-Tone Green Stone Leaf Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-298-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f754-7be8-98b7-799cbbd821bc",
+        "name": "1 Piece",
+        "mrp": 219,
+        "selling_price": 179,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-298-1-1.webp",
+        "available_stock_qty": 5
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-green-stone-leaf-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f6b8-7be8-b954-625c464016f3",
+    "name": "Silver-Tone Double Butterfly Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-290-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f6b9-7be8-9dcc-99e858307e13",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-290-2-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "silver-tone-double-butterfly-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f62b-7be8-b995-7cbc28d3aa60",
+    "name": "Gold-Tone Double Butterfly Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-290-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f62c-7be8-bd49-b51f9a740669",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-290-1-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-double-butterfly-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f587-7be8-9fab-bf8474a120a3",
+    "name": "Gold-Tone Seashell Pearl Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-285-3-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a18126-f588-7be8-b4ff-200b06a14806",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-285-3-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-seashell-pearl-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f4bd-7be8-9b34-c271fc676830",
+    "name": "Silver-Tone Seashell Pearl Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-285-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f4be-7be8-90c4-8f3867384812",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-285-2-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "silver-tone-seashell-pearl-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f420-7be8-bf43-4448de7bbdf1",
+    "name": "Gold-Tone Crystal Round Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-285-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f421-7be8-94c9-cee3fa8471f2",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-285-1-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-round-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f37d-7be8-8dbe-5f5120dba4f2",
+    "name": "Gold-Tone Crystal Butterfly Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-278-3-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f37e-7be8-af97-b39ff96b9df4",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-278-3-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-butterfly-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f221-7be8-8797-6c07b31d16ed",
+    "name": "Gold-Tone White Petal Flower Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-278-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f222-7be8-8992-8c4442a7a69f",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-278-2-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-white-petal-flower-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-f183-7be8-a42e-5037e953bb21",
+    "name": "Gold-Tone Crystal Flower Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-278-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-f184-7be8-8b05-f9394db02a22",
+        "name": "1 Piece",
+        "mrp": 199,
+        "selling_price": 149,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-278-1-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-flower-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-ef9b-7be8-ad5d-b330ad36fd66",
+    "name": "Gold-Tone Maple Leaf & Butterfly Charm Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2132-4-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-efa9-7be8-8569-b69c2ea40f6b",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2132-4-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-maple-leaf-and-butterfly-charm-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-ee2e-7be8-b442-5df9c3289e5c",
+    "name": "Gold-Tone Star Flower & Butterfly Charm Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2132-3-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-ee2f-7be8-aea8-b23bb31ad9e3",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2132-3-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-star-flower-and-butterfly-charm-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-ed44-7be7-8214-420e31c9bb55",
+    "name": "Gold-Tone Sun & Flower Charm Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2132-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-ed44-7be8-9257-e98dbbf3eeb5",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2132-2-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-sun-and-flower-charm-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-ec75-7be7-9f9d-f5a8fb22137b",
+    "name": "Gold-Tone Heart & Leaf Charm Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2132-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-ec76-7be7-ad2d-7564a1f59225",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2132-1-1.webp",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-heart-and-leaf-charm-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-eac9-7be7-aa95-80b1a8914060",
+    "name": "Gold-Tone Heart & Diamond Drop Lariat Anti-Tarnish Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra-2145-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-eace-7be7-a812-4e180fe55412",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra-2145-1-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-heart-and-diamond-drop-lariat-anti-tarnish-necklace"
+  },
+  {
+    "product_id": "01a18126-ea02-7be7-b713-ec092a50ea82",
+    "name": "Gold-Tone Crystal Swirl Circle Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra2140-3-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-ea03-7be7-8336-dd25c71b1aab",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra2140-3-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-swirl-circle-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-e67b-7be7-97dc-c5a56ae5b5c7",
+    "name": "Gold-Tone Crystal V-Line Heart Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra2140-2-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": false,
+    "variants": [
+      {
+        "id": "01a18126-e67c-7be7-ab19-010717d04868",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 199,
+        "in_stock": false,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra2140-2-1.webp",
+        "available_stock_qty": 0
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-v-line-heart-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a18126-e4ee-7be7-8def-3261036632b8",
+    "name": "Gold-Tone Heart Crystal Cluster Anti-Tarnish Pendant Necklace",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/products/ruha_aura/ra2140-1-1.webp",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a18126-e4f3-7be7-bcfa-07439faedc71",
+        "name": "1 Piece",
+        "mrp": 249,
+        "selling_price": 199,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/products/ruha_aura/ra2140-1-1.webp",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-heart-crystal-cluster-anti-tarnish-pendant-necklace"
+  },
+  {
+    "product_id": "01a15edc-2329-73f3-b36d-9974d246d80c",
+    "name": "Floral Scarf Scrunchies – Trendy Floral Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15edc-2329-73f3-b36d-9974d246d80c/1792592847_image_cropper_1792592766469.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15edc-232b-73f3-b3ac-b9721d2933fc",
+        "name": "1 Piece",
+        "mrp": 30,
+        "selling_price": 18,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15edc-2329-73f3-b36d-9974d246d80c/1792592847_image_cropper_1792592766469.jpg",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "floral-scarf-scrunchies-trendy-floral-hair-accessories"
+  },
+  {
+    "product_id": "01a15ec6-b2da-73bf-a1ca-7f5a815aa5f7",
+    "name": "Fluffy Fur Scrunchies – Soft & Stylish Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15ec6-b2da-73bf-a1ca-7f5a815aa5f7/1792591442_image_cropper_1792591353776.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15ec6-b2db-73bf-80fc-c29dc3b46260",
+        "name": "1 Piece",
+        "mrp": 25,
+        "selling_price": 15,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15ec6-b2da-73bf-a1ca-7f5a815aa5f7/1792591442_image_cropper_1792591353776.jpg",
+        "available_stock_qty": 12
+      }
+    ],
+    "review_count": "0",
+    "slug": "fluffy-fur-scrunchies-soft-and-stylish-hair-accessories"
+  },
+  {
+    "product_id": "01a1583a-3ac4-736c-8dfe-dcf9352b33b8",
+    "name": "Floral Flower Hair Clips Set for Girls – Fairy Design Floral Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a1583a-3ac4-736c-8dfe-dcf9352b33b8/1792481573_image_cropper_1792481474389.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1583a-3ac5-736c-a3ae-6460a72f1658",
+        "name": "1 Piece",
+        "mrp": 79,
+        "selling_price": 35,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a1583a-3ac4-736c-8dfe-dcf9352b33b8/1792481573_image_cropper_1792481474389.jpg",
+        "available_stock_qty": 12
+      }
+    ],
+    "review_count": "0",
+    "slug": "floral-flower-hair-clips-set-for-girls-fairy-design-floral-hair-accessories"
+  },
+  {
+    "product_id": "01a15811-527a-736a-bcbc-623074f34e8e",
+    "name": "Cute Flower Hair Clips Set for Girls – Fairy Design Floral Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15811-527a-736a-bcbc-623074f34e8e/1792478892_image_cropper_1792478830260.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15811-527a-736b-bb52-a5f153d0bc1d",
+        "name": "1 Piece",
+        "mrp": 59,
+        "selling_price": 35,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15811-527a-736a-bcbc-623074f34e8e/1792478892_image_cropper_1792478830260.jpg",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "cute-flower-hair-clips-set-for-girls-fairy-design-floral-hair-accessories"
+  },
+  {
+    "product_id": "01a15808-b4aa-736a-8d07-e4eae6390d7d",
+    "name": "Fluffy Heart Hair Clips for Women – Cute Plush Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15808-b4aa-736a-8d07-e4eae6390d7d/1792478328_image_cropper_1792478202999.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15808-b4ac-736a-95c2-f8f01fb31fdc",
+        "name": "1 Piece",
+        "mrp": 39,
+        "selling_price": 20,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15808-b4aa-736a-8d07-e4eae6390d7d/1792478328_image_cropper_1792478202999.jpg",
+        "available_stock_qty": 8
+      }
+    ],
+    "review_count": "0",
+    "slug": "fluffy-heart-hair-clips-for-women-cute-plush-hair-accessories"
+  },
+  {
+    "product_id": "01a15801-879f-736a-912a-7c754cdac761",
+    "name": "Fluffy Hair Claw Clips for Women – Soft & Cute Hair Accessories",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15801-879f-736a-912a-7c754cdac761/1792477858_image_cropper_1792477720292.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15801-87a0-736a-bf84-3c44f897dbbb",
+        "name": "1 Piece",
+        "mrp": 49,
+        "selling_price": 22,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15801-879f-736a-912a-7c754cdac761/1792477858_image_cropper_1792477720292.jpg",
+        "available_stock_qty": 5
+      }
+    ],
+    "review_count": "0",
+    "slug": "fluffy-hair-claw-clips-for-women-soft-and-cute-hair-accessories"
+  },
+  {
+    "product_id": "01a15556-e0ff-7369-aa18-3bd4f1c5c411",
+    "name": "Pastel Floral Pearl Wreath Hair Clip for Women & Girls",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15556-e0ff-7369-aa18-3bd4f1c5c411/1792433119_image_cropper_1792432893438.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": true,
+    "variant_count": 2,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15556-e102-7369-a048-cebaad9b9be7",
+        "name": "Roundshape",
+        "mrp": 49,
+        "selling_price": 25,
+        "in_stock": true,
+        "options": {
+          "scent": "Roundshape"
+        },
+        "image": "https://media.yentto.com/product_variant/01a15556-e102-7369-a048-cebaad9b9be7/1792433120_image_cropper_1792433066430.jpg",
+        "available_stock_qty": 4
+      },
+      {
+        "id": "01a15556-e102-736a-86c7-43922d5d2d4a",
+        "name": "Flower",
+        "mrp": 49,
+        "selling_price": 25,
+        "in_stock": true,
+        "options": {
+          "scent": "Flower"
+        },
+        "image": "https://media.yentto.com/product_variant/01a15556-e102-736a-86c7-43922d5d2d4a/1792433120_image_cropper_1792433103795.jpg",
+        "available_stock_qty": 4
+      }
+    ],
+    "review_count": "0",
+    "slug": "pastel-floral-pearl-wreath-hair-clip-for-women-and-girls"
+  },
+  {
+    "product_id": "01a1554b-827b-7369-85dd-c26eaab356dd",
+    "name": "Gold-Tone Double Layer Crystal Anti-Tarnish Bracelet for Women",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a1554b-827b-7369-85dd-c26eaab356dd/1792432374_image_cropper_1792432342509.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1554b-827c-7369-b8d9-5c0917bd252b",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a1554b-827b-7369-85dd-c26eaab356dd/1792432374_image_cropper_1792432342509.jpg",
+        "available_stock_qty": 2
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-double-layer-crystal-anti-tarnish-bracelet-for-women"
+  },
+  {
+    "product_id": "01a15549-3b89-7369-9ec0-210733d14a8f",
+    "name": "Gold-Tone Crystal Flower Charm Anti-Tarnish Bracelet for Women",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15549-3b89-7369-9ec0-210733d14a8f/1792432225_image_cropper_1792432163258.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15549-3b8c-7369-9eb3-8708b42702b2",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15549-3b89-7369-9ec0-210733d14a8f/1792432225_image_cropper_1792432163258.jpg",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-crystal-flower-charm-anti-tarnish-bracelet-for-women"
+  },
+  {
+    "product_id": "01a15546-c690-7369-a429-989ab10a5d64",
+    "name": "Gold-Tone Blue Crystal Charm Anti-Tarnish Bracelet for Women",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15546-c690-7369-a429-989ab10a5d64/1792432064_image_cropper_1792431996927.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15546-c697-7369-82c5-cbcb93db1f19",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15546-c690-7369-a429-989ab10a5d64/1792432064_image_cropper_1792431996927.jpg",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-blue-crystal-charm-anti-tarnish-bracelet-for-women"
+  },
+  {
+    "product_id": "01a15543-f476-7369-881e-df0f265079f7",
+    "name": "Gold-Tone Heartbeat Charm Anti-Tarnish Bracelet for Women",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15543-f476-7369-881e-df0f265079f7/1792431879_image_cropper_1792431782261.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15543-f478-7369-9b0b-1e76f1a858e9",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15543-f476-7369-881e-df0f265079f7/1792431879_image_cropper_1792431782261.jpg",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-heartbeat-charm-anti-tarnish-bracelet-for-women"
+  },
+  {
+    "product_id": "01a15541-2364-7369-a610-7467e6a456b9",
+    "name": "Gold-Tone Clover Charm Layered Anti-Tarnish Bracelet for Women",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15541-2364-7369-a610-7467e6a456b9/1792431694_image_cropper_1792431618736.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15541-2365-7369-b783-620b36551c3f",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15541-2364-7369-a610-7467e6a456b9/1792431694_image_cropper_1792431618736.jpg",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-clover-charm-layered-anti-tarnish-bracelet-for-women"
+  },
+  {
+    "product_id": "01a1553e-193c-7368-87b1-1a00c8e69185",
+    "name": "Red Floral Charm Anti-Tarnish Bracelet for Women",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a1553e-193c-7368-87b1-1a00c8e69185/1792431495_image_cropper_1792431442007.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1553e-193c-7369-b486-ea9e2a52e7b1",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a1553e-193c-7368-87b1-1a00c8e69185/1792431495_image_cropper_1792431442007.jpg",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "red-floral-charm-anti-tarnish-bracelet-for-women"
+  },
+  {
+    "product_id": "01a1553b-2e42-7368-bc4f-fa3da3cc37b2",
+    "name": "Gold-Tone Star & Moon Charm Anti-Tarnish Bracelet for Women",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a1553b-2e42-7368-bc4f-fa3da3cc37b2/1792431304_image_cropper_1792431278213.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1553b-2e46-7368-8d1b-1d38592308b2",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a1553b-2e42-7368-bc4f-fa3da3cc37b2/1792431304_image_cropper_1792431278213.jpg",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-star-and-moon-charm-anti-tarnish-bracelet-for-women"
+  },
+  {
+    "product_id": "01a15534-5612-7368-96b3-08e57cf1235b",
+    "name": "Gold-Tone Floral Resin Charm Bracelet for Women",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15534-5612-7368-96b3-08e57cf1235b/1792430855_image_cropper_1792430660747.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15534-5613-7368-8f28-c974712c108e",
+        "name": "1 Piece",
+        "mrp": 299,
+        "selling_price": 249,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15534-5612-7368-96b3-08e57cf1235b/1792430855_image_cropper_1792430660747.jpg",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "gold-tone-floral-resin-charm-bracelet-for-women"
+  },
+  {
+    "product_id": "01a15330-7048-72ba-96a0-7d190f8f3ea5",
+    "name": "Elegant Bow Claw Clips",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a15330-7048-72ba-96a0-7d190f8f3ea5/1792397045_image_cropper_1792396773782.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a15330-7049-72ba-bc23-1b4470383869",
+        "name": "1 Piece",
+        "mrp": 35,
+        "selling_price": 22,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a15330-7048-72ba-96a0-7d190f8f3ea5/1792397045_image_cropper_1792396773782.jpg",
+        "available_stock_qty": 10
+      }
+    ],
+    "review_count": "0",
+    "slug": "elegant-bow-claw-clips"
+  },
+  {
+    "product_id": "01a1531b-cd14-72b4-970b-9c2c3c6b31f6",
+    "name": "Pastel Bloom Flower Hair Claw Clips",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a1531b-cd14-72b4-970b-9c2c3c6b31f6/1792395693_image_cropper_1792395452088.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": true,
+    "variant_count": 4,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a1531b-cd17-72b4-ad11-d82150167871",
+        "name": "Blue And Beige",
+        "mrp": 149,
+        "selling_price": 89,
+        "in_stock": true,
+        "options": {
+          "color": "Blue And Beige"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1531b-cd17-72b4-ad11-d82150167871/1792395694_image_cropper_1792395632263.jpg",
+        "available_stock_qty": 1
+      },
+      {
+        "id": "01a1531b-cd17-72b5-a746-8930fcfe556b",
+        "name": "Yellow And Blue",
+        "mrp": 149,
+        "selling_price": 89,
+        "in_stock": true,
+        "options": {
+          "color": "Yellow And Blue"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1531b-cd17-72b5-a746-8930fcfe556b/1792395695_image_cropper_1792395675092.jpg",
+        "available_stock_qty": 1
+      },
+      {
+        "id": "01a1531b-cd17-72b6-be07-faa92f7fb6c3",
+        "name": "Pink And Beige",
+        "mrp": 149,
+        "selling_price": 89,
+        "in_stock": true,
+        "options": {
+          "color": "Pink And Beige"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1531b-cd17-72b6-be07-faa92f7fb6c3/1792395694_image_cropper_1792395648774.jpg",
+        "available_stock_qty": 1
+      },
+      {
+        "id": "01a1531b-cd17-72b7-8d41-68a45a4e6ecb",
+        "name": "Blue And Pink",
+        "mrp": 149,
+        "selling_price": 89,
+        "in_stock": true,
+        "options": {
+          "color": "Blue And Pink"
+        },
+        "image": "https://media.yentto.com/product_variant/01a1531b-cd17-72b7-8d41-68a45a4e6ecb/1792395694_image_cropper_1792395615149.jpg",
+        "available_stock_qty": 1
+      }
+    ],
+    "review_count": "0",
+    "slug": "pastel-bloom-flower-hair-claw-clips"
+  },
+  {
+    "product_id": "01a14edf-8f84-727d-874c-bf8ec2a9f31f",
+    "name": "Pastel Bloom Floral Claw Clips",
+    "brand": "RuhaAura",
+    "unit_name": "piece",
+    "image": "https://media.yentto.com/product/01a14edf-8f84-727d-874c-bf8ec2a9f31f/1792343771_image_cropper_1792343757356.jpg",
+    "average_rating": 0,
+    "dietary_type": "",
+    "has_variants": false,
+    "variant_count": 1,
+    "has_stock": true,
+    "variants": [
+      {
+        "id": "01a14edf-8f85-727d-80a2-f0c1cab00c46",
+        "name": "1 Piece",
+        "mrp": 89,
+        "selling_price": 49,
+        "in_stock": true,
+        "options": {},
+        "image": "https://media.yentto.com/product/01a14edf-8f84-727d-874c-bf8ec2a9f31f/1792343771_image_cropper_1792343757356.jpg",
+        "available_stock_qty": 5
+      }
+    ],
+    "review_count": "0",
+    "slug": "pastel-bloom-floral-claw-clips"
+  }
+]

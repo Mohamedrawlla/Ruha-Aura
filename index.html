@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7f0">
+  <title>Ruha Aura — Small Treasures, Big Smiles | Hair Accessories & Handcrafted Toys</title>
+  <meta name="description" content="Explore Ruha Aura hair accessories and handcrafted toys. Little details for your everyday, little wonders for their world. Fast pan-India delivery.">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ruha Aura — Small Treasures, Big Smiles">
+  <meta property="og:description" content="Artisanal hair clips, statement bows, and sensory toys. Beautiful moments for your everyday.">
+  <meta property="og:image" content="assets/brand-logo.jpeg">
+
+  <link rel="icon" href="assets/brand-logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3.3">
+  <link rel="stylesheet" href="shop.css?v=3.3">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="catalogue-data.js?v=3.3" defer></script>
+  <script src="supabase-config.js?v=3.3" defer></script>
+  <script src="shop-core.js?v=3.3" defer></script>
+  <script src="checkout.js?v=3.3" defer></script>
+  <script src="app.js?v=3.3" defer></script>
+</head>
+<body>
+  <svg class="symbol-definitions" aria-hidden="true">
+    <defs>
+      <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+      <symbol id="right" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+      <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+      <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="spark" viewBox="0 0 40 40"><path d="M20 0c3 14 6 17 20 20-14 3-17 6-20 20C17 26 14 23 0 20 14 17 17 14 20 0Z" fill="currentColor" stroke="none"/></symbol>
+      <symbol id="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+      <symbol id="bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+      <symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- BRAND HEADER -->
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="Ruha Aura home">
+      <img src="assets/brand-logo.jpeg" width="58" height="58" alt="Ruha Aura" class="brand-logo-img">
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="catalogue.html">Shop all</a>
+      <a href="catalogue.html?collection=accessories">Hair accessories</a>
+      <a href="catalogue.html?collection=jewellery">Jewellery</a>
+      <a href="catalogue.html?collection=toys">Kids' toys</a>
+      <a href="catalogue.html?collection=jewellery&types=Stud%20Earrings%20Set">Earring sets</a>
+      <a href="catalogue.html?collection=accessories&types=Satin%20Scrunchies">Scrunchies</a>
+      <a href="catalogue.html?badge=new">New arrivals</a>
+      <a href="#about">Our Story</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Search input capsule -->
+      <form class="header-search-form" action="catalogue.html" method="get" role="search">
+        <svg aria-hidden="true"><use href="#search"/></svg>
+        <input type="search" name="q" placeholder="Search hair clips, jewellery, toys & essentials..." aria-label="Search catalogue">
+      </form>
+
+      <!-- Favourites Heart -->
+      <a class="saved-nav" href="catalogue.html?saved=1" aria-label="View saved favourites" title="Saved favourites">
+        <svg><use href="#heart"/></svg>
+        <span data-saved-count>0</span>
+      </a>
+
+      <!-- Shopping Bag -->
+      <button type="button" class="header-cart-btn" data-open-cart aria-label="View shopping bag" title="View bag">
+        <svg><use href="#bag"/></svg>
+        <span class="cart-pill" data-cart-count>0</span>
+      </button>
+
+      <!-- Account / Login Button -->
+      <button type="button" class="header-login-btn" id="header-login-btn" aria-label="Account Login">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span id="login-btn-text">Log in</span>
+      </button>
+    </div>
+
+    <button class="menu-button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-menu" class="mobile-menu" hidden>
+    <nav aria-label="Mobile navigation">
+      <a href="catalogue.html">Shop all <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?collection=accessories">Hair accessories <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?collection=jewellery">Jewellery <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?collection=toys">Kids' toys <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?collection=jewellery&types=Stud%20Earrings%20Set">Earring sets <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?collection=accessories&types=Satin%20Scrunchies">Scrunchies <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?badge=new">New arrivals <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?saved=1">Saved Favourites <svg><use href="#arrow"/></svg></a>
+      <a href="#about">Our Story <svg><use href="#arrow"/></svg></a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <!-- 3. HERO SECTION (Figma layout: "Small treasures. Big smiles.") -->
+    <section class="hero-split-section" id="home">
+      <div class="hero-split-left">
+        <span class="hero-eyebrow">HAIR ACCESSORIES · JEWELLERY · KIDS' TOYS</span>
+        <h1 class="hero-title">
+          Small treasures.<br>
+          <em>Everyday elegance.</em>
+        </h1>
+        <p class="hero-desc">
+          Artisanal hair clips, delicate jewellery sets, and sensory-rich toys. Discover beautiful, handcrafted little wonders designed to elevate your style and brighten their day.
+        </p>
+        <div class="hero-actions">
+          <a class="hero-btn-primary" href="catalogue.html">
+            Discover the collection &rarr;
+          </a>
+          <a class="hero-btn-secondary" href="catalogue.html?collection=jewellery">
+            Shop Jewellery
+          </a>
+        </div>
+        <div class="hero-subtag">
+          HANDCRAFTED BEAUTY FOR EVERY MOMENT
+        </div>
+      </div>
+
+      <div class="hero-split-right">
+        <img src="assets/hero-flatlay.jpg" alt="Ruha Aura handcrafted hair accessories and toys on draped blush silk" class="hero-split-img" width="1200" height="800" fetchpriority="high">
+        <div class="hero-white-card" aria-hidden="true">
+          <div class="card-quote">
+            <em>The joy is in the</em><br>
+            <em>details</em>
+          </div>
+          <span class="card-brand">THE RUHA AURA EDIT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 4-PILLAR VALUE STRIP (Figma Exact) -->
+    <section class="value-strip-figma" aria-label="Store values">
+      <div class="value-strip-container">
+        <div class="value-strip-item">
+          <span class="value-glyph">&#10047;</span>
+          <span class="value-text">A little play</span>
+        </div>
+        <div class="value-strip-item">
+          <span class="value-glyph">&#10047;</span>
+          <span class="value-text">A pretty detail</span>
+        </div>
+        <div class="value-strip-item">
+          <span class="value-glyph">&#10047;</span>
+          <span class="value-text">An everyday favourite</span>
+        </div>
+        <div class="value-strip-item">
+          <span class="value-glyph">&#10047;</span>
+          <span class="value-text">A thoughtful little gift</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CATEGORY BUBBLES ("A little something for everyone") -->
+    <section class="category-bubbles-section" id="categories">
+      <div class="category-bubbles-header reveal">
+        <span class="eyebrow">EXPLORE OUR COLLECTIONS</span>
+        <h2>A little something for everyone.</h2>
+        <p>Curated treasures crafted to elevate your style and brighten their play.</p>
+      </div>
+
+      <div class="bubbles-wrap reveal">
+        <a href="catalogue.html?collection=jewellery&types=Stud%20Earrings%20Set" class="bubble-item" data-bubble-category="Stud earrings">
+          <div class="bubble-avatar">
+            <img src="https://media.yentto.com/products/ruha_aura/raec-27-1.webp" alt="Stud Earrings Sets" width="120" height="120" loading="lazy">
+          </div>
+          <span class="bubble-label">Stud Earrings</span>
+        </a>
+
+        <a href="catalogue.html?collection=accessories&types=Hair%20Claw%20Clip" class="bubble-item" data-bubble-category="Claw clips">
+          <div class="bubble-avatar">
+            <img src="https://media.yentto.com/products/ruha_aura/raha15-1.webp" alt="Hair Claw Clips collection" width="120" height="120" loading="lazy">
+          </div>
+          <span class="bubble-label">Claw Clips</span>
+        </a>
+
+        <a href="catalogue.html?collection=jewellery" class="bubble-item" data-bubble-category="Drop earrings">
+          <div class="bubble-avatar">
+            <img src="https://media.yentto.com/products/ruha_aura/raec-23-1.webp" alt="Drop & Crystal Earrings collection" width="120" height="120" loading="lazy">
+          </div>
+          <span class="bubble-label">Drop Earrings</span>
+        </a>
+
+        <a href="catalogue.html?collection=accessories&types=Hair%20Clip%20Set" class="bubble-item" data-bubble-category="Hair clips">
+          <div class="bubble-avatar">
+            <img src="https://media.yentto.com/product/01a1b167-8b12-73c3-9795-dfc96b71eaee/cover_1793977692608.jpg" alt="Floral Hair Clip Sets" width="120" height="120" loading="lazy">
+          </div>
+          <span class="bubble-label">Floral Clips</span>
+        </a>
+
+        <a href="catalogue.html?collection=accessories&types=Silk%20Scrunchie" class="bubble-item" data-bubble-category="Scrunchies">
+          <div class="bubble-avatar">
+            <img src="https://media.yentto.com/products/ruha_aura/raha49-1.webp" alt="Satin Scrunchies collection" width="120" height="120" loading="lazy">
+          </div>
+          <span class="bubble-label">Silk Scrunchies</span>
+        </a>
+
+        <a href="catalogue.html?collection=toys" class="bubble-item" data-bubble-category="Kids' toys">
+          <div class="bubble-avatar">
+            <img src="assets/toys/hammer.png" alt="Kids' toys collection" width="120" height="120" loading="lazy">
+          </div>
+          <span class="bubble-label">Kids' Toys</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 6. FEATURED FAVOURITES ("Meet your new little favourites") -->
+    <section class="featured-favourites-section" id="featured-favourites">
+      <div class="favourites-container">
+        <div class="favourites-top reveal">
+          <div>
+            <span class="eyebrow">OUR CURATED PICKS</span>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 4vw, 42px); color: var(--plum); margin: 0;">
+              Meet your new little favourites.
+            </h2>
+          </div>
+
+          <!-- Filter Tabs -->
+          <div class="favourites-tabs" role="tablist" aria-label="Featured category filter">
+            <button type="button" class="fav-tab-btn is-active" data-fav-tab="all" role="tab" aria-selected="true">All the lovely things</button>
+            <button type="button" class="fav-tab-btn" data-fav-tab="jewellery" role="tab" aria-selected="false">Jewellery</button>
+            <button type="button" class="fav-tab-btn" data-fav-tab="accessories" role="tab" aria-selected="false">Hair accessories</button>
+            <button type="button" class="fav-tab-btn" data-fav-tab="toys" role="tab" aria-selected="false">Kids' toys</button>
+            <button type="button" class="fav-tab-btn" data-fav-tab="sets" role="tab" aria-selected="false">Gift sets</button>
+          </div>
+        </div>
+
+        <!-- Dynamic 4-card Grid -->
+        <div class="favourites-grid" id="featured-grid">
+          <!-- Populated by app.js with RuhaShop.card -->
+        </div>
+
+        <div style="text-align: center;">
+          <a href="catalogue.html" class="button button-plum">
+            Explore all favourites <svg><use href="#arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. THE HAIR EDIT BANNER ("Pretty little details. Endless possibilities.") -->
+    <section class="split-editorial" id="hair-edit">
+      <div class="editorial-inner">
+        <div class="editorial-media reveal">
+          <div class="capsule-photo">
+            <img src="assets/hair-edit-model.jpg" alt="Model wearing handcrafted velvet bow hair clip" width="800" height="980" loading="lazy">
+          </div>
+          <div class="stamp-badge stamp-badge-hair" aria-hidden="true">
+            <span>the hair edit</span>
+            <em>touches of<br>lovely</em>
+          </div>
+        </div>
+
+        <div class="editorial-copy reveal">
+          <span class="eyebrow">THE HAIR EDIT</span>
+          <h2>Pretty little details.<br><em>Endless possibilities.</em></h2>
+          <p>
+            From effortless everyday claw clips to statement silk bows that elevate any outfit. Hand-finished with premium finishes, designed to be kind to your hair and delightful to wear from morning until night.
+          </p>
+
+          <ul class="editorial-checklist">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Gentle, snag-free hold for delicate and thick hair alike</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Hand-selected artisanal ribbons, pearls, and acetate</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Feather-light weight engineered for all-day comfort</span>
+            </li>
+          </ul>
+
+          <a href="catalogue.html?collection=accessories" class="button button-plum">
+            Shop the hair edit <svg><use href="#arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7b. THE JEWELLERY EDIT BANNER ("Anti-tarnish drops, statement studs & pearls.") -->
+    <section class="split-editorial" id="jewellery-edit" style="background: #faf4ed; border-top: 1px solid #ebdcd0;">
+      <div class="editorial-inner reverse-layout">
+        <div class="editorial-media reveal">
+          <div class="capsule-photo">
+            <img src="https://media.yentto.com/products/ruha_aura/raec-27-1.webp" alt="Ruha Aura Artisanal Stud and Earring Set" width="800" height="980" loading="lazy" style="object-fit: cover; width: 100%; height: 100%;">
+          </div>
+          <div class="stamp-badge" style="background: var(--plum); color: var(--cream);" aria-hidden="true">
+            <span style="color: rgba(255,255,255,0.85);">the jewellery edit</span>
+            <em style="color: #fff;">timeless artisanal<br>designs</em>
+          </div>
+        </div>
+
+        <div class="editorial-copy reveal">
+          <span class="eyebrow">THE JEWELLERY EDIT</span>
+          <h2>Timeless sparkle.<br><em>Curated for everyday grace.</em></h2>
+          <p>
+            Explore our signature jewellery collection &mdash; from minimalist anti-tarnish studs and delicate pearl wreaths to vibrant festive sets. Hypoallergenic, featherlight, and crafted to shimmer effortlessly from desk to dinner.
+          </p>
+
+          <ul class="editorial-checklist">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Anti-tarnish, skin-friendly &amp; hypoallergenic finishes</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Curated styles: daily studs, floral wreaths, and drop earrings</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Curated in coordinated sets perfect for mindful gifting</span>
+            </li>
+          </ul>
+
+          <a href="catalogue.html?collection=jewellery" class="button button-plum">
+            Explore jewellery collection <svg><use href="#arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. EVERYDAY KEEPSAKES ROW ("Lovely layers, everyday.") -->
+    <section class="keepsakes-section" id="keepsakes">
+      <div class="keepsakes-header reveal">
+        <span class="eyebrow">SIGNATURE CAPSULES</span>
+        <h2>Lovely layers, everyday.</h2>
+        <p>Effortless jewellery, clips, and silk essentials designed to mix, match, and repeat.</p>
+      </div>
+
+      <div class="keepsakes-grid">
+        <a href="catalogue.html?collection=accessories&types=Hair%20Clip%20Set" class="keepsake-card reveal">
+          <div class="keepsake-image">
+            <img src="https://media.yentto.com/product/01a1b167-8b12-73c3-9795-dfc96b71eaee/cover_1793977692608.jpg" alt="Handcrafted Floral Hair Clip Sets" width="600" height="570" loading="lazy">
+          </div>
+          <div class="keepsake-body">
+            <h3>Handcrafted Clip Sets</h3>
+            <p>Artisanal fabric florets and secure snaps for effortless daily hairstyles.</p>
+            <span class="keepsake-link">Explore clip sets <svg><use href="#arrow"/></svg></span>
+          </div>
+        </a>
+
+        <a href="catalogue.html?collection=jewellery" class="keepsake-card reveal">
+          <div class="keepsake-image">
+            <img src="https://media.yentto.com/products/ruha_aura/raec-27-1.webp" alt="Minimalist Stud and Earring Sets" width="600" height="570" loading="lazy">
+          </div>
+          <div class="keepsake-body">
+            <h3>Stud &amp; Earring Sets</h3>
+            <p>Curated capsules of anti-tarnish studs for mix-and-match ear curation.</p>
+            <span class="keepsake-link">Explore jewellery <svg><use href="#arrow"/></svg></span>
+          </div>
+        </a>
+
+        <a href="catalogue.html?collection=accessories&types=Satin%20Scrunchies" class="keepsake-card reveal">
+          <div class="keepsake-image">
+            <img src="https://media.yentto.com/products/ruha_aura/raha49-1.webp" alt="Cloud-Soft Satin Scrunchies" width="600" height="570" loading="lazy">
+          </div>
+          <div class="keepsake-body">
+            <h3>Cloud-Soft Scrunchies</h3>
+            <p>Premium silk-satin elastics designed to glide smoothly and prevent breakage.</p>
+            <span class="keepsake-link">Explore scrunchies <svg><use href="#arrow"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 9. KIDS' PLAY SPOTLIGHT (Compact & Proportional) -->
+    <section class="kids-play-editorial compact-play-section" id="toys">
+      <div class="compact-play-inner">
+        <div class="compact-play-copy reveal">
+          <span class="eyebrow" style="color: #b36b00;">FOR LITTLE HANDS</span>
+          <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(26px, 3.2vw, 36px); color: var(--plum); margin: 6px 0 12px; line-height: 1.2;">
+            Mindful play for little hands.
+          </h2>
+          <p style="font-size: 14px; line-height: 1.6; color: var(--warm-gray); margin-bottom: 20px; max-width: 480px;">
+            Safe, wooden, and sensory-rich toys made to spark curious imagination, motor coordination, and open-ended joy for toddlers.
+          </p>
+          <a href="catalogue.html?collection=toys" class="button button-plum" style="padding: 10px 22px; font-size: 13px;">
+            Explore toys collection <svg><use href="#arrow"/></svg>
+          </a>
+        </div>
+
+        <div class="compact-play-cards reveal">
+          <a href="catalogue.html?collection=toys" class="compact-toy-pill">
+            <img src="assets/toys/hammer.png" alt="5-in-1 Hammer Toy" width="70" height="70" loading="lazy">
+            <div class="compact-toy-info">
+              <span class="compact-toy-title">5-in-1 Hammer Toy</span>
+              <span class="compact-toy-price">₹499 · Sensory Bench</span>
+            </div>
+          </a>
+          <a href="catalogue.html?collection=toys" class="compact-toy-pill">
+            <img src="assets/toys/weather.png" alt="Weather Busy Book" width="70" height="70" loading="lazy">
+            <div class="compact-toy-info">
+              <span class="compact-toy-title">Weather Busy Book</span>
+              <span class="compact-toy-price">₹549 · Montessori Felt</span>
+            </div>
+          </a>
+          <a href="catalogue.html?collection=toys" class="compact-toy-pill">
+            <img src="assets/toys/chess.png" alt="Memory Chess" width="70" height="70" loading="lazy">
+            <div class="compact-toy-info">
+              <span class="compact-toy-title">Memory Chess Game</span>
+              <span class="compact-toy-price">₹499 · Solid Wood</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. THE RUHA AURA STORY ("Joy, in the smallest things.") -->
+    <section class="split-editorial story-section-palette" id="about">
+      <div class="editorial-inner reverse-layout">
+        <div class="editorial-media reveal">
+          <div class="arch-photo">
+            <img src="assets/gift-story.jpg" alt="Ruha Aura story - luxury gift box unboxing" width="800" height="960" loading="lazy">
+          </div>
+          <div class="stamp-badge stamp-badge-story" aria-hidden="true">
+            <span>ruha aura</span>
+            <em>for someone<br>you love</em>
+          </div>
+        </div>
+
+        <div class="editorial-copy reveal">
+          <span class="eyebrow">OUR PHILOSOPHY</span>
+          <h2>Joy, in the<br><em>smallest things.</em></h2>
+          <p>
+            At Ruha Aura, we believe that happiness isn't always found in grand gestures&mdash;it lives in the little rituals. Slipping on a lovely hair bow before heading out. Watching your little one giggle as they hammer a wooden peg.
+          </p>
+          <p>
+            We curate small treasures that bring warmth, beauty, and smiles into your everyday. Designed with intention, finished by hand, and delivered to your doorstep with love.
+          </p>
+
+          <div style="margin-top: 24px;">
+            <a href="catalogue.html" class="button button-plum">
+              Find your little joy <svg><use href="#arrow"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. TRUST PILLARS (3 Columns: "Good to know before you shop") -->
+    <section class="trust-pillars-section" aria-label="Customer assurances">
+      <div class="pillars-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">&#10022;</div>
+          <h4>Hand-finished with care</h4>
+          <p>Every single clip, bow, and sensory toy is inspected by hand for flawless quality and baby-safe edges before packaging.</p>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">&#9992;</div>
+          <h4>Reliable delivery across India</h4>
+          <p>Orders over ₹999 ship free of charge. Fast, fully-tracked shipping to pin codes all across the country.</p>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">&#9742;</div>
+          <h4>Friendly customer care</h4>
+          <p>Need help picking a shade or creating a custom gift hamper? Message us anytime directly on WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. NEWSLETTER BOX ("A little lovely in your inbox.") -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="newsletter-card reveal">
+        <span class="eyebrow" style="color: var(--plum);">A LITTLE JOY IN YOUR INBOX</span>
+        <h3>A little lovely in your inbox.</h3>
+        <p>Be the first to hear about new seasonal drops, quiet restocks, and exclusive subscriber treats.</p>
+        
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" id="newsletter-email" required placeholder="Enter your email address..." aria-label="Email address">
+          <button type="submit">Join the club</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 13. MODERN 4-COLUMN FOOTER -->
+  <footer class="footer-modern">
+    <div class="footer-modern-grid">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-col-brand">
+        <img src="assets/brand-logo.jpeg" alt="Ruha Aura logo" width="56" height="56" style="border-radius:12px; object-fit:cover; box-shadow:0 2px 10px rgba(70,3,41,0.08); display:block; margin-bottom:12px;">
+        <h3>RUHA AURA</h3>
+        <p>
+          Small treasures. Big smiles. Beautiful handcrafted jewellery, hair accessories, and sensory toys crafted for everyday joy.
+        </p>
+        <span style="font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #ba998c;">
+          THE EVERYDAY EDIT
+        </span>
+      </div>
+
+      <!-- Col 2: Explore -->
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="catalogue.html">All Products</a></li>
+          <li><a href="catalogue.html?collection=jewellery">Jewellery Collection</a></li>
+          <li><a href="catalogue.html?collection=accessories">Hair Accessories</a></li>
+          <li><a href="catalogue.html?types=Hair%20Claw%20Clip">Claw Clips</a></li>
+          <li><a href="catalogue.html?types=Stud%20Earrings%20Set">Stud Sets</a></li>
+          <li><a href="catalogue.html?types=Silk%20Scrunchie">Scrunchies</a></li>
+          <li><a href="catalogue.html?collection=toys">Kids' toys</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: A Little Help -->
+      <div class="footer-col">
+        <h4>A Little Help</h4>
+        <ul>
+          <li><a href="catalogue.html?saved=1">Saved Favourites</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="admin.html">Admin Dashboard</a></li>
+          <li><a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Support</a></li>
+          <li><a href="catalogue.html">Shipping &amp; Orders</a></li>
+          <li><a href="catalogue.html">Care Guidelines</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Customer Care & Payments -->
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <p style="font-size: 13px; color: #ba998c; margin-bottom: 12px; line-height: 1.5;">
+          Have questions or need assistance with your order? We are here to help.
+        </p>
+        <p style="font-size: 13px; color: #fff; margin-bottom: 12px;">
+          Email: <a href="mailto:care@ruhaaura.com" style="color:#f5eee6; text-decoration:underline;">care@ruhaaura.com</a><br>
+          WhatsApp: <span style="color:#f5eee6;">+91 98765 43210</span>
+        </p>
+        
+        <div class="footer-payment-badges">
+          <span class="payment-badge">UPI</span>
+          <span class="payment-badge">Google Pay</span>
+          <span class="payment-badge">Paytm</span>
+          <span class="payment-badge">COD</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-modern-bottom">
+      <span>&copy; <span id="year">2026</span> Ruha Aura. All rights reserved.</span>
+      <span>Handcrafted with love in India &middot; Free delivery on orders over ₹999</span>
+      <a href="#home" style="color: #e2b89a; text-decoration: none;">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title">
+    <button class="dialog-close" aria-label="Close photograph"><svg><use href="#close"/></svg></button>
+    <div class="lightbox-stage">
+      <img id="lightbox-image" src="https://media.yentto.com/product/01a1b167-8b12-73c3-9795-dfc96b71eaee/cover_1793977692608.jpg" alt="Ruha Aura Handcrafted Clips">
+      <button class="lightbox-prev" aria-label="Previous photograph">&larr;</button>
+      <button class="lightbox-next" aria-label="Next photograph">&rarr;</button>
+    </div>
+    <div class="lightbox-footer">
+      <div>
+        <span id="lightbox-count"></span>
+        <h2 id="lightbox-title">Large Bow Clip</h2>
+      </div>
+      <button class="lightbox-done underlined">Keep exploring <svg><use href="#right"/></svg></button>
+    </div>
+  </dialog>
+</body>
+</html>

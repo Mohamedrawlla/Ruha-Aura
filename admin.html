@@ -1,0 +1,3631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin & Operations · Ruha Aura</title>
+  <link rel="icon" href="assets/brand-logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="shop.css">
+  <style>
+    :root {
+      --admin-bg: #f8f6f5;
+      --admin-sidebar-bg: #faf7f5;
+      --admin-surface: #ffffff;
+      --admin-border: #ede4e1;
+      --admin-border-subtle: #f0eae7;
+      --admin-plum: #4a1525;
+      --admin-plum-dark: #380d1a;
+      --admin-plum-highlight: #5e2638;
+      --admin-plum-soft: #f4eaec;
+      --admin-text: #2c2523;
+      --admin-muted: #7d7270;
+      --admin-success: #1b7a4e;
+      --admin-warning: #b45309;
+      --admin-danger: #b91c1c;
+      --admin-radius: 12px;
+      --admin-card-radius: 10px;
+      --admin-shadow: 0 1px 3px rgba(74, 21, 37, 0.04), 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body.admin-body {
+      background: var(--admin-bg);
+      color: var(--admin-text);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+    }
+
+    /* ========================================================
+       SIDEBAR NAVIGATION (LEFT - 260px)
+       ======================================================== */
+    .admin-sidebar {
+      width: 260px;
+      background: var(--admin-sidebar-bg);
+      border-right: 1px solid var(--admin-border);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      padding: 24px 18px 20px;
+      overflow-y: auto;
+    }
+
+    .admin-sidebar-top {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .sidebar-brand {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding: 4px 6px;
+    }
+
+    .sidebar-brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--admin-plum);
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+    }
+
+    .sidebar-brand-sub {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--admin-muted);
+    }
+
+    .sidebar-section-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9c8e8b;
+      margin: 0 0 10px 8px;
+    }
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .admin-tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+      padding: 11px 14px;
+      border: none;
+      background: transparent;
+      color: #554946;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+
+    .admin-tab-btn svg {
+      flex-shrink: 0;
+      color: #8c7e7b;
+      transition: color 0.15s ease;
+    }
+
+    .admin-tab-btn:hover {
+      background: #f2eae7;
+      color: var(--admin-plum);
+    }
+
+    .admin-tab-btn:hover svg {
+      color: var(--admin-plum);
+    }
+
+    .admin-tab-btn.is-active {
+      background: var(--admin-plum-soft);
+      color: var(--admin-plum);
+      font-weight: 700;
+    }
+
+    .admin-tab-btn.is-active svg {
+      color: var(--admin-plum);
+    }
+
+    .admin-tab-badge {
+      margin-left: auto;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      background: #ffffff;
+      color: var(--admin-plum);
+      border: 1px solid #ebdcd5;
+    }
+
+    /* Sidebar Bottom Widgets */
+    .admin-sidebar-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-top: 18px;
+    }
+
+    .sidebar-settings-card {
+      background: #f4ece9;
+      border: 1px solid #e8dbd6;
+      border-radius: 10px;
+      padding: 14px 14px 12px;
+    }
+
+    .sidebar-settings-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #3d2c27;
+      margin: 0 0 4px;
+    }
+
+    .sidebar-settings-text {
+      font-size: 0.74rem;
+      color: #7a6a66;
+      line-height: 1.35;
+      margin: 0 0 10px;
+    }
+
+    .sidebar-settings-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      color: var(--admin-plum);
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      text-decoration: none;
+    }
+
+    .sidebar-settings-btn:hover {
+      text-decoration: underline;
+    }
+
+    .sidebar-profile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px solid var(--admin-border);
+    }
+
+    .sidebar-profile-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #e8dbd6;
+      color: var(--admin-plum);
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .sidebar-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #332826;
+      line-height: 1.2;
+    }
+
+    .sidebar-role {
+      font-size: 0.72rem;
+      color: var(--admin-muted);
+    }
+
+    .sidebar-signout-btn {
+      background: none;
+      border: none;
+      color: #8c7e7b;
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+
+    .sidebar-signout-btn:hover {
+      background: #eee3df;
+      color: var(--admin-plum);
+    }
+
+    /* ========================================================
+       MAIN APP WRAPPER & TOPBAR (RIGHT)
+       ======================================================== */
+    .admin-app-container {
+      margin-left: 260px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      min-height: 100vh;
+    }
+
+    /* Top Breadcrumbs & Utility Bar */
+    .admin-topbar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--admin-border);
+      padding: 14px 36px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 90;
+    }
+
+    .admin-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      color: #8c7e7b;
+    }
+
+    .admin-breadcrumb-active {
+      color: #2c2523;
+      font-weight: 600;
+    }
+
+    .admin-topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .topbar-db-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #1b7a4e;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .topbar-db-badge:hover {
+      background: #f4fbf7;
+    }
+
+    .topbar-db-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #1b7a4e;
+    }
+
+    .btn-preview-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #332826;
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: 7px;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+
+    .btn-preview-store:hover {
+      background: #faf6f5;
+      border-color: #d8c9c4;
+    }
+
+    /* Main Content Container */
+    .admin-main {
+      padding: 28px 36px 60px;
+      max-width: 1400px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Common Button Styles */
+    .btn-admin {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+      font-family: inherit;
+    }
+
+    .btn-admin-plum {
+      background: var(--admin-plum);
+      color: #ffffff;
+    }
+
+    .btn-admin-plum:hover {
+      background: var(--admin-plum-dark);
+    }
+
+    .btn-admin-outline {
+      background: #ffffff;
+      color: #3d2f2b;
+      border-color: var(--admin-border);
+    }
+
+    .btn-admin-outline:hover {
+      background: #faf6f5;
+      border-color: #d8c9c4;
+    }
+
+    .btn-admin-success {
+      background: #ebf7f0;
+      color: var(--admin-success);
+      border-color: #bbf0d0;
+    }
+
+    .btn-admin-danger {
+      background: #fef2f2;
+      color: var(--admin-danger);
+      border-color: #fecaca;
+    }
+
+    /* ========================================================
+       PAGE HEADERS & TIME PILLS
+       ======================================================== */
+    .page-header-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 16px;
+    }
+
+    .page-title {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: #211918;
+      margin: 0 0 5px;
+      letter-spacing: -0.015em;
+    }
+
+    .page-subtitle {
+      font-size: 0.88rem;
+      color: #7a6e6b;
+      margin: 0;
+    }
+
+    .page-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Filter Strip Under Header */
+    .analytics-control-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .analytics-time-pills {
+      display: inline-flex;
+      background: #efe7e4;
+      border-radius: 8px;
+      padding: 3px;
+    }
+
+    .time-pill-btn {
+      border: none;
+      background: transparent;
+      padding: 7px 18px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #6d605c;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s;
+      font-family: inherit;
+    }
+
+    .time-pill-btn.is-active {
+      background: #ffffff;
+      color: #211918;
+      font-weight: 700;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    .analytics-channel-select {
+      padding: 8px 14px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #2c2523;
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: inherit;
+      outline: none;
+    }
+
+    .reporting-currency-note {
+      font-size: 0.78rem;
+      color: #9c8e8b;
+      margin-left: auto;
+    }
+
+    /* ========================================================
+       4-COLUMN STAT CARDS (EXACT MATCH TO MOCKUPS)
+       ======================================================== */
+    .admin-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .stat-card-clean {
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: var(--admin-card-radius);
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 120px;
+      position: relative;
+      box-shadow: var(--admin-shadow);
+    }
+
+    .stat-card-clean.card-plum-highlight {
+      background: var(--admin-plum-highlight);
+      border-color: var(--admin-plum-highlight);
+      color: #ffffff;
+    }
+
+    .stat-card-clean.card-plum-highlight .stat-label {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .stat-card-clean.card-plum-highlight .stat-value {
+      color: #ffffff;
+    }
+
+    .stat-card-clean.card-plum-highlight .stat-sub {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .stat-card-clean.card-plum-highlight .stat-top-icon {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .stat-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .stat-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #736561;
+    }
+
+    .stat-top-icon {
+      color: #a49692;
+      display: flex;
+      align-items: center;
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #211918;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .stat-sub {
+      font-size: 0.76rem;
+      color: #8c7e7b;
+    }
+
+    /* ========================================================
+       ANALYTICS 2-COLUMN SECTION (REVENUE & CHANNELS)
+       ======================================================== */
+    .analytics-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .dashboard-panel-card {
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: var(--admin-card-radius);
+      padding: 22px 24px;
+      box-shadow: var(--admin-shadow);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .panel-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .panel-card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #241c1a;
+      margin: 0 0 3px;
+    }
+
+    .panel-card-sub {
+      font-size: 0.78rem;
+      color: #8c7e7b;
+      margin: 0;
+    }
+
+    .panel-pill-badge {
+      background: #efe7e4;
+      color: #554844;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+
+    /* Revenue Progress Bar Mockup Style */
+    .revenue-overview-amount-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .revenue-overview-label {
+      font-size: 0.82rem;
+      color: #7a6d69;
+    }
+
+    .revenue-overview-number {
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #211918;
+      letter-spacing: -0.02em;
+    }
+
+    .revenue-progress-track {
+      width: 100%;
+      height: 14px;
+      background: #ede4e1;
+      border-radius: 7px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .revenue-progress-fill {
+      width: 100%;
+      height: 100%;
+      background: var(--admin-plum-highlight);
+      border-radius: 7px;
+    }
+
+    .revenue-bounds-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: #9c8e8b;
+      margin-bottom: 20px;
+    }
+
+    .revenue-trend-note-box {
+      background: #faf6f5;
+      border: 1px solid #ebdcd6;
+      border-radius: 8px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .revenue-trend-note-box svg {
+      color: #8c7d79;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .trend-note-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #332825;
+      margin: 0 0 3px;
+    }
+
+    .trend-note-text {
+      font-size: 0.75rem;
+      color: #7a6e6b;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    /* Sales by Channel List (Image 1 Style) */
+    .channel-list-clean {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .channel-list-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f2eae7;
+    }
+
+    .channel-list-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .channel-item-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .channel-icon-wrap {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #554946;
+    }
+
+    .channel-name-clean {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #2b2321;
+    }
+
+    .channel-item-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .channel-tag-clean {
+      font-size: 0.74rem;
+      color: #8c7e7b;
+    }
+
+    .channel-dash {
+      color: #b5a8a4;
+    }
+
+    .channel-footnote {
+      font-size: 0.72rem;
+      color: #9c8e8b;
+      margin-top: 18px;
+      line-height: 1.4;
+    }
+
+    /* Bottom Row: Dispatch at a Glance + Keep Things Moving */
+    .analytics-bottom-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .dispatch-split-row {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin: 10px 0 24px;
+    }
+
+    .dispatch-big-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #211918;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .dispatch-big-sub {
+      font-size: 0.78rem;
+      color: #8c7e7b;
+      margin-top: 4px;
+    }
+
+    .dispatch-divider-v {
+      width: 1px;
+      height: 54px;
+      background: var(--admin-border);
+    }
+
+    .dispatch-channel-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .dispatch-meta-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9c8e8b;
+    }
+
+    .dispatch-meta-val {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #211918;
+    }
+
+    .dispatch-meta-sub {
+      font-size: 0.76rem;
+      color: #8c7e7b;
+    }
+
+    .btn-link-dispatch {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--admin-plum);
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn-link-dispatch:hover {
+      text-decoration: underline;
+    }
+
+    /* Keep Things Moving Cards */
+    .keep-moving-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .keep-moving-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      background: #faf6f5;
+      border: 1px solid #ebdcd6;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .keep-moving-item:hover {
+      background: #f4eae7;
+      border-color: #dfccc5;
+    }
+
+    .keep-moving-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .keep-moving-icon-box {
+      width: 32px;
+      height: 32px;
+      background: #ffffff;
+      border: 1px solid #ebdcd6;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--admin-plum);
+    }
+
+    .keep-moving-title {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #2b2321;
+      margin: 0 0 2px;
+    }
+
+    .keep-moving-sub {
+      font-size: 0.75rem;
+      color: #8c7e7b;
+      margin: 0;
+    }
+
+    .keep-moving-arrow {
+      color: #8c7e7b;
+      font-size: 0.95rem;
+    }
+
+    .dashboard-footer-caption {
+      font-size: 0.75rem;
+      color: #9c8e8b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 0 0;
+    }
+
+    /* ========================================================
+       CATALOGUE & INVENTORY VIEW (EXACT MATCH TO IMAGE 2)
+       ======================================================== */
+    .catalog-search-toolbar {
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: 10px 10px 0 0;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      border-bottom: none;
+    }
+
+    .catalog-toolbar-filters {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .catalog-search-wrap {
+      position: relative;
+      flex: 1;
+      max-width: 480px;
+    }
+
+    .catalog-search-wrap input {
+      width: 100%;
+      padding: 8px 12px 8px 34px;
+      border: 1px solid var(--admin-border);
+      border-radius: 7px;
+      font-size: 0.84rem;
+      font-family: inherit;
+      background: #ffffff;
+      color: #211918;
+      outline: none;
+    }
+
+    .catalog-search-wrap input:focus {
+      border-color: var(--admin-plum);
+    }
+
+    .catalog-search-wrap svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9c8e8b;
+      pointer-events: none;
+    }
+
+    .catalog-filter-dropdown {
+      padding: 8px 12px;
+      border: 1px solid var(--admin-border);
+      border-radius: 7px;
+      font-size: 0.82rem;
+      font-family: inherit;
+      font-weight: 500;
+      color: #4a3e3b;
+      background: #ffffff;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .catalog-sub-header {
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--admin-border);
+    }
+
+    .catalog-sub-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .catalog-sub-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #211918;
+      margin: 0;
+    }
+
+    .catalog-count-pill {
+      background: #f4eae7;
+      color: #554844;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .btn-print-barcodes-clean {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #2c2220;
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    .btn-print-barcodes-clean:hover {
+      background: #faf6f5;
+    }
+
+    /* Product Table */
+    .clean-table-container {
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      overflow-x: auto;
+      margin-bottom: 24px;
+    }
+
+    .clean-product-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+
+    .clean-product-table th {
+      background: #faf7f5;
+      padding: 10px 16px;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #8c7e7b;
+      font-weight: 700;
+      border-bottom: 1px solid var(--admin-border);
+      white-space: nowrap;
+    }
+
+    .clean-product-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--admin-border-subtle);
+      vertical-align: middle;
+      color: #2c2523;
+    }
+
+    .clean-product-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .clean-product-table tr:hover td {
+      background: #fdfaf9;
+    }
+
+    .table-prod-cell {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .table-prod-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: #fdf5f2;
+      border: 1px solid #ebdcd6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .table-prod-icon-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .table-prod-name {
+      font-weight: 700;
+      color: #211918;
+      display: block;
+      margin-bottom: 2px;
+      text-decoration: none;
+    }
+
+    .table-prod-sku-tag {
+      font-size: 0.74rem;
+      color: #8c7e7b;
+      font-family: monospace;
+    }
+
+    .stock-pill-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      font-size: 0.82rem;
+    }
+
+    .stock-dot-green {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #16a34a;
+    }
+
+    .stock-dot-orange {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #d97706;
+    }
+
+    .stock-dot-red {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #dc2626;
+    }
+
+    .barcode-col-clean {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .barcode-mini-svg {
+      max-width: 70px;
+      height: 20px;
+    }
+
+    .badge-pill-soft {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 5px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: #f2eae7;
+      color: #63504b;
+    }
+
+    .badge-pill-bestseller {
+      background: #fdf3e7;
+      color: #92540e;
+    }
+
+    .badge-pill-toprated {
+      background: #f2eae7;
+      color: #554844;
+    }
+
+    .swatches-dots-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .swatch-circle-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .table-row-actions-clean {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .btn-row-action {
+      background: none;
+      border: none;
+      color: #736561;
+      font-size: 0.75rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: all 0.15s;
+    }
+
+    .btn-row-action:hover {
+      background: #f2eae7;
+      color: var(--admin-plum);
+    }
+
+    .btn-row-action-delete {
+      color: #b91c1c;
+      font-weight: 700;
+    }
+
+    .btn-row-action-delete:hover {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    /* Batch Actions Toolbar */
+    .catalog-batch-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff1f2;
+      border: 1px solid #fecdd3;
+      padding: 10px 18px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+    .batch-strip-info {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #9f1239;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .batch-strip-count {
+      background: #e11d48;
+      color: #ffffff;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+    .batch-strip-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-batch-delete {
+      background: #e11d48;
+      color: #ffffff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s;
+    }
+    .btn-batch-delete:hover {
+      background: #be123c;
+    }
+    .btn-batch-cancel {
+      background: none;
+      border: 1px solid #fda4af;
+      color: #9f1239;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .btn-batch-cancel:hover {
+      background: #ffe4e6;
+    }
+
+    .btn-text-regen {
+      background: #fbf0f3;
+      border: 1px solid #ebdcd6;
+      color: var(--admin-plum);
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+      padding: 3px 8px;
+      border-radius: 4px;
+      transition: all 0.15s;
+    }
+    .btn-text-regen:hover {
+      background: #f5dce3;
+    }
+
+    /* Bottom Catalog Alert Cards */
+    .catalog-bottom-alerts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .alert-card-green {
+      background: #f2f9f5;
+      border: 1px solid #d4ebd9;
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .alert-green-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid #d4ebd9;
+      color: #1b7a4e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .alert-green-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #134e2c;
+      margin: 0 0 2px;
+    }
+
+    .alert-green-sub {
+      font-size: 0.78rem;
+      color: #276749;
+      margin: 0;
+    }
+
+    .alert-card-warm {
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .alert-warm-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .alert-warm-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #faf4f2;
+      border: 1px solid #ebdcd5;
+      color: var(--admin-plum);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .alert-warm-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #2c2523;
+      margin: 0 0 2px;
+    }
+
+    .alert-warm-sub {
+      font-size: 0.78rem;
+      color: #8c7e7b;
+      margin: 0;
+    }
+
+    .alert-warm-arrow {
+      color: #8c7e7b;
+    }
+
+    /* Views visibility */
+    .admin-view {
+      display: none;
+    }
+
+    .admin-view.is-active {
+      display: block;
+    }
+
+    /* Existing POS, Barcode & Multi-channel CSS preserved */
+    .pos-scan-bar {
+      display: flex;
+      gap: 12px;
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: var(--admin-radius);
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      align-items: center;
+      box-shadow: var(--admin-shadow);
+    }
+    .pos-scan-input-wrap {
+      position: relative;
+      flex: 1;
+    }
+    .pos-scan-input-wrap svg {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      color: var(--admin-muted);
+    }
+    .pos-scan-input {
+      width: 100%;
+      padding: 13px 16px 13px 44px;
+      border: 2px solid var(--admin-border);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+    .pos-scan-input:focus {
+      border-color: var(--admin-plum);
+    }
+    .pos-mode-strip {
+      background: #faf6f5;
+      border: 1px solid #ebdcd6;
+      border-radius: 8px;
+      padding: 10px 18px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pos-mode-toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+    .pos-mode-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--admin-plum);
+    }
+    .pos-status-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--admin-success);
+      box-shadow: 0 0 6px var(--admin-success);
+    }
+    .pos-workspace {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 24px;
+    }
+    .pos-cart-card, .pos-checkout-card {
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: var(--admin-radius);
+      padding: 24px;
+      box-shadow: var(--admin-shadow);
+    }
+    .pos-cart-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .pos-cart-table th {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--admin-border);
+      text-align: left;
+      font-size: 0.72rem;
+      color: var(--admin-muted);
+      text-transform: uppercase;
+    }
+    .pos-cart-table td {
+      padding: 12px;
+      border-bottom: 1px solid var(--admin-border);
+      vertical-align: middle;
+    }
+    .pos-summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+    .pos-summary-table td {
+      padding: 8px 0;
+      border-bottom: 1px solid #f2eae7;
+    }
+    .pos-grand-total td {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--admin-plum);
+      padding-top: 14px;
+      border-bottom: none;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .form-group label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #4a3e3b;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      padding: 8px 12px;
+      border: 1px solid var(--admin-border);
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-family: inherit;
+      outline: none;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .barcode-controls-card {
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: var(--admin-radius);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      box-shadow: var(--admin-shadow);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .label-sheet-container {
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: var(--admin-radius);
+      padding: 28px;
+      box-shadow: var(--admin-shadow);
+    }
+    .label-grid {
+      display: grid;
+      gap: 16px;
+    }
+    .label-grid-a4-24 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .label-grid-a4-30 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .label-grid-thermal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .label-grid-thermal .label-sticker-item {
+      width: 320px;
+      max-width: 100%;
+    }
+    .label-sticker-item {
+      border: 1px dashed #cbb6af;
+      border-radius: 8px;
+      padding: 16px 16px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #ffffff;
+      min-height: 195px;
+      box-shadow: 0 2px 8px rgba(74, 21, 37, 0.04);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .label-sticker-item:hover {
+      border-color: var(--admin-plum);
+      box-shadow: 0 4px 14px rgba(74, 21, 37, 0.08);
+    }
+    .label-brand-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--admin-plum);
+    }
+    .label-product-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #2c2523;
+      margin: 4px 0 3px;
+      line-height: 1.25;
+      max-height: 2.5em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .label-price-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--admin-plum);
+    }
+    .label-barcode-svg {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0 2px;
+    }
+    .label-barcode-svg svg,
+    svg.code128-barcode-svg {
+      width: 100% !important;
+      max-width: 270px !important;
+      height: 68px !important;
+      min-height: 60px !important;
+      display: block !important;
+      margin: 0 auto !important;
+      overflow: visible !important;
+    }
+    .label-barcode-svg svg rect,
+    svg.code128-barcode-svg rect {
+      fill: #000000 !important;
+    }
+    .label-barcode-svg svg text,
+    svg.code128-barcode-svg text {
+      fill: #000000 !important;
+      font-family: monospace, 'Courier New', Courier !important;
+      font-size: 13px !important;
+      font-weight: 800 !important;
+      letter-spacing: 3px !important;
+    }
+    .barcode-mini-svg svg {
+      width: 70px !important;
+      height: 20px !important;
+      display: block !important;
+    }
+
+    .api-integration-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+    .api-card {
+      background: #ffffff;
+      border: 1px solid var(--admin-border);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: var(--admin-shadow);
+    }
+    .api-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .api-card-status {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+    .status-ready {
+      background: #ebf7f0;
+      color: var(--admin-success);
+    }
+
+    /* Modal Backdrop */
+    .admin-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(30, 10, 16, 0.45);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .admin-modal-backdrop.is-open {
+      display: flex;
+    }
+    .admin-modal {
+      background: #ffffff;
+      border-radius: var(--admin-radius);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+      width: 100%;
+      max-width: 600px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border: 1px solid var(--admin-border);
+    }
+    .admin-modal-header {
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--admin-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .admin-modal-close {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--admin-muted);
+      cursor: pointer;
+    }
+    .admin-modal-body {
+      padding: 24px;
+    }
+    .admin-modal-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--admin-border);
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      background: #faf6f5;
+    }
+
+    /* Photo Upload Zone */
+    .photo-upload-zone {
+      border: 2px dashed #d9c8c3;
+      border-radius: 10px;
+      padding: 22px 16px;
+      text-align: center;
+      background: #faf6f5;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      position: relative;
+    }
+    .photo-upload-zone input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    .photo-preview-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid var(--admin-border);
+    }
+    .photo-preview-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      object-fit: cover;
+      background: #f7f1ef;
+    }
+
+    /* Amazon-Style Multi-Photo Gallery Manager */
+    .photo-count-pill {
+      font-size: 0.72rem;
+      background: var(--admin-plum);
+      color: #fff;
+      padding: 3px 9px;
+      border-radius: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .photo-gallery-card {
+      margin-top: 12px;
+      background: #faf7f5;
+      border: 1px solid var(--admin-border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .photo-gallery-layout {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    @media (max-width: 640px) {
+      .photo-gallery-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    .photo-main-preview-box {
+      background: #ffffff;
+      border: 2px solid var(--admin-border);
+      border-radius: 8px;
+      padding: 8px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+    .photo-main-preview-box img {
+      width: 100%;
+      height: 130px;
+      object-fit: contain;
+      border-radius: 6px;
+      background: #fff;
+    }
+    .photo-main-tag {
+      margin-top: 6px;
+      font-size: 0.7rem;
+      color: #2e7d32;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .photo-strip-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .photo-thumbnails-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
+      gap: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 3px;
+    }
+    .photo-thumb-card {
+      position: relative;
+      border: 2px solid #e2d7cf;
+      border-radius: 6px;
+      background: #ffffff;
+      cursor: pointer;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s ease;
+    }
+    .photo-thumb-card:hover {
+      border-color: var(--admin-plum);
+      box-shadow: 0 2px 8px rgba(74,21,37,0.12);
+    }
+    .photo-thumb-card.is-main {
+      border-color: #2e7d32;
+      box-shadow: 0 0 0 1px #2e7d32;
+    }
+    .photo-thumb-card.is-active {
+      border-color: var(--admin-plum);
+      box-shadow: 0 0 0 2px var(--admin-plum);
+    }
+    .photo-thumb-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .photo-thumb-badge {
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      background: #2e7d32;
+      color: #ffffff;
+      font-size: 0.58rem;
+      font-weight: 800;
+      padding: 1px 4px;
+      border-radius: 3px;
+      letter-spacing: 0.3px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .photo-thumb-del {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      background: rgba(0,0,0,0.65);
+      color: #ffffff;
+      border: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      cursor: pointer;
+      line-height: 1;
+      transition: background 0.15s;
+      z-index: 2;
+    }
+    .photo-thumb-del:hover {
+      background: #dc2626;
+    }
+    .photo-thumb-actions {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(36,28,26,0.85);
+      padding: 3px 2px;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.15s;
+      z-index: 2;
+    }
+    .photo-thumb-card:hover .photo-thumb-actions {
+      opacity: 1;
+    }
+    .photo-thumb-btn {
+      background: #ffffff;
+      color: #222222;
+      border: none;
+      border-radius: 3px;
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 2px 4px;
+      cursor: pointer;
+    }
+    .photo-thumb-btn:hover {
+      background: #fbf7f0;
+      color: var(--admin-plum);
+    }
+    .photo-url-add-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .badge-photos-count {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 0.68rem;
+      color: #4338ca;
+      background: #eef2ff;
+      border: 1px solid #c7d2fe;
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-top: 3px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .badge-photos-count:hover {
+      background: #e0e7ff;
+    }
+
+    .admin-toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #241c1a;
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      z-index: 2000;
+      display: none;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    .admin-toast.show {
+      display: block;
+      animation: toastFadeIn 0.25s ease;
+    }
+    @keyframes toastFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .admin-gatekeeper-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(35, 15, 22, 0.7);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .admin-gatekeeper-card {
+      background: #ffffff;
+      border-radius: 14px;
+      max-width: 420px;
+      width: 100%;
+      padding: 36px 30px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      border: 1px solid var(--admin-border);
+    }
+    .admin-gatekeeper-logo {
+      width: 76px;
+      height: 76px;
+      border-radius: 16px;
+      margin: 0 auto 16px;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 4px 18px rgba(74, 21, 37, 0.15);
+      border: 1px solid rgba(74, 21, 37, 0.15);
+    }
+
+    /* Print styles */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 8mm 6mm;
+      }
+      .admin-sidebar, 
+      .admin-topbar, 
+      .admin-toast, 
+      #product-modal, 
+      .catalog-search-toolbar, 
+      .pos-scan-bar, 
+      .barcode-controls-card,
+      #view-analytics,
+      #view-catalog,
+      #view-pos,
+      #view-multichannel {
+        display: none !important;
+      }
+      .admin-app-container {
+        margin-left: 0 !important;
+        padding: 0 !important;
+      }
+      .admin-main {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: none !important;
+      }
+      body.printing-invoice .admin-main {
+        display: none !important;
+      }
+      body.printing-invoice #invoice-modal {
+        display: block !important;
+        position: static !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+      body.printing-invoice .admin-modal {
+        box-shadow: none !important;
+        border: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      body.printing-invoice .admin-modal-header,
+      body.printing-invoice .admin-modal-footer {
+        display: none !important;
+      }
+
+      /* Sticker & Label Sheet Print Layout */
+      body.printing-labels #view-barcodes {
+        display: block !important;
+      }
+      body.printing-labels .label-sheet-container {
+        padding: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+      }
+      body.printing-labels .label-grid {
+        gap: 3mm 4mm !important;
+      }
+      body.printing-labels .label-grid-a4-24 {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+      body.printing-labels .label-grid-a4-30 {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 2mm 3mm !important;
+      }
+      body.printing-labels .label-grid-thermal {
+        display: block !important;
+      }
+      body.printing-labels .label-grid-thermal .label-sticker-item {
+        width: 50mm !important;
+        height: 30mm !important;
+        margin: 0 auto !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        border: none !important;
+      }
+      body.printing-labels .label-sticker-item {
+        border: 1px dashed #bbb !important;
+        border-radius: 4px !important;
+        padding: 6px 8px !important;
+        box-shadow: none !important;
+        background: #ffffff !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        min-height: auto !important;
+      }
+      body.printing-labels .label-brand-name {
+        font-size: 8.5pt !important;
+        color: #000000 !important;
+      }
+      body.printing-labels .label-product-name {
+        font-size: 7.5pt !important;
+        color: #000000 !important;
+        max-height: 2.3em !important;
+        overflow: hidden !important;
+      }
+      body.printing-labels .label-price-tag {
+        font-size: 8pt !important;
+        color: #000000 !important;
+      }
+      body.printing-labels .label-barcode-svg {
+        margin: 3px 0 1px !important;
+      }
+      body.printing-labels .label-barcode-svg svg,
+      body.printing-labels svg.code128-barcode-svg {
+        width: 100% !important;
+        max-width: 220px !important;
+        height: 48px !important;
+      }
+      body.printing-labels .label-barcode-svg svg rect,
+      body.printing-labels svg.code128-barcode-svg rect {
+        fill: #000000 !important;
+      }
+      body.printing-labels .label-barcode-svg svg text,
+      body.printing-labels svg.code128-barcode-svg text {
+        fill: #000000 !important;
+        font-size: 10pt !important;
+      }
+    }
+  </style>
+</head>
+<body class="admin-body">
+
+  <!-- ========================================================
+       1. VERTICAL SIDEBAR NAVIGATION (LEFT - EXACT MOCKUP)
+       ======================================================== -->
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-top">
+      <!-- Brand Logo & Subtitle -->
+      <a href="admin.html" class="sidebar-brand" style="display:flex; flex-direction:row; align-items:center; gap:12px; padding:6px 6px; text-decoration:none;">
+        <img src="assets/brand-logo.jpeg" alt="Ruha Aura" class="sidebar-brand-img" style="width:46px; height:46px; border-radius:10px; object-fit:cover; border:1px solid rgba(74,21,37,0.12); box-shadow:0 2px 8px rgba(74,21,37,0.06); flex-shrink:0;">
+        <div style="display:flex; flex-direction:column; gap:2px;">
+          <span class="sidebar-brand-name" style="font-size:1.42rem; line-height:1.05;">Ruha Aura</span>
+          <span class="sidebar-brand-sub" style="font-size:0.62rem; letter-spacing:0.12em;">ADMIN / OPERATIONS</span>
+        </div>
+      </a>
+
+      <!-- Navigation Section -->
+      <div>
+        <div class="sidebar-section-label">WORKSPACE</div>
+        <nav class="sidebar-nav" aria-label="Dashboard views">
+          <button type="button" class="admin-tab-btn is-active" data-view="analytics" id="tab-analytics-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            <span>Sales Analytics</span>
+          </button>
+          <button type="button" class="admin-tab-btn" data-view="catalog" id="tab-catalog-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+            <span>Catalogue &amp; Inventory</span>
+          </button>
+          <button type="button" class="admin-tab-btn" data-view="pos" id="tab-pos-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/></svg>
+            <span>Scan &amp; Bill / Dispatch POS</span>
+            <span class="admin-tab-badge" id="pos-cart-badge" style="display:none;">0</span>
+          </button>
+          <button type="button" class="admin-tab-btn" data-view="barcodes" id="tab-barcodes-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="5" x2="3" y2="19"/><line x1="7" y1="5" x2="7" y2="19"/><line x1="11" y1="5" x2="11" y2="19"/><line x1="15" y1="5" x2="15" y2="19"/><line x1="19" y1="5" x2="19" y2="19"/><line x1="21" y1="5" x2="21" y2="19"/></svg>
+            <span>Barcode Labels &amp; Stickers</span>
+          </button>
+          <button type="button" class="admin-tab-btn" data-view="multichannel" id="tab-multichannel-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            <span>Multi-Channel Sales Hub</span>
+            <span class="admin-tab-badge" id="orders-count-badge">0</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Sidebar Bottom: Admin Profile -->
+    <div class="admin-sidebar-bottom">
+
+      <div class="sidebar-profile">
+        <div class="sidebar-profile-info">
+          <img src="assets/brand-logo.jpeg" alt="RA" class="sidebar-avatar" style="object-fit:cover; border-radius:50%; width:34px; height:34px; border:1px solid rgba(74,21,37,0.15); display:block;">
+          <div>
+            <div class="sidebar-name">Administrator</div>
+            <div class="sidebar-role">Store Owner</div>
+          </div>
+        </div>
+        <button type="button" class="sidebar-signout-btn" id="admin-signout-btn" title="Sign out">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================
+       2. MAIN CONTENT AREA (RIGHT)
+       ======================================================== -->
+  <div class="admin-app-container">
+
+    <!-- Top Breadcrumb & Status Bar (Exact Mockup) -->
+    <header class="admin-topbar">
+      <div class="admin-breadcrumb">
+        <span>Administration</span>
+        <span>/</span>
+        <span class="admin-breadcrumb-active" id="admin-breadcrumb-view">Overview</span>
+      </div>
+
+      <div class="admin-topbar-actions">
+        <!-- Cloud DB Status Pill -->
+        <button type="button" class="topbar-db-badge" id="db-status-btn" title="Supabase Cloud Database Settings">
+          <span class="topbar-db-dot" id="db-status-dot"></span>
+          <span id="db-status-text">Cloud DB connected</span>
+        </button>
+
+        <!-- Preview Storefront -->
+        <a href="index.html" class="btn-preview-store" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span>Preview storefront</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="admin-main">
+
+      <!-- ========================================================
+           VIEW 0: SALES ANALYTICS (EXACT MATCH TO IMAGE 1)
+           ======================================================== -->
+      <div id="view-analytics" class="admin-view is-active">
+        <!-- Page Title & Export Action -->
+        <div class="page-header-row">
+          <div>
+            <h1 class="page-title">Sales Analytics</h1>
+            <p class="page-subtitle">Your sales, orders and dispatches. One clear view.</p>
+          </div>
+          <button type="button" class="btn-admin btn-admin-plum" id="analytics-export-csv-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Export CSV</span>
+          </button>
+        </div>
+
+        <!-- Filter Strip: Time Pills + Channel Dropdown -->
+        <div class="analytics-control-strip">
+          <div class="analytics-time-pills" id="analytics-time-range">
+            <button type="button" class="time-pill-btn" data-range="today">Today</button>
+            <button type="button" class="time-pill-btn" data-range="week">7 Days</button>
+            <button type="button" class="time-pill-btn is-active" data-range="month">30 Days</button>
+            <button type="button" class="time-pill-btn" data-range="all">All Time</button>
+          </div>
+
+          <select id="analytics-channel-filter" class="analytics-channel-select">
+            <option value="all">All channels (Omni)</option>
+            <option value="Instagram DM">Instagram DM</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Website">Website Storefront</option>
+            <option value="Amazon">Amazon India</option>
+            <option value="Meesho">Meesho</option>
+            <option value="In-Store">In-Store / Direct</option>
+          </select>
+
+          <span class="reporting-currency-note">Reporting currency: INR (₹)</span>
+        </div>
+
+        <!-- 4 Stat Metric Cards (Image 1 Mockup) -->
+        <section class="admin-stats-grid">
+          <!-- Card 1: Gross Sales (Plum Highlight) -->
+          <div class="stat-card-clean card-plum-highlight">
+            <div class="stat-card-header">
+              <span class="stat-label">Gross sales</span>
+              <span class="stat-top-icon" style="font-size:0.9rem; font-weight:700;">₹</span>
+            </div>
+            <div>
+              <div class="stat-value" id="kpi-total-revenue">₹5,959</div>
+              <div class="stat-sub">Total in the selected period</div>
+            </div>
+          </div>
+
+          <!-- Card 2: Total Orders -->
+          <div class="stat-card-clean">
+            <div class="stat-card-header">
+              <span class="stat-label">Total orders</span>
+              <span class="stat-top-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </span>
+            </div>
+            <div>
+              <div class="stat-value" id="kpi-total-orders">8</div>
+              <div class="stat-sub">Across all connected channels</div>
+            </div>
+          </div>
+
+          <!-- Card 3: Average Order Value -->
+          <div class="stat-card-clean">
+            <div class="stat-card-header">
+              <span class="stat-label">Average order value</span>
+              <span class="stat-top-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </span>
+            </div>
+            <div>
+              <div class="stat-value" id="kpi-aov">₹745</div>
+              <div class="stat-sub">Average cart spend</div>
+            </div>
+          </div>
+
+          <!-- Card 4: Units Dispatched -->
+          <div class="stat-card-clean">
+            <div class="stat-card-header">
+              <span class="stat-label">Units dispatched</span>
+              <span class="stat-top-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </span>
+            </div>
+            <div>
+              <div class="stat-value" id="kpi-units-sold">21</div>
+              <div class="stat-sub" id="kpi-top-channel-badge">Top: Instagram (IG/DM)</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Middle Section: Revenue Overview (Left) + Sales by Channel (Right) -->
+        <div class="analytics-two-col">
+          <!-- Revenue Overview Card -->
+          <div class="dashboard-panel-card">
+            <div class="panel-card-header">
+              <div>
+                <h3 class="panel-card-title">Revenue overview</h3>
+                <p class="panel-card-sub" id="chart-timeline-sub">Selected period · All channels</p>
+              </div>
+              <span class="panel-pill-badge" id="overview-period-badge">30 DAYS</span>
+            </div>
+
+            <div class="revenue-overview-amount-row">
+              <span class="revenue-overview-label">Total gross sales</span>
+              <span class="revenue-overview-number" id="overview-total-amount">₹5,959</span>
+            </div>
+
+            <div class="revenue-progress-track">
+              <div class="revenue-progress-fill"></div>
+            </div>
+
+            <div class="revenue-bounds-row">
+              <span>₹0</span>
+              <span id="overview-period-total-sub">30-day total · ₹5,959</span>
+            </div>
+
+            <div class="revenue-trend-note-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              <div>
+                <div class="trend-note-title">Daily trend recorded</div>
+                <div class="trend-note-text" id="trend-note-text">Omnichannel sales trajectory is active. Real-time synchronisation with Supabase Cloud Database is running.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sales by Channel Card -->
+          <div class="dashboard-panel-card">
+            <div class="panel-card-header">
+              <div>
+                <h3 class="panel-card-title">Sales by channel</h3>
+              </div>
+              <span class="panel-card-sub" id="channels-active-count">4 active</span>
+            </div>
+
+            <div class="channel-list-clean" id="channel-breakdown-list">
+              <!-- Dynamically populated or exact mockup items -->
+              <div class="channel-list-item">
+                <div class="channel-item-left">
+                  <div class="channel-icon-wrap">📸</div>
+                  <span class="channel-name-clean">Instagram DM</span>
+                </div>
+                <div class="channel-item-right">
+                  <span class="channel-tag-clean">Social</span>
+                  <span class="channel-dash">—</span>
+                </div>
+              </div>
+              <div class="channel-list-item">
+                <div class="channel-item-left">
+                  <div class="channel-icon-wrap">💬</div>
+                  <span class="channel-name-clean">WhatsApp</span>
+                </div>
+                <div class="channel-item-right">
+                  <span class="channel-tag-clean">Direct</span>
+                  <span class="channel-dash">—</span>
+                </div>
+              </div>
+              <div class="channel-list-item">
+                <div class="channel-item-left">
+                  <div class="channel-icon-wrap">🛒</div>
+                  <span class="channel-name-clean">Amazon</span>
+                </div>
+                <div class="channel-item-right">
+                  <span class="channel-tag-clean">India</span>
+                  <span class="channel-dash">—</span>
+                </div>
+              </div>
+              <div class="channel-list-item">
+                <div class="channel-item-left">
+                  <div class="channel-icon-wrap">🌐</div>
+                  <span class="channel-name-clean">Website</span>
+                </div>
+                <div class="channel-item-right">
+                  <span class="channel-tag-clean">Online</span>
+                  <span class="channel-dash">—</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="channel-footnote">
+              Channel amounts are calculated live across all orders recorded in the cloud database.
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section: Dispatch at a Glance (Left) + Keep Things Moving (Right) -->
+        <div class="analytics-bottom-two-col">
+          <!-- Dispatch at a glance -->
+          <div class="dashboard-panel-card">
+            <div class="panel-card-header">
+              <h3 class="panel-card-title">Dispatch at a glance</h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#8c7e7b;"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+
+            <div class="dispatch-split-row">
+              <div>
+                <div class="dispatch-big-number" id="dispatch-units-num">21</div>
+                <div class="dispatch-big-sub">units dispatched</div>
+              </div>
+
+              <div class="dispatch-divider-v"></div>
+
+              <div class="dispatch-channel-meta">
+                <span class="dispatch-meta-label">TOP DISPATCH CHANNEL</span>
+                <span class="dispatch-meta-val" id="dispatch-top-channel-name">Instagram (IG/DM)</span>
+                <span class="dispatch-meta-sub">Manage the next order in Dispatch POS.</span>
+              </div>
+            </div>
+
+            <div>
+              <a href="#" class="btn-link-dispatch" id="link-to-dispatch-pos">
+                Open Scan &amp; Bill / Dispatch POS →
+              </a>
+            </div>
+          </div>
+
+          <!-- Keep things moving -->
+          <div class="dashboard-panel-card">
+            <div class="panel-card-header">
+              <h3 class="panel-card-title">Keep things moving</h3>
+            </div>
+
+            <div class="keep-moving-list">
+              <div class="keep-moving-item" id="link-manage-catalogue">
+                <div class="keep-moving-left">
+                  <div class="keep-moving-icon-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+                  </div>
+                  <div>
+                    <div class="keep-moving-title">Manage catalogue</div>
+                    <div class="keep-moving-sub">Products, prices &amp; stock</div>
+                  </div>
+                </div>
+                <span class="keep-moving-arrow">↗</span>
+              </div>
+
+              <div class="keep-moving-item" id="link-print-barcodes">
+                <div class="keep-moving-left">
+                  <div class="keep-moving-icon-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="5" x2="3" y2="19"/><line x1="7" y1="5" x2="7" y2="19"/><line x1="11" y1="5" x2="11" y2="19"/><line x1="15" y1="5" x2="15" y2="19"/><line x1="19" y1="5" x2="19" y2="19"/><line x1="21" y1="5" x2="21" y2="19"/></svg>
+                  </div>
+                  <div>
+                    <div class="keep-moving-title">Print barcode labels</div>
+                    <div class="keep-moving-sub">Labels &amp; stickers for your products</div>
+                  </div>
+                </div>
+                <span class="keep-moving-arrow">↗</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-footer-caption">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>Omnichannel reporting · Instagram DM, WhatsApp, Website, Meesho and Amazon India</span>
+        </div>
+      </div>
+
+      <!-- ========================================================
+           VIEW 1: CATALOGUE & INVENTORY (EXACT MATCH TO IMAGE 2)
+           ======================================================== -->
+      <div id="view-catalog" class="admin-view" hidden>
+        <!-- Page Title & Header Actions -->
+        <div class="page-header-row">
+          <div>
+            <h1 class="page-title">Catalogue &amp; Inventory</h1>
+            <p class="page-subtitle">Every product, price and stock level, beautifully organised.</p>
+          </div>
+          <div class="page-header-actions">
+            <button type="button" class="btn-admin btn-admin-outline" id="import-catalog-csv-btn" onclick="window.openImportProductsModalDirect ? window.openImportProductsModalDirect() : (function(){ var m = document.getElementById('import-products-modal'); if (m) { m.style.setProperty('display', 'flex', 'important'); m.classList.add('is-open'); } })()" title="Bulk Import Products from CSV or Excel">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <span>Import products (CSV)</span>
+            </button>
+            <input type="file" id="catalog-csv-file-input" accept=".csv,.tsv,.json" style="display:none;">
+
+            <button type="button" class="btn-admin btn-admin-outline" id="export-catalog-btn" title="Download updated catalogue-data.js">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Export catalogue</span>
+            </button>
+            <button type="button" class="btn-admin btn-admin-plum" id="add-product-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span>Add new product</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4 Stat Metric Cards (Image 2 Mockup) -->
+        <section class="admin-stats-grid">
+          <!-- Total products -->
+          <div class="stat-card-clean">
+            <div class="stat-card-header">
+              <span class="stat-label">Total products</span>
+              <span class="stat-top-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+              </span>
+            </div>
+            <div>
+              <div class="stat-value" id="stat-total-products">9</div>
+              <div class="stat-sub">Kids' toys collection</div>
+            </div>
+          </div>
+
+          <!-- Inventory units -->
+          <div class="stat-card-clean">
+            <div class="stat-card-header">
+              <span class="stat-label">Inventory units</span>
+              <span class="stat-top-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg>
+              </span>
+            </div>
+            <div>
+              <div class="stat-value" id="stat-total-stock">360</div>
+              <div class="stat-sub">Total pieces available</div>
+            </div>
+          </div>
+
+          <!-- Catalogue retail value (Plum Highlight) -->
+          <div class="stat-card-clean card-plum-highlight">
+            <div class="stat-card-header">
+              <span class="stat-label">Catalogue retail value</span>
+              <span class="stat-top-icon" style="font-size:0.9rem; font-weight:700;">₹</span>
+            </div>
+            <div>
+              <div class="stat-value" id="stat-inventory-value">₹1,52,570</div>
+              <div class="stat-sub">Based on current pricing</div>
+            </div>
+          </div>
+
+          <!-- Low / out of stock -->
+          <div class="stat-card-clean">
+            <div class="stat-card-header">
+              <span class="stat-label">Low / out of stock</span>
+              <span class="stat-top-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              </span>
+            </div>
+            <div>
+              <div class="stat-value" id="stat-low-stock">0</div>
+              <div class="stat-sub">Items with fewer than 5 units</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Search & Filter Controls (Image 2 Mockup) -->
+        <div class="catalog-search-toolbar">
+          <div class="catalog-toolbar-filters">
+            <div class="catalog-search-wrap">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="admin-search" placeholder="Search by name, SKU or tag...">
+            </div>
+
+            <select id="filter-category" class="catalog-filter-dropdown">
+              <option value="all">All categories</option>
+              <option value="Hair accessories">Hair accessories</option>
+              <option value="Floral">Floral</option>
+              <option value="Statement">Statement</option>
+              <option value="Everyday">Everyday</option>
+              <option value="Kids’ toys">Kids’ toys</option>
+              <option value="Activity toys">Activity toys</option>
+              <option value="Busy books">Busy books</option>
+              <option value="Puzzles">Puzzles</option>
+              <option value="Wooden games">Wooden games</option>
+            </select>
+
+            <select id="filter-badge" class="catalog-filter-dropdown">
+              <option value="all">All badges</option>
+              <option value="Bestseller">Bestseller</option>
+              <option value="New Arrival">New Arrival</option>
+              <option value="Editor’s Pick">Editor’s Pick</option>
+              <option value="Trending">Trending</option>
+              <option value="Top Rated">Top Rated</option>
+              <option value="Sensory Play">Sensory Play</option>
+            </select>
+
+            <select id="filter-stock" class="catalog-filter-dropdown">
+              <option value="all">All stock levels</option>
+              <option value="in">In Stock (>5)</option>
+              <option value="low">Low Stock (1-5)</option>
+              <option value="out">Out of Stock (0)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products Section Header Strip with Print Barcodes Button -->
+        <div class="catalog-sub-header">
+          <div class="catalog-sub-title-wrap">
+            <h2 class="catalog-sub-title">Products</h2>
+            <span class="catalog-count-pill" id="filtered-count">9 total</span>
+          </div>
+
+          <button type="button" class="btn-print-barcodes-clean" id="print-all-barcodes-shortcut">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <span>Print barcodes</span>
+          </button>
+        </div>
+
+        <!-- Batch Actions Toolbar (Appears when products are checked) -->
+        <div class="catalog-batch-strip" id="batch-actions-strip" style="display: none;">
+          <div class="batch-strip-info">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span><strong id="batch-selected-count">0</strong> products selected</span>
+          </div>
+          <div class="batch-strip-actions">
+            <button type="button" class="btn-batch-delete" id="batch-delete-btn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+              Delete Selected (<span id="batch-delete-num">0</span>)
+            </button>
+            <button type="button" class="btn-batch-cancel" id="batch-deselect-btn">
+              Deselect All
+            </button>
+          </div>
+        </div>
+
+        <!-- Modern Clean Product Table (Image 2 Mockup) -->
+        <div class="clean-table-container">
+          <table class="clean-product-table">
+            <thead>
+              <tr>
+                <th style="width: 36px;"><input type="checkbox" id="select-all-products" aria-label="Select all products"></th>
+                <th>PRODUCT</th>
+                <th>CATEGORY / TYPE</th>
+                <th>PRICE (₹)</th>
+                <th>STOCK</th>
+                <th>BARCODE / SKU</th>
+                <th>BADGE</th>
+                <th>COLOURS</th>
+                <th style="text-align: right;">ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody id="admin-product-tbody">
+              <!-- Dynamically populated by admin.js -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Bottom Alerts (Image 2 Mockup) -->
+        <div class="catalog-bottom-alerts">
+          <!-- Green Alert Card: No stock alerts -->
+          <div class="alert-card-green">
+            <div class="alert-green-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div>
+              <div class="alert-green-title">No stock alerts to review</div>
+              <div class="alert-green-sub" id="alert-stock-sub">0 products are low or out of stock. The alert threshold is fewer than 5 units.</div>
+            </div>
+          </div>
+
+          <!-- Warm Alert Card: Room for next collection -->
+          <div class="alert-card-warm">
+            <div class="alert-warm-left">
+              <div class="alert-warm-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 10 6-10 6-10-6Z"/><path d="m2 12 10 6 10-6"/><path d="m2 17 10 6 10-6"/></svg>
+              </div>
+              <div>
+                <div class="alert-warm-title">Room for your next collection</div>
+                <div class="alert-warm-sub">5 collections today. Add products and categories as your range grows.</div>
+              </div>
+            </div>
+            <span class="alert-warm-arrow">↗</span>
+          </div>
+        </div>
+
+        <div class="dashboard-footer-caption">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>Retail value reflects current catalogue prices, not realised sales.</span>
+        </div>
+      </div>
+
+<!-- VIEW 2: SCAN & BILL / DISPATCH POS -->
+    <div id="view-pos" class="admin-view" hidden>
+      <!-- Top Scanner Bar -->
+      <div class="pos-scan-bar">
+        <div class="pos-scan-input-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="5" x2="3" y2="19"/><line x1="7" y1="5" x2="7" y2="19"/><line x1="11" y1="5" x2="11" y2="19"/><line x1="15" y1="5" x2="15" y2="19"/><line x1="19" y1="5" x2="19" y2="19"/><line x1="21" y1="5" x2="21" y2="19"/></svg>
+          <input type="text" id="pos-barcode-input" class="pos-scan-input" placeholder="Scan barcode with scanner gun or type SKU (e.g. RA-001)..." autocomplete="off" autofocus>
+        </div>
+        <button type="button" class="btn-admin btn-admin-plum" id="pos-scan-bill-btn" style="white-space:nowrap; padding: 13px 20px; font-weight:700;" title="Scan/Enter barcode and immediately generate bill">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          Instant Bill
+        </button>
+        <button type="button" class="btn-admin btn-admin-outline" id="pos-camera-scan-btn" style="white-space:nowrap; padding: 13px 18px; font-weight:600; display:inline-flex; align-items:center; gap:8px;" title="Scan barcode with Camera">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          Camera Scan
+        </button>
+        <select id="pos-quick-add-select" class="admin-select" style="min-width: 200px; padding: 13px 14px;">
+          <option value="">Or select product...</option>
+        </select>
+        <button type="button" class="btn-admin btn-admin-outline" id="pos-clear-cart-btn">
+          Clear
+        </button>
+      </div>
+
+      <!-- Auto-Bill on Scan Active Banner & Toggle -->
+      <div class="pos-mode-strip">
+        <label class="pos-mode-toggle" title="When checked, scanning any barcode immediately generates the Tax Invoice and Shipping Slip!">
+          <input type="checkbox" id="pos-auto-bill-toggle" checked>
+          <span class="pos-mode-text">⚡ <strong>Auto-Bill on Scan:</strong> Instantly generate bill &amp; courier shipping slip upon scanning</span>
+        </label>
+        <div class="pos-mode-status">
+          <span class="pos-status-pulse"></span>
+          <span id="pos-mode-status-text">Scanner Gun Ready: Point &amp; Scan Barcode</span>
+        </div>
+      </div>
+
+      <!-- POS Grid: Cart Table (Left) + Billing Summary (Right) -->
+      <div class="pos-workspace">
+        <!-- Left: Scanned Items -->
+        <div class="pos-cart-card">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 16px;">
+            <h3 style="margin:0; font-family:'Playfair Display', serif; font-size:1.2rem; color:var(--admin-plum);">
+              Current Scanned Items
+            </h3>
+            <span id="pos-item-count-text" style="font-size:0.82rem; color:var(--admin-muted); font-weight:600;">0 items</span>
+          </div>
+
+          <table class="pos-cart-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>SKU</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="pos-cart-tbody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+          <div id="pos-cart-empty" style="text-align:center; padding: 50px 20px; color:var(--admin-muted);">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="margin-bottom:10px; color:#cbb5b0;"><line x1="3" y1="5" x2="3" y2="19"/><line x1="7" y1="5" x2="7" y2="19"/><line x1="11" y1="5" x2="11" y2="19"/><line x1="15" y1="5" x2="15" y2="19"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
+            <p style="margin:0; font-weight:600;">Ready to scan</p>
+            <p style="margin:4px 0 0; font-size:0.8rem;">Aim barcode gun at product sticker or type SKU above.</p>
+          </div>
+        </div>
+
+        <!-- Right: Customer, Channel & Bill Summary -->
+        <div class="pos-checkout-card">
+          <h3 style="margin:0 0 16px; font-family:'Playfair Display', serif; font-size:1.2rem; color:var(--admin-plum);">
+            Dispatch &amp; Billing
+          </h3>
+
+          <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:18px;">
+            <div class="form-group">
+              <label for="pos-channel">Sales Channel</label>
+              <select id="pos-channel" class="admin-select" style="font-weight:600;">
+                <option value="Instagram DM">📸 Instagram Sale (DM / Story)</option>
+                <option value="WhatsApp">💬 WhatsApp Direct</option>
+                <option value="Website">🌐 Website Online Order</option>
+                <option value="Meesho">📦 Meesho Dispatch</option>
+                <option value="Amazon">🛒 Amazon India Order</option>
+                <option value="In-Store">🛍 In-Store / Pop-up Sale</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pos-cust-name">Customer Name</label>
+                <input type="text" id="pos-cust-name" placeholder="e.g. Priya Sharma">
+              </div>
+              <div class="form-group">
+                <label for="pos-cust-phone">Phone / WhatsApp</label>
+                <input type="tel" id="pos-cust-phone" placeholder="98765 43210">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="pos-cust-address">Shipping Address</label>
+              <textarea id="pos-cust-address" rows="2" placeholder="House/Flat No, Street, Landmark..."></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pos-cust-city">City / State</label>
+                <input type="text" id="pos-cust-city" placeholder="Bengaluru, Karnataka">
+              </div>
+              <div class="form-group">
+                <label for="pos-cust-pincode">Pincode</label>
+                <input type="text" id="pos-cust-pincode" placeholder="560001">
+              </div>
+            </div>
+          </div>
+
+          <!-- Billing Summary Table -->
+          <table class="pos-summary-table">
+            <tr>
+              <td>Subtotal</td>
+              <td style="text-align:right; font-weight:600;" id="pos-subtotal-val">₹0</td>
+            </tr>
+            <tr>
+              <td>GST Tax (5% Incl.)</td>
+              <td style="text-align:right; color:var(--admin-muted);" id="pos-tax-val">₹0</td>
+            </tr>
+            <tr>
+              <td>Shipping / Delivery</td>
+              <td style="text-align:right;">
+                <input type="number" id="pos-shipping-val" value="0" min="0" step="10" style="width:70px; text-align:right; padding:3px 6px; border:1px solid var(--admin-border); border-radius:4px;">
+              </td>
+            </tr>
+            <tr>
+              <td>Discount (₹)</td>
+              <td style="text-align:right;">
+                <input type="number" id="pos-discount-val" value="0" min="0" step="10" style="width:70px; text-align:right; padding:3px 6px; border:1px solid var(--admin-border); border-radius:4px;">
+              </td>
+            </tr>
+            <tr class="pos-grand-total">
+              <td>Total Amount</td>
+              <td style="text-align:right;" id="pos-grand-total-val">₹0</td>
+            </tr>
+          </table>
+
+          <button type="button" class="btn-admin btn-admin-plum" id="pos-generate-bill-btn" style="width:100%; justify-content:center; padding:14px; font-size:0.95rem; margin-top:14px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            Generate Tax Invoice &amp; Shipping Slip
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 3: BARCODE LABELS & STICKERS -->
+    <div id="view-barcodes" class="admin-view" hidden>
+      <div class="barcode-controls-card">
+        <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+          <div>
+            <label style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--admin-muted); display:block; margin-bottom:4px;">Select Product</label>
+            <select id="label-product-select" class="admin-select" style="min-width:240px;">
+              <option value="all">★ All Products in Catalogue</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--admin-muted); display:block; margin-bottom:4px;">Copies Per Item</label>
+            <input type="number" id="label-copies-input" value="1" min="1" max="100" style="width:80px; padding:9px 12px; border:1px solid var(--admin-border); border-radius:8px;">
+          </div>
+          <div>
+            <label style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--admin-muted); display:block; margin-bottom:4px;">Sheet Layout</label>
+            <select id="label-format-select" class="admin-select">
+              <option value="a4-24">A4 Sheet (24 Stickers - 3 x 8)</option>
+              <option value="a4-30">A4 Sheet (30 Stickers - 3 x 10)</option>
+              <option value="thermal">Individual Thermal Labels (50mm × 30mm)</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="button" class="btn-admin btn-admin-plum" id="print-labels-btn" style="padding:11px 22px;">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Labels Now
+        </button>
+      </div>
+
+      <!-- Live Printable Label Sheet -->
+      <div class="label-sheet-container" id="printable-labels">
+        <div class="label-grid label-grid-a4-24" id="label-grid-container">
+          <!-- Dynamically populated by admin.js with Barcode Stickers -->
+        </div>
+      </div>
+    </div>
+
+    <!-- VIEW 4: MULTI-CHANNEL SALES HUB -->
+    <div id="view-multichannel" class="admin-view" hidden>
+      <!-- Channel Revenue KPIs -->
+      <section class="admin-stats-grid">
+        <div class="admin-stat-card">
+          <span class="admin-stat-label">Total Multi-Channel Sales</span>
+          <span class="admin-stat-value" id="stat-channel-total">₹0</span>
+          <span class="admin-stat-sub" id="stat-order-count">0 recorded orders</span>
+        </div>
+        <div class="admin-stat-card">
+          <span class="admin-stat-label">📸 Instagram / WhatsApp</span>
+          <span class="admin-stat-value" id="stat-channel-insta" style="color:#be185d;">₹0</span>
+          <span class="admin-stat-sub">Social commerce orders</span>
+        </div>
+        <div class="admin-stat-card">
+          <span class="admin-stat-label">📦 Meesho Orders</span>
+          <span class="admin-stat-value" id="stat-channel-meesho" style="color:#b45309;">₹0</span>
+          <span class="admin-stat-sub">Supplier portal dispatch</span>
+        </div>
+        <div class="admin-stat-card">
+          <span class="admin-stat-label">🛒 Amazon &amp; Website</span>
+          <span class="admin-stat-value" id="stat-channel-marketplaces" style="color:#0369a1;">₹0</span>
+          <span class="admin-stat-sub">Amazon SP-API &amp; Storefront</span>
+        </div>
+      </section>
+
+      <!-- Multi-Channel Actions Toolbar -->
+      <div class="admin-toolbar">
+        <div class="admin-filters">
+          <div class="admin-search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="order-search" placeholder="Search orders by ID, customer, phone...">
+          </div>
+          <select id="filter-order-channel" class="admin-select">
+            <option value="all">All Channels</option>
+            <option value="Instagram DM">Instagram DM</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Website">Website Storefront</option>
+            <option value="Meesho">Meesho</option>
+            <option value="Amazon">Amazon</option>
+            <option value="In-Store">In-Store / Direct</option>
+          </select>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+          <button type="button" class="btn-admin btn-admin-plum" id="record-sale-shortcut">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Record New Sale
+          </button>
+          <button type="button" class="btn-admin btn-admin-outline" id="import-marketplace-csv-btn">
+            Import CSV Report
+          </button>
+        </div>
+      </div>
+
+      <!-- Orders Table -->
+      <div class="admin-table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Order ID &amp; Date</th>
+              <th>Channel</th>
+              <th>Customer</th>
+              <th>Items</th>
+              <th>Total Amount</th>
+              <th>Status</th>
+              <th style="text-align: right;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="admin-orders-tbody">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Channel API Status & Configuration Cards -->
+      <div style="margin-top: 36px;">
+        <h3 style="font-family:'Playfair Display', serif; font-size:1.3rem; color:var(--admin-plum); margin:0 0 6px;">
+          Marketplace API Connectors
+        </h3>
+        <p style="font-size:0.85rem; color:var(--admin-muted); margin:0 0 18px;">
+          Centralize stock &amp; orders across your marketplace seller accounts. Adding or editing catalogue items updates your online storefront immediately.
+        </p>
+
+        <div class="api-integration-grid">
+          <!-- Amazon SP-API Card -->
+          <div class="api-card">
+            <div class="api-card-header">
+              <span style="font-weight:700; font-size:1rem; display:flex; align-items:center; gap:8px;">
+                🛒 Amazon SP-API
+              </span>
+              <span class="api-card-status status-ready">Bridge Ready</span>
+            </div>
+            <p style="font-size:0.82rem; color:var(--admin-muted); margin:0; line-height:1.5;">
+              Connect your Amazon Seller Central Developer credentials (LWA App ID &amp; AWS IAM) to automatically pull orders and sync inventory.
+            </p>
+            <div style="font-size:0.75rem; color:var(--admin-muted); background:#faf6f5; padding:8px 10px; border-radius:6px; font-family:monospace;">
+              Endpoint: /api/v1/integrations/amazon/sync
+            </div>
+          </div>
+
+          <!-- Meesho Supplier API Card -->
+          <div class="api-card">
+            <div class="api-card-header">
+              <span style="font-weight:700; font-size:1rem; display:flex; align-items:center; gap:8px;">
+                📦 Meesho Supplier API
+              </span>
+              <span class="api-card-status status-ready">Bridge Ready</span>
+            </div>
+            <p style="font-size:0.82rem; color:var(--admin-muted); margin:0; line-height:1.5;">
+              Connect Meesho Supplier panel order dispatch webhooks. Once scanned in Ruha Aura dispatch, tracking numbers update automatically.
+            </p>
+            <div style="font-size:0.75rem; color:var(--admin-muted); background:#faf6f5; padding:8px 10px; border-radius:6px; font-family:monospace;">
+              Endpoint: /api/v1/integrations/meesho/orders
+            </div>
+          </div>
+
+          <!-- Instagram & WhatsApp Commerce Card -->
+          <div class="api-card">
+            <div class="api-card-header">
+              <span style="font-weight:700; font-size:1rem; display:flex; align-items:center; gap:8px;">
+                📸 Instagram Commerce
+              </span>
+              <span class="api-card-status status-ready">Active &middot; Ready</span>
+            </div>
+            <p style="font-size:0.82rem; color:var(--admin-muted); margin:0; line-height:1.5;">
+              Log DM sales directly in the "Scan &amp; Bill" station. Automatically formats GST bills and shipping slips formatted for your courier bag.
+            </p>
+            <div style="font-size:0.75rem; color:var(--admin-muted); background:#faf6f5; padding:8px 10px; border-radius:6px; font-family:monospace;">
+              Channel Tag: INSTAGRAM_DM
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  </div><!-- .admin-app-container -->
+
+  <!-- Edit / Add Product Modal (Enhanced with Drag-and-Drop Photo Uploader & SKU) -->
+  <div class="admin-modal-backdrop" id="product-modal">
+    <div class="admin-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="admin-modal-header">
+        <h3 id="modal-title">Edit Product</h3>
+        <button type="button" class="admin-modal-close" id="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <form id="product-form">
+        <div class="admin-modal-body">
+          <input type="hidden" id="form-mode" value="edit">
+
+          <div class="form-row">
+            <div class="form-group">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <label for="form-id" style="margin-bottom:0;">Product ID / Code</label>
+                <button type="button" id="btn-regenerate-id" class="btn-text-regen" title="Generate next sequential ID for selected category">🔄 Auto-Generate</button>
+              </div>
+              <input type="text" id="form-id" required pattern="^[A-Za-z0-9-_]+$" placeholder="e.g. RA-TY-01" style="font-family:monospace; font-weight:700;">
+              <span class="form-help" id="form-id-help">Unique ID (e.g. RA-TY-01 for toys)</span>
+            </div>
+            <div class="form-group">
+              <label for="form-sku">SKU Code (For Barcode)</label>
+              <input type="text" id="form-sku" required placeholder="e.g. RA-TY-01" style="font-family:monospace; font-weight:700; text-transform:uppercase;">
+              <span class="form-help">Scannable Code-128 barcode value</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="form-name">Product Name</label>
+            <input type="text" id="form-name" required placeholder="e.g. Wooden Activity Toy">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <label for="form-category" style="margin-bottom:0;">Category</label>
+                <button type="button" id="btn-toggle-custom-category" class="btn-text-regen">+ New Category</button>
+              </div>
+              <select id="form-category" required>
+                <option value="Kids' toys" selected>Kids' toys (RA-TY)</option>
+                <option value="Hair clips">Hair clips (RA-CL)</option>
+                <option value="Scrunchies">Scrunchies (RA-SC)</option>
+                <option value="Bow collection">Bow collection (RA-BW)</option>
+                <option value="Sets & Combos">Sets & Combos (RA-ST)</option>
+                <option value="__new__">+ Add new category...</option>
+              </select>
+              <div id="custom-category-box" style="display:none; margin-top:8px;">
+                <div style="display:flex; gap:6px;">
+                  <input type="text" id="custom-category-input" placeholder="Category name (e.g. Puzzles, Baby)..." style="font-size:0.82rem; padding:7px 10px; flex:1;">
+                  <input type="text" id="custom-category-code" placeholder="Code (e.g. PU)" maxlength="3" style="width:75px; font-size:0.82rem; padding:7px 8px; text-transform:uppercase; font-family:monospace; font-weight:700;" title="Optional 2-letter SKU prefix">
+                  <button type="button" id="btn-add-custom-category" class="btn-admin btn-admin-plum" style="padding:7px 14px; font-size:0.8rem; white-space:nowrap;">Add</button>
+                </div>
+                <span style="font-size:0.72rem; color:var(--admin-muted); display:block; margin-top:3px;">Assigns prefix &amp; starts next ID from 01</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="form-type">Type / Subtitle</label>
+              <input type="text" id="form-type" placeholder="e.g. Educational Wood Game">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-price">Price (₹ INR)</label>
+              <input type="number" id="form-price" min="0" step="1" required placeholder="399">
+            </div>
+            <div class="form-group">
+              <label for="form-stock">Stock Quantity</label>
+              <input type="number" id="form-stock" min="0" step="1" required placeholder="15">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-badge">Promotional Badge</label>
+              <select id="form-badge">
+                <option value="">(None)</option>
+                <option value="New Arrival">New Arrival</option>
+                <option value="Best Seller">Best Seller</option>
+                <option value="Top Rated">Top Rated</option>
+                <option value="Limited Edition">Limited Edition</option>
+                <option value="Festive Edit">Festive Edit</option>
+                <option value="Handcrafted">Handcrafted</option>
+                <option value="Montessori">Montessori</option>
+                <option value="Sensory Play">Sensory Play</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="form-swatches">Color Swatches (Hex codes)</label>
+              <input type="text" id="form-swatches" placeholder="#4a1525, #faf6f5, #d4af37">
+            </div>
+          </div>
+
+          <!-- Amazon-Style Multi-Photo Gallery Uploader & Manager -->
+          <div class="form-group">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+              <label style="margin:0; font-weight:600;">Product Photographs &amp; Multi-Angle Gallery</label>
+              <span class="photo-count-pill" id="photo-count-pill">1 photo</span>
+            </div>
+            <p style="font-size:0.75rem; color:var(--admin-muted); margin:0 0 8px;">Upload multiple photos like Amazon (front, angles, details, packaging). First photo is the main cover.</p>
+            
+            <div class="photo-upload-zone" id="photo-upload-dropzone">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:var(--admin-plum);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <div style="font-size:0.88rem; font-weight:600; color:var(--admin-plum);">
+                Drop multiple photos here or click to browse
+              </div>
+              <span style="font-size:0.75rem; color:var(--admin-muted);">Select 1 or more images (JPG, PNG, WEBP)</span>
+              <input type="file" id="form-file-input" accept="image/*" multiple>
+            </div>
+
+            <!-- Multi-Photo Gallery Strip & Manager -->
+            <div class="photo-gallery-card" id="photo-gallery-manager">
+              <div class="photo-gallery-layout">
+                <!-- Large Active Preview -->
+                <div class="photo-main-preview-box">
+                  <img id="form-preview-thumb" src="assets/toys/hammer.png" alt="Main Photo">
+                  <div class="photo-main-tag" id="photo-main-tag">★ Main Cover</div>
+                </div>
+
+                <!-- Thumbnails Strip & Controls -->
+                <div class="photo-strip-container">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <span style="font-size:0.75rem; font-weight:700; color:#333;">Gallery Thumbnails:</span>
+                    <span style="font-size:0.7rem; color:var(--admin-muted);">Click to preview · Hover to Set Main or Delete</span>
+                  </div>
+
+                  <!-- Dynamic Thumbnails Container -->
+                  <div class="photo-thumbnails-grid" id="photo-thumbnails-grid">
+                    <!-- Populated dynamically by admin.js -->
+                  </div>
+
+                  <!-- Quick Add by URL or Path -->
+                  <div class="photo-url-add-row">
+                    <input type="text" id="form-add-photo-url" placeholder="Or paste photo URL / path (e.g. assets/toys/hammer-detail.png)" style="font-size:0.78rem; padding:6px 10px; flex:1;">
+                    <button type="button" class="btn-admin btn-admin-outline" id="btn-add-photo-url" style="padding:6px 12px; font-size:0.78rem; white-space:nowrap;">+ Add Photo</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input to store primary image source for compatibility -->
+              <input type="hidden" id="form-src" value="">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="form-options">Variants / Options (Comma separated)</label>
+            <input type="text" id="form-options" placeholder="Standard Set, Boxed Edition">
+          </div>
+
+          <div class="form-group">
+            <label for="form-description">Description</label>
+            <textarea id="form-description" rows="3" placeholder="A natural wooden toy designed for sensory play..."></textarea>
+          </div>
+        </div>
+
+        <div class="admin-modal-footer" style="display:flex; justify-content:space-between; align-items:center;">
+          <button type="button" class="btn-admin btn-admin-danger" id="modal-delete-btn" style="display:none; background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; font-weight:700;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+            Delete Product
+          </button>
+          <div style="display:flex; gap:10px; margin-left:auto;">
+            <button type="button" class="btn-admin btn-admin-outline" id="modal-cancel-btn">Cancel</button>
+            <button type="submit" class="btn-admin btn-admin-plum" id="modal-save-btn">Save Product</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- BULK IMPORT PRODUCTS MODAL -->
+  <div class="admin-modal-backdrop" id="import-products-modal" style="display:none; z-index:1200;" onclick="if(event.target === this) closeImportProductsModalDirect()">
+    <div class="admin-modal" style="max-width:540px; background:#ffffff; border-radius:16px; box-shadow:0 20px 60px rgba(0,0,0,0.25); overflow:hidden; border:1px solid var(--admin-border);" role="dialog" aria-modal="true" aria-labelledby="import-modal-title">
+      <div class="admin-modal-header" style="padding:18px 24px; border-bottom:1px solid var(--admin-border); display:flex; justify-content:space-between; align-items:flex-start;">
+        <div>
+          <h3 class="admin-modal-title" id="import-modal-title" style="margin:0 0 4px; font-family:'Playfair Display',serif; font-size:1.35rem; color:var(--admin-plum);">Bulk Import Products</h3>
+          <span style="font-size:0.78rem; color:var(--admin-muted);">Sync from Yentto or upload any CSV/JSON spreadsheet</span>
+        </div>
+        <button type="button" class="admin-modal-close" id="import-modal-close-btn" onclick="closeImportProductsModalDirect()" aria-label="Close dialog" style="font-size:1.4rem; background:none; border:none; cursor:pointer; color:var(--admin-muted);">&times;</button>
+      </div>
+
+      <div class="admin-modal-body" style="padding:22px 24px; display:flex; flex-direction:column; gap:16px;">
+        <!-- Option 1: 1-Click Sync from Yentto (210 Products) -->
+        <div style="background:linear-gradient(135deg, #fdf8f4, #fff9f5); border:1.5px solid rgba(197, 139, 114, 0.45); border-radius:12px; padding:16px; display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:40px; height:40px; border-radius:10px; background:var(--admin-plum); color:#fff; display:grid; place-items:center; font-size:1.2rem; flex-shrink:0; box-shadow:0 3px 8px rgba(74,21,37,0.2);">⚡</div>
+            <div>
+              <div style="font-weight:700; color:var(--admin-plum); font-size:0.98rem;">1-Click Import from Yentto</div>
+              <div style="font-size:0.8rem; color:#6b5a55; line-height:1.4;">210 Hair &amp; Jewellery products extracted from your live store with selling prices, MRP, stock levels, and HD photos.</div>
+            </div>
+          </div>
+          <button type="button" class="btn-admin btn-admin-plum" id="btn-quick-import-yentto" style="width:100%; justify-content:center; padding:11px; font-size:0.92rem; font-weight:700; margin-top:4px;">
+            ⚡ Import 210 Products Now
+          </button>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:12px; margin:4px 0;">
+          <div style="flex:1; height:1px; background:var(--admin-border);"></div>
+          <span style="font-size:0.72rem; color:var(--admin-muted); font-weight:700; text-transform:uppercase; letter-spacing:0.08em;">OR CHOOSE LOCAL FILE</span>
+          <div style="flex:1; height:1px; background:var(--admin-border);"></div>
+        </div>
+
+        <!-- Option 2: Choose File directly -->
+        <div style="border:2px dashed var(--admin-border); border-radius:12px; padding:20px; text-align:center; background:#faf8f6;">
+          <button type="button" class="btn-admin btn-admin-outline" id="btn-trigger-file-select" style="margin:0 auto; padding:10px 18px; font-weight:700; font-size:0.88rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Choose CSV or JSON File
+          </button>
+          <div style="font-size:0.75rem; color:var(--admin-muted); margin-top:8px;">Select ruha_aura_210_products.csv, .json, or any custom export file</div>
+        </div>
+
+        <!-- Import Mode Toggle -->
+        <div style="display:flex; align-items:center; gap:12px; padding:12px 14px; background:#f4eaec; border-radius:8px;">
+          <input type="checkbox" id="import-replace-mode" checked style="accent-color:var(--admin-plum); width:18px; height:18px; cursor:pointer;">
+          <label for="import-replace-mode" style="font-size:0.82rem; font-weight:600; color:var(--admin-plum); cursor:pointer;">
+            Replace existing catalogue with imported products (Uncheck to keep both)
+          </label>
+        </div>
+
+        <!-- Template Download -->
+        <div style="display:flex; justify-content:space-between; align-items:center; padding-top:4px; font-size:0.8rem;">
+          <span style="color:var(--admin-muted);">Need a spreadsheet template?</span>
+          <button type="button" id="btn-download-template" style="color:var(--admin-plum); font-weight:700; text-decoration:underline; font-size:0.8rem; background:none; border:none; cursor:pointer; padding:0;">
+            Download Sample CSV
+          </button>
+        </div>
+      </div>
+
+      <div class="admin-modal-footer" style="padding:14px 24px; border-top:1px solid var(--admin-border); display:flex; justify-content:flex-end;">
+        <button type="button" class="btn-admin btn-admin-outline" id="import-modal-cancel-btn" onclick="closeImportProductsModalDirect()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openImportProductsModalDirect() {
+      var m = document.getElementById('import-products-modal');
+      if (m) {
+        m.style.setProperty('display', 'flex', 'important');
+        m.classList.add('is-open');
+      }
+    }
+    function closeImportProductsModalDirect() {
+      var m = document.getElementById('import-products-modal');
+      if (m) {
+        m.style.setProperty('display', 'none', 'important');
+        m.classList.remove('is-open');
+      }
+    }
+    window.openImportProductsModalDirect = openImportProductsModalDirect;
+    window.closeImportProductsModalDirect = closeImportProductsModalDirect;
+    window.openImportProductsModal = openImportProductsModalDirect;
+    window.closeImportProductsModal = closeImportProductsModalDirect;
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var triggerBtn = document.getElementById('btn-trigger-file-select');
+      var fileIn = document.getElementById('catalog-csv-file-input');
+      var sampleBtn = document.getElementById('btn-download-template');
+      var yenttoBtn = document.getElementById('btn-quick-import-yentto');
+      var replaceCheck = document.getElementById('import-replace-mode');
+
+      if (triggerBtn && fileIn) {
+        triggerBtn.onclick = function() {
+          fileIn.value = '';
+          fileIn.click();
+        };
+      }
+      if (sampleBtn) {
+        sampleBtn.onclick = function() {
+          var a = document.createElement('a');
+          a.href = 'ruha_aura_210_products.csv';
+          a.download = 'ruha_aura_210_products.csv';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        };
+      }
+      if (yenttoBtn) {
+        yenttoBtn.onclick = async function() {
+          try {
+            yenttoBtn.disabled = true;
+            yenttoBtn.textContent = '⏳ Importing 210 Products...';
+            var res = await fetch('ruha_aura_210_products.json?v=' + Date.now());
+            if (!res.ok) throw new Error('Could not fetch ruha_aura_210_products.json');
+            var items = await res.json();
+            if (!Array.isArray(items) || items.length === 0) throw new Error('Product list is empty');
+            var shouldReplace = replaceCheck ? replaceCheck.checked : true;
+            var cur = [];
+            try { cur = JSON.parse(localStorage.getItem('ruha-aura-custom-catalog')) || []; } catch(e){}
+            var final = shouldReplace ? items : cur.concat(items);
+            localStorage.setItem('ruha-aura-custom-catalog', JSON.stringify(final));
+            if (window.RuhaDB && window.RuhaDB.isConfigured()) {
+              yenttoBtn.textContent = '☁️ Saving to Cloud DB...';
+              try { await window.RuhaDB.saveProductsBatch(final); } catch(dbErr) { console.warn(dbErr); }
+            }
+            if (window.adminReloadCatalog) {
+              window.adminReloadCatalog(final);
+            } else if (window.RuhaShop && window.RuhaShop.saveCatalog) {
+              window.RuhaShop.saveCatalog(final);
+              location.reload();
+            } else {
+              location.reload();
+            }
+            closeImportProductsModalDirect();
+            alert('🎉 Successfully imported ' + items.length + ' products into Ruha Aura catalogue and synced to database!');
+          } catch(err) {
+            console.error(err);
+            alert('Import failed: ' + err.message);
+          } finally {
+            if (yenttoBtn) {
+              yenttoBtn.disabled = false;
+              yenttoBtn.textContent = '⚡ Import 210 Products Now';
+            }
+          }
+        };
+      }
+    });
+  </script>
+
+  <!-- INVOICE & SHIPPING SLIP MODAL (PRINTABLE) -->
+  <div class="admin-modal-backdrop" id="invoice-modal">
+    <div class="admin-modal" style="max-width: 820px;" role="dialog" aria-modal="true" aria-labelledby="invoice-modal-title">
+      <div class="admin-modal-header">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <h3 id="invoice-modal-title" style="margin:0;">Tax Invoice &amp; Dispatch Shipping Slip</h3>
+          <span class="inv-autobill-badge" id="inv-autobill-badge" style="display:none;">⚡ Auto-Generated via Barcode Scan</span>
+        </div>
+        <button type="button" class="admin-modal-close" id="invoice-modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <div class="admin-modal-body" style="padding:0;">
+        <div class="invoice-printable-container" id="printable-invoice">
+          <!-- Invoice Header -->
+          <div class="invoice-header-row">
+            <div>
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+                <img src="assets/brand-logo.jpeg" alt="Ruha Aura" style="width:48px; height:48px; border-radius:50%; object-fit:cover;">
+                <div>
+                  <h2 style="margin:0; font-family:'Playfair Display',serif; font-size:1.6rem; color:#4a1525; letter-spacing:0.02em;">RUHA AURA</h2>
+                  <span style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:#666;">Handcrafted Accessories &amp; Toys</span>
+                </div>
+              </div>
+              <p style="margin:0; font-size:0.8rem; color:#555;">
+                Pan-India Delivery &middot; Care &middot; Quality<br>
+                Email: care@ruhaaura.com &middot; WhatsApp: +91 98765 43210
+              </p>
+            </div>
+
+            <div style="text-align:right;">
+              <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:#888; font-weight:700;">RETAIL TAX INVOICE</span>
+              <div style="font-size:1.15rem; font-weight:700; font-family:monospace; color:#222; margin:4px 0;" id="inv-display-number">
+                RA-INV-1001
+              </div>
+              <div style="font-size:0.82rem; color:#666;" id="inv-display-date">
+                Date: 28 Oct 2026
+              </div>
+              <div style="margin-top:6px;">
+                <span class="channel-badge" id="inv-display-channel">Instagram DM</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Customer Info & Billed To -->
+          <div class="invoice-meta-grid">
+            <div style="background:#fcf9f8; padding:14px; border-radius:6px; border:1px solid #ebdcd0;">
+              <span style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:#888;">BILLED &amp; DELIVERED TO:</span>
+              <div style="font-weight:700; font-size:1rem; color:#111; margin:4px 0;" id="inv-display-cust-name">Priya Sharma</div>
+              <div style="font-size:0.85rem; color:#444;" id="inv-display-cust-phone">+91 98765 43210</div>
+              <div style="font-size:0.82rem; color:#555; margin-top:4px;" id="inv-display-cust-address">
+                124, Lotus Greens, Indiranagar, Bengaluru, Karnataka - 560001
+              </div>
+            </div>
+
+            <div style="background:#fcf9f8; padding:14px; border-radius:6px; border:1px solid #ebdcd0; display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <span style="font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; color:#888;">ORDER SUMMARY:</span>
+                <div style="font-size:0.85rem; color:#333; margin-top:4px;">
+                  Payment Mode: <strong>Prepaid / UPI Verified</strong><br>
+                  Packaging: <strong>Signature Ruha Aura Gift Box</strong>
+                </div>
+              </div>
+              <div style="text-align:right;">
+                <span style="font-size:0.75rem; color:#777;">Grand Total:</span>
+                <div style="font-size:1.4rem; font-weight:700; color:#4a1525;" id="inv-display-total">₹748</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Itemized Table -->
+          <table class="invoice-table">
+            <thead>
+              <tr>
+                <th style="width:35px;">#</th>
+                <th>Item Description</th>
+                <th>SKU</th>
+                <th style="text-align:right;">Rate</th>
+                <th style="text-align:center;">Qty</th>
+                <th style="text-align:right;">Total</th>
+              </tr>
+            </thead>
+            <tbody id="inv-display-tbody">
+              <!-- Item rows populated here -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4" style="text-align:right; font-weight:600;">Subtotal:</td>
+                <td colspan="2" style="text-align:right; font-weight:600;" id="inv-subtotal-text">₹698</td>
+              </tr>
+              <tr>
+                <td colspan="4" style="text-align:right; color:#666;">GST (Included in price):</td>
+                <td colspan="2" style="text-align:right; color:#666;" id="inv-tax-text">₹35</td>
+              </tr>
+              <tr>
+                <td colspan="4" style="text-align:right; color:#666;">Shipping &amp; Delivery:</td>
+                <td colspan="2" style="text-align:right; color:#666;" id="inv-shipping-text">₹50</td>
+              </tr>
+              <tr style="background:#f8f4f2; font-size:1rem; font-weight:700;">
+                <td colspan="4" style="text-align:right; color:#4a1525;">Amount Paid:</td>
+                <td colspan="2" style="text-align:right; color:#4a1525;" id="inv-grand-total-text">₹748</td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <!-- Integrated Courier Dispatch Shipping Slip -->
+          <div class="dispatch-slip-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px dashed #999; padding-bottom:10px; margin-bottom:12px;">
+              <div style="display:flex; align-items:center; gap:8px;">
+                <span style="font-weight:700; font-size:0.9rem; letter-spacing:0.06em; text-transform:uppercase;">
+                  COURIER DISPATCH &amp; SHIPPING SLIP
+                </span>
+                <span style="font-size:0.75rem; background:#4a1525; color:#fff; padding:2px 8px; border-radius:10px;">FRAGILE</span>
+              </div>
+              <span style="font-size:0.8rem; font-family:monospace; font-weight:700;" id="dispatch-barcode-text">RA-INV-1001</span>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:20px; align-items:center;">
+              <div>
+                <span style="font-size:0.7rem; text-transform:uppercase; font-weight:700; color:#777;">SHIP TO:</span>
+                <div style="font-size:1rem; font-weight:700; margin:2px 0;" id="dispatch-cust-name">Priya Sharma</div>
+                <div style="font-size:0.85rem; color:#333; line-height:1.4;" id="dispatch-cust-address">
+                  124, Lotus Greens, Indiranagar, Bengaluru, Karnataka - 560001
+                </div>
+                <div style="font-size:0.85rem; font-weight:600; margin-top:4px;" id="dispatch-cust-phone">
+                  Phone: +91 98765 43210
+                </div>
+              </div>
+
+              <!-- Barcode Display in Dispatch Slip -->
+              <div style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+                <div id="dispatch-barcode-svg-container" style="width:100%; max-width:280px; min-height:80px;">
+                  <!-- Rendered Code-128 SVG -->
+                </div>
+                <span style="font-size:0.68rem; color:#666; margin-top:4px; font-weight:600;">Scan for Courier Dispatch &amp; Tracking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-modal-footer">
+        <button type="button" class="btn-admin btn-admin-outline" id="invoice-modal-cancel-btn">Close</button>
+        <button type="button" class="btn-admin btn-admin-success" id="invoice-print-next-btn" title="Print this bill & slip, then focus scanner for the next product">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print &amp; Scan Next Item
+        </button>
+        <button type="button" class="btn-admin btn-admin-plum" id="invoice-print-btn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Print Invoice &amp; Slip
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Camera Barcode Scanner Modal -->
+  <div class="admin-modal-backdrop" id="camera-scanner-modal" style="display:none; z-index:1200;">
+    <div class="admin-modal" style="max-width: 480px; text-align:center;">
+      <div class="admin-modal-header" style="justify-content:space-between; display:flex; align-items:center;">
+        <h3 style="margin:0; font-family:'Playfair Display', serif; color:var(--admin-plum); font-size:1.3rem;">Scan with Camera</h3>
+        <button type="button" class="admin-modal-close" id="camera-scanner-close-btn">&times;</button>
+      </div>
+      <div class="admin-modal-body" style="padding: 18px 20px;">
+        <p style="font-size:0.85rem; color:var(--admin-muted); margin:0 0 12px; line-height:1.4;">
+          Point your laptop camera or phone camera at any Ruha Aura barcode sticker.
+        </p>
+        <div id="camera-scanner-viewport" style="width: 100%; min-height: 260px; background: #1a1a1a; border-radius: 10px; overflow: hidden; position: relative;"></div>
+        <div id="camera-scanner-status" style="margin-top: 12px; font-size: 0.88rem; font-weight:700; color:var(--admin-plum);">
+          Ready to scan...
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cloud Database Configuration Modal -->
+  <div class="admin-modal-backdrop" id="db-settings-modal" style="display:none; z-index:1100;">
+    <div class="admin-modal" style="max-width:560px;">
+      <div class="admin-modal-header">
+        <div>
+          <h2 style="font-family:'Playfair Display', serif; margin:0 0 4px; color:var(--admin-plum); font-size:1.4rem;">Supabase Cloud Database</h2>
+          <span style="font-size:0.85rem; color:var(--admin-muted);">Connect your live PostgreSQL database, Realtime sync &amp; photo storage</span>
+        </div>
+        <button type="button" class="admin-modal-close" id="db-settings-close-btn">&times;</button>
+      </div>
+
+      <div class="admin-modal-body" style="padding:22px 24px;">
+        <div style="background:#fcf9f8; border:1px solid #ebdcd5; border-radius:10px; padding:14px 16px; margin-bottom:18px; font-size:0.85rem; line-height:1.5;">
+          <strong>Setup in 3 steps:</strong>
+          <ol style="margin:6px 0 0; padding-left:20px; color:#555;">
+            <li>Create a free project at <a href="https://supabase.com" target="_blank" rel="noopener" style="color:var(--admin-plum); font-weight:700;">supabase.com</a>.</li>
+            <li>Run <code style="background:#fff; padding:2px 5px; border-radius:4px; font-weight:600;">supabase-schema.sql</code> in Supabase SQL Editor.</li>
+            <li>Paste your Project URL &amp; Public Anon Key below.</li>
+          </ol>
+        </div>
+
+        <form id="db-settings-form">
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; margin-bottom:6px; color:#333;">Project URL</label>
+            <input type="url" id="db-input-url" placeholder="https://xyzcompany.supabase.co" style="width:100%; padding:10px 14px; border:1px solid var(--admin-border); border-radius:8px; font-size:0.9rem; box-sizing:border-box;">
+          </div>
+          <div style="margin-bottom:18px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; margin-bottom:6px; color:#333;">Public Anon Key (Client API Key)</label>
+            <input type="password" id="db-input-key" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." style="width:100%; padding:10px 14px; border:1px solid var(--admin-border); border-radius:8px; font-size:0.9rem; box-sizing:border-box;">
+          </div>
+
+          <div style="display:flex; gap:10px; justify-content:flex-end; align-items:center;">
+            <button type="button" class="btn-admin btn-admin-danger" id="db-disconnect-btn" style="display:none;">Disconnect Cloud</button>
+            <button type="button" class="btn-admin btn-admin-outline" id="db-settings-cancel-btn">Cancel</button>
+            <button type="submit" class="btn-admin btn-admin-plum" id="db-save-btn">Save &amp; Connect</button>
+          </div>
+        </form>
+
+        <hr style="margin:20px 0; border:none; border-top:1px solid var(--admin-border);">
+
+        <!-- 1-Click Migration to Cloud -->
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+          <div>
+            <strong style="display:block; font-size:0.9rem; color:#222;">Migrate Catalogue to Cloud</strong>
+            <span style="font-size:0.78rem; color:var(--admin-muted);">Sync & clean 9 kids' toys and seed orders into Supabase</span>
+          </div>
+          <button type="button" class="btn-admin btn-admin-success" id="db-seed-btn" style="padding:8px 16px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Push to Cloud
+          </button>
+        </div>
+        <div id="db-seed-status" style="font-size:0.8rem; margin-top:8px; color:var(--admin-plum); font-weight:600; display:none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Master Password Gatekeeper Modal -->
+  <div id="admin-gatekeeper-modal" class="admin-gatekeeper-overlay" style="display:none;">
+    <div class="admin-gatekeeper-card">
+      <img src="assets/brand-logo.jpeg" alt="Ruha Aura" class="admin-gatekeeper-logo">
+      <h2 style="margin:0 0 8px; font-family:'Playfair Display', serif; color:var(--admin-plum); font-size:1.5rem;">Ruha Aura Admin Portal</h2>
+      <p style="margin:0 0 20px; font-size:0.88rem; color:var(--admin-muted); line-height:1.4;">
+        Enter master password to access Sales Analytics, Catalogue &amp; Dispatch POS.
+      </p>
+      <form id="admin-gatekeeper-form">
+        <div style="margin-bottom: 16px;">
+          <input type="password" id="gatekeeper-password" placeholder="Enter password (admin123)" required autofocus style="width:100%; padding: 13px 16px; font-size: 1rem; border: 2px solid var(--admin-border); border-radius: 8px; text-align: center; outline:none; box-sizing:border-box;">
+        </div>
+        <button type="submit" class="btn-admin btn-admin-plum" style="width:100%; justify-content:center; padding: 13px; font-size: 0.95rem; font-weight:700;">
+          Unlock Dashboard
+        </button>
+      </form>
+      <div id="gatekeeper-error" style="color: #b91c1c; font-size: 0.85rem; margin-top: 10px; display: none; font-weight:600;">
+        Incorrect password. Try: admin123
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top: 18px; font-size: 0.82rem;">
+        <a href="index.html" style="color: var(--admin-muted); text-decoration: none;">&larr; Back to Store</a>
+        <button type="button" id="gatekeeper-quick-btn" style="background:none; border:none; color:var(--admin-plum); font-weight:700; cursor:pointer; text-decoration:underline;">
+          Quick Unlock (admin123)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="admin-toast" id="admin-toast">Catalogue updated successfully.</div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="catalogue-data.js?v=3.6"></script>
+  <script src="supabase-config.js?v=3.6"></script>
+  <script src="shop-core.js?v=3.6"></script>
+  <script src="admin.js?v=3.6"></script>
+</body>
+</html>

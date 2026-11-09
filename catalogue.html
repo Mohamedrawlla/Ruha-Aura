@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fbf7f0">
+  <title>The Collection | Ruha Aura</title>
+  <meta name="description" content="Explore Ruha Aura hair accessories and kids’ toys. Search the catalogue, save favourites and shop your everyday essentials.">
+  <link rel="icon" href="assets/brand-logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3.3">
+  <link rel="stylesheet" href="shop.css?v=3.3">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="catalogue-data.js?v=3.3" defer></script>
+  <script src="supabase-config.js?v=3.3" defer></script>
+  <script src="shop-core.js?v=3.3" defer></script>
+  <script src="checkout.js?v=3.3" defer></script>
+  <script src="catalogue.js?v=3.3" defer></script>
+</head>
+<body class="shop-page">
+  <svg class="symbol-definitions" aria-hidden="true">
+    <defs>
+      <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+      <symbol id="right" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+      <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+      <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+      <symbol id="bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+      <symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+      <symbol id="left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+      <symbol id="chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="Ruha Aura home">
+      <img src="assets/brand-logo.jpeg" width="58" height="58" alt="Ruha Aura" class="brand-logo-img">
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="catalogue.html">All products</a>
+      <a href="catalogue.html?collection=accessories">Hair accessories</a>
+      <a href="catalogue.html?collection=jewellery">Jewellery</a>
+      <a href="catalogue.html?collection=toys">Kids’ toys</a>
+      <a href="index.html#about">Our Story</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="saved-nav" href="catalogue.html?saved=1" aria-label="View saved favourites">
+        <svg><use href="#heart"/></svg>
+        <span data-saved-count>0</span>
+      </a>
+
+      <button type="button" class="header-cart-btn" data-open-cart aria-label="View shopping bag">
+        <svg><use href="#bag"/></svg>
+        <span class="cart-pill" data-cart-count>0</span>
+      </button>
+
+      <button type="button" class="header-login-btn" id="header-login-btn" aria-label="Account Login">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span id="login-btn-text">Log in</span>
+      </button>
+    </div>
+
+    <button class="menu-button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu" hidden>
+    <nav aria-label="Mobile navigation">
+      <a href="catalogue.html">All products <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?collection=jewellery">Jewellery <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?collection=accessories">Hair accessories <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?collection=toys">Kids’ toys <svg><use href="#arrow"/></svg></a>
+      <a href="catalogue.html?saved=1">Saved favourites <svg><use href="#arrow"/></svg></a>
+      <a href="index.html#about">Our Story <svg><use href="#arrow"/></svg></a>
+    </nav>
+  </div>
+
+  <main id="main">
+    <section class="catalogue-intro">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span aria-current="page">The collection</span>
+      </nav>
+      <div>
+        <span class="eyebrow">THE RUHA AURA COLLECTION</span>
+        <h1>Find your next<br/><em>little favourite.</em></h1>
+        <p>Handcrafted jewellery, hair accessories, and sensory toys.</p>
+      </div>
+      <span class="intro-number" aria-hidden="true">THE EDIT / 02</span>
+    </section>
+
+    <div class="catalogue-body">
+      <aside class="catalogue-sidebar">
+        <button type="button" id="toggle-filters" class="mobile-filter-toggle" aria-expanded="false" aria-controls="filter-form">
+          Filters <svg><use href="#plus"/></svg>
+        </button>
+
+        <form id="filter-form">
+          <fieldset>
+            <legend>Collections</legend>
+            <label><input type="radio" name="collection" value="all" checked>All products</label>
+            <label><input type="radio" name="collection" value="accessories">Hair accessories</label>
+            <label><input type="radio" name="collection" value="jewellery">Jewellery</label>
+            <label><input type="radio" name="collection" value="toys">Kids’ toys</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Styles & types</legend>
+            <div id="type-filters"></div>
+          </fieldset>
+
+          <label class="saved-filter">
+            <input type="checkbox" id="saved-only">
+            Saved favourites <svg><use href="#heart"/></svg>
+          </label>
+
+          <button class="filter-reset" type="button" id="clear-filters">Reset filters</button>
+        </form>
+
+        <div class="sidebar-help-card">
+          <h4>Complimentary Shipping</h4>
+          <p>Orders above ₹999 ship free across India. Dispatched within 24–48 hours.</p>
+        </div>
+      </aside>
+
+      <section class="catalogue-results" aria-label="Product catalogue">
+        <div class="catalogue-toolbar">
+          <label class="catalogue-search">
+            <svg aria-hidden="true"><use href="#search"/></svg>
+            <input type="search" id="product-search" placeholder="Find something lovely…" aria-label="Search products">
+          </label>
+          <label class="catalogue-sort">
+            Sort by
+            <select id="product-sort" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="az">Name: A–Z</option>
+              <option value="za">Name: Z–A</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="catalogue-summary">
+          <span id="catalogue-count" role="status" aria-live="polite"></span>
+          <div id="active-filters"></div>
+        </div>
+
+        <div class="catalogue-grid" id="catalogue-grid"></div>
+
+        <div class="catalogue-empty" id="catalogue-empty" hidden>
+          <svg><use href="#search"/></svg>
+          <h2>No little finds here yet.</h2>
+          <p>Try another search or reset the filters.</p>
+          <button class="button button-plum" id="empty-reset">Show all products <svg><use href="#arrow"/></svg></button>
+        </div>
+
+        <div class="catalogue-more">
+          <button class="button button-outline" id="catalogue-more">Show more products <svg><use href="#plus"/></svg></button>
+        </div>
+        <noscript><p>Enable JavaScript to browse the product catalogue.</p></noscript>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        RUHA AURA
+        <span>LITTLE THINGS. LOVELY MOMENTS.</span>
+      </a>
+      <div>
+        <a href="catalogue.html?collection=accessories">Hair accessories</a>
+        <a href="catalogue.html?collection=jewellery">Jewellery</a>
+        <a href="catalogue.html?collection=toys">Kids’ toys</a>
+        <a href="catalogue.html?saved=1">Saved favourites</a>
+        <a href="index.html#about">Our Story</a>
+        <a href="admin.html">Admin Dashboard</a>
+      </div>
+      <a href="#" class="back-top" aria-label="Back to top"><svg><use href="#arrow"/></svg></a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Ruha Aura</span>
+      <span>Handcrafted with love · Pan-India delivery · Secure checkout</span>
+      <span>THE EVERYDAY EDIT</span>
+    </div>
+  </footer>
+
+  <div id="shop-toast" class="shop-toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
