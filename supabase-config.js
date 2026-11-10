@@ -433,49 +433,142 @@
               date: ord.date,
               channel: ord.channel,
               customer: ord.customer,
-              subtotal: Number(ord.subtotal),
-              tax: Number(ord.tax),
-              shipping: Number(ord.shipping),
-              discount: Number(ord.discount),
-              total: Number(ord.total),
-              status: ord.status,
+              subtotal: Number(ord.subtotal) || 0,
+              tax: Number(ord.tax) || 0,
+              shipping: Number(ord.shipping) || 0,
+              discount: Number(ord.discount) || 0,
+              total: Number(ord.total) || 0,
+              status: ord.status || 'Pending',
               items: (ord.order_items || []).map(item => ({
                 product: {
                   id: item.product_id,
                   sku: item.sku,
                   name: item.product_name,
-                  price: Number(item.unit_price)
+                  price: Number(item.unit_price) || 0
                 },
-                quantity: item.quantity,
-                lineTotal: Number(item.line_total)
+                quantity: item.quantity || 1,
+                lineTotal: Number(item.line_total) || 0
               }))
             }));
 
             // Filter out dummy/mock orders
             const cleanOrders = mappedOrders.filter(o => !this.isDummyOrder(o));
 
-            // Sync to local cache
+            // Merge with local orders so offline/fresh orders are NEVER wiped out
+            let localOrders = [];
             try {
-              localStorage.setItem('ruha-aura-orders', JSON.stringify(cleanOrders));
+              const stored = localStorage.getItem('ruha-aura-orders');
+              localOrders = stored ? JSON.parse(stored) : [];
+              if (!Array.isArray(localOrders)) localOrders = [];
             } catch {}
-            return cleanOrders;
+
+            const orderMap = new Map();
+            cleanOrders.forEach(o => orderMap.set(o.id, o));
+            localOrders.forEach(o => {
+              if (o && o.id && !orderMap.has(o.id) && !this.isDummyOrder(o)) {
+                orderMap.set(o.id, o);
+              }
+            });
+
+            const merged = Array.from(orderMap.values()).sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+            try {
+              localStorage.setItem('ruha-aura-orders', JSON.stringify(merged));
+            } catch {}
+            return merged;
           }
         } catch (e) {
           console.warn('[RuhaDB] Orders fetch from Supabase failed, using local:', e);
         }
       }
 
-      // Fallback
+      // Fallback local storage
       try {
         const stored = localStorage.getItem('ruha-aura-orders');
         if (stored) {
           const parsed = JSON.parse(stored);
-          if (Array.isArray(parsed)) {
+          if (Array.isArray(parsed) && parsed.length > 0) {
             return parsed.filter(o => !this.isDummyOrder(o));
           }
         }
       } catch {}
       return [];
+    },
+
+    // --- Customers & User Directory API ---
+    async getCustomers() {
+      if (this.isConfigured()) {
+        try {
+          const { data, error } = await supabaseClient
+            .from('customers')
+            .select('*')
+            .order('created_at', { ascending: false });
+
+          if (!error && Array.isArray(data) && data.length > 0) {
+            let localCusts = [];
+            try {
+              const stored = localStorage.getItem('ruha-aura-customers');
+              localCusts = stored ? JSON.parse(stored) : [];
+              if (!Array.isArray(localCusts)) localCusts = [];
+            } catch {}
+
+            const map = new Map();
+            data.forEach(c => map.set((c.email || c.id).toLowerCase(), c));
+            localCusts.forEach(c => {
+              const k = (c.email || c.id).toLowerCase();
+              if (!map.has(k)) map.set(k, c);
+            });
+
+            const merged = Array.from(map.values());
+            try {
+              localStorage.setItem('ruha-aura-customers', JSON.stringify(merged));
+            } catch {}
+            return merged;
+          }
+        } catch (e) {
+          console.warn('[RuhaDB] Customers fetch failed, using local:', e);
+        }
+      }
+
+      try {
+        const stored = localStorage.getItem('ruha-aura-customers');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+        }
+      } catch {}
+      return [];
+    },
+
+    async saveCustomer(cust) {
+      if (!cust) return;
+      try {
+        const stored = localStorage.getItem('ruha-aura-customers');
+        let custs = stored ? JSON.parse(stored) : [];
+        if (!Array.isArray(custs)) custs = [];
+        const idx = custs.findIndex(c => (c.email && cust.email && c.email.toLowerCase() === cust.email.toLowerCase()) || c.id === cust.id);
+        if (idx >= 0) custs[idx] = { ...custs[idx], ...cust };
+        else custs.unshift(cust);
+        localStorage.setItem('ruha-aura-customers', JSON.stringify(custs));
+      } catch {}
+
+      if (this.isConfigured() && cust) {
+        try {
+          await supabaseClient.from('customers').upsert([{
+            id: cust.id,
+            name: cust.name || 'Customer',
+            email: cust.email || null,
+            phone: cust.phone || null,
+            address: cust.address || null,
+            role: cust.role || 'customer',
+            orders_count: cust.orders_count || 0,
+            total_spent: cust.total_spent || 0,
+            joined_date: cust.joined_date || new Date().toISOString(),
+            last_active: new Date().toISOString()
+          }], { onConflict: 'id' });
+        } catch (e) {
+          console.warn('[RuhaDB] Customer cloud upsert note:', e);
+        }
+      }
     },
 
     // --- Purge Dummy / Test Orders from Cloud and Local ---
@@ -620,6 +713,20 @@
       if (orders.length > 0) {
         for (const ord of orders) {
           await this.createOrder(ord, ord.items || []);
+        }
+      }
+
+      // Seed customers/users directory to Supabase
+      if (onProgress) onProgress(90, 'Syncing registered customers & users...');
+      let custs = [];
+      try {
+        const stored = localStorage.getItem('ruha-aura-customers');
+        custs = stored ? JSON.parse(stored) : [];
+      } catch {}
+
+      if (Array.isArray(custs) && custs.length > 0) {
+        for (const c of custs) {
+          await this.saveCustomer(c);
         }
       }
 

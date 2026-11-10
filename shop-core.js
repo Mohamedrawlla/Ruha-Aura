@@ -550,11 +550,50 @@
     return authUser;
   }
 
+  function recordCustomer(user) {
+    if (!user || user.role === 'admin' || !user.email) return;
+    try {
+      const stored = localStorage.getItem('ruha-aura-customers');
+      let custs = stored ? JSON.parse(stored) : [];
+      if (!Array.isArray(custs)) custs = [];
+
+      const cleanEmail = (user.email || '').toLowerCase().trim();
+      const existingIdx = custs.findIndex(c => c.email && c.email.toLowerCase() === cleanEmail);
+
+      const custRecord = {
+        id: user.id || (existingIdx >= 0 ? custs[existingIdx].id : 'CUST-' + Math.floor(100000 + Math.random() * 900000)),
+        name: user.name || (cleanEmail ? cleanEmail.split('@')[0] : 'Member'),
+        email: cleanEmail,
+        phone: user.phone || (existingIdx >= 0 ? custs[existingIdx].phone : ''),
+        address: user.address || (existingIdx >= 0 ? custs[existingIdx].address : ''),
+        role: 'customer',
+        orders_count: existingIdx >= 0 ? (custs[existingIdx].orders_count || 0) : 0,
+        total_spent: existingIdx >= 0 ? (custs[existingIdx].total_spent || 0) : 0,
+        joined_date: existingIdx >= 0 ? custs[existingIdx].joined_date : new Date().toISOString(),
+        last_active: new Date().toISOString()
+      };
+
+      if (existingIdx >= 0) {
+        custs[existingIdx] = { ...custs[existingIdx], ...custRecord };
+      } else {
+        custs.unshift(custRecord);
+      }
+      localStorage.setItem('ruha-aura-customers', JSON.stringify(custs));
+
+      if (window.RuhaDB && window.RuhaDB.saveCustomer) {
+        window.RuhaDB.saveCustomer(custRecord).catch(() => {});
+      }
+    } catch (e) {
+      console.warn('[Customer Record Note]', e);
+    }
+  }
+
   function setAuthUser(user) {
     authUser = user;
     try {
       if (user) {
         localStorage.setItem('ruha-aura-auth', JSON.stringify(user));
+        recordCustomer(user);
       } else {
         localStorage.removeItem('ruha-aura-auth');
       }

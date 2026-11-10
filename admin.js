@@ -14,6 +14,9 @@
   // Orders State
   let orders = [];
 
+  // Customers & Registered Users State
+  let customers = [];
+
   // ========================================================
   // 1. CODE-128 VECTOR BARCODE GENERATOR (LIGHTWEIGHT & PURE JS)
   // ========================================================
@@ -236,7 +239,8 @@
     catalog: document.getElementById('view-catalog'),
     pos: document.getElementById('view-pos'),
     barcodes: document.getElementById('view-barcodes'),
-    multichannel: document.getElementById('view-multichannel')
+    multichannel: document.getElementById('view-multichannel'),
+    customers: document.getElementById('view-customers')
   };
 
   const breadcrumbView = document.getElementById('admin-breadcrumb-view');
@@ -245,7 +249,8 @@
     catalog: 'Products',
     pos: 'Dispatch POS',
     barcodes: 'Barcode Labels',
-    multichannel: 'Multi-Channel Sales'
+    multichannel: 'Multi-Channel Sales',
+    customers: 'Customers & Users'
   };
 
   function switchTab(viewName) {
@@ -2444,9 +2449,9 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
         id: 'RA-140103',
         date: new Date().toISOString(),
         customer: {
-          name: 'Online Customer',
-          phone: '7708542509',
-          email: '',
+          name: 'Ruha Aura Customer',
+          phone: '8220431210',
+          email: 'ruhaaura.store@gmail.com',
           address: 'Delivery on Call (Cash on Delivery)'
         },
         channel: 'Website',
@@ -2696,10 +2701,14 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
     try {
       if (window.RuhaDB && window.RuhaDB.isConfigured() && window.RuhaDB.getOrders) {
         const cloudOrders = await window.RuhaDB.getOrders();
-        if (Array.isArray(cloudOrders)) {
+        if (Array.isArray(cloudOrders) && cloudOrders.length > 0) {
           orders = cloudOrders;
           saveOrders();
           showToast(`Synced ${cloudOrders.length} order(s) from Supabase Cloud.`);
+        } else {
+          orders = getOrders();
+          saveOrders();
+          showToast('Loaded active orders from storage.');
         }
       } else {
         orders = getOrders();
@@ -2708,6 +2717,212 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
       }
     } catch (e) {
       showToast('Sync note: ' + (e.message || 'Failed to sync orders.'));
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = oldText;
+    }
+  });
+
+  // ========================================================
+  // CUSTOMERS & REGISTERED USERS DIRECTORY SYSTEM
+  // ========================================================
+  function getCustomers() {
+    try {
+      const stored = localStorage.getItem('ruha-aura-customers');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          return parsed;
+        }
+      }
+    } catch {}
+
+    // Seed customer directory from verified user account
+    const defaultCusts = [
+      {
+        id: 'CUST-1001',
+        name: 'Ruha Aura Customer',
+        email: 'ruhaaura.store@gmail.com',
+        phone: '8220431210',
+        address: 'Delivery on Call (Cash on Delivery)',
+        role: 'customer',
+        orders_count: 1,
+        total_spent: 258,
+        joined_date: new Date().toISOString(),
+        last_active: new Date().toISOString()
+      }
+    ];
+
+    try {
+      localStorage.setItem('ruha-aura-customers', JSON.stringify(defaultCusts));
+    } catch {}
+    return defaultCusts;
+  }
+
+  function saveCustomers() {
+    try {
+      localStorage.setItem('ruha-aura-customers', JSON.stringify(customers));
+    } catch {}
+    renderCustomersTable();
+    renderCustomersKPIs();
+  }
+
+  function renderCustomersKPIs() {
+    const totalCust = customers.length;
+    const totalLTV = customers.reduce((sum, c) => sum + (Number(c.total_spent) || 0), 0);
+    const totalOrders = customers.reduce((sum, c) => sum + (Number(c.orders_count) || 0), 0);
+    const aov = totalOrders > 0 ? Math.round(totalLTV / totalOrders) : 0;
+
+    const elCount = document.getElementById('stat-cust-count');
+    const elLtv = document.getElementById('stat-cust-ltv');
+    const elOrders = document.getElementById('stat-cust-orders');
+    const elAov = document.getElementById('stat-cust-aov');
+    const badge = document.getElementById('customers-count-badge');
+
+    if (elCount) elCount.textContent = totalCust;
+    if (elLtv) elLtv.textContent = formatPrice(totalLTV);
+    if (elOrders) elOrders.textContent = totalOrders;
+    if (elAov) elAov.textContent = formatPrice(aov);
+    if (badge) {
+      badge.textContent = totalCust;
+      badge.style.display = totalCust > 0 ? 'inline-flex' : 'none';
+    }
+  }
+
+  function renderCustomersTable() {
+    const tbody = document.getElementById('admin-customers-tbody');
+    if (!tbody) return;
+
+    if (!customers.length) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="7" style="text-align:center; padding:48px 20px; color:var(--admin-muted);">
+            <div style="font-size:1.05rem; font-weight:700; color:var(--admin-plum); margin-bottom:6px;">No Registered Customers Yet</div>
+            <div style="font-size:0.85rem;">As users register or check out on the storefront, their profiles and order summaries will appear here.</div>
+          </td>
+        </tr>
+      `;
+      return;
+    }
+
+    const q = (document.getElementById('customer-search')?.value || '').toLowerCase().trim();
+    const filtered = customers.filter(c => {
+      if (!q) return true;
+      const str = `${c.name || ''} ${c.email || ''} ${c.phone || ''} ${c.address || ''}`.toLowerCase();
+      return str.includes(q);
+    });
+
+    const countLabel = document.getElementById('customers-filter-count');
+    if (countLabel) {
+      countLabel.textContent = `Showing ${filtered.length} of ${customers.length} registered customer(s)`;
+    }
+
+    if (!filtered.length) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="7" style="text-align:center; padding:36px 20px; color:var(--admin-muted);">
+            No matching customers found for "${q}".
+          </td>
+        </tr>
+      `;
+      return;
+    }
+
+    tbody.innerHTML = filtered.map(c => {
+      const cleanPhone = String(c.phone || '').replace(/[^0-9]/g, '');
+      const initials = (c.name || 'C').split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase() || 'CU';
+      const formattedDate = c.joined_date ? new Date(c.joined_date).toLocaleDateString('en-IN', { day:'numeric', month:'short', year:'numeric' }) : 'Recent';
+
+      return `
+        <tr>
+          <td>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:36px; height:36px; border-radius:50%; background:rgba(74,21,37,0.08); color:var(--admin-plum); font-weight:700; font-size:0.82rem; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                ${initials}
+              </div>
+              <div>
+                <strong style="display:block; color:#221b19; font-size:0.88rem;">${c.name || 'Member'}</strong>
+                <span style="font-size:0.75rem; color:var(--admin-muted);">${c.role === 'admin' ? 'Store Administrator' : 'Verified Customer'}</span>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div style="font-size:0.85rem; color:#333; font-weight:600;">${c.email || '—'}</div>
+            <div style="display:flex; align-items:center; gap:6px; margin-top:2px;">
+              <span style="font-size:0.78rem; color:var(--admin-muted);">${c.phone || '—'}</span>
+              ${cleanPhone.length >= 10 ? `
+                <a href="https://wa.me/91${cleanPhone.slice(-10)}" target="_blank" class="order-wa-link" title="Chat with ${c.name} on WhatsApp" style="font-size:0.75rem; padding:1px 6px;">
+                  💬 WA
+                </a>
+              ` : ''}
+            </div>
+          </td>
+          <td style="font-size:0.82rem; color:#444; max-width:200px; line-height:1.4;">
+            ${c.address || '—'}
+          </td>
+          <td style="text-align:center;">
+            <span style="display:inline-block; font-weight:700; background:rgba(74,21,37,0.06); color:var(--admin-plum); padding:2px 8px; border-radius:12px; font-size:0.82rem;">
+              ${c.orders_count || 0}
+            </span>
+          </td>
+          <td style="text-align:right; font-weight:700; color:var(--admin-plum); font-size:0.92rem;">
+            ${formatPrice(c.total_spent || 0)}
+          </td>
+          <td style="font-size:0.8rem; color:var(--admin-muted);">
+            ${formattedDate}
+          </td>
+          <td style="text-align:right;">
+            <button type="button" class="row-btn" data-cust-view-orders="${c.email || c.phone || ''}" title="Filter Multi-Channel Hub to this customer's orders">
+              View Orders
+            </button>
+          </td>
+        </tr>
+      `;
+    }).join('');
+
+    tbody.querySelectorAll('[data-cust-view-orders]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const query = btn.dataset.custViewOrders;
+        document.getElementById('tab-multichannel-btn')?.click();
+        const searchInput = document.getElementById('order-search');
+        if (searchInput) {
+          searchInput.value = query;
+          renderOrdersTable();
+        }
+      });
+    });
+  }
+
+  // Customer search filter listener
+  document.getElementById('customer-search')?.addEventListener('input', () => {
+    renderCustomersTable();
+  });
+
+  // Customer cloud sync button
+  document.getElementById('sync-customers-cloud-btn')?.addEventListener('click', async () => {
+    const btn = document.getElementById('sync-customers-cloud-btn');
+    const oldText = btn.innerHTML;
+    btn.disabled = true;
+    btn.textContent = 'Syncing...';
+    try {
+      if (window.RuhaDB && window.RuhaDB.isConfigured() && window.RuhaDB.getCustomers) {
+        const cloudCusts = await window.RuhaDB.getCustomers();
+        if (Array.isArray(cloudCusts) && cloudCusts.length > 0) {
+          customers = cloudCusts;
+          saveCustomers();
+          showToast(`Synced ${cloudCusts.length} customer(s) from Supabase Cloud.`);
+        } else {
+          customers = getCustomers();
+          saveCustomers();
+          showToast('Loaded active customers from storage.');
+        }
+      } else {
+        customers = getCustomers();
+        saveCustomers();
+        showToast('Customers refreshed from local storage.');
+      }
+    } catch (e) {
+      showToast('Customer sync note: ' + (e.message || 'Failed to sync.'));
     } finally {
       btn.disabled = false;
       btn.innerHTML = oldText;
@@ -2997,17 +3212,29 @@ AMZN-402-9921,2026-10-28,Amazon,Rahul Jain,9876543210,"Civil Lines, Jaipur",RA-0
   function initDashboard() {
     catalog = getCatalog();
     orders = getOrders();
+    customers = getCustomers();
 
-    if (window.RuhaDB && window.RuhaDB.isConfigured() && window.RuhaDB.getOrders) {
-      window.RuhaDB.getOrders().then(cloudOrders => {
-        if (Array.isArray(cloudOrders) && cloudOrders.length > 0) {
-          orders = cloudOrders;
-          renderOrdersTable();
-          renderOrdersKPIs();
-          renderAnalyticsDashboard();
-          renderOverviewRecentOrders();
-        }
-      }).catch(() => {});
+    if (window.RuhaDB && window.RuhaDB.isConfigured()) {
+      if (window.RuhaDB.getOrders) {
+        window.RuhaDB.getOrders().then(cloudOrders => {
+          if (Array.isArray(cloudOrders) && cloudOrders.length > 0) {
+            orders = cloudOrders;
+            renderOrdersTable();
+            renderOrdersKPIs();
+            renderAnalyticsDashboard();
+            renderOverviewRecentOrders();
+          }
+        }).catch(() => {});
+      }
+      if (window.RuhaDB.getCustomers) {
+        window.RuhaDB.getCustomers().then(cloudCusts => {
+          if (Array.isArray(cloudCusts) && cloudCusts.length > 0) {
+            customers = cloudCusts;
+            renderCustomersTable();
+            renderCustomersKPIs();
+          }
+        }).catch(() => {});
+      }
     }
 
     updateDBStatusUI();
@@ -3020,22 +3247,28 @@ AMZN-402-9921,2026-10-28,Amazon,Rahul Jain,9876543210,"Civil Lines, Jaipur",RA-0
     populateCategoryFilter();
     renderOrdersKPIs();
     renderOrdersTable();
+    renderCustomersKPIs();
+    renderCustomersTable();
   }
 
-  // Live real-time update when an order is placed from website checkout
+  // Live real-time update when an order is placed from website checkout or user registers
   function refreshOrdersFromEvent() {
     orders = getOrders();
+    customers = getCustomers();
     renderOrdersTable();
     renderOrdersKPIs();
     renderAnalyticsDashboard();
     renderOverviewRecentOrders();
+    renderCustomersTable();
+    renderCustomersKPIs();
   }
 
   window.addEventListener('storage', e => {
-    if (e.key === 'ruha-aura-orders') refreshOrdersFromEvent();
+    if (e.key === 'ruha-aura-orders' || e.key === 'ruha-aura-customers') refreshOrdersFromEvent();
   });
 
   window.addEventListener('ruha:order-created', refreshOrdersFromEvent);
+  window.addEventListener('ruha:auth', refreshOrdersFromEvent);
 
   // Initialization
   document.addEventListener('DOMContentLoaded', () => {

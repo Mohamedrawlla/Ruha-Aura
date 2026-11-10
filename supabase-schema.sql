@@ -119,13 +119,68 @@ CREATE TABLE IF NOT EXISTS public.channel_integrations (
 );
 
 -- ====================================================================
--- 6. ROW LEVEL SECURITY (RLS) POLICIES
+-- 6. CUSTOMERS & REGISTERED USER DIRECTORY
+-- ====================================================================
+CREATE TABLE IF NOT EXISTS public.customers (
+    id TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE,
+    phone TEXT,
+    address TEXT,
+    role TEXT DEFAULT 'customer',
+    orders_count INTEGER DEFAULT 0,
+    total_spent NUMERIC(10,2) DEFAULT 0,
+    joined_date TIMESTAMPTZ DEFAULT NOW(),
+    last_active TIMESTAMPTZ DEFAULT NOW(),
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_customers_email ON public.customers(email);
+CREATE INDEX IF NOT EXISTS idx_customers_phone ON public.customers(phone);
+
+-- ====================================================================
+-- 7. ROW LEVEL SECURITY (RLS) POLICIES
 -- ====================================================================
 ALTER TABLE public.products ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.orders ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.order_items ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.inventory_logs ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.channel_integrations ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.customers ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Public Read Customers" ON public.customers;
+CREATE POLICY "Public Read Customers" ON public.customers FOR SELECT USING (true);
+DROP POLICY IF EXISTS "Public Insert Customers" ON public.customers;
+CREATE POLICY "Public Insert Customers" ON public.customers FOR INSERT WITH CHECK (true);
+DROP POLICY IF EXISTS "Public Update Customers" ON public.customers;
+CREATE POLICY "Public Update Customers" ON public.customers FOR UPDATE USING (true);
+DROP POLICY IF EXISTS "Public Delete Customers" ON public.customers;
+CREATE POLICY "Public Delete Customers" ON public.customers FOR DELETE USING (true);
+
+-- Auto-sync Supabase Auth sign-ups into public.customers directory
+CREATE OR REPLACE FUNCTION public.handle_new_user()
+RETURNS TRIGGER AS $$
+BEGIN
+    INSERT INTO public.customers (id, name, email, phone, role, joined_date, last_active)
+    VALUES (
+        new.id::text,
+        COALESCE(new.raw_user_meta_data->>'full_name', new.raw_user_meta_data->>'name', split_part(new.email, '@', 1), 'Member'),
+        new.email,
+        new.phone,
+        'customer',
+        NOW(),
+        NOW()
+    )
+    ON CONFLICT (email) DO UPDATE SET
+        last_active = NOW();
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql SECURITY DEFINER;
+
+DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
+CREATE TRIGGER on_auth_user_created
+    AFTER INSERT ON auth.users
+    FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
 
 DROP POLICY IF EXISTS "Public Read Products" ON public.products;
 CREATE POLICY "Public Read Products" ON public.products FOR SELECT USING (true);

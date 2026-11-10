@@ -354,7 +354,50 @@
       console.warn('[Checkout] Local storage save note:', e);
     }
 
-    // 2. Broadcast order creation to all open tabs / windows
+    // 2. Synchronize customer profile into Customers directory
+    try {
+      const custStored = localStorage.getItem('ruha-aura-customers');
+      let custs = custStored ? JSON.parse(custStored) : [];
+      if (!Array.isArray(custs)) custs = [];
+      const cEmail = (orderRecord.customer?.email || '').toLowerCase().trim();
+      const cPhone = (orderRecord.customer?.phone || '').trim();
+      const cName = orderRecord.customer?.name || 'Online Customer';
+      const cAddress = orderRecord.customer?.address || '';
+
+      let found = custs.find(c => (cEmail && c.email && c.email.toLowerCase() === cEmail) || (cPhone && c.phone && c.phone === cPhone));
+      let targetCust = null;
+      if (found) {
+        found.orders_count = (found.orders_count || 0) + 1;
+        found.total_spent = (found.total_spent || 0) + orderRecord.total;
+        found.last_order_date = orderRecord.date;
+        if (cAddress) found.address = cAddress;
+        if (!found.phone && cPhone) found.phone = cPhone;
+        if (!found.email && cEmail) found.email = cEmail;
+        targetCust = found;
+      } else {
+        targetCust = {
+          id: 'CUST-' + Math.floor(100000 + Math.random() * 900000),
+          name: cName,
+          email: cEmail || `${cPhone || 'member'}@ruhaaura.com`,
+          phone: cPhone,
+          address: cAddress,
+          role: 'customer',
+          joined_date: orderRecord.date,
+          orders_count: 1,
+          total_spent: orderRecord.total,
+          last_order_date: orderRecord.date
+        };
+        custs.unshift(targetCust);
+      }
+      localStorage.setItem('ruha-aura-customers', JSON.stringify(custs));
+      if (window.RuhaDB && window.RuhaDB.saveCustomer) {
+        window.RuhaDB.saveCustomer(targetCust).catch(() => {});
+      }
+    } catch (e) {
+      console.warn('[Checkout Customer Sync Note]', e);
+    }
+
+    // 3. Broadcast order creation to all open tabs / windows
     window.dispatchEvent(new CustomEvent('ruha:order-created', { detail: orderRecord }));
 
     // 3. Cloud persistence in Supabase
