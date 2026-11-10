@@ -152,28 +152,41 @@
     if (window.RuhaDB && window.RuhaDB.isConfigured()) {
       window.RuhaDB.getProducts().then(remoteList => {
         if (Array.isArray(remoteList) && remoteList.length > 0) {
-          const localItems = [...(catalog || [])];
-          // Merge custom local uploaded photos so they are not wiped by older remote rows
-          catalog = remoteList.map(rem => {
-            const local = localItems.find(l => l.id === rem.id);
-            if (local && local.src && local.src.startsWith('data:')) {
-              window.RuhaDB.saveProduct(local).catch(() => {});
-              return { 
-                ...rem, 
-                src: local.src, 
-                images: (Array.isArray(local.images) && local.images.length > 0) ? local.images : rem.images 
-              };
+          const isDeprecated = p => {
+            if (!p || !p.id) return true;
+            const id = String(p.id);
+            const sku = String(p.sku || '');
+            return (
+              id === 'hibiscus' || id === 'butterfly' || id === 'floral-dotted' ||
+              id === 'lily' || id === 'golden' || id === 'pearl' || id === 'daisy' ||
+              id.startsWith('RA-HC-') || id.startsWith('RA-JW-') ||
+              sku.startsWith('RA-HC-') || sku.startsWith('RA-JW-') ||
+              (sku.startsWith('RA-0') && Number(sku.replace('RA-', '')) <= 17)
+            );
+          };
+
+          const cleanRemote = remoteList.filter(p => !isDeprecated(p));
+          const defaultCat = window.RUHA_CATALOG || [];
+
+          // Map clean remote over default catalog strictly matching valid IDs
+          const map = new Map();
+          defaultCat.forEach(p => map.set(p.id, { ...p }));
+          cleanRemote.forEach(rem => {
+            if (rem && rem.id && map.has(rem.id)) {
+              map.set(rem.id, { ...map.get(rem.id), ...rem });
             }
-            return rem;
           });
 
-          // Also include any local products not yet in remote
-          localItems.forEach(local => {
-            if (!remoteList.some(rem => rem.id === local.id)) {
-              catalog.push(local);
-              window.RuhaDB.saveProduct(local).catch(() => {});
-            }
-          });
+          catalog = Array.from(map.values());
+
+          // If remote had deprecated items, purge them and sync clean 219 items to Supabase
+          if (remoteList.some(isDeprecated) || cleanRemote.length < defaultCat.length) {
+            window.RuhaDB.saveProductsBatch(catalog).catch(() => {});
+          }
+
+          try {
+            localStorage.setItem('ruha-aura-custom-catalog', JSON.stringify(catalog));
+          } catch {}
 
           renderKPIs();
           renderTable();

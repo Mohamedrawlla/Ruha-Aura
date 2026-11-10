@@ -9,6 +9,19 @@
     }
   } catch {}
 
+  const isDeprecatedProduct = p => {
+    if (!p || !p.id) return true;
+    const id = String(p.id);
+    const sku = String(p.sku || '');
+    return (
+      id === 'hibiscus' || id === 'butterfly' || id === 'floral-dotted' ||
+      id === 'lily' || id === 'golden' || id === 'pearl' || id === 'daisy' ||
+      id.startsWith('RA-HC-') || id.startsWith('RA-JW-') ||
+      sku.startsWith('RA-HC-') || sku.startsWith('RA-JW-') ||
+      (sku.startsWith('RA-0') && Number(sku.replace('RA-', '')) <= 17)
+    );
+  };
+
   const ensureFullCatalog = (currentList) => {
     const defaultCatalog = window.RUHA_CATALOG || [];
     if (!Array.isArray(currentList) || currentList.length === 0) {
@@ -17,11 +30,11 @@
     const map = new Map();
     // 1. Seed with full default catalog (219 products)
     defaultCatalog.forEach(p => map.set(p.id, { ...p }));
-    // 2. Overlay any modifications from current list
+    // 2. Overlay any modifications from current list ONLY for valid current products
     currentList.forEach(p => {
-      if (p && p.id) {
+      if (p && p.id && !isDeprecatedProduct(p) && map.has(p.id)) {
         const existing = map.get(p.id);
-        map.set(p.id, existing ? { ...existing, ...p } : p);
+        map.set(p.id, { ...existing, ...p });
       }
     });
     return Array.from(map.values());
@@ -33,8 +46,11 @@
       const defaultCatalog = window.RUHA_CATALOG || [];
       if (stored !== null) {
         const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed) && parsed.length >= defaultCatalog.length) {
-          return parsed;
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const clean = parsed.filter(p => !isDeprecatedProduct(p));
+          if (clean.length === defaultCatalog.length) {
+            return clean;
+          }
         }
       }
     } catch (e) {

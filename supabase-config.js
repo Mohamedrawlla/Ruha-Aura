@@ -108,17 +108,48 @@
               status: row.status || 'available'
             }));
 
-            let finalList = mapped;
-            const defaultCatalog = window.RUHA_CATALOG || [];
+            // Filter out any deprecated products (e.g. old RA-HC- or RA-JW- before category split)
+            const isDeprecated = p => {
+              if (!p || !p.id) return true;
+              const id = String(p.id);
+              const sku = String(p.sku || '');
+              return (
+                id === 'hibiscus' || id === 'butterfly' || id === 'floral-dotted' ||
+                id === 'lily' || id === 'golden' || id === 'pearl' || id === 'daisy' ||
+                id.startsWith('RA-HC-') || id.startsWith('RA-JW-') ||
+                sku.startsWith('RA-HC-') || sku.startsWith('RA-JW-') ||
+                (sku.startsWith('RA-0') && Number(sku.replace('RA-', '')) <= 17)
+              );
+            };
 
-            // If Supabase has fewer products than the full default catalog (e.g. only 8 toys in DB),
-            // merge missing items and auto-upsert them so Supabase contains the complete catalogue!
-            if (defaultCatalog.length > mapped.length) {
-              const missingInDB = defaultCatalog.filter(def => !mapped.some(m => m.id === def.id));
-              if (missingInDB.length > 0) {
-                finalList = [...mapped, ...missingInDB];
-                this.saveProductsBatch(finalList).catch(() => {});
-              }
+            const cleanMapped = mapped.filter(p => !isDeprecated(p));
+            const hasDeprecated = mapped.length !== cleanMapped.length;
+
+            if (hasDeprecated) {
+              // Purge deprecated products from Supabase
+              supabaseClient
+                .from('products')
+                .delete()
+                .or('id.like.RA-HC-%,id.like.RA-JW-%,sku.like.RA-HC-%,sku.like.RA-JW-%')
+                .then(() => {})
+                .catch(() => {});
+            }
+
+            const defaultCatalog = window.RUHA_CATALOG || [];
+            let finalList = defaultCatalog;
+            if (cleanMapped.length > 0) {
+              const map = new Map();
+              defaultCatalog.forEach(p => map.set(p.id, { ...p }));
+              cleanMapped.forEach(p => {
+                if (p && p.id && map.has(p.id)) {
+                  map.set(p.id, { ...map.get(p.id), ...p });
+                }
+              });
+              finalList = Array.from(map.values());
+            }
+
+            if (hasDeprecated || cleanMapped.length < defaultCatalog.length) {
+              this.saveProductsBatch(finalList).catch(() => {});
             }
 
             // Sync to local cache so offline works
