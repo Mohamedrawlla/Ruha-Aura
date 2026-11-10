@@ -2607,43 +2607,7 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
       }
     } catch {}
 
-    const auth = getAuthenticCustomer();
-    const defaultLiveOrders = [
-      {
-        id: 'RA-140103',
-        date: new Date().toISOString(),
-        customer: {
-          name: auth.name || 'Customer',
-          phone: auth.phone || '7708542509',
-          email: auth.email || '',
-          address: auth.address || 'Delivery on Call (Cash on Delivery)'
-        },
-        channel: 'Website',
-        items: [{
-          product: {
-            id: 'RA-CL-01',
-            sku: 'RA-CL-01',
-            name: 'Tulip Floral Fancy Hair Clip Set – 1 Large and 2 Mini Clips',
-            price: 159
-          },
-          quantity: 1,
-          lineTotal: 159
-        }],
-        subtotal: 159,
-        tax: 0,
-        shipping: 99,
-        discount: 0,
-        total: 258,
-        status: 'Pending',
-        payment_method: 'cod',
-        payment_status: 'Unpaid'
-      }
-    ];
-
-    try {
-      localStorage.setItem('ruha-aura-orders', JSON.stringify(defaultLiveOrders));
-    } catch {}
-    return defaultLiveOrders;
+    return [];
   }
 
   function saveOrders() {
@@ -2891,46 +2855,45 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
   // CUSTOMERS & REGISTERED USERS DIRECTORY SYSTEM
   // ========================================================
   function getCustomers() {
-    const auth = getAuthenticCustomer();
     try {
       const stored = localStorage.getItem('ruha-aura-customers');
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          parsed.forEach(c => {
-            if (c.name === 'Ruha Aura Customer' || c.email === 'ruhaaura.store@gmail.com' || c.phone === '8220431210') {
-              if (auth.name && auth.name !== 'Customer') c.name = auth.name;
-              if (auth.email) c.email = auth.email;
-              c.phone = auth.phone || '7708542509';
-              if (auth.address) c.address = auth.address;
-            }
-          });
-          localStorage.setItem('ruha-aura-customers', JSON.stringify(parsed));
-          return parsed;
+          const clean = parsed.filter(c => c && c.name !== 'Ruha Aura Customer' && c.email !== 'ruhaaura.store@gmail.com');
+          if (clean.length > 0) {
+            localStorage.setItem('ruha-aura-customers', JSON.stringify(clean));
+            return clean;
+          }
         }
       }
     } catch {}
 
-    // Seed customer directory from verified user account
-    const defaultCusts = [
-      {
-        id: 'CUST-1001',
-        name: auth.name || 'Customer',
-        email: auth.email || '',
-        phone: auth.phone || '7708542509',
-        address: auth.address || 'Delivery on Call (Cash on Delivery)',
-        role: 'customer',
-        orders_count: 1,
-        total_spent: 258,
-        joined_date: new Date().toISOString(),
-        last_active: new Date().toISOString()
-      }
-    ];
-
+    // Check if authentic customer account is currently logged in locally
     try {
-      localStorage.setItem('ruha-aura-customers', JSON.stringify(defaultCusts));
+      const auth = localStorage.getItem('ruha-aura-auth');
+      if (auth) {
+        const u = JSON.parse(auth);
+        if (u && u.email && u.role !== 'admin') {
+          const activeUser = [{
+            id: u.id || ('CUST-' + Math.floor(100000 + Math.random() * 900000)),
+            name: u.name || u.email.split('@')[0],
+            email: u.email,
+            phone: u.phone || '',
+            address: u.address || '',
+            role: 'customer',
+            orders_count: 0,
+            total_spent: 0,
+            joined_date: new Date().toISOString(),
+            last_active: new Date().toISOString()
+          }];
+          localStorage.setItem('ruha-aura-customers', JSON.stringify(activeUser));
+          return activeUser;
+        }
+      }
     } catch {}
-    return defaultCusts;
+
+    return [];
   }
 
   function saveCustomers() {

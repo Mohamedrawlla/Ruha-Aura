@@ -751,6 +751,55 @@
               console.error('[RuhaDB] Supabase order_items insert error:', itemsErr);
             }
           }
+
+          // 3. Automatically synchronize and link this order to the customer profile in Supabase
+          const cust = orderData.customer || {};
+          const cEmail = (cust.email || '').trim().toLowerCase();
+          const cPhone = (cust.phone || '').trim();
+          const cName = (cust.name || '').trim();
+          const orderTotal = Number(orderData.total) || 0;
+
+          if (cEmail || cPhone) {
+            try {
+              let custs = [];
+              try {
+                const storedCusts = localStorage.getItem('ruha-aura-customers');
+                custs = storedCusts ? JSON.parse(storedCusts) : [];
+                if (!Array.isArray(custs)) custs = [];
+              } catch {}
+
+              let targetCust = custs.find(c => (cEmail && c.email && c.email.toLowerCase() === cEmail) || (cPhone && c.phone && c.phone === cPhone));
+              if (targetCust) {
+                targetCust.orders_count = (targetCust.orders_count || 0) + 1;
+                targetCust.total_spent = (targetCust.total_spent || 0) + orderTotal;
+                targetCust.last_active = new Date().toISOString();
+                targetCust.last_order_date = orderData.date || new Date().toISOString();
+                if (cName && targetCust.name === 'Customer') targetCust.name = cName;
+                if (cust.address) targetCust.address = cust.address;
+              } else {
+                targetCust = {
+                  id: 'CUST-' + Math.floor(100000 + Math.random() * 900000),
+                  name: cName || 'Customer',
+                  email: cEmail || null,
+                  phone: cPhone || null,
+                  address: cust.address || null,
+                  role: 'customer',
+                  orders_count: 1,
+                  total_spent: orderTotal,
+                  joined_date: orderData.date || new Date().toISOString(),
+                  last_active: new Date().toISOString(),
+                  last_order_date: orderData.date || new Date().toISOString()
+                };
+                custs.unshift(targetCust);
+              }
+              try {
+                localStorage.setItem('ruha-aura-customers', JSON.stringify(custs));
+              } catch {}
+              await this.saveCustomer(targetCust);
+            } catch (custErr) {
+              console.warn('[RuhaDB] Customer auto-link in createOrder note:', custErr);
+            }
+          }
         } catch (e) {
           console.error('[RuhaDB] Failed to insert order into Supabase:', e);
           throw e;
@@ -815,10 +864,9 @@
       if (onProgress) onProgress(10, 'Syncing all products to cloud database...');
       await this.saveProductsBatch(catalog, onProgress);
 
-      if (onProgress) onProgress(80, 'Products synced! Syncing initial multi-channel orders...');
+      if (onProgress) onProgress(80, 'Products synced! Syncing verified live orders...');
 
-      // Seed orders (only authentic live orders, dynamically resolved from active customer session)
-      const authUser = this.getAuthenticCustomer();
+      // Sync verified orders only (zero fake or placeholder data)
       let orders = [];
       try {
         const stored = localStorage.getItem('ruha-aura-orders');
@@ -830,92 +878,26 @@
         }
       } catch {}
 
-      if (!Array.isArray(orders) || orders.length === 0) {
-        orders = [{
-          id: 'RA-140103',
-          date: new Date().toISOString(),
-          customer: {
-            name: authUser.name || 'Customer',
-            phone: authUser.phone || '7708542509',
-            email: authUser.email || '',
-            address: authUser.address || 'Delivery on Call (Cash on Delivery)'
-          },
-          channel: 'Website',
-          items: [{
-            product: {
-              id: 'RA-CL-01',
-              sku: 'RA-CL-01',
-              name: 'Tulip Floral Fancy Hair Clip Set – 1 Large and 2 Mini Clips',
-              price: 159
-            },
-            quantity: 1,
-            lineTotal: 159
-          }],
-          subtotal: 159,
-          tax: 0,
-          shipping: 99,
-          discount: 0,
-          total: 258,
-          status: 'Pending',
-          payment_method: 'cod',
-          payment_status: 'Unpaid'
-        }];
-        try {
-          localStorage.setItem('ruha-aura-orders', JSON.stringify(orders));
-        } catch {}
-      } else {
-        orders.forEach(o => {
-          if (o.customer) {
-            if (o.customer.name === 'Ruha Aura Customer' || !o.customer.name) o.customer.name = authUser.name;
-            if (o.customer.email === 'ruhaaura.store@gmail.com' || !o.customer.email) o.customer.email = authUser.email;
-            if (o.customer.phone === '8220431210' || !o.customer.phone) o.customer.phone = authUser.phone;
-          }
-        });
-      }
-
       for (const ord of orders) {
         await this.createOrder(ord, ord.items || []);
       }
 
-      // Seed customers/users directory to Supabase
+      // Sync registered customers only (zero fake or placeholder data)
       if (onProgress) onProgress(90, 'Syncing registered customers & users...');
       let custs = [];
       try {
         const stored = localStorage.getItem('ruha-aura-customers');
         custs = stored ? JSON.parse(stored) : [];
+        if (Array.isArray(custs)) {
+          custs = custs.filter(c => c && c.name !== 'Ruha Aura Customer' && c.email !== 'ruhaaura.store@gmail.com');
+        }
       } catch {}
-
-      if (!Array.isArray(custs) || custs.length === 0) {
-        custs = [{
-          id: 'CUST-1001',
-          name: authUser.name || 'Customer',
-          email: authUser.email || null,
-          phone: authUser.phone || '7708542509',
-          address: authUser.address || 'Delivery on Call (Cash on Delivery)',
-          role: 'customer',
-          orders_count: orders.length || 1,
-          total_spent: 258,
-          joined_date: new Date().toISOString(),
-          last_active: new Date().toISOString()
-        }];
-        try {
-          localStorage.setItem('ruha-aura-customers', JSON.stringify(custs));
-        } catch {}
-      } else {
-        custs.forEach(c => {
-          if (c.name === 'Ruha Aura Customer' || c.email === 'ruhaaura.store@gmail.com' || c.phone === '8220431210') {
-            if (authUser.name && authUser.name !== 'Customer') c.name = authUser.name;
-            if (authUser.email) c.email = authUser.email;
-            c.phone = authUser.phone || '7708542509';
-          }
-        });
-      }
 
       for (const c of custs) {
         await this.saveCustomer(c);
       }
 
-      if (onProgress) onProgress(100, 'Cloud database successfully initialized!');
+      if (onProgress) onProgress(100, 'Cloud database successfully synchronized!');
       return true;
     }
   };
