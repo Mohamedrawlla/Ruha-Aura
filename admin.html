@@ -3114,11 +3114,21 @@
                 <button type="button" id="btn-toggle-custom-category" class="btn-text-regen">+ New Category</button>
               </div>
               <select id="form-category" required>
-                <option value="Kids' toys" selected>Kids' toys (RA-TY)</option>
-                <option value="Hair clips">Hair clips (RA-CL)</option>
-                <option value="Scrunchies">Scrunchies (RA-SC)</option>
-                <option value="Bow collection">Bow collection (RA-BW)</option>
-                <option value="Sets & Combos">Sets & Combos (RA-ST)</option>
+                <optgroup label="Kids' Toys">
+                  <option value="Kids' toys" selected>Kids' toys (RA-TY)</option>
+                </optgroup>
+                <optgroup label="Hair Accessories">
+                  <option value="Hair clips">Hair clips (RA-CL)</option>
+                  <option value="Scrunchies">Scrunchies (RA-SC)</option>
+                  <option value="Bow collection">Bow collection (RA-BW)</option>
+                  <option value="Sets & Combos">Sets & Combos (RA-ST)</option>
+                </optgroup>
+                <optgroup label="Jewellery">
+                  <option value="Earrings">Earrings (RA-ER)</option>
+                  <option value="Necklaces & Pendants">Necklaces & Pendants (RA-NK)</option>
+                  <option value="Bracelets & Bangles">Bracelets & Bangles (RA-BR)</option>
+                  <option value="Rings">Rings (RA-RG)</option>
+                </optgroup>
                 <option value="__new__">+ Add new category...</option>
               </select>
               <div id="custom-category-box" style="display:none; margin-top:8px;">

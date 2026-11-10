@@ -125,8 +125,8 @@
       }
     }
 
-    // Auto-migrate if stored catalogue contains old legacy mock items or is smaller than default catalog
-    const isOldClip = p => 
+    // Auto-migrate if stored catalogue contains old legacy mock items or outdated SKUs
+    const isOldData = p => 
       p.id === 'hibiscus' || 
       p.id === 'butterfly' || 
       p.id === 'floral-dotted' || 
@@ -134,10 +134,12 @@
       p.id === 'golden' ||
       p.id === 'pearl' ||
       p.id === 'daisy' ||
+      (p.sku && p.sku.startsWith('RA-HC-')) ||
+      (p.sku && p.sku.startsWith('RA-JW-')) ||
       (p.sku && p.sku.startsWith('RA-0') && Number(p.sku.replace('RA-', '')) <= 17);
 
     const defaultCat = window.RUHA_CATALOG || [];
-    if (Array.isArray(list) && (list.some(isOldClip) || list.length < defaultCat.length)) {
+    if (Array.isArray(list) && (list.some(isOldData) || list.length < defaultCat.length)) {
       list = [...defaultCat];
       try {
         localStorage.setItem('ruha-aura-custom-catalog', JSON.stringify(list));
@@ -893,11 +895,30 @@
     "hair clips": "CL",
     "clips": "CL",
     "floral": "CL",
+    "claw clips": "CL",
+    "hair claw clip": "CL",
     "scrunchies": "SC",
     "bow collection": "BW",
     "bows": "BW",
     "sets & combos": "ST",
-    "sets": "ST"
+    "sets": "ST",
+    "combos": "ST",
+    "earrings": "ER",
+    "studs": "ER",
+    "stud earrings": "ER",
+    "drop earrings": "ER",
+    "necklaces & pendants": "NK",
+    "necklaces": "NK",
+    "pendants": "NK",
+    "chains": "NK",
+    "bracelets & bangles": "BR",
+    "bracelets": "BR",
+    "bangles": "BR",
+    "kadas": "BR",
+    "kada": "BR",
+    "rings": "RG",
+    "ring": "RG",
+    "jewellery": "JW"
   };
 
   const customCategoryPrefixes = {};
@@ -916,7 +937,17 @@
     if (!filterSelect) return;
     const currentVal = filterSelect.value;
 
-    const baseCategories = ["Kids' toys", "Hair clips", "Scrunchies", "Bow collection", "Sets & Combos"];
+    const baseCategories = [
+      "Kids' toys",
+      "Hair clips",
+      "Scrunchies",
+      "Bow collection",
+      "Sets & Combos",
+      "Earrings",
+      "Necklaces & Pendants",
+      "Bracelets & Bangles",
+      "Rings"
+    ];
     const catalogCategories = catalog.map(p => p.category || p.collection).filter(Boolean);
     const customCats = Object.keys(customCategoryPrefixes).map(c => c.charAt(0).toUpperCase() + c.slice(1));
     const allUnique = Array.from(new Set([...baseCategories, ...catalogCategories, ...customCats]));

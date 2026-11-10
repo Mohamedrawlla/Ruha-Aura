@@ -103,10 +103,10 @@
       return sets.slice(0, 4);
     }
 
-    // 'all' curated selection: 1 Hair Clip Set, 1 Jewellery Stud Set, 1 Claw Clip/Scrunchie, 1 Toy
-    const hair = catalog.find(p => p.id === 'RA-HC-01') || fallback.find(p => p.id === 'RA-HC-01');
-    const jewel = catalog.find(p => p.id === 'RA-JW-02') || fallback.find(p => p.id === 'RA-JW-02');
-    const clawOrScrunch = catalog.find(p => p.id === 'RA-HC-03') || fallback.find(p => p.id === 'RA-HC-03');
+    // 'all' curated selection: 1 Hair Clip Set, 1 Jewellery Stud Set, 1 Scrunchie, 1 Toy
+    const hair = catalog.find(p => p.id === 'RA-CL-01') || fallback.find(p => p.id === 'RA-CL-01');
+    const jewel = catalog.find(p => p.id === 'RA-ER-01') || fallback.find(p => p.id === 'RA-ER-01');
+    const clawOrScrunch = catalog.find(p => p.id === 'RA-SC-01') || fallback.find(p => p.id === 'RA-SC-01');
     const toy = catalog.find(p => p.id === 'RA-TY-01') || fallback.find(p => p.id === 'RA-TY-01');
     const mixed = [hair, jewel, clawOrScrunch, toy].filter(Boolean);
     if (mixed.length === 4) return mixed;

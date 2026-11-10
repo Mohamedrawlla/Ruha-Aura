@@ -1,9 +1,8 @@
-/* Ruha Aura Catalog Data — Complete Collection (210 Yentto Hair & Jewellery + 9 Kids Toys = 219 Products) */
 window.RUHA_CATALOG = [
   {
-    "id": "RA-HC-01",
-    "code": "RA-HC-01",
-    "sku": "RA-HC-01",
+    "id": "RA-CL-01",
+    "code": "RA-CL-01",
+    "sku": "RA-CL-01",
     "name": "Tulip Floral Fancy Hair Clip Set – 1 Large and 2 Mini Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -75,12 +74,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-02",
-    "code": "RA-HC-02",
-    "sku": "RA-HC-02",
+    "id": "RA-CL-02",
+    "code": "RA-CL-02",
+    "sku": "RA-CL-02",
     "name": "Ombre Rose Floral Hair Clip Set – 1 Large and 2 Mini Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -182,12 +181,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-03",
-    "code": "RA-HC-03",
-    "sku": "RA-HC-03",
+    "id": "RA-SC-01",
+    "code": "RA-SC-01",
+    "sku": "RA-SC-01",
     "name": "Sequin Petal Satin Scrunchies",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -231,12 +230,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Scrunchies"
   },
   {
-    "id": "RA-HC-04",
-    "code": "RA-HC-04",
-    "sku": "RA-HC-04",
+    "id": "RA-SC-02",
+    "code": "RA-SC-02",
+    "sku": "RA-SC-02",
     "name": "Printed Fabric Fashion Scrunchies",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -280,12 +279,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Scrunchies"
   },
   {
-    "id": "RA-HC-05",
-    "code": "RA-HC-05",
-    "sku": "RA-HC-05",
+    "id": "RA-SC-03",
+    "code": "RA-SC-03",
+    "sku": "RA-SC-03",
     "name": "Polka Dot Satin Scrunchies",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -329,12 +328,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Scrunchies"
   },
   {
-    "id": "RA-HC-06",
-    "code": "RA-HC-06",
-    "sku": "RA-HC-06",
+    "id": "RA-SC-04",
+    "code": "RA-SC-04",
+    "sku": "RA-SC-04",
     "name": "Bow Print Fashion Scrunchies",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -378,12 +377,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Scrunchies"
   },
   {
-    "id": "RA-HC-07",
-    "code": "RA-HC-07",
-    "sku": "RA-HC-07",
+    "id": "RA-SC-05",
+    "code": "RA-SC-05",
+    "sku": "RA-SC-05",
     "name": "Heart Print Fashion Scrunchies",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -427,12 +426,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Scrunchies"
   },
   {
-    "id": "RA-HC-08",
-    "code": "RA-HC-08",
-    "sku": "RA-HC-08",
+    "id": "RA-SC-06",
+    "code": "RA-SC-06",
+    "sku": "RA-SC-06",
     "name": "Pearl Charm Satin Scrunchies",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -476,12 +475,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Scrunchies"
   },
   {
-    "id": "RA-HC-09",
-    "code": "RA-HC-09",
-    "sku": "RA-HC-09",
+    "id": "RA-SC-07",
+    "code": "RA-SC-07",
+    "sku": "RA-SC-07",
     "name": "Pastel Luxe Satin Scrunchies",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -525,12 +524,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Scrunchies"
   },
   {
-    "id": "RA-HC-10",
-    "code": "RA-HC-10",
-    "sku": "RA-HC-10",
+    "id": "RA-SC-08",
+    "code": "RA-SC-08",
+    "sku": "RA-SC-08",
     "name": "Pearl Luxe Satin Scrunchies",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -574,12 +573,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Scrunchies"
   },
   {
-    "id": "RA-HC-11",
-    "code": "RA-HC-11",
-    "sku": "RA-HC-11",
+    "id": "RA-ST-01",
+    "code": "RA-ST-01",
+    "sku": "RA-ST-01",
     "name": "Colourful Soft Hair Elastics Set",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -623,12 +622,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Sets & Combos"
   },
   {
-    "id": "RA-HC-12",
-    "code": "RA-HC-12",
-    "sku": "RA-HC-12",
+    "id": "RA-CL-03",
+    "code": "RA-CL-03",
+    "sku": "RA-CL-03",
     "name": "Braided Double Colour Hair Claw Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -672,12 +671,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-13",
-    "code": "RA-HC-13",
-    "sku": "RA-HC-13",
+    "id": "RA-CL-04",
+    "code": "RA-CL-04",
+    "sku": "RA-CL-04",
     "name": "Gold Trim Floral Hair Claw Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -721,12 +720,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-14",
-    "code": "RA-HC-14",
-    "sku": "RA-HC-14",
+    "id": "RA-ST-02",
+    "code": "RA-ST-02",
+    "sku": "RA-ST-02",
     "name": "Multicolour Spiral Hair Tie Set",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -770,12 +769,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Sets & Combos"
   },
   {
-    "id": "RA-HC-15",
-    "code": "RA-HC-15",
-    "sku": "RA-HC-15",
+    "id": "RA-BW-01",
+    "code": "RA-BW-01",
+    "sku": "RA-BW-01",
     "name": "Braided Bow Design Hair Claw Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -819,12 +818,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Bow collection"
   },
   {
-    "id": "RA-HC-16",
-    "code": "RA-HC-16",
-    "sku": "RA-HC-16",
+    "id": "RA-CL-05",
+    "code": "RA-CL-05",
+    "sku": "RA-CL-05",
     "name": "Floral Bloom Matte Hair Claw Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -868,12 +867,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-17",
-    "code": "RA-HC-17",
-    "sku": "RA-HC-17",
+    "id": "RA-CL-06",
+    "code": "RA-CL-06",
+    "sku": "RA-CL-06",
     "name": "Daisy Bloom Flower Hair Claw Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -917,12 +916,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-18",
-    "code": "RA-HC-18",
-    "sku": "RA-HC-18",
+    "id": "RA-CL-07",
+    "code": "RA-CL-07",
+    "sku": "RA-CL-07",
     "name": "Bunny Star Mini Hair Clip Set",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -966,12 +965,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-19",
-    "code": "RA-HC-19",
-    "sku": "RA-HC-19",
+    "id": "RA-BW-02",
+    "code": "RA-BW-02",
+    "sku": "RA-BW-02",
     "name": "Tulle Bow Hair Clip and Mini Claw Clips Set for Girls",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1015,12 +1014,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Bow collection"
   },
   {
-    "id": "RA-HC-20",
-    "code": "RA-HC-20",
-    "sku": "RA-HC-20",
+    "id": "RA-CL-08",
+    "code": "RA-CL-08",
+    "sku": "RA-CL-08",
     "name": "Pearl Centre Floral Fabric Hair Clips – 3 Flower Design",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1064,12 +1063,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-21",
-    "code": "RA-HC-21",
-    "sku": "RA-HC-21",
+    "id": "RA-CL-09",
+    "code": "RA-CL-09",
+    "sku": "RA-CL-09",
     "name": "Jasmine Bud Hair Clips with Red Rose Design",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1113,12 +1112,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-22",
-    "code": "RA-HC-22",
-    "sku": "RA-HC-22",
+    "id": "RA-CL-10",
+    "code": "RA-CL-10",
+    "sku": "RA-CL-10",
     "name": "Daisy Flower Hair Claw Clips – Matte Collection",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1162,12 +1161,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-23",
-    "code": "RA-HC-23",
-    "sku": "RA-HC-23",
+    "id": "RA-CL-11",
+    "code": "RA-CL-11",
+    "sku": "RA-CL-11",
     "name": "Mini Butterfly Hair Claw Clips – Pastel Collection",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1211,12 +1210,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-24",
-    "code": "RA-HC-24",
-    "sku": "RA-HC-24",
+    "id": "RA-CL-12",
+    "code": "RA-CL-12",
+    "sku": "RA-CL-12",
     "name": "Floral Beaded Hair Claw Clip – Elegant Flower Design",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1260,12 +1259,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-25",
-    "code": "RA-HC-25",
-    "sku": "RA-HC-25",
+    "id": "RA-CL-13",
+    "code": "RA-CL-13",
+    "sku": "RA-CL-13",
     "name": "Elegant Butterfly Design Hair Claw Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1309,12 +1308,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-26",
-    "code": "RA-HC-26",
-    "sku": "RA-HC-26",
+    "id": "RA-CL-14",
+    "code": "RA-CL-14",
+    "sku": "RA-CL-14",
     "name": "Hibiscus Flower Hair Claw Clip – Pastel Colours",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1358,12 +1357,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-27",
-    "code": "RA-HC-27",
-    "sku": "RA-HC-27",
+    "id": "RA-CL-15",
+    "code": "RA-CL-15",
+    "sku": "RA-CL-15",
     "name": "3D Rose Flower Claw Clips – Elegant Floral Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1407,12 +1406,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-28",
-    "code": "RA-HC-28",
-    "sku": "RA-HC-28",
+    "id": "RA-CL-16",
+    "code": "RA-CL-16",
+    "sku": "RA-CL-16",
     "name": "Fan Shape Mini Claw Clips – Trendy Pastel Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1456,12 +1455,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-29",
-    "code": "RA-HC-29",
-    "sku": "RA-HC-29",
+    "id": "RA-CL-17",
+    "code": "RA-CL-17",
+    "sku": "RA-CL-17",
     "name": "Gradient Flower Hair Clips – Pastel Floral Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1505,12 +1504,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-30",
-    "code": "RA-HC-30",
-    "sku": "RA-HC-30",
+    "id": "RA-ST-03",
+    "code": "RA-ST-03",
+    "sku": "RA-ST-03",
     "name": "Colourful Flower and Mini Claw Hair Clips Combo – Pack of 5",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1554,12 +1553,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Sets & Combos"
   },
   {
-    "id": "RA-HC-31",
-    "code": "RA-HC-31",
-    "sku": "RA-HC-31",
+    "id": "RA-BW-03",
+    "code": "RA-BW-03",
+    "sku": "RA-BW-03",
     "name": "Organza Pearl Bow Hair Clips – Elegant Rhinestone Ribbon Bows",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1603,12 +1602,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Bow collection"
   },
   {
-    "id": "RA-HC-32",
-    "code": "RA-HC-32",
-    "sku": "RA-HC-32",
+    "id": "RA-BW-04",
+    "code": "RA-BW-04",
+    "sku": "RA-BW-04",
     "name": "Pearl Bow Hair Clips Set – Pastel Decorative Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1652,12 +1651,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Bow collection"
   },
   {
-    "id": "RA-HC-33",
-    "code": "RA-HC-33",
-    "sku": "RA-HC-33",
+    "id": "RA-BW-05",
+    "code": "RA-BW-05",
+    "sku": "RA-BW-05",
     "name": "Satin Pearl Bow Hair Clips – Elegant Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1701,16 +1700,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Bow collection"
   },
   {
-    "id": "RA-JW-01",
-    "code": "RA-JW-01",
-    "sku": "RA-JW-01",
+    "id": "RA-CL-18",
+    "code": "RA-CL-18",
+    "sku": "RA-CL-18",
     "name": "Butterfly Rhinestone Hair Claw Clip – Pearl Chain Design",
-    "collection": "Jewellery",
-    "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "collection": "Hair accessories",
+    "collectionLabel": "Hair accessories",
+    "type": "Hair Claw Clip",
     "price": 49,
     "costPrice": 89,
     "currency": "INR",
@@ -1750,12 +1749,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-34",
-    "code": "RA-HC-34",
-    "sku": "RA-HC-34",
+    "id": "RA-CL-19",
+    "code": "RA-CL-19",
+    "sku": "RA-CL-19",
     "name": "Pastel Beaded Flower Hair Clips – Floral Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1799,12 +1798,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-35",
-    "code": "RA-HC-35",
-    "sku": "RA-HC-35",
+    "id": "RA-ST-04",
+    "code": "RA-ST-04",
+    "sku": "RA-ST-04",
     "name": "Decorative Hair Pins – Pearl, Floral and Heart Designs",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1848,12 +1847,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Sets & Combos"
   },
   {
-    "id": "RA-HC-36",
-    "code": "RA-HC-36",
-    "sku": "RA-HC-36",
+    "id": "RA-CL-20",
+    "code": "RA-CL-20",
+    "sku": "RA-CL-20",
     "name": "Pearl and Rhinestone Mini Hair Clips – Butterfly, Flower & Heart",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1897,12 +1896,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-37",
-    "code": "RA-HC-37",
-    "sku": "RA-HC-37",
+    "id": "RA-BW-06",
+    "code": "RA-BW-06",
+    "sku": "RA-BW-06",
     "name": "Bow Flower Mini Claw Clips – Matte Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1946,12 +1945,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Bow collection"
   },
   {
-    "id": "RA-HC-38",
-    "code": "RA-HC-38",
-    "sku": "RA-HC-38",
+    "id": "RA-CL-21",
+    "code": "RA-CL-21",
+    "sku": "RA-CL-21",
     "name": "Heart Mini Claw Clips – Cute Matte Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -1995,12 +1994,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-39",
-    "code": "RA-HC-39",
-    "sku": "RA-HC-39",
+    "id": "RA-BW-07",
+    "code": "RA-BW-07",
+    "sku": "RA-BW-07",
     "name": "Bow Tie Mini Claw Clips – Cute Matte Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -2044,12 +2043,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Bow collection"
   },
   {
-    "id": "RA-HC-40",
-    "code": "RA-HC-40",
-    "sku": "RA-HC-40",
+    "id": "RA-CL-22",
+    "code": "RA-CL-22",
+    "sku": "RA-CL-22",
     "name": "Striped Triangle Claw Clips – Trendy Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -2093,12 +2092,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-41",
-    "code": "RA-HC-41",
-    "sku": "RA-HC-41",
+    "id": "RA-CL-23",
+    "code": "RA-CL-23",
+    "sku": "RA-CL-23",
     "name": "Mini Transparent Claw Clips – Colourful Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -2142,12 +2141,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-42",
-    "code": "RA-HC-42",
-    "sku": "RA-HC-42",
+    "id": "RA-CL-24",
+    "code": "RA-CL-24",
+    "sku": "RA-CL-24",
     "name": "Glitter Butterfly Rectangle Claw Clips – Stylish Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -2191,12 +2190,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-43",
-    "code": "RA-HC-43",
-    "sku": "RA-HC-43",
+    "id": "RA-CL-25",
+    "code": "RA-CL-25",
+    "sku": "RA-CL-25",
     "name": "Heart Shape Claw Clips – Trendy Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -2240,12 +2239,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-44",
-    "code": "RA-HC-44",
-    "sku": "RA-HC-44",
+    "id": "RA-CL-26",
+    "code": "RA-CL-26",
+    "sku": "RA-CL-26",
     "name": "Floral Mini Claw Clips – Cute Flower Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -2289,12 +2288,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-45",
-    "code": "RA-HC-45",
-    "sku": "RA-HC-45",
+    "id": "RA-CL-27",
+    "code": "RA-CL-27",
+    "sku": "RA-CL-27",
     "name": "U-Shape Hair Clips – Trendy Colourful Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -2338,12 +2337,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-46",
-    "code": "RA-HC-46",
-    "sku": "RA-HC-46",
+    "id": "RA-CL-28",
+    "code": "RA-CL-28",
+    "sku": "RA-CL-28",
     "name": "Transparent Rectangle Claw Clips – Trendy Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -2387,12 +2386,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-47",
-    "code": "RA-HC-47",
-    "sku": "RA-HC-47",
+    "id": "RA-CL-29",
+    "code": "RA-CL-29",
+    "sku": "RA-CL-29",
     "name": "Floral Claw Clips – Elegant Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -2436,12 +2435,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-48",
-    "code": "RA-HC-48",
-    "sku": "RA-HC-48",
+    "id": "RA-ST-05",
+    "code": "RA-ST-05",
+    "sku": "RA-ST-05",
     "name": "Gold-Tone Crystal Flower Hair Vine with Side Combs",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -2485,12 +2484,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Sets & Combos"
   },
   {
-    "id": "RA-JW-02",
-    "code": "RA-JW-02",
-    "sku": "RA-JW-02",
+    "id": "RA-ER-01",
+    "code": "RA-ER-01",
+    "sku": "RA-ER-01",
     "name": "Gold-Tone Cherry, Bow and Pearl Wreath Stud Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -2534,12 +2533,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-03",
-    "code": "RA-JW-03",
-    "sku": "RA-JW-03",
+    "id": "RA-ER-02",
+    "code": "RA-ER-02",
+    "sku": "RA-ER-02",
     "name": "Gold-Tone Tulip, Heart and Flower Stud Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -2583,12 +2582,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-04",
-    "code": "RA-JW-04",
-    "sku": "RA-JW-04",
+    "id": "RA-ER-03",
+    "code": "RA-ER-03",
+    "sku": "RA-ER-03",
     "name": "Gold-Tone Black Bar, Bow and Flower Stud Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -2632,12 +2631,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-05",
-    "code": "RA-JW-05",
-    "sku": "RA-JW-05",
+    "id": "RA-ER-04",
+    "code": "RA-ER-04",
+    "sku": "RA-ER-04",
     "name": "Gold-Tone Moon, Star and Crystal Heart Stud Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -2681,16 +2680,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-06",
-    "code": "RA-JW-06",
-    "sku": "RA-JW-06",
+    "id": "RA-ER-05",
+    "code": "RA-ER-05",
+    "sku": "RA-ER-05",
     "name": "Seashell, Starfish and Crystal Drop Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Stud Earrings Set",
+    "type": "Drop Earrings",
     "price": 129,
     "costPrice": 199,
     "currency": "INR",
@@ -2730,12 +2729,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-07",
-    "code": "RA-JW-07",
-    "sku": "RA-JW-07",
+    "id": "RA-ER-06",
+    "code": "RA-ER-06",
+    "sku": "RA-ER-06",
     "name": "Gold-Tone Rose, Butterfly and Black Heart Stud Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -2779,12 +2778,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-08",
-    "code": "RA-JW-08",
-    "sku": "RA-JW-08",
+    "id": "RA-ER-07",
+    "code": "RA-ER-07",
+    "sku": "RA-ER-07",
     "name": "Gold-Tone Rose, Heart and Butterfly Stud Earrings Set – 12 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -2828,12 +2827,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-09",
-    "code": "RA-JW-09",
-    "sku": "RA-JW-09",
+    "id": "RA-ER-08",
+    "code": "RA-ER-08",
+    "sku": "RA-ER-08",
     "name": "Gold-Tone Black Heart, Triangle and Flower Stud Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -2877,12 +2876,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-10",
-    "code": "RA-JW-10",
-    "sku": "RA-JW-10",
+    "id": "RA-ER-09",
+    "code": "RA-ER-09",
+    "sku": "RA-ER-09",
     "name": "Gold-Tone Black Flower, Bow and Butterfly Stud Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -2926,12 +2925,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-11",
-    "code": "RA-JW-11",
-    "sku": "RA-JW-11",
+    "id": "RA-ER-10",
+    "code": "RA-ER-10",
+    "sku": "RA-ER-10",
     "name": "Gold-Tone Butterfly, Daisy and Black Heart Stud Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -2975,12 +2974,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-12",
-    "code": "RA-JW-12",
-    "sku": "RA-JW-12",
+    "id": "RA-ER-11",
+    "code": "RA-ER-11",
+    "sku": "RA-ER-11",
     "name": "Gold-Tone Butterfly, Leaf Hoop and Flower Stud Earrings Set – 12 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3024,12 +3023,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-13",
-    "code": "RA-JW-13",
-    "sku": "RA-JW-13",
+    "id": "RA-ER-12",
+    "code": "RA-ER-12",
+    "sku": "RA-ER-12",
     "name": "Gold-Tone Moon, Star, Heart and Bow Stud Earrings Set – 12 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3073,12 +3072,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-14",
-    "code": "RA-JW-14",
-    "sku": "RA-JW-14",
+    "id": "RA-ER-13",
+    "code": "RA-ER-13",
+    "sku": "RA-ER-13",
     "name": "Gold-Tone Rose, Butterfly and Starfish Stud Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3122,12 +3121,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-15",
-    "code": "RA-JW-15",
-    "sku": "RA-JW-15",
+    "id": "RA-ER-14",
+    "code": "RA-ER-14",
+    "sku": "RA-ER-14",
     "name": "Gold-Tone Daisy Pearl and Crystal Flower Stud Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3171,16 +3170,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-16",
-    "code": "RA-JW-16",
-    "sku": "RA-JW-16",
+    "id": "RA-ER-15",
+    "code": "RA-ER-15",
+    "sku": "RA-ER-15",
     "name": "Pink Crystal Heart Drop and Stud Earrings Set – 7 Pairs",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Stud Earrings Set",
+    "type": "Drop Earrings",
     "price": 129,
     "costPrice": 199,
     "currency": "INR",
@@ -3220,12 +3219,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-17",
-    "code": "RA-JW-17",
-    "sku": "RA-JW-17",
+    "id": "RA-ER-16",
+    "code": "RA-ER-16",
+    "sku": "RA-ER-16",
     "name": "5 Days of Elegance Silver-Tone Anti-Tarnish Floral Stud Gift Set",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3269,12 +3268,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-18",
-    "code": "RA-JW-18",
-    "sku": "RA-JW-18",
+    "id": "RA-ER-17",
+    "code": "RA-ER-17",
+    "sku": "RA-ER-17",
     "name": "Gold-Tone Crystal Leaf Swirl Pearl Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3318,12 +3317,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-19",
-    "code": "RA-JW-19",
-    "sku": "RA-JW-19",
+    "id": "RA-ER-18",
+    "code": "RA-ER-18",
+    "sku": "RA-ER-18",
     "name": "Gold-Tone Pearl Wreath Crystal Accent Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3367,16 +3366,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-20",
-    "code": "RA-JW-20",
-    "sku": "RA-JW-20",
+    "id": "RA-ER-19",
+    "code": "RA-ER-19",
+    "sku": "RA-ER-19",
     "name": "Gold-Tone Pearl Bow Crystal Drop Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Stud Earrings Set",
+    "type": "Drop Earrings",
     "price": 59,
     "costPrice": 89,
     "currency": "INR",
@@ -3416,12 +3415,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-21",
-    "code": "RA-JW-21",
-    "sku": "RA-JW-21",
+    "id": "RA-ER-20",
+    "code": "RA-ER-20",
+    "sku": "RA-ER-20",
     "name": "Silver-Tone Crystal Pearl Ribbon Bow Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3465,12 +3464,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-22",
-    "code": "RA-JW-22",
-    "sku": "RA-JW-22",
+    "id": "RA-ER-21",
+    "code": "RA-ER-21",
+    "sku": "RA-ER-21",
     "name": "Gold-Tone Oval Double Pearl Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3514,12 +3513,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-23",
-    "code": "RA-JW-23",
-    "sku": "RA-JW-23",
+    "id": "RA-ER-22",
+    "code": "RA-ER-22",
+    "sku": "RA-ER-22",
     "name": "Silver-Tone Rose Pearl Wreath Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3563,16 +3562,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-24",
-    "code": "RA-JW-24",
-    "sku": "RA-JW-24",
+    "id": "RA-ER-23",
+    "code": "RA-ER-23",
+    "sku": "RA-ER-23",
     "name": "Silver-Tone Crystal Bow White Petal Drop Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Stud Earrings Set",
+    "type": "Drop Earrings",
     "price": 59,
     "costPrice": 89,
     "currency": "INR",
@@ -3612,16 +3611,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-25",
-    "code": "RA-JW-25",
-    "sku": "RA-JW-25",
+    "id": "RA-ER-24",
+    "code": "RA-ER-24",
+    "sku": "RA-ER-24",
     "name": "Gold-Tone Crystal Bow Pearl Drop Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Stud Earrings Set",
+    "type": "Drop Earrings",
     "price": 59,
     "costPrice": 89,
     "currency": "INR",
@@ -3661,12 +3660,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-26",
-    "code": "RA-JW-26",
-    "sku": "RA-JW-26",
+    "id": "RA-ER-25",
+    "code": "RA-ER-25",
+    "sku": "RA-ER-25",
     "name": "Gold-Tone Pearl Inlay Crystal Bow Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3710,12 +3709,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-27",
-    "code": "RA-JW-27",
-    "sku": "RA-JW-27",
+    "id": "RA-ER-26",
+    "code": "RA-ER-26",
+    "sku": "RA-ER-26",
     "name": "Gold-Tone Crystal Ribbon Loop Pearl Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -3759,16 +3758,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-28",
-    "code": "RA-JW-28",
-    "sku": "RA-JW-28",
+    "id": "RA-ER-27",
+    "code": "RA-ER-27",
+    "sku": "RA-ER-27",
     "name": "Silver-Tone Crystal Bow Pearl Drop Anti-Tarnish Earrings",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Stud Earrings Set",
+    "type": "Drop Earrings",
     "price": 59,
     "costPrice": 89,
     "currency": "INR",
@@ -3808,16 +3807,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-29",
-    "code": "RA-JW-29",
-    "sku": "RA-JW-29",
+    "id": "RA-BR-01",
+    "code": "RA-BR-01",
+    "sku": "RA-BR-01",
     "name": "Gold-Tone Seashell & Green Stone Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -3857,16 +3856,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-30",
-    "code": "RA-JW-30",
-    "sku": "RA-JW-30",
+    "id": "RA-BR-02",
+    "code": "RA-BR-02",
+    "sku": "RA-BR-02",
     "name": "Gold-Tone Black Butterfly Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -3906,16 +3905,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-31",
-    "code": "RA-JW-31",
-    "sku": "RA-JW-31",
+    "id": "RA-BR-03",
+    "code": "RA-BR-03",
+    "sku": "RA-BR-03",
     "name": "Gold-Tone Heart Charm Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 189,
     "costPrice": 249,
     "currency": "INR",
@@ -3955,16 +3954,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-32",
-    "code": "RA-JW-32",
-    "sku": "RA-JW-32",
+    "id": "RA-BR-04",
+    "code": "RA-BR-04",
+    "sku": "RA-BR-04",
     "name": "Gold-Tone Heart & Bow Drop Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 189,
     "costPrice": 249,
     "currency": "INR",
@@ -4004,16 +4003,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-33",
-    "code": "RA-JW-33",
-    "sku": "RA-JW-33",
+    "id": "RA-BR-05",
+    "code": "RA-BR-05",
+    "sku": "RA-BR-05",
     "name": "Gold-Tone Triple Bow Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 219,
     "costPrice": 269,
     "currency": "INR",
@@ -4053,16 +4052,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-34",
-    "code": "RA-JW-34",
-    "sku": "RA-JW-34",
+    "id": "RA-BR-06",
+    "code": "RA-BR-06",
+    "sku": "RA-BR-06",
     "name": "Gold-Tone Infinity & Crystal Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 219,
     "costPrice": 269,
     "currency": "INR",
@@ -4102,16 +4101,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-35",
-    "code": "RA-JW-35",
-    "sku": "RA-JW-35",
+    "id": "RA-BR-07",
+    "code": "RA-BR-07",
+    "sku": "RA-BR-07",
     "name": "Gold-Tone Double Infinity Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 219,
     "costPrice": 269,
     "currency": "INR",
@@ -4151,16 +4150,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-36",
-    "code": "RA-JW-36",
-    "sku": "RA-JW-36",
+    "id": "RA-BR-08",
+    "code": "RA-BR-08",
+    "sku": "RA-BR-08",
     "name": "Gold-Tone Black & White Clover Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 169,
     "costPrice": 219,
     "currency": "INR",
@@ -4200,16 +4199,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-37",
-    "code": "RA-JW-37",
-    "sku": "RA-JW-37",
+    "id": "RA-BR-09",
+    "code": "RA-BR-09",
+    "sku": "RA-BR-09",
     "name": "Gold-Tone Black & Green Clover Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 169,
     "costPrice": 219,
     "currency": "INR",
@@ -4249,16 +4248,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-38",
-    "code": "RA-JW-38",
-    "sku": "RA-JW-38",
+    "id": "RA-BR-10",
+    "code": "RA-BR-10",
+    "sku": "RA-BR-10",
     "name": "Gold-Tone Crystal Bar Double Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 169,
     "costPrice": 219,
     "currency": "INR",
@@ -4298,16 +4297,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-39",
-    "code": "RA-JW-39",
-    "sku": "RA-JW-39",
+    "id": "RA-BR-11",
+    "code": "RA-BR-11",
+    "sku": "RA-BR-11",
     "name": "Gold-Tone Crystal Clover Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 169,
     "costPrice": 219,
     "currency": "INR",
@@ -4347,16 +4346,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-40",
-    "code": "RA-JW-40",
-    "sku": "RA-JW-40",
+    "id": "RA-BR-12",
+    "code": "RA-BR-12",
+    "sku": "RA-BR-12",
     "name": "Gold-Tone Mini Bow Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 169,
     "costPrice": 219,
     "currency": "INR",
@@ -4396,16 +4395,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-41",
-    "code": "RA-JW-41",
-    "sku": "RA-JW-41",
+    "id": "RA-BR-13",
+    "code": "RA-BR-13",
+    "sku": "RA-BR-13",
     "name": "Gold-Tone Four-Leaf Clover Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 169,
     "costPrice": 219,
     "currency": "INR",
@@ -4445,16 +4444,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-42",
-    "code": "RA-JW-42",
-    "sku": "RA-JW-42",
+    "id": "RA-BR-14",
+    "code": "RA-BR-14",
+    "sku": "RA-BR-14",
     "name": "Gold-Tone Crystal Bow Ball Chain Anti-Tarnish Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 169,
     "costPrice": 219,
     "currency": "INR",
@@ -4494,12 +4493,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-43",
-    "code": "RA-JW-43",
-    "sku": "RA-JW-43",
+    "id": "RA-RG-01",
+    "code": "RA-RG-01",
+    "sku": "RA-RG-01",
     "name": "Gold-Tone Crystal Twist Infinity Anti-Tarnish Ring",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -4543,12 +4542,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Rings"
   },
   {
-    "id": "RA-JW-44",
-    "code": "RA-JW-44",
-    "sku": "RA-JW-44",
+    "id": "RA-RG-02",
+    "code": "RA-RG-02",
+    "sku": "RA-RG-02",
     "name": "Gold-Tone Crystal Wave Solitaire Anti-Tarnish Ring",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -4592,12 +4591,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Rings"
   },
   {
-    "id": "RA-JW-45",
-    "code": "RA-JW-45",
-    "sku": "RA-JW-45",
+    "id": "RA-RG-03",
+    "code": "RA-RG-03",
+    "sku": "RA-RG-03",
     "name": "Gold-Tone Solitaire Baguette Band Anti-Tarnish Ring",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -4641,12 +4640,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Rings"
   },
   {
-    "id": "RA-JW-46",
-    "code": "RA-JW-46",
-    "sku": "RA-JW-46",
+    "id": "RA-RG-04",
+    "code": "RA-RG-04",
+    "sku": "RA-RG-04",
     "name": "Gold-Tone Crystal Swirl Fan Anti-Tarnish Ring",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -4690,12 +4689,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Rings"
   },
   {
-    "id": "RA-JW-47",
-    "code": "RA-JW-47",
-    "sku": "RA-JW-47",
+    "id": "RA-RG-05",
+    "code": "RA-RG-05",
+    "sku": "RA-RG-05",
     "name": "Gold-Tone Baguette Crystal Square Anti-Tarnish Ring",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -4739,12 +4738,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Rings"
   },
   {
-    "id": "RA-JW-48",
-    "code": "RA-JW-48",
-    "sku": "RA-JW-48",
+    "id": "RA-RG-06",
+    "code": "RA-RG-06",
+    "sku": "RA-RG-06",
     "name": "Gold-Tone Double Stone Crystal Anti-Tarnish Ring",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -4788,12 +4787,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Rings"
   },
   {
-    "id": "RA-JW-49",
-    "code": "RA-JW-49",
-    "sku": "RA-JW-49",
+    "id": "RA-RG-07",
+    "code": "RA-RG-07",
+    "sku": "RA-RG-07",
     "name": "Gold-Tone Cushion Halo Crystal Anti-Tarnish Ring",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -4837,12 +4836,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Rings"
   },
   {
-    "id": "RA-JW-50",
-    "code": "RA-JW-50",
-    "sku": "RA-JW-50",
+    "id": "RA-RG-08",
+    "code": "RA-RG-08",
+    "sku": "RA-RG-08",
     "name": "Gold-Tone Oval Halo Crystal Anti-Tarnish Ring",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -4886,12 +4885,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Rings"
   },
   {
-    "id": "RA-JW-51",
-    "code": "RA-JW-51",
-    "sku": "RA-JW-51",
+    "id": "RA-RG-09",
+    "code": "RA-RG-09",
+    "sku": "RA-RG-09",
     "name": "Gold-Tone Crystal Bypass Anti-Tarnish Ring",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -4935,16 +4934,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Rings"
   },
   {
-    "id": "RA-JW-52",
-    "code": "RA-JW-52",
-    "sku": "RA-JW-52",
+    "id": "RA-BR-15",
+    "code": "RA-BR-15",
+    "sku": "RA-BR-15",
     "name": "Gold-Tone Twin Butterfly Lattice Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -4984,16 +4983,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-53",
-    "code": "RA-JW-53",
-    "sku": "RA-JW-53",
+    "id": "RA-BR-16",
+    "code": "RA-BR-16",
+    "sku": "RA-BR-16",
     "name": "Gold-Tone Crystal Butterfly Filigree Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5033,16 +5032,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-54",
-    "code": "RA-JW-54",
-    "sku": "RA-JW-54",
+    "id": "RA-BR-17",
+    "code": "RA-BR-17",
+    "sku": "RA-BR-17",
     "name": "Gold-Tone Black Enamel Circle Chain Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5082,16 +5081,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-55",
-    "code": "RA-JW-55",
-    "sku": "RA-JW-55",
+    "id": "RA-BR-18",
+    "code": "RA-BR-18",
+    "sku": "RA-BR-18",
     "name": "Gold-Tone Crystal Butterfly & Pearl Chain Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5131,16 +5130,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-56",
-    "code": "RA-JW-56",
-    "sku": "RA-JW-56",
+    "id": "RA-BR-19",
+    "code": "RA-BR-19",
+    "sku": "RA-BR-19",
     "name": "Gold-Tone Crystal Rectangle Plaque Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5180,16 +5179,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-57",
-    "code": "RA-JW-57",
-    "sku": "RA-JW-57",
+    "id": "RA-BR-20",
+    "code": "RA-BR-20",
+    "sku": "RA-BR-20",
     "name": "Gold-Tone Butterfly & Pearl Heart Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5229,16 +5228,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-58",
-    "code": "RA-JW-58",
-    "sku": "RA-JW-58",
+    "id": "RA-BR-21",
+    "code": "RA-BR-21",
+    "sku": "RA-BR-21",
     "name": "Gold-Tone Crystal Four-Leaf Clover Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5278,16 +5277,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-59",
-    "code": "RA-JW-59",
-    "sku": "RA-JW-59",
+    "id": "RA-BR-22",
+    "code": "RA-BR-22",
+    "sku": "RA-BR-22",
     "name": "Gold-Tone Black Stone & Crystal Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5327,16 +5326,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-60",
-    "code": "RA-JW-60",
-    "sku": "RA-JW-60",
+    "id": "RA-BR-23",
+    "code": "RA-BR-23",
+    "sku": "RA-BR-23",
     "name": "Gold-Tone Crystal Fern Leaf Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5376,16 +5375,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-61",
-    "code": "RA-JW-61",
-    "sku": "RA-JW-61",
+    "id": "RA-BR-24",
+    "code": "RA-BR-24",
+    "sku": "RA-BR-24",
     "name": "Gold-Tone Crystal Triple Heart Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5425,16 +5424,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-62",
-    "code": "RA-JW-62",
-    "sku": "RA-JW-62",
+    "id": "RA-BR-25",
+    "code": "RA-BR-25",
+    "sku": "RA-BR-25",
     "name": "Gold-Tone Butterfly Leaf Vine Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5474,16 +5473,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-63",
-    "code": "RA-JW-63",
-    "sku": "RA-JW-63",
+    "id": "RA-BR-26",
+    "code": "RA-BR-26",
+    "sku": "RA-BR-26",
     "name": "Gold-Tone Crystal Pave Heart Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5523,16 +5522,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-64",
-    "code": "RA-JW-64",
-    "sku": "RA-JW-64",
+    "id": "RA-BR-27",
+    "code": "RA-BR-27",
+    "sku": "RA-BR-27",
     "name": "Gold-Tone Butterfly & Crystal Drop Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5572,16 +5571,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-65",
-    "code": "RA-JW-65",
-    "sku": "RA-JW-65",
+    "id": "RA-BR-28",
+    "code": "RA-BR-28",
+    "sku": "RA-BR-28",
     "name": "Gold-Tone Crystal Heart Chain Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5621,16 +5620,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-66",
-    "code": "RA-JW-66",
-    "sku": "RA-JW-66",
+    "id": "RA-BR-29",
+    "code": "RA-BR-29",
+    "sku": "RA-BR-29",
     "name": "Gold-Tone Butterfly Heart Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5670,16 +5669,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-67",
-    "code": "RA-JW-67",
-    "sku": "RA-JW-67",
+    "id": "RA-BR-30",
+    "code": "RA-BR-30",
+    "sku": "RA-BR-30",
     "name": "Gold-Tone Crystal Tree of Life Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5719,16 +5718,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-68",
-    "code": "RA-JW-68",
-    "sku": "RA-JW-68",
+    "id": "RA-BR-31",
+    "code": "RA-BR-31",
+    "sku": "RA-BR-31",
     "name": "Gold-Tone Twin Butterfly Layered Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5768,16 +5767,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-69",
-    "code": "RA-JW-69",
-    "sku": "RA-JW-69",
+    "id": "RA-BR-32",
+    "code": "RA-BR-32",
+    "sku": "RA-BR-32",
     "name": "Gold-Tone Crystal Square Chain Link Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 269,
     "currency": "INR",
@@ -5817,16 +5816,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-70",
-    "code": "RA-JW-70",
-    "sku": "RA-JW-70",
+    "id": "RA-BR-33",
+    "code": "RA-BR-33",
+    "sku": "RA-BR-33",
     "name": "Gold-Tone Crystal Flower Medallion Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 229,
     "costPrice": 269,
     "currency": "INR",
@@ -5866,16 +5865,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-71",
-    "code": "RA-JW-71",
-    "sku": "RA-JW-71",
+    "id": "RA-BR-34",
+    "code": "RA-BR-34",
+    "sku": "RA-BR-34",
     "name": "Gold-Tone Crystal Double Infinity Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 229,
     "costPrice": 269,
     "currency": "INR",
@@ -5915,16 +5914,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-72",
-    "code": "RA-JW-72",
-    "sku": "RA-JW-72",
+    "id": "RA-BR-35",
+    "code": "RA-BR-35",
+    "sku": "RA-BR-35",
     "name": "Gold-Tone Butterfly Crystal Layered Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 229,
     "costPrice": 269,
     "currency": "INR",
@@ -5964,16 +5963,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-73",
-    "code": "RA-JW-73",
-    "sku": "RA-JW-73",
+    "id": "RA-BR-36",
+    "code": "RA-BR-36",
+    "sku": "RA-BR-36",
     "name": "Gold-Tone Crystal U-Link Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 229,
     "costPrice": 269,
     "currency": "INR",
@@ -6013,16 +6012,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-74",
-    "code": "RA-JW-74",
-    "sku": "RA-JW-74",
+    "id": "RA-BR-37",
+    "code": "RA-BR-37",
+    "sku": "RA-BR-37",
     "name": "Gold-Tone Crystal Butterfly Chain Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 229,
     "costPrice": 269,
     "currency": "INR",
@@ -6062,16 +6061,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-75",
-    "code": "RA-JW-75",
-    "sku": "RA-JW-75",
+    "id": "RA-BR-38",
+    "code": "RA-BR-38",
+    "sku": "RA-BR-38",
     "name": "Rose Gold-Tone Green Clover Crystal Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 229,
     "costPrice": 269,
     "currency": "INR",
@@ -6111,16 +6110,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-76",
-    "code": "RA-JW-76",
-    "sku": "RA-JW-76",
+    "id": "RA-BR-39",
+    "code": "RA-BR-39",
+    "sku": "RA-BR-39",
     "name": "Gold-Tone Crystal Infinity Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 229,
     "costPrice": 269,
     "currency": "INR",
@@ -6160,16 +6159,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-77",
-    "code": "RA-JW-77",
-    "sku": "RA-JW-77",
+    "id": "RA-BR-40",
+    "code": "RA-BR-40",
+    "sku": "RA-BR-40",
     "name": "Gold-Tone Crystal Leaf Arrow Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 229,
     "costPrice": 269,
     "currency": "INR",
@@ -6209,16 +6208,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-78",
-    "code": "RA-JW-78",
-    "sku": "RA-JW-78",
+    "id": "RA-BR-41",
+    "code": "RA-BR-41",
+    "sku": "RA-BR-41",
     "name": "Gold-Tone Clover Chain Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Anti-Tarnish Necklace",
+    "type": "Anti-Tarnish Bracelet",
     "price": 229,
     "costPrice": 269,
     "currency": "INR",
@@ -6258,16 +6257,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-79",
-    "code": "RA-JW-79",
-    "sku": "RA-JW-79",
+    "id": "RA-BR-42",
+    "code": "RA-BR-42",
+    "sku": "RA-BR-42",
     "name": "Gold-Tone Crystal Line Open Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 229,
     "costPrice": 269,
     "currency": "INR",
@@ -6307,16 +6306,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-80",
-    "code": "RA-JW-80",
-    "sku": "RA-JW-80",
+    "id": "RA-BR-43",
+    "code": "RA-BR-43",
+    "sku": "RA-BR-43",
     "name": "Gold-Tone Crystal Double Heart Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 149,
     "costPrice": 199,
     "currency": "INR",
@@ -6356,16 +6355,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-81",
-    "code": "RA-JW-81",
-    "sku": "RA-JW-81",
+    "id": "RA-BR-44",
+    "code": "RA-BR-44",
+    "sku": "RA-BR-44",
     "name": "Gold-Tone Crystal Butterfly Swirl Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 149,
     "costPrice": 199,
     "currency": "INR",
@@ -6405,16 +6404,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-82",
-    "code": "RA-JW-82",
-    "sku": "RA-JW-82",
+    "id": "RA-BR-45",
+    "code": "RA-BR-45",
+    "sku": "RA-BR-45",
     "name": "Gold-Tone Crystal Square Link Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 149,
     "costPrice": 199,
     "currency": "INR",
@@ -6454,16 +6453,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-83",
-    "code": "RA-JW-83",
-    "sku": "RA-JW-83",
+    "id": "RA-BR-46",
+    "code": "RA-BR-46",
+    "sku": "RA-BR-46",
     "name": "Gold-Tone Interlocking Ring Crystal Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 149,
     "costPrice": 199,
     "currency": "INR",
@@ -6503,16 +6502,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-84",
-    "code": "RA-JW-84",
-    "sku": "RA-JW-84",
+    "id": "RA-BR-47",
+    "code": "RA-BR-47",
+    "sku": "RA-BR-47",
     "name": "Gold-Tone Triple Flower Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 149,
     "costPrice": 199,
     "currency": "INR",
@@ -6552,16 +6551,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-85",
-    "code": "RA-JW-85",
-    "sku": "RA-JW-85",
+    "id": "RA-BR-48",
+    "code": "RA-BR-48",
+    "sku": "RA-BR-48",
     "name": "Gold-Tone Butterfly & Leaf Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 149,
     "costPrice": 199,
     "currency": "INR",
@@ -6601,16 +6600,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-86",
-    "code": "RA-JW-86",
-    "sku": "RA-JW-86",
+    "id": "RA-BR-49",
+    "code": "RA-BR-49",
+    "sku": "RA-BR-49",
     "name": "Gold-Tone Pink Enamel Bamboo Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -6650,16 +6649,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-87",
-    "code": "RA-JW-87",
-    "sku": "RA-JW-87",
+    "id": "RA-BR-50",
+    "code": "RA-BR-50",
+    "sku": "RA-BR-50",
     "name": "Gold-Tone Greek Key Crystal Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -6699,16 +6698,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-88",
-    "code": "RA-JW-88",
-    "sku": "RA-JW-88",
+    "id": "RA-BR-51",
+    "code": "RA-BR-51",
+    "sku": "RA-BR-51",
     "name": "Gold-Tone Multicolour Stone Layered Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -6748,16 +6747,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-89",
-    "code": "RA-JW-89",
-    "sku": "RA-JW-89",
+    "id": "RA-BR-52",
+    "code": "RA-BR-52",
+    "sku": "RA-BR-52",
     "name": "Gold-Tone Crystal Butterfly Wrap Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -6797,16 +6796,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-90",
-    "code": "RA-JW-90",
-    "sku": "RA-JW-90",
+    "id": "RA-BR-53",
+    "code": "RA-BR-53",
+    "sku": "RA-BR-53",
     "name": "Gold-Tone Crystal Pave Floating Stone Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 249,
     "currency": "INR",
@@ -6846,16 +6845,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-91",
-    "code": "RA-JW-91",
-    "sku": "RA-JW-91",
+    "id": "RA-BR-54",
+    "code": "RA-BR-54",
+    "sku": "RA-BR-54",
     "name": "Gold-Tone Black Enamel Circle Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 199,
     "costPrice": 249,
     "currency": "INR",
@@ -6895,16 +6894,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-92",
-    "code": "RA-JW-92",
-    "sku": "RA-JW-92",
+    "id": "RA-BR-55",
+    "code": "RA-BR-55",
+    "sku": "RA-BR-55",
     "name": "Gold-Tone Slim Screw Motif Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 149,
     "costPrice": 199,
     "currency": "INR",
@@ -6944,16 +6943,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-93",
-    "code": "RA-JW-93",
-    "sku": "RA-JW-93",
+    "id": "RA-BR-56",
+    "code": "RA-BR-56",
+    "sku": "RA-BR-56",
     "name": "Gold-Tone Screw Motif Crystal Anti-Tarnish Kada Bracelet",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 149,
     "costPrice": 199,
     "currency": "INR",
@@ -6993,12 +6992,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-94",
-    "code": "RA-JW-94",
-    "sku": "RA-JW-94",
+    "id": "RA-NK-01",
+    "code": "RA-NK-01",
+    "sku": "RA-NK-01",
     "name": "Gold-Tone Open Heart Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7042,12 +7041,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-95",
-    "code": "RA-JW-95",
-    "sku": "RA-JW-95",
+    "id": "RA-NK-02",
+    "code": "RA-NK-02",
+    "sku": "RA-NK-02",
     "name": "Gold-Tone Crystal Square Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7091,12 +7090,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-96",
-    "code": "RA-JW-96",
-    "sku": "RA-JW-96",
+    "id": "RA-ER-28",
+    "code": "RA-ER-28",
+    "sku": "RA-ER-28",
     "name": "Gold-Tone Crystal Infinity Anti-Tarnish Necklace & Earrings Set",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7140,12 +7139,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-97",
-    "code": "RA-JW-97",
-    "sku": "RA-JW-97",
+    "id": "RA-ER-29",
+    "code": "RA-ER-29",
+    "sku": "RA-ER-29",
     "name": "Gold-Tone Infinity Anti-Tarnish Necklace & Earrings Set",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7189,12 +7188,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Earrings"
   },
   {
-    "id": "RA-JW-98",
-    "code": "RA-JW-98",
-    "sku": "RA-JW-98",
+    "id": "RA-NK-03",
+    "code": "RA-NK-03",
+    "sku": "RA-NK-03",
     "name": "Gold-Tone Crystal Rectangle Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7238,12 +7237,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-99",
-    "code": "RA-JW-99",
-    "sku": "RA-JW-99",
+    "id": "RA-NK-04",
+    "code": "RA-NK-04",
+    "sku": "RA-NK-04",
     "name": "Gold-Tone Pearl Square Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7287,12 +7286,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-100",
-    "code": "RA-JW-100",
-    "sku": "RA-JW-100",
+    "id": "RA-NK-05",
+    "code": "RA-NK-05",
+    "sku": "RA-NK-05",
     "name": "Gold-Tone Pearl Double Ring Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7336,12 +7335,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-101",
-    "code": "RA-JW-101",
-    "sku": "RA-JW-101",
+    "id": "RA-NK-06",
+    "code": "RA-NK-06",
+    "sku": "RA-NK-06",
     "name": "Gold-Tone Heart Bow Drop Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7385,12 +7384,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-102",
-    "code": "RA-JW-102",
-    "sku": "RA-JW-102",
+    "id": "RA-NK-07",
+    "code": "RA-NK-07",
+    "sku": "RA-NK-07",
     "name": "Gold-Tone Crystal V-Bar Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7434,12 +7433,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-103",
-    "code": "RA-JW-103",
-    "sku": "RA-JW-103",
+    "id": "RA-NK-08",
+    "code": "RA-NK-08",
+    "sku": "RA-NK-08",
     "name": "Gold-Tone Crystal Snowflake Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7483,12 +7482,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-104",
-    "code": "RA-JW-104",
-    "sku": "RA-JW-104",
+    "id": "RA-NK-09",
+    "code": "RA-NK-09",
+    "sku": "RA-NK-09",
     "name": "Gold-Tone Pearl Cross Bar Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7532,12 +7531,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-105",
-    "code": "RA-JW-105",
-    "sku": "RA-JW-105",
+    "id": "RA-NK-10",
+    "code": "RA-NK-10",
+    "sku": "RA-NK-10",
     "name": "Gold-Tone Pearl & Star Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7581,12 +7580,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-106",
-    "code": "RA-JW-106",
-    "sku": "RA-JW-106",
+    "id": "RA-NK-11",
+    "code": "RA-NK-11",
+    "sku": "RA-NK-11",
     "name": "Gold-Tone Bow Drop Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7630,12 +7629,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-107",
-    "code": "RA-JW-107",
-    "sku": "RA-JW-107",
+    "id": "RA-NK-12",
+    "code": "RA-NK-12",
+    "sku": "RA-NK-12",
     "name": "Gold-Tone Bow Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7679,12 +7678,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-108",
-    "code": "RA-JW-108",
-    "sku": "RA-JW-108",
+    "id": "RA-NK-13",
+    "code": "RA-NK-13",
+    "sku": "RA-NK-13",
     "name": "Gold-Tone Rose Medallion Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7728,12 +7727,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-109",
-    "code": "RA-JW-109",
-    "sku": "RA-JW-109",
+    "id": "RA-NK-14",
+    "code": "RA-NK-14",
+    "sku": "RA-NK-14",
     "name": "Gold-Tone Infinity Ball Chain Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7777,12 +7776,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-110",
-    "code": "RA-JW-110",
-    "sku": "RA-JW-110",
+    "id": "RA-NK-15",
+    "code": "RA-NK-15",
+    "sku": "RA-NK-15",
     "name": "Gold-Tone Mini Heart Charm Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7826,12 +7825,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-111",
-    "code": "RA-JW-111",
-    "sku": "RA-JW-111",
+    "id": "RA-NK-16",
+    "code": "RA-NK-16",
+    "sku": "RA-NK-16",
     "name": "Gold-Tone Crystal Clover Ball Chain Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7875,12 +7874,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-112",
-    "code": "RA-JW-112",
-    "sku": "RA-JW-112",
+    "id": "RA-NK-17",
+    "code": "RA-NK-17",
+    "sku": "RA-NK-17",
     "name": "Gold-Tone Clover Ball Chain Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7924,12 +7923,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-113",
-    "code": "RA-JW-113",
-    "sku": "RA-JW-113",
+    "id": "RA-NK-18",
+    "code": "RA-NK-18",
+    "sku": "RA-NK-18",
     "name": "Gold-Tone Crystal Flower Cluster Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -7973,12 +7972,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-114",
-    "code": "RA-JW-114",
-    "sku": "RA-JW-114",
+    "id": "RA-NK-19",
+    "code": "RA-NK-19",
+    "sku": "RA-NK-19",
     "name": "Gold-Tone Double Heart Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8022,12 +8021,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-115",
-    "code": "RA-JW-115",
-    "sku": "RA-JW-115",
+    "id": "RA-NK-20",
+    "code": "RA-NK-20",
+    "sku": "RA-NK-20",
     "name": "Gold-Tone Crystal Teardrop Cluster Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8071,12 +8070,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-116",
-    "code": "RA-JW-116",
-    "sku": "RA-JW-116",
+    "id": "RA-NK-21",
+    "code": "RA-NK-21",
+    "sku": "RA-NK-21",
     "name": "Gold-Tone Crystal Heart Station Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8120,12 +8119,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-117",
-    "code": "RA-JW-117",
-    "sku": "RA-JW-117",
+    "id": "RA-NK-22",
+    "code": "RA-NK-22",
+    "sku": "RA-NK-22",
     "name": "Gold-Tone Crystal Heart Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8169,12 +8168,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-118",
-    "code": "RA-JW-118",
-    "sku": "RA-JW-118",
+    "id": "RA-NK-23",
+    "code": "RA-NK-23",
+    "sku": "RA-NK-23",
     "name": "Gold-Tone Pearl Ribbon Crystal Station Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8218,12 +8217,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-119",
-    "code": "RA-JW-119",
-    "sku": "RA-JW-119",
+    "id": "RA-NK-24",
+    "code": "RA-NK-24",
+    "sku": "RA-NK-24",
     "name": "Gold-Tone Pink Baguette Stone Station Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8267,12 +8266,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-120",
-    "code": "RA-JW-120",
-    "sku": "RA-JW-120",
+    "id": "RA-NK-25",
+    "code": "RA-NK-25",
+    "sku": "RA-NK-25",
     "name": "Gold-Tone Pink Heart Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8316,12 +8315,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-121",
-    "code": "RA-JW-121",
-    "sku": "RA-JW-121",
+    "id": "RA-NK-26",
+    "code": "RA-NK-26",
+    "sku": "RA-NK-26",
     "name": "Gold-Tone Purple Rectangle Stone Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8365,12 +8364,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-122",
-    "code": "RA-JW-122",
-    "sku": "RA-JW-122",
+    "id": "RA-NK-27",
+    "code": "RA-NK-27",
+    "sku": "RA-NK-27",
     "name": "Gold-Tone Pink Crystal Flower Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8414,12 +8413,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-123",
-    "code": "RA-JW-123",
-    "sku": "RA-JW-123",
+    "id": "RA-NK-28",
+    "code": "RA-NK-28",
+    "sku": "RA-NK-28",
     "name": "Gold-Tone Cut-Out Flower Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8463,12 +8462,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-124",
-    "code": "RA-JW-124",
-    "sku": "RA-JW-124",
+    "id": "RA-NK-29",
+    "code": "RA-NK-29",
+    "sku": "RA-NK-29",
     "name": "Gold-Tone Puffed Heart Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8512,12 +8511,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-125",
-    "code": "RA-JW-125",
-    "sku": "RA-JW-125",
+    "id": "RA-NK-30",
+    "code": "RA-NK-30",
+    "sku": "RA-NK-30",
     "name": "Gold-Tone Interlocking Rings Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8561,12 +8560,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-126",
-    "code": "RA-JW-126",
-    "sku": "RA-JW-126",
+    "id": "RA-NK-31",
+    "code": "RA-NK-31",
+    "sku": "RA-NK-31",
     "name": "Gold-Tone Angel Wing Pink Heart Lariat Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8610,12 +8609,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-127",
-    "code": "RA-JW-127",
-    "sku": "RA-JW-127",
+    "id": "RA-NK-32",
+    "code": "RA-NK-32",
+    "sku": "RA-NK-32",
     "name": "Gold-Tone Tulip Flower Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8659,12 +8658,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-128",
-    "code": "RA-JW-128",
-    "sku": "RA-JW-128",
+    "id": "RA-NK-33",
+    "code": "RA-NK-33",
+    "sku": "RA-NK-33",
     "name": "Gold-Tone Green Stone Leaf Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8708,12 +8707,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-129",
-    "code": "RA-JW-129",
-    "sku": "RA-JW-129",
+    "id": "RA-NK-34",
+    "code": "RA-NK-34",
+    "sku": "RA-NK-34",
     "name": "Silver-Tone Double Butterfly Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8757,12 +8756,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-130",
-    "code": "RA-JW-130",
-    "sku": "RA-JW-130",
+    "id": "RA-NK-35",
+    "code": "RA-NK-35",
+    "sku": "RA-NK-35",
     "name": "Gold-Tone Double Butterfly Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8806,12 +8805,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-131",
-    "code": "RA-JW-131",
-    "sku": "RA-JW-131",
+    "id": "RA-NK-36",
+    "code": "RA-NK-36",
+    "sku": "RA-NK-36",
     "name": "Gold-Tone Seashell Pearl Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8855,12 +8854,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-132",
-    "code": "RA-JW-132",
-    "sku": "RA-JW-132",
+    "id": "RA-NK-37",
+    "code": "RA-NK-37",
+    "sku": "RA-NK-37",
     "name": "Silver-Tone Seashell Pearl Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8904,12 +8903,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-133",
-    "code": "RA-JW-133",
-    "sku": "RA-JW-133",
+    "id": "RA-NK-38",
+    "code": "RA-NK-38",
+    "sku": "RA-NK-38",
     "name": "Gold-Tone Crystal Round Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -8953,12 +8952,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-134",
-    "code": "RA-JW-134",
-    "sku": "RA-JW-134",
+    "id": "RA-NK-39",
+    "code": "RA-NK-39",
+    "sku": "RA-NK-39",
     "name": "Gold-Tone Crystal Butterfly Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9002,12 +9001,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-135",
-    "code": "RA-JW-135",
-    "sku": "RA-JW-135",
+    "id": "RA-NK-40",
+    "code": "RA-NK-40",
+    "sku": "RA-NK-40",
     "name": "Gold-Tone White Petal Flower Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9051,12 +9050,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-136",
-    "code": "RA-JW-136",
-    "sku": "RA-JW-136",
+    "id": "RA-NK-41",
+    "code": "RA-NK-41",
+    "sku": "RA-NK-41",
     "name": "Gold-Tone Crystal Flower Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9100,12 +9099,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-137",
-    "code": "RA-JW-137",
-    "sku": "RA-JW-137",
+    "id": "RA-NK-42",
+    "code": "RA-NK-42",
+    "sku": "RA-NK-42",
     "name": "Gold-Tone Maple Leaf & Butterfly Charm Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9149,12 +9148,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-138",
-    "code": "RA-JW-138",
-    "sku": "RA-JW-138",
+    "id": "RA-NK-43",
+    "code": "RA-NK-43",
+    "sku": "RA-NK-43",
     "name": "Gold-Tone Star Flower & Butterfly Charm Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9198,12 +9197,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-139",
-    "code": "RA-JW-139",
-    "sku": "RA-JW-139",
+    "id": "RA-NK-44",
+    "code": "RA-NK-44",
+    "sku": "RA-NK-44",
     "name": "Gold-Tone Sun & Flower Charm Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9247,12 +9246,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-140",
-    "code": "RA-JW-140",
-    "sku": "RA-JW-140",
+    "id": "RA-NK-45",
+    "code": "RA-NK-45",
+    "sku": "RA-NK-45",
     "name": "Gold-Tone Heart & Leaf Charm Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9296,12 +9295,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-141",
-    "code": "RA-JW-141",
-    "sku": "RA-JW-141",
+    "id": "RA-NK-46",
+    "code": "RA-NK-46",
+    "sku": "RA-NK-46",
     "name": "Gold-Tone Heart & Diamond Drop Lariat Anti-Tarnish Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9345,12 +9344,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-142",
-    "code": "RA-JW-142",
-    "sku": "RA-JW-142",
+    "id": "RA-NK-47",
+    "code": "RA-NK-47",
+    "sku": "RA-NK-47",
     "name": "Gold-Tone Crystal Swirl Circle Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9394,12 +9393,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-143",
-    "code": "RA-JW-143",
-    "sku": "RA-JW-143",
+    "id": "RA-NK-48",
+    "code": "RA-NK-48",
+    "sku": "RA-NK-48",
     "name": "Gold-Tone Crystal V-Line Heart Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9443,12 +9442,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-JW-144",
-    "code": "RA-JW-144",
-    "sku": "RA-JW-144",
+    "id": "RA-NK-49",
+    "code": "RA-NK-49",
+    "sku": "RA-NK-49",
     "name": "Gold-Tone Heart Crystal Cluster Anti-Tarnish Pendant Necklace",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
@@ -9492,12 +9491,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Necklaces & Pendants"
   },
   {
-    "id": "RA-HC-49",
-    "code": "RA-HC-49",
-    "sku": "RA-HC-49",
+    "id": "RA-SC-09",
+    "code": "RA-SC-09",
+    "sku": "RA-SC-09",
     "name": "Floral Scarf Scrunchies – Trendy Floral Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -9541,12 +9540,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Scrunchies"
   },
   {
-    "id": "RA-HC-50",
-    "code": "RA-HC-50",
-    "sku": "RA-HC-50",
+    "id": "RA-SC-10",
+    "code": "RA-SC-10",
+    "sku": "RA-SC-10",
     "name": "Fluffy Fur Scrunchies – Soft & Stylish Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -9590,12 +9589,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Scrunchies"
   },
   {
-    "id": "RA-HC-51",
-    "code": "RA-HC-51",
-    "sku": "RA-HC-51",
+    "id": "RA-CL-30",
+    "code": "RA-CL-30",
+    "sku": "RA-CL-30",
     "name": "Floral Flower Hair Clips Set for Girls – Fairy Design Floral Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -9639,12 +9638,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-52",
-    "code": "RA-HC-52",
-    "sku": "RA-HC-52",
+    "id": "RA-CL-31",
+    "code": "RA-CL-31",
+    "sku": "RA-CL-31",
     "name": "Cute Flower Hair Clips Set for Girls – Fairy Design Floral Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -9688,12 +9687,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-53",
-    "code": "RA-HC-53",
-    "sku": "RA-HC-53",
+    "id": "RA-CL-32",
+    "code": "RA-CL-32",
+    "sku": "RA-CL-32",
     "name": "Fluffy Heart Hair Clips for Women – Cute Plush Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -9737,12 +9736,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-54",
-    "code": "RA-HC-54",
-    "sku": "RA-HC-54",
+    "id": "RA-CL-33",
+    "code": "RA-CL-33",
+    "sku": "RA-CL-33",
     "name": "Fluffy Hair Claw Clips for Women – Soft & Cute Hair Accessories",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -9786,16 +9785,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-JW-145",
-    "code": "RA-JW-145",
-    "sku": "RA-JW-145",
+    "id": "RA-CL-34",
+    "code": "RA-CL-34",
+    "sku": "RA-CL-34",
     "name": "Pastel Floral Pearl Wreath Hair Clip for Women & Girls",
-    "collection": "Jewellery",
-    "collectionLabel": "Jewellery accessories",
-    "type": "Fashion Jewellery",
+    "collection": "Hair accessories",
+    "collectionLabel": "Hair accessories",
+    "type": "Hair Clip Set",
     "price": 25,
     "costPrice": 49,
     "currency": "INR",
@@ -9853,16 +9852,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-JW-146",
-    "code": "RA-JW-146",
-    "sku": "RA-JW-146",
+    "id": "RA-BR-57",
+    "code": "RA-BR-57",
+    "sku": "RA-BR-57",
     "name": "Gold-Tone Double Layer Crystal Anti-Tarnish Bracelet for Women",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -9902,16 +9901,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-147",
-    "code": "RA-JW-147",
-    "sku": "RA-JW-147",
+    "id": "RA-BR-58",
+    "code": "RA-BR-58",
+    "sku": "RA-BR-58",
     "name": "Gold-Tone Crystal Flower Charm Anti-Tarnish Bracelet for Women",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -9951,16 +9950,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-148",
-    "code": "RA-JW-148",
-    "sku": "RA-JW-148",
+    "id": "RA-BR-59",
+    "code": "RA-BR-59",
+    "sku": "RA-BR-59",
     "name": "Gold-Tone Blue Crystal Charm Anti-Tarnish Bracelet for Women",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -10000,16 +9999,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-149",
-    "code": "RA-JW-149",
-    "sku": "RA-JW-149",
+    "id": "RA-BR-60",
+    "code": "RA-BR-60",
+    "sku": "RA-BR-60",
     "name": "Gold-Tone Heartbeat Charm Anti-Tarnish Bracelet for Women",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -10049,16 +10048,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-150",
-    "code": "RA-JW-150",
-    "sku": "RA-JW-150",
+    "id": "RA-BR-61",
+    "code": "RA-BR-61",
+    "sku": "RA-BR-61",
     "name": "Gold-Tone Clover Charm Layered Anti-Tarnish Bracelet for Women",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -10098,16 +10097,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-151",
-    "code": "RA-JW-151",
-    "sku": "RA-JW-151",
+    "id": "RA-BR-62",
+    "code": "RA-BR-62",
+    "sku": "RA-BR-62",
     "name": "Red Floral Charm Anti-Tarnish Bracelet for Women",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -10147,16 +10146,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-152",
-    "code": "RA-JW-152",
-    "sku": "RA-JW-152",
+    "id": "RA-BR-63",
+    "code": "RA-BR-63",
+    "sku": "RA-BR-63",
     "name": "Gold-Tone Star & Moon Charm Anti-Tarnish Bracelet for Women",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -10196,16 +10195,16 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-JW-153",
-    "code": "RA-JW-153",
-    "sku": "RA-JW-153",
+    "id": "RA-BR-64",
+    "code": "RA-BR-64",
+    "sku": "RA-BR-64",
     "name": "Gold-Tone Floral Resin Charm Bracelet for Women",
     "collection": "Jewellery",
     "collectionLabel": "Jewellery accessories",
-    "type": "Bracelet",
+    "type": "Anti-Tarnish Bracelet",
     "price": 249,
     "costPrice": 299,
     "currency": "INR",
@@ -10245,12 +10244,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Jewellery"
+    "category": "Bracelets & Bangles"
   },
   {
-    "id": "RA-HC-55",
-    "code": "RA-HC-55",
-    "sku": "RA-HC-55",
+    "id": "RA-BW-08",
+    "code": "RA-BW-08",
+    "sku": "RA-BW-08",
     "name": "Elegant Bow Claw Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -10294,12 +10293,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Bow collection"
   },
   {
-    "id": "RA-HC-56",
-    "code": "RA-HC-56",
-    "sku": "RA-HC-56",
+    "id": "RA-CL-35",
+    "code": "RA-CL-35",
+    "sku": "RA-CL-35",
     "name": "Pastel Bloom Flower Hair Claw Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -10381,12 +10380,12 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
-    "id": "RA-HC-57",
-    "code": "RA-HC-57",
-    "sku": "RA-HC-57",
+    "id": "RA-CL-36",
+    "code": "RA-CL-36",
+    "sku": "RA-CL-36",
     "name": "Pastel Bloom Floral Claw Clips",
     "collection": "Hair accessories",
     "collectionLabel": "Hair accessories",
@@ -10430,7 +10429,7 @@ window.RUHA_CATALOG = [
       "#c58b72",
       "#ecd8ce"
     ],
-    "category": "Hair accessories"
+    "category": "Hair clips"
   },
   {
     "id": "RA-TY-01",
@@ -10438,7 +10437,7 @@ window.RUHA_CATALOG = [
     "name": "5-in-1 Hammer Toy",
     "badge": "Top Rated",
     "src": "assets/toys/hammer.png",
-    "collection": "Kids’ toys",
+    "collection": "Kids' toys",
     "category": "Kids' toys",
     "type": "Activity toys",
     "description": "A colourful developmental activity toy with a hammering bench, xylophone musical bars, and wooden mallets.",
@@ -10466,7 +10465,9 @@ window.RUHA_CATALOG = [
       "#d97c65",
       "#629b9f",
       "#e5b85a"
-    ]
+    ],
+    "collectionLabel": "Kids' toys",
+    "code": "RA-TY-01"
   },
   {
     "id": "RA-TY-02",
@@ -10474,7 +10475,7 @@ window.RUHA_CATALOG = [
     "name": "Weather Busy Book",
     "badge": "Sensory Play",
     "src": "assets/toys/weather.png",
-    "collection": "Kids’ toys",
+    "collection": "Kids' toys",
     "category": "Kids' toys",
     "type": "Busy books",
     "description": "A tactile, weather-themed sensory busy book packed with interactive learning activities for little explorers.",
@@ -10502,7 +10503,9 @@ window.RUHA_CATALOG = [
       "#678ea8",
       "#eed168",
       "#e08d81"
-    ]
+    ],
+    "collectionLabel": "Kids' toys",
+    "code": "RA-TY-02"
   },
   {
     "id": "RA-TY-03",
@@ -10510,7 +10513,7 @@ window.RUHA_CATALOG = [
     "name": "Vehicle Busy Book",
     "badge": "Interactive",
     "src": "assets/toys/vehicle.png",
-    "collection": "Kids’ toys",
+    "collection": "Kids' toys",
     "category": "Kids' toys",
     "type": "Busy books",
     "description": "A vehicle-themed sensory book featuring cars, airplanes, and trains with button and zip motor-skill activities.",
@@ -10534,7 +10537,9 @@ window.RUHA_CATALOG = [
       "#4c7f99",
       "#d65d56",
       "#f2c75a"
-    ]
+    ],
+    "collectionLabel": "Kids' toys",
+    "code": "RA-TY-03"
   },
   {
     "id": "RA-TY-04",
@@ -10542,7 +10547,7 @@ window.RUHA_CATALOG = [
     "name": "Wooden Cat Puzzle",
     "badge": "Montessori",
     "src": "assets/toys/cat-puzzle.png",
-    "collection": "Kids’ toys",
+    "collection": "Kids' toys",
     "category": "Kids' toys",
     "type": "Puzzles",
     "description": "A charming wooden puzzle featuring interlocking cat figures that develop spatial recognition and problem solving.",
@@ -10570,7 +10575,9 @@ window.RUHA_CATALOG = [
       "#cda37b",
       "#8b654a",
       "#523b2d"
-    ]
+    ],
+    "collectionLabel": "Kids' toys",
+    "code": "RA-TY-04"
   },
   {
     "id": "RA-TY-05",
@@ -10578,7 +10585,7 @@ window.RUHA_CATALOG = [
     "name": "Magnetic Maze",
     "badge": "Brain Teaser",
     "src": "assets/toys/maze.png",
-    "collection": "Kids’ toys",
+    "collection": "Kids' toys",
     "category": "Kids' toys",
     "type": "Puzzles",
     "description": "A sealed magnetic maze board where kids guide colourful steel spheres through pathways using a magnetic pen.",
@@ -10606,7 +10613,9 @@ window.RUHA_CATALOG = [
       "#5a9391",
       "#d87a63",
       "#edd27c"
-    ]
+    ],
+    "collectionLabel": "Kids' toys",
+    "code": "RA-TY-05"
   },
   {
     "id": "RA-TY-06",
@@ -10614,7 +10623,7 @@ window.RUHA_CATALOG = [
     "name": "Memory Chess",
     "badge": "Family Game",
     "src": "assets/toys/chess.png",
-    "collection": "Kids’ toys",
+    "collection": "Kids' toys",
     "category": "Kids' toys",
     "type": "Wooden games",
     "description": "A classic wooden memory game with colour-coded pegs and dice that sharpens recall and turns game night into fun.",
@@ -10638,7 +10647,9 @@ window.RUHA_CATALOG = [
       "#b88a64",
       "#528591",
       "#d75e5b"
-    ]
+    ],
+    "collectionLabel": "Kids' toys",
+    "code": "RA-TY-06"
   },
   {
     "id": "RA-TY-07",
@@ -10646,7 +10657,7 @@ window.RUHA_CATALOG = [
     "name": "Colour Shut the Box",
     "badge": "Math & Play",
     "src": "assets/toys/colour-box.png",
-    "collection": "Kids’ toys",
+    "collection": "Kids' toys",
     "category": "Kids' toys",
     "type": "Wooden games",
     "description": "A colour-coded, 4-player traditional wooden board game teaching early math and tactical thinking.",
@@ -10670,7 +10681,9 @@ window.RUHA_CATALOG = [
       "#d65b53",
       "#528994",
       "#e2ae4c"
-    ]
+    ],
+    "collectionLabel": "Kids' toys",
+    "code": "RA-TY-07"
   },
   {
     "id": "RA-TY-08",
@@ -10678,7 +10691,7 @@ window.RUHA_CATALOG = [
     "name": "Wooden XO Game",
     "badge": "Artisan Decor",
     "src": "assets/toys/xo.png",
-    "collection": "Kids’ toys",
+    "collection": "Kids' toys",
     "category": "Kids' toys",
     "type": "Wooden games",
     "description": "An artisanal wooden tic-tac-toe coffee-table set with solid tactile X and O blocks.",
@@ -10702,7 +10715,9 @@ window.RUHA_CATALOG = [
       "#9f7457",
       "#cbb094",
       "#4a3528"
-    ]
+    ],
+    "collectionLabel": "Kids' toys",
+    "code": "RA-TY-08"
   },
   {
     "id": "RA-TY-09",
@@ -10710,7 +10725,7 @@ window.RUHA_CATALOG = [
     "name": "Mikado Stick Game",
     "badge": "Traditional",
     "src": "assets/toys/mikado.png",
-    "collection": "Kids’ toys",
+    "collection": "Kids' toys",
     "category": "Kids' toys",
     "type": "Wooden games",
     "description": "Timeless Mikado pick-up sticks in a fine wooden sliding storage box for precision and patience.",
@@ -10734,6 +10749,8 @@ window.RUHA_CATALOG = [
       "#bfa07e",
       "#913b35",
       "#3a5b6d"
-    ]
+    ],
+    "collectionLabel": "Kids' toys",
+    "code": "RA-TY-09"
   }
 ];
