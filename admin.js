@@ -2528,6 +2528,33 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
     }
   });
 
+  // Sync live orders from Supabase button
+  document.getElementById('sync-orders-cloud-btn')?.addEventListener('click', async () => {
+    const btn = document.getElementById('sync-orders-cloud-btn');
+    const oldText = btn.innerHTML;
+    btn.disabled = true;
+    btn.textContent = 'Syncing...';
+    try {
+      if (window.RuhaDB && window.RuhaDB.isConfigured() && window.RuhaDB.getOrders) {
+        const cloudOrders = await window.RuhaDB.getOrders();
+        if (Array.isArray(cloudOrders)) {
+          orders = cloudOrders;
+          saveOrders();
+          showToast(`Synced ${cloudOrders.length} order(s) from Supabase Cloud.`);
+        }
+      } else {
+        orders = getOrders();
+        saveOrders();
+        showToast('Orders refreshed from local storage.');
+      }
+    } catch (e) {
+      showToast('Sync note: ' + (e.message || 'Failed to sync orders.'));
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = oldText;
+    }
+  });
+
   // Import Marketplace CSV modal / prompt
   document.getElementById('import-marketplace-csv-btn')?.addEventListener('click', () => {
     const sample = `OrderID,Date,Channel,CustomerName,Phone,Address,SKU,Quantity,TotalAmount
@@ -2740,8 +2767,20 @@ AMZN-402-9921,2026-10-28,Amazon,Rahul Jain,9876543210,"Civil Lines, Jaipur",RA-0
     catalog = getCatalog();
     orders = getOrders();
     // Auto-clean any dummy orders from remote database if connected
-    if (window.RuhaDB && window.RuhaDB.isConfigured() && window.RuhaDB.purgeDummyOrders) {
-      window.RuhaDB.purgeDummyOrders().catch(() => {});
+    if (window.RuhaDB && window.RuhaDB.isConfigured()) {
+      if (window.RuhaDB.purgeDummyOrders) {
+        window.RuhaDB.purgeDummyOrders().catch(() => {});
+      }
+      if (window.RuhaDB.getOrders) {
+        window.RuhaDB.getOrders().then(cloudOrders => {
+          if (Array.isArray(cloudOrders) && cloudOrders.length > 0) {
+            orders = cloudOrders;
+            renderOrdersTable();
+            renderOrdersKPIs();
+            renderAnalyticsDashboard();
+          }
+        }).catch(() => {});
+      }
     }
     updateDBStatusUI();
     renderAnalyticsDashboard();
@@ -2752,6 +2791,16 @@ AMZN-402-9921,2026-10-28,Amazon,Rahul Jain,9876543210,"Civil Lines, Jaipur",RA-0
     populateCategoryFilter();
     renderOrdersKPIs();
   }
+
+  // Live real-time update when an order is placed from website checkout in another tab
+  window.addEventListener('storage', e => {
+    if (e.key === 'ruha-aura-orders') {
+      orders = getOrders();
+      renderOrdersTable();
+      renderOrdersKPIs();
+      renderAnalyticsDashboard();
+    }
+  });
 
   // Initialization
   document.addEventListener('DOMContentLoaded', () => {

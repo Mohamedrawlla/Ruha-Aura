@@ -308,6 +308,34 @@
 
     modal.querySelector('#success-message-text').innerHTML = instructions;
 
+    // Record Order in RuhaDB (Supabase cloud database + local storage)
+    const orderRecord = {
+      id: orderId,
+      date: new Date().toISOString(),
+      customer: {
+        name,
+        phone,
+        email: email || '',
+        address: `${address}, ${city}, ${state} - ${pincode}`,
+        notes: notes || ''
+      },
+      channel: 'Website',
+      subtotal,
+      tax: 0,
+      shipping,
+      discount: 0,
+      total,
+      status: 'Pending',
+      payment_method: paymentMethod,
+      payment_status: paymentMethod === 'cod' ? 'Unpaid' : 'Pending Verification'
+    };
+
+    if (window.RuhaDB && window.RuhaDB.createOrder) {
+      window.RuhaDB.createOrder(orderRecord, items).catch(err => {
+        console.warn('[Checkout] Cloud order registration note:', err);
+      });
+    }
+
     // Clear cart after successful placement
     window.RuhaShop.clearCart();
   }
@@ -321,6 +349,18 @@
     const modal = ensureCheckoutModal();
     modal.querySelector('#checkout-view-form').hidden = false;
     modal.querySelector('#checkout-view-success').hidden = true;
+
+    // Auto-fill logged-in customer info if available
+    const authUser = window.RuhaShop && window.RuhaShop.getAuthUser ? window.RuhaShop.getAuthUser() : null;
+    if (authUser) {
+      const nameInput = modal.querySelector('#cust-name');
+      const emailInput = modal.querySelector('#cust-email');
+      const phoneInput = modal.querySelector('#cust-phone');
+      if (nameInput && !nameInput.value && authUser.name) nameInput.value = authUser.name;
+      if (emailInput && !emailInput.value && authUser.email) emailInput.value = authUser.email;
+      if (phoneInput && !phoneInput.value && authUser.phone) phoneInput.value = authUser.phone;
+    }
+
     renderSummary();
     modal.showModal();
   }
