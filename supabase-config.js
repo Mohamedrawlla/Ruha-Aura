@@ -589,52 +589,90 @@
     },
 
     async createOrder(orderData, items = []) {
-      // 1. Save locally
+      if (!orderData) return [];
+
+      const orderItems = (Array.isArray(items) && items.length > 0)
+        ? items
+        : (Array.isArray(orderData.items) ? orderData.items : []);
+
+      // 1. Save locally with deduplication
       let orders = [];
       try {
         const stored = localStorage.getItem('ruha-aura-orders');
         orders = stored ? JSON.parse(stored) : [];
+        if (!Array.isArray(orders)) orders = [];
       } catch {}
 
-      orders.unshift({ ...orderData, items });
+      const cleanOrder = {
+        ...orderData,
+        items: orderItems
+      };
+
+      const existingIdx = orders.findIndex(o => o.id === orderData.id);
+      if (existingIdx >= 0) {
+        orders[existingIdx] = cleanOrder;
+      } else {
+        orders.unshift(cleanOrder);
+      }
+
       try {
         localStorage.setItem('ruha-aura-orders', JSON.stringify(orders));
       } catch {}
 
-      // 2. Save in Supabase
+      // 2. Save in Supabase via UPSERT (never fails on retry or primary key conflict!)
       if (this.isConfigured()) {
         try {
           const { error: ordErr } = await supabaseClient
             .from('orders')
-            .insert([{
+            .upsert([{
               id: orderData.id,
               order_number: orderData.id,
               date: orderData.date || new Date().toISOString(),
               channel: orderData.channel || 'Website',
               customer: orderData.customer || {},
-              subtotal: orderData.subtotal || 0,
-              tax: orderData.tax || 0,
-              shipping: orderData.shipping || 0,
-              discount: orderData.discount || 0,
-              total: orderData.total || 0,
+              subtotal: Number(orderData.subtotal) || 0,
+              tax: Number(orderData.tax) || 0,
+              shipping: Number(orderData.shipping) || 0,
+              discount: Number(orderData.discount) || 0,
+              total: Number(orderData.total) || 0,
               status: orderData.status || 'Pending',
-              payment_status: 'Paid'
-            }]);
+              payment_status: orderData.payment_status || 'Paid'
+            }], { onConflict: 'id' });
 
-          if (!ordErr && items.length > 0) {
-            const rows = items.map(i => ({
-              order_id: orderData.id,
-              product_id: i.product?.id || null,
-              sku: i.product?.sku || '',
-              product_name: i.product?.name || 'Product',
-              quantity: i.quantity || 1,
-              unit_price: i.product?.price || 0,
-              line_total: i.lineTotal || (i.quantity * (i.product?.price || 0))
-            }));
-            await supabaseClient.from('order_items').insert(rows);
+          if (ordErr) {
+            console.error('[RuhaDB] Supabase orders upsert error:', ordErr);
+            throw new Error('Orders upsert failed: ' + ordErr.message);
+          }
+
+          if (orderItems.length > 0) {
+            const rows = orderItems.map(i => {
+              const pId = i.product?.id || i.product_id || i.id || null;
+              const pSku = i.product?.sku || i.sku || '';
+              const pName = i.product?.name || i.product_name || i.name || 'Product';
+              const pPrice = Number(i.product?.price || i.unit_price || i.price) || 0;
+              const qty = Number(i.quantity) || 1;
+              const lineTot = Number(i.lineTotal || i.line_total) || (qty * pPrice);
+              return {
+                order_id: orderData.id,
+                product_id: pId,
+                sku: pSku,
+                product_name: pName,
+                quantity: qty,
+                unit_price: pPrice,
+                line_total: lineTot
+              };
+            });
+
+            // Clean previous items for this order before re-inserting
+            await supabaseClient.from('order_items').delete().eq('order_id', orderData.id);
+            const { error: itemsErr } = await supabaseClient.from('order_items').insert(rows);
+            if (itemsErr) {
+              console.error('[RuhaDB] Supabase order_items insert error:', itemsErr);
+            }
           }
         } catch (e) {
-          console.warn('[RuhaDB] Failed to insert order into Supabase:', e);
+          console.error('[RuhaDB] Failed to insert order into Supabase:', e);
+          throw e;
         }
       }
 
@@ -710,10 +748,43 @@
         }
       } catch {}
 
-      if (orders.length > 0) {
-        for (const ord of orders) {
-          await this.createOrder(ord, ord.items || []);
-        }
+      if (!Array.isArray(orders) || orders.length === 0) {
+        orders = [{
+          id: 'RA-140103',
+          date: new Date().toISOString(),
+          customer: {
+            name: 'Ruha Aura Customer',
+            phone: '8220431210',
+            email: 'ruhaaura.store@gmail.com',
+            address: 'Delivery on Call (Cash on Delivery)'
+          },
+          channel: 'Website',
+          items: [{
+            product: {
+              id: 'RA-CL-01',
+              sku: 'RA-CL-01',
+              name: 'Tulip Floral Fancy Hair Clip Set – 1 Large and 2 Mini Clips',
+              price: 159
+            },
+            quantity: 1,
+            lineTotal: 159
+          }],
+          subtotal: 159,
+          tax: 0,
+          shipping: 99,
+          discount: 0,
+          total: 258,
+          status: 'Pending',
+          payment_method: 'cod',
+          payment_status: 'Unpaid'
+        }];
+        try {
+          localStorage.setItem('ruha-aura-orders', JSON.stringify(orders));
+        } catch {}
+      }
+
+      for (const ord of orders) {
+        await this.createOrder(ord, ord.items || []);
       }
 
       // Seed customers/users directory to Supabase
@@ -724,10 +795,26 @@
         custs = stored ? JSON.parse(stored) : [];
       } catch {}
 
-      if (Array.isArray(custs) && custs.length > 0) {
-        for (const c of custs) {
-          await this.saveCustomer(c);
-        }
+      if (!Array.isArray(custs) || custs.length === 0) {
+        custs = [{
+          id: 'CUST-1001',
+          name: 'Ruha Aura Customer',
+          email: 'ruhaaura.store@gmail.com',
+          phone: '8220431210',
+          address: 'Delivery on Call (Cash on Delivery)',
+          role: 'customer',
+          orders_count: orders.length || 1,
+          total_spent: 258,
+          joined_date: new Date().toISOString(),
+          last_active: new Date().toISOString()
+        }];
+        try {
+          localStorage.setItem('ruha-aura-customers', JSON.stringify(custs));
+        } catch {}
+      }
+
+      for (const c of custs) {
+        await this.saveCustomer(c);
       }
 
       if (onProgress) onProgress(100, 'Cloud database successfully initialized!');
