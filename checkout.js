@@ -320,6 +320,18 @@
         notes: notes || ''
       },
       channel: 'Website',
+      items: items.map(it => ({
+        product: {
+          id: it.product?.id || '',
+          sku: it.product?.sku || '',
+          name: it.product?.name || 'Product',
+          price: it.product?.price || 0,
+          src: it.product?.src || ''
+        },
+        quantity: it.quantity || 1,
+        option: it.option || null,
+        lineTotal: it.lineTotal || (it.quantity * (it.product?.price || 0))
+      })),
       subtotal,
       tax: 0,
       shipping,
@@ -330,6 +342,22 @@
       payment_status: paymentMethod === 'cod' ? 'Unpaid' : 'Pending Verification'
     };
 
+    // 1. Guaranteed Immediate Local Persistence
+    try {
+      const stored = localStorage.getItem('ruha-aura-orders');
+      let currentOrders = stored ? JSON.parse(stored) : [];
+      if (!Array.isArray(currentOrders)) currentOrders = [];
+      currentOrders = currentOrders.filter(o => o.id !== orderId);
+      currentOrders.unshift(orderRecord);
+      localStorage.setItem('ruha-aura-orders', JSON.stringify(currentOrders));
+    } catch (e) {
+      console.warn('[Checkout] Local storage save note:', e);
+    }
+
+    // 2. Broadcast order creation to all open tabs / windows
+    window.dispatchEvent(new CustomEvent('ruha:order-created', { detail: orderRecord }));
+
+    // 3. Cloud persistence in Supabase
     if (window.RuhaDB && window.RuhaDB.createOrder) {
       window.RuhaDB.createOrder(orderRecord, items).catch(err => {
         console.warn('[Checkout] Cloud order registration note:', err);
