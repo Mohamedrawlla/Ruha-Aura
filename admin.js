@@ -2128,11 +2128,13 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
         autobillBadge.style.display = isAutoBilled ? 'inline-flex' : 'none';
       }
 
+      const orderId = order.id || 'RA-INV-1001';
       if (document.getElementById('inv-display-number')) {
-        document.getElementById('inv-display-number').textContent = order.id;
+        document.getElementById('inv-display-number').textContent = orderId;
       }
       if (document.getElementById('inv-display-date')) {
-        document.getElementById('inv-display-date').textContent = new Date(order.date).toLocaleDateString('en-IN', {
+        const orderDate = order.date ? new Date(order.date) : new Date();
+        document.getElementById('inv-display-date').textContent = orderDate.toLocaleDateString('en-IN', {
           day: 'numeric',
           month: 'short',
           year: 'numeric',
@@ -2143,68 +2145,160 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
 
       const chanEl = document.getElementById('inv-display-channel');
       if (chanEl) {
-        chanEl.textContent = order.channel || 'Direct';
-        chanEl.className = `channel-badge channel-${(order.channel || 'direct').toLowerCase().replace(/[^a-z]/g, '')}`;
+        chanEl.textContent = order.channel || 'Website';
+        chanEl.className = `channel-badge channel-${(order.channel || 'website').toLowerCase().replace(/[^a-z]/g, '')}`;
       }
 
+      // Customer Info
+      const cust = order.customer || {};
       if (document.getElementById('inv-display-cust-name')) {
-        document.getElementById('inv-display-cust-name').textContent = order.customer.name;
+        document.getElementById('inv-display-cust-name').textContent = cust.name || 'Customer';
       }
       if (document.getElementById('inv-display-cust-phone')) {
-        document.getElementById('inv-display-cust-phone').textContent = `Phone: ${order.customer.phone}`;
+        document.getElementById('inv-display-cust-phone').textContent = `Phone: ${cust.phone || '—'}`;
+      }
+      if (document.getElementById('inv-display-cust-email')) {
+        document.getElementById('inv-display-cust-email').textContent = cust.email ? `Email: ${cust.email}` : '';
+        document.getElementById('inv-display-cust-email').style.display = cust.email ? 'block' : 'none';
       }
       if (document.getElementById('inv-display-cust-address')) {
-        document.getElementById('inv-display-cust-address').textContent = order.customer.address;
+        document.getElementById('inv-display-cust-address').textContent = cust.address || '—';
       }
+
+      // Payment Method & Status Logic
+      const payMethodRaw = (order.payment_method || order.paymentMethod || '').toLowerCase();
+      const isCOD = payMethodRaw === 'cod' || payMethodRaw.includes('cash');
+      const isPaid = (order.payment_status || '').toLowerCase() === 'paid' || (order.payment_status || '').toLowerCase() === 'verified';
+      const paymentModeText = isCOD ? 'Cash on Delivery (COD)' : (order.payment_method || 'Prepaid / UPI Verified');
+      const paymentStatusText = isPaid ? 'Paid & Verified' : (isCOD ? 'Pending on Delivery' : (order.payment_status || 'Pending Verification'));
+
+      const payModeEl = document.getElementById('inv-display-payment-mode');
+      if (payModeEl) payModeEl.textContent = paymentModeText;
+
+      const payStatusEl = document.getElementById('inv-display-payment-status');
+      if (payStatusEl) {
+        payStatusEl.textContent = paymentStatusText;
+        if (isPaid) {
+          payStatusEl.style.background = '#dcfce7';
+          payStatusEl.style.color = '#166534';
+        } else if (isCOD) {
+          payStatusEl.style.background = '#fef9c3';
+          payStatusEl.style.color = '#854d0e';
+        } else {
+          payStatusEl.style.background = '#fee2e2';
+          payStatusEl.style.color = '#991b1b';
+        }
+      }
+
+      // Financials & Breakdown
+      const subtotal = Number(order.subtotal) || 0;
+      const shipping = Number(order.shipping) || 0;
+      const tax = Number(order.tax) || 0;
+      const total = Number(order.total) || (subtotal + shipping + tax);
 
       if (document.getElementById('inv-display-total')) {
-        document.getElementById('inv-display-total').textContent = formatPrice(order.total);
+        document.getElementById('inv-display-total').textContent = `₹${total.toLocaleString('en-IN')}`;
+      }
+      if (document.getElementById('inv-summary-total-label')) {
+        document.getElementById('inv-summary-total-label').textContent = isCOD ? 'Amount to Collect (COD):' : 'Grand Total Paid:';
       }
       if (document.getElementById('inv-subtotal-text')) {
-        document.getElementById('inv-subtotal-text').textContent = formatPrice(order.subtotal);
-      }
-      if (document.getElementById('inv-tax-text')) {
-        document.getElementById('inv-tax-text').textContent = formatPrice(order.tax);
+        document.getElementById('inv-subtotal-text').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
       }
       if (document.getElementById('inv-shipping-text')) {
-        document.getElementById('inv-shipping-text').textContent = formatPrice(order.shipping);
+        document.getElementById('inv-shipping-text').textContent = shipping > 0 ? `₹${shipping.toLocaleString('en-IN')}` : 'FREE';
+      }
+      if (document.getElementById('inv-tax-text')) {
+        document.getElementById('inv-tax-text').textContent = tax > 0 ? `₹${tax.toLocaleString('en-IN')}` : '₹0 (Included)';
+      }
+      if (document.getElementById('inv-grand-total-label')) {
+        document.getElementById('inv-grand-total-label').textContent = isCOD ? 'Amount Payable (COD):' : 'Amount Paid:';
       }
       if (document.getElementById('inv-grand-total-text')) {
-        document.getElementById('inv-grand-total-text').textContent = formatPrice(order.total);
+        document.getElementById('inv-grand-total-text').textContent = `₹${total.toLocaleString('en-IN')}`;
       }
 
+      // Itemized Table Rows
       const tbody = document.getElementById('inv-display-tbody');
+      const items = Array.isArray(order.items) ? order.items : [];
       if (tbody) {
-        tbody.innerHTML = order.items.map((item, i) => `
-          <tr>
-            <td>${i + 1}</td>
-            <td><strong>${item.product.name}</strong> (${item.product.category || 'Accessories'})</td>
-            <td style="font-family:monospace; font-weight:700;">${(item.product.sku || item.product.id).toUpperCase()}</td>
-            <td style="text-align:right;">₹${item.product.price}</td>
-            <td style="text-align:center;">${item.quantity}</td>
-            <td style="text-align:right; font-weight:700;">₹${item.lineTotal}</td>
-          </tr>
-        `).join('');
+        tbody.innerHTML = items.map((item, i) => {
+          const prodName = item.product?.name || item.name || 'Product';
+          const prodCat = item.product?.category || item.category || 'Accessories';
+          const prodSku = (item.product?.sku || item.sku || item.product?.id || `RA-SKU-${i+1}`).toUpperCase();
+          const prodPrice = Number(item.product?.price || item.price) || 0;
+          const qty = Number(item.quantity) || 1;
+          const lineTotal = Number(item.lineTotal) || (prodPrice * qty);
+          const optStr = item.option ? ` <span style="font-size:0.75rem; color:#666;">(${item.option})</span>` : '';
+          return `
+            <tr>
+              <td style="color:#777;">${i + 1}</td>
+              <td><strong>${prodName}</strong>${optStr} <span style="color:#777; font-size:0.8rem;">(${prodCat})</span></td>
+              <td style="font-family:monospace; font-weight:700; color:#333;">${prodSku}</td>
+              <td style="text-align:right;">₹${prodPrice.toLocaleString('en-IN')}</td>
+              <td style="text-align:center;">${qty}</td>
+              <td style="text-align:right; font-weight:700;">₹${lineTotal.toLocaleString('en-IN')}</td>
+            </tr>
+          `;
+        }).join('');
       }
 
-      // Dispatch Courier Slip Details
+      // Integrated Courier Dispatch Slip Details
       if (document.getElementById('dispatch-barcode-text')) {
-        document.getElementById('dispatch-barcode-text').textContent = order.id;
+        document.getElementById('dispatch-barcode-text').textContent = orderId;
       }
       if (document.getElementById('dispatch-cust-name')) {
-        document.getElementById('dispatch-cust-name').textContent = order.customer.name;
+        document.getElementById('dispatch-cust-name').textContent = cust.name || 'Customer';
       }
       if (document.getElementById('dispatch-cust-address')) {
-        document.getElementById('dispatch-cust-address').textContent = order.customer.address;
+        document.getElementById('dispatch-cust-address').textContent = cust.address || '—';
       }
       if (document.getElementById('dispatch-cust-phone')) {
-        document.getElementById('dispatch-cust-phone').textContent = `Phone: ${order.customer.phone}`;
+        document.getElementById('dispatch-cust-phone').textContent = `Phone: ${cust.phone || '—'}`;
+      }
+
+      const dispatchBadge = document.getElementById('dispatch-payment-badge');
+      if (dispatchBadge) {
+        if (isCOD) {
+          dispatchBadge.textContent = `📦 COD: Collect ₹${total.toLocaleString('en-IN')} at Delivery`;
+          dispatchBadge.style.background = '#fef9c3';
+          dispatchBadge.style.color = '#854d0e';
+          dispatchBadge.style.border = '1px solid #fde047';
+        } else {
+          dispatchBadge.textContent = `✅ PREPAID: Do Not Collect Cash`;
+          dispatchBadge.style.background = '#dcfce7';
+          dispatchBadge.style.color = '#166534';
+          dispatchBadge.style.border = '1px solid #86efac';
+        }
       }
 
       // Render Order Barcode for Dispatch Scan
       const barcodeContainer = document.getElementById('dispatch-barcode-svg-container');
       if (barcodeContainer) {
-        barcodeContainer.innerHTML = generateCode128SVG(order.id, 65, 2.2, true);
+        barcodeContainer.innerHTML = generateCode128SVG(orderId, 65, 2.2, true);
+      }
+
+      // Customer WhatsApp Share Link
+      const waBtn = document.getElementById('inv-whatsapp-btn');
+      if (waBtn) {
+        const rawPhone = String(cust.phone || '').replace(/[^0-9]/g, '');
+        const cleanPhone = rawPhone.length >= 10 ? rawPhone.slice(-10) : '';
+        if (cleanPhone) {
+          const itemsSummary = items.map(it => {
+            const pName = it.product?.name || it.name || 'Item';
+            const q = it.quantity || 1;
+            const p = it.lineTotal || ((it.product?.price || it.price || 0) * q);
+            return `• ${pName} (×${q}) - ₹${p}`;
+          }).join('\n');
+
+          const waMsg = encodeURIComponent(
+            `Hello ${cust.name || 'Customer'},\n\nThank you for shopping with *Ruha Aura*! ✨\nHere is your Tax Invoice & Dispatch confirmation for order *#${orderId}*:\n\n*Ordered Items:*\n${itemsSummary}\n\n*Subtotal:* ₹${subtotal}\n*Shipping:* ${shipping > 0 ? '₹' + shipping : 'FREE'}\n*Grand Total:* ₹${total}\n*Payment Mode:* ${paymentModeText}\n*Status:* ${paymentStatusText}\n\n*Shipping Address:*\n${cust.address || '—'}\n\nWe are carefully packing your handcrafted order with care. If you have any questions, feel free to reply to this message!\n\nWarm regards,\n*Ruha Aura Handcrafted*\nEmail: ruhaaura.store@gmail.com\nWhatsApp: +91 82204 31210`
+          );
+          waBtn.href = `https://wa.me/91${cleanPhone}?text=${waMsg}`;
+          waBtn.style.display = 'inline-flex';
+        } else {
+          waBtn.style.display = 'none';
+        }
       }
     } catch (err) {
       console.error('Invoice modal population note:', err);
