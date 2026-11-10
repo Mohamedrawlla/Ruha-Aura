@@ -329,6 +329,81 @@
       return urlData.publicUrl;
     },
 
+    // --- Authentication API (Customer Sign Up, Sign In, Google OAuth) ---
+    async signUp(email, password, metadata = {}) {
+      if (!this.isConfigured()) {
+        const user = {
+          id: 'user_' + Date.now().toString(36),
+          email,
+          name: metadata.fullName || email.split('@')[0],
+          phone: metadata.phone || '',
+          role: 'customer'
+        };
+        return { data: { user }, error: null };
+      }
+      return await supabaseClient.auth.signUp({
+        email,
+        password,
+        options: {
+          data: {
+            full_name: metadata.fullName || '',
+            phone: metadata.phone || ''
+          }
+        }
+      });
+    },
+
+    async signIn(email, password) {
+      if (!this.isConfigured()) {
+        const user = {
+          id: 'user_' + email.replace(/[^a-zA-Z0-9]/g, '_'),
+          email,
+          name: email.split('@')[0],
+          role: (email === 'admin' || email === 'admin@ruhaaura.com') && password === 'admin123' ? 'admin' : 'customer'
+        };
+        return { data: { user }, error: null };
+      }
+      return await supabaseClient.auth.signInWithPassword({ email, password });
+    },
+
+    async signInWithGoogle() {
+      if (!this.isConfigured()) {
+        throw new Error('Supabase project configuration required for Google Sign-In.');
+      }
+      return await supabaseClient.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: window.location.origin + window.location.pathname
+        }
+      });
+    },
+
+    async signOut() {
+      if (this.isConfigured()) {
+        try { await supabaseClient.auth.signOut(); } catch {}
+      }
+      return true;
+    },
+
+    async getSessionUser() {
+      if (this.isConfigured()) {
+        try {
+          const { data: { session } } = await supabaseClient.auth.getSession();
+          if (session && session.user) {
+            return {
+              id: session.user.id,
+              email: session.user.email,
+              name: session.user.user_metadata?.full_name || session.user.email?.split('@')[0] || 'Member',
+              role: session.user.email === 'admin@ruhaaura.com' ? 'admin' : 'customer'
+            };
+          }
+        } catch (e) {
+          console.warn('[RuhaDB] Session fetch note:', e);
+        }
+      }
+      return null;
+    },
+
     // Helper to detect dummy/mock test orders
     isDummyOrder(o) {
       if (!o || typeof o !== 'object') return true;

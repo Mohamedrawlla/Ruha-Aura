@@ -2403,6 +2403,106 @@ body.cart-open-scroll-lock {
   gap: 10px;
   justify-content: center;
   margin-top: 14px;
+}
+
+/* Auth Modal Tabs (Sign In / Create Account) */
+.auth-tabs {
+  display: flex;
+  border-bottom: 1px solid #ebdcd0;
+  margin-bottom: 20px;
+  gap: 6px;
+}
+.auth-tab-btn {
+  flex: 1;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #8c736a;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+.auth-tab-btn:hover {
+  color: var(--plum);
+}
+.auth-tab-btn.is-active {
+  color: var(--plum);
+  border-bottom-color: var(--plum);
+}
+
+/* Google OAuth Sign-in Button */
+.auth-google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 11px 16px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 1px solid #d4c6c0;
+  color: #3c4043;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+.auth-google-btn:hover {
+  background: #fdfbf9;
+  border-color: #baaba5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Divider with text */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 4px 0 18px;
+  color: #a89489;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e8ded9;
+}
+.auth-divider span {
+  padding: 0 12px;
+}
+
+/* Alert / Status Messages */
+.auth-alert {
+  padding: 11px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  margin-bottom: 16px;
+  display: none;
+}
+.auth-alert.alert-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  display: block;
+}
+.auth-alert.alert-success {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  display: block;
+}
+
 /* Multi-Photo Card Hover & Counter Badge */
 .catalogue-card-photo > a {
   position: relative;

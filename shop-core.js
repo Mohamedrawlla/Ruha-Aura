@@ -591,21 +591,80 @@
         <div class="auth-modal-head">
           <img src="assets/brand-logo.jpeg" alt="Ruha Aura" class="auth-modal-logo">
           <h3>Welcome to Ruha Aura</h3>
-          <p id="auth-modal-sub">Sign in to access your bag, orders, and saved favourites.</p>
+          <p id="auth-modal-sub">Sign in or create an account to access your bag, orders & favourites.</p>
         </div>
-        <form id="auth-modal-form">
-          <div class="auth-input-group">
-            <label for="auth-email">Email or Username</label>
-            <input type="text" id="auth-email" required placeholder="you@example.com" autocomplete="username">
+
+        <div id="auth-modal-unauthenticated">
+          <!-- Google OAuth One-Click Button -->
+          <button type="button" class="auth-google-btn" id="auth-google-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <span>Continue with Google</span>
+          </button>
+
+          <div class="auth-divider"><span>or with email</span></div>
+
+          <!-- Auth Tab Switcher -->
+          <div class="auth-tabs">
+            <button type="button" class="auth-tab-btn is-active" id="tab-auth-login" data-auth-tab="login">Sign In</button>
+            <button type="button" class="auth-tab-btn" id="tab-auth-signup" data-auth-tab="signup">Create Account</button>
           </div>
-          <div class="auth-input-group">
-            <label for="auth-password">Password</label>
-            <input type="password" id="auth-password" required placeholder="••••••••" autocomplete="current-password">
-          </div>
-          <button type="submit" class="auth-submit-btn">Sign in</button>
-        </form>
+
+          <!-- Alert / Feedback Message Box -->
+          <div class="auth-alert" id="auth-alert-box"></div>
+
+          <!-- 1. SIGN IN FORM -->
+          <form id="auth-form-login">
+            <div class="auth-input-group">
+              <label for="auth-email">Email or Username</label>
+              <input type="text" id="auth-email" required placeholder="you@example.com" autocomplete="username">
+            </div>
+            <div class="auth-input-group">
+              <label for="auth-password">Password</label>
+              <input type="password" id="auth-password" required placeholder="••••••••" autocomplete="current-password">
+            </div>
+            <button type="submit" class="auth-submit-btn" id="login-submit-btn">Sign in</button>
+            <p style="text-align:center; font-size:11.5px; color:#8c736a; margin:13px 0 0;">
+              Store Owner? <a href="#" id="auth-quick-admin-link" style="color:var(--plum); font-weight:600; text-decoration:underline;">Quick Fill Admin</a>
+            </p>
+          </form>
+
+          <!-- 2. SIGN UP / CREATE ACCOUNT FORM -->
+          <form id="auth-form-signup" style="display:none;">
+            <div class="auth-input-group">
+              <label for="signup-name">Full Name</label>
+              <input type="text" id="signup-name" required placeholder="e.g. Priya Sharma" autocomplete="name">
+            </div>
+            <div class="auth-input-group">
+              <label for="signup-phone">Mobile Number</label>
+              <input type="tel" id="signup-phone" placeholder="e.g. 82204 31210" autocomplete="tel">
+            </div>
+            <div class="auth-input-group">
+              <label for="signup-email">Email Address</label>
+              <input type="email" id="signup-email" required placeholder="you@example.com" autocomplete="email">
+            </div>
+            <div class="auth-input-group">
+              <label for="signup-password">Create Password</label>
+              <input type="password" id="signup-password" required minlength="6" placeholder="At least 6 characters" autocomplete="new-password">
+            </div>
+            <button type="submit" class="auth-submit-btn" id="signup-submit-btn">Create Account</button>
+            <p style="font-size:11px; color:#8c736a; text-align:center; margin:12px 0 0; line-height:1.45;">
+              By signing up, your bag, saved favourites and shipping address are securely stored.
+            </p>
+          </form>
+        </div>
+
+        <!-- 3. LOGGED IN STATUS VIEW -->
         <div class="auth-footer-status" id="auth-logged-in-view" style="display:none;">
-          <p style="font-size: 14px; margin-bottom: 14px;">Signed in as <strong id="auth-current-username">Member</strong></p>
+          <div style="width:48px; height:48px; border-radius:50%; background:#f5e8df; color:var(--plum); display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:1.3rem;">
+            👤
+          </div>
+          <h4 style="margin:0 0 4px; font-family:'Cormorant Garamond', Georgia, serif; font-size:1.5rem; color:var(--plum);" id="auth-current-username">Member</h4>
+          <p style="font-size:13px; color:var(--warm-gray); margin:0 0 16px;" id="auth-current-email">customer@example.com</p>
           <div class="auth-action-buttons">
             <a href="admin.html" class="button button-plum" id="auth-go-admin-btn" style="display:none;">Admin Dashboard &rarr;</a>
             <button type="button" class="button button-outline" id="auth-signout-btn">Sign out</button>
@@ -615,14 +674,91 @@
     `;
     document.body.appendChild(dialog);
 
+    const alertBox = dialog.querySelector('#auth-alert-box');
+    function showAlert(msg, type = 'error') {
+      if (!alertBox) return;
+      if (!msg) {
+        alertBox.style.display = 'none';
+        alertBox.className = 'auth-alert';
+        alertBox.textContent = '';
+      } else {
+        alertBox.textContent = msg;
+        alertBox.className = `auth-alert alert-${type}`;
+        alertBox.style.display = 'block';
+      }
+    }
+
     // Close handlers
     dialog.querySelector('.auth-modal-close').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', e => {
       if (e.target === dialog) dialog.close();
     });
 
+    // Tab switching (Sign In vs Create Account)
+    const tabLogin = dialog.querySelector('#tab-auth-login');
+    const tabSignup = dialog.querySelector('#tab-auth-signup');
+    const formLogin = dialog.querySelector('#auth-form-login');
+    const formSignup = dialog.querySelector('#auth-form-signup');
+
+    function switchAuthTab(targetTab) {
+      showAlert('');
+      if (targetTab === 'signup') {
+        tabLogin.classList.remove('is-active');
+        tabSignup.classList.add('is-active');
+        formLogin.style.display = 'none';
+        formSignup.style.display = 'block';
+        dialog.querySelector('#auth-modal-sub').textContent = 'Join Ruha Aura for express checkout & saved orders.';
+        dialog.querySelector('#signup-name')?.focus();
+      } else {
+        tabSignup.classList.remove('is-active');
+        tabLogin.classList.add('is-active');
+        formSignup.style.display = 'none';
+        formLogin.style.display = 'block';
+        dialog.querySelector('#auth-modal-sub').textContent = 'Sign in to access your bag, orders & favourites.';
+        dialog.querySelector('#auth-email')?.focus();
+      }
+    }
+
+    tabLogin.addEventListener('click', () => switchAuthTab('login'));
+    tabSignup.addEventListener('click', () => switchAuthTab('signup'));
+
+    // Google Sign In handler
+    dialog.querySelector('#auth-google-btn').addEventListener('click', async () => {
+      showAlert('');
+      if (window.RuhaDB && window.RuhaDB.isConfigured()) {
+        try {
+          await window.RuhaDB.signInWithGoogle();
+        } catch (err) {
+          console.warn('[Google Auth]', err);
+          showAlert(err.message || 'Google Sign-In failed. Please try Email & Password.', 'error');
+        }
+      } else {
+        // Instant simulated Google login in local/demo mode
+        const googleUser = {
+          name: 'Google User',
+          email: 'customer@gmail.com',
+          role: 'customer',
+          provider: 'google'
+        };
+        setAuthUser(googleUser);
+        notify('Signed in with Google Account!');
+        dialog.close();
+      }
+    });
+
+    // Quick Fill Admin link
+    dialog.querySelector('#auth-quick-admin-link')?.addEventListener('click', e => {
+      e.preventDefault();
+      dialog.querySelector('#auth-email').value = 'admin';
+      dialog.querySelector('#auth-password').value = 'admin123';
+      dialog.querySelector('#login-submit-btn').click();
+    });
+
     // Sign out button
-    dialog.querySelector('#auth-signout-btn').addEventListener('click', () => {
+    dialog.querySelector('#auth-signout-btn').addEventListener('click', async () => {
+      if (window.RuhaDB && window.RuhaDB.signOut) {
+        await window.RuhaDB.signOut();
+      }
       setAuthUser(null);
       notify('Signed out successfully.');
       dialog.close();
@@ -631,15 +767,15 @@
       }
     });
 
-    // Form submission
-    const form = dialog.querySelector('#auth-modal-form');
-    form.addEventListener('submit', e => {
+    // 1. SIGN IN FORM SUBMIT
+    formLogin.addEventListener('submit', async e => {
       e.preventDefault();
-      const userVal = dialog.querySelector('#auth-email').value.trim().toLowerCase();
+      showAlert('');
+      const userVal = dialog.querySelector('#auth-email').value.trim();
       const passVal = dialog.querySelector('#auth-password').value.trim();
 
-      const isAdmin = (userVal === 'admin' || userVal === 'admin@ruhaaura.com') && passVal === 'admin123';
-
+      // Check admin credentials
+      const isAdmin = (userVal.toLowerCase() === 'admin' || userVal.toLowerCase() === 'admin@ruhaaura.com') && passVal === 'admin123';
       if (isAdmin) {
         setAuthUser({ name: 'Admin', role: 'admin', email: 'admin@ruhaaura.com' });
         notify('Welcome back, Admin! Redirecting to Dashboard...');
@@ -650,33 +786,134 @@
         return;
       }
 
-      // Customer login
-      const displayName = userVal.split('@')[0] || 'Member';
-      setAuthUser({ name: displayName, role: 'customer', email: userVal });
-      notify(`Welcome back, ${displayName}!`);
-      dialog.close();
+      // Customer Login via Supabase if configured
+      if (window.RuhaDB && window.RuhaDB.isConfigured()) {
+        const submitBtn = dialog.querySelector('#login-submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Signing in...';
+
+        try {
+          const { data, error } = await window.RuhaDB.signIn(userVal, passVal);
+          if (error) {
+            showAlert(error.message || 'Invalid email or password.', 'error');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Sign in';
+            return;
+          }
+
+          const u = data?.user;
+          const displayName = u?.user_metadata?.full_name || userVal.split('@')[0] || 'Member';
+          setAuthUser({
+            id: u?.id,
+            name: displayName,
+            email: u?.email || userVal,
+            role: 'customer'
+          });
+          notify(`Welcome back, ${displayName}!`);
+          dialog.close();
+        } catch (err) {
+          showAlert(err.message || 'Login failed. Please check your credentials.', 'error');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Sign in';
+        }
+      } else {
+        // Fallback local sign in
+        const displayName = userVal.split('@')[0] || 'Member';
+        setAuthUser({ name: displayName, role: 'customer', email: userVal });
+        notify(`Welcome back, ${displayName}!`);
+        dialog.close();
+      }
+    });
+
+    // 2. SIGN UP / CREATE ACCOUNT FORM SUBMIT
+    formSignup.addEventListener('submit', async e => {
+      e.preventDefault();
+      showAlert('');
+      const fullName = dialog.querySelector('#signup-name').value.trim();
+      const phone = dialog.querySelector('#signup-phone').value.trim();
+      const email = dialog.querySelector('#signup-email').value.trim();
+      const password = dialog.querySelector('#signup-password').value.trim();
+
+      if (password.length < 6) {
+        showAlert('Password must be at least 6 characters.', 'error');
+        return;
+      }
+
+      const submitBtn = dialog.querySelector('#signup-submit-btn');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Creating account...';
+
+      if (window.RuhaDB && window.RuhaDB.isConfigured()) {
+        try {
+          const { data, error } = await window.RuhaDB.signUp(email, password, { fullName, phone });
+          if (error) {
+            showAlert(error.message, 'error');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Create Account';
+            return;
+          }
+
+          const u = data?.user;
+          setAuthUser({
+            id: u?.id || Date.now(),
+            name: fullName,
+            phone,
+            email,
+            role: 'customer'
+          });
+          notify(`Account created! Welcome to Ruha Aura, ${fullName}!`);
+          dialog.close();
+        } catch (err) {
+          showAlert(err.message || 'Sign up failed. Please try again.', 'error');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Create Account';
+        }
+      } else {
+        // Local mode sign up
+        setAuthUser({ name: fullName, phone, email, role: 'customer' });
+        notify(`Account created! Welcome to Ruha Aura, ${fullName}!`);
+        dialog.close();
+      }
     });
   }
 
   function openAuthModal() {
     ensureAuthModal();
     const dialog = document.getElementById('auth-modal-dialog');
-    const form = dialog.querySelector('#auth-modal-form');
+    const unauthView = dialog.querySelector('#auth-modal-unauthenticated');
     const loggedInView = dialog.querySelector('#auth-logged-in-view');
     const usernameEl = dialog.querySelector('#auth-current-username');
+    const emailEl = dialog.querySelector('#auth-current-email');
     const goAdminBtn = dialog.querySelector('#auth-go-admin-btn');
 
     if (authUser) {
-      form.style.display = 'none';
-      loggedInView.style.display = 'block';
-      usernameEl.textContent = authUser.name;
+      if (unauthView) unauthView.style.display = 'none';
+      if (loggedInView) loggedInView.style.display = 'block';
+      if (usernameEl) usernameEl.textContent = authUser.name || 'Member';
+      if (emailEl) emailEl.textContent = authUser.email || '';
       if (goAdminBtn) {
         goAdminBtn.style.display = authUser.role === 'admin' ? 'inline-flex' : 'none';
       }
     } else {
-      form.style.display = 'block';
-      loggedInView.style.display = 'none';
-      form.reset();
+      if (unauthView) unauthView.style.display = 'block';
+      if (loggedInView) loggedInView.style.display = 'none';
+      dialog.querySelector('#auth-form-login')?.reset();
+      dialog.querySelector('#auth-form-signup')?.reset();
+      const alertBox = dialog.querySelector('#auth-alert-box');
+      if (alertBox) { alertBox.style.display = 'none'; alertBox.textContent = ''; }
+      // Default to Sign In tab
+      const tabLogin = dialog.querySelector('#tab-auth-login');
+      const tabSignup = dialog.querySelector('#tab-auth-signup');
+      const formLogin = dialog.querySelector('#auth-form-login');
+      const formSignup = dialog.querySelector('#auth-form-signup');
+      if (tabLogin && tabSignup && formLogin && formSignup) {
+        tabLogin.classList.add('is-active');
+        tabSignup.classList.remove('is-active');
+        formLogin.style.display = 'block';
+        formSignup.style.display = 'none';
+      }
     }
 
     dialog.showModal();
@@ -720,6 +957,15 @@
     updateCartCount();
     ensureCartDrawer();
     updateAuthUI();
+
+    // Check cloud auth session if Supabase is active
+    if (window.RuhaDB && window.RuhaDB.getSessionUser) {
+      window.RuhaDB.getSessionUser().then(user => {
+        if (user && !authUser) {
+          setAuthUser(user);
+        }
+      }).catch(() => {});
+    }
   });
 
   // Exports
