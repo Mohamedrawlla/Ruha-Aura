@@ -66,11 +66,12 @@
     }
     const totalWidth = (x + quietZone).toFixed(1);
     const totalHeight = showText ? height + 18 : height;
-    const isMini = height <= 30;
+    const isMini = height <= 35;
     const svgHeight = isMini ? `${height}px` : '68px';
-    const svgMaxWidth = isMini ? '80px' : '270px';
+    const svgMaxWidth = isMini ? '105px' : '270px';
+    const miniClass = isMini ? ' code128-barcode-mini' : '';
 
-    return `<svg class="code128-barcode-svg" width="100%" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;width:100% !important;max-width:${svgMaxWidth} !important;height:${svgHeight} !important;overflow:visible;">
+    return `<svg class="code128-barcode-svg${miniClass}" width="100%" height="${totalHeight}" viewBox="0 0 ${totalWidth} ${totalHeight}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;width:100% !important;max-width:${svgMaxWidth} !important;height:${svgHeight} !important;min-height:${isMini ? '0' : '60px'} !important;overflow:visible;">
       ${rects}
       ${showText ? `<text x="${(totalWidth / 2).toFixed(1)}" y="${height + 14}" font-family="monospace, 'Courier New', Courier" font-size="13" font-weight="800" text-anchor="middle" fill="#000000" letter-spacing="3">${text}</text>` : ''}
     </svg>`;
@@ -579,7 +580,7 @@
         : '<span style="color:#a89b97;font-size:0.75rem;">—</span>';
 
       const sku = (p.sku || p.id).toUpperCase();
-      const barcodeSVG = generateCode128SVG(sku, 20, 1.0, false);
+      const barcodeSVG = generateCode128SVG(sku, 28, 1.1, false);
 
       return `
         <tr data-product-id="${p.id}">
@@ -614,7 +615,7 @@
           <td>
             <div class="barcode-col-clean">
               <div class="barcode-mini-svg">${barcodeSVG}</div>
-              <span style="font-size:0.72rem; font-family:monospace; color:#8c7e7b; font-weight:600;">${sku}</span>
+              <span class="barcode-sku-pill">${sku}</span>
             </div>
           </td>
           <td>${badgeHtml}</td>
