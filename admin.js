@@ -383,17 +383,17 @@
     if (elOrd) elOrd.textContent = totalOrdersCount;
     if (elAov) elAov.textContent = formatPrice(aov);
     if (elUnits) elUnits.textContent = totalUnits;
-    if (elTopBadge) elTopBadge.textContent = `Top: ${topChannel}`;
+    if (elTopBadge) elTopBadge.textContent = totalOrdersCount > 0 ? `Top: ${topChannel}` : 'Top: —';
     if (elOverviewAmt) elOverviewAmt.textContent = formatPrice(totalGrossRevenue);
 
     const rangeLabels = { today: 'TODAY', week: '7 DAYS', month: '30 DAYS', all: 'ALL TIME' };
     const periodLabel = rangeLabels[currentAnalyticsRange] || '30 DAYS';
     if (elPeriodBadge) elPeriodBadge.textContent = periodLabel;
     if (elOverviewSub) elOverviewSub.textContent = `${periodLabel.toLowerCase()} total · ${formatPrice(totalGrossRevenue)}`;
-    if (elActiveChannels) elActiveChannels.textContent = `${Object.keys(channelTotals).length || 4} active`;
+    if (elActiveChannels) elActiveChannels.textContent = `${Object.keys(channelTotals).length} active`;
 
     if (elDispatchNum) elDispatchNum.textContent = totalUnits;
-    if (elDispatchChannel) elDispatchChannel.textContent = topChannel;
+    if (elDispatchChannel) elDispatchChannel.textContent = totalOrdersCount > 0 ? topChannel : '—';
 
     // 2. Render Visual Channel List
     renderChannelBreakdown(filteredOrders, totalGrossRevenue);
@@ -2087,6 +2087,11 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
     renderOrdersTable();
     renderOrdersKPIs();
 
+    // Sync real live order to Supabase if connected
+    if (window.RuhaDB && window.RuhaDB.isConfigured() && window.RuhaDB.createOrder) {
+      window.RuhaDB.createOrder(newOrder, newOrder.items).catch(e => console.warn('[RuhaDB] Cloud order sync note:', e));
+    }
+
     // 3. Populate and Open Invoice Modal
     openInvoiceModal(newOrder, isAutoBilled);
 
@@ -2317,104 +2322,35 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
   // ========================================================
   // 8. MULTI-CHANNEL SALES HUB
   // ========================================================
+  function isDummyOrder(o) {
+    if (!o || typeof o !== 'object') return true;
+    const id = String(o.id || '');
+    const name = String(o.customer?.name || '').toLowerCase();
+    const isMockId = /^RA-ORD-88\d+/.test(id) || /^RA-ORD-87\d+/.test(id) || /^RA-ORD-89\d+/.test(id) || /^RA-ORD-90\d+/.test(id);
+    const isMockName = [
+      'ananya', 'pooja', 'kavita', 'ritika', 'sneha', 'meera', 'divya',
+      'swati', 'valued customer', 'deepa rao', 'rahul jain', 'walk-in customer',
+      'aanya sharma', 'priya nair', 'rhea kapoor'
+    ].some(n => name.includes(n));
+    return isMockId || isMockName;
+  }
+
   function getOrders() {
     try {
       const stored = localStorage.getItem('ruha-aura-orders');
       if (stored) {
         const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed) && parsed.length >= 5) return parsed;
+        if (Array.isArray(parsed)) {
+          const clean = parsed.filter(o => !isDummyOrder(o));
+          localStorage.setItem('ruha-aura-orders', JSON.stringify(clean));
+          return clean;
+        }
       }
     } catch {}
 
-    // Seed realistic multi-channel orders spanning the last 30 days
-    const initialSeed = [
-      {
-        id: 'RA-ORD-882194',
-        date: new Date(Date.now() - 3600000 * 2).toISOString(),
-        customer: { name: 'Ananya Verma', phone: '98450 12890', address: 'B-402, Palm Springs, Koramangala, Bengaluru - 560034' },
-        channel: 'Instagram DM',
-        items: [
-          { product: catalog[0] || { name: 'Hibiscus Clip', price: 299 }, quantity: 2, lineTotal: 598 }
-        ],
-        subtotal: 598, tax: 30, shipping: 50, discount: 0, total: 648, status: 'Packed'
-      },
-      {
-        id: 'RA-ORD-882041',
-        date: new Date(Date.now() - 3600000 * 14).toISOString(),
-        customer: { name: 'Pooja Hegde', phone: '98201 55670', address: 'Plot 18, Jubilee Hills, Hyderabad - 500033' },
-        channel: 'WhatsApp',
-        items: [
-          { product: catalog[1] || { name: 'Floral Dotted Clip', price: 279 }, quantity: 3, lineTotal: 837 }
-        ],
-        subtotal: 837, tax: 42, shipping: 0, discount: 50, total: 787, status: 'Delivered'
-      },
-      {
-        id: 'RA-ORD-881903',
-        date: new Date(Date.now() - 3600000 * 28).toISOString(),
-        customer: { name: 'Kavita Nair', phone: '97412 88210', address: 'Sector 14, Hiranandani Estate, Thane, Mumbai - 400607' },
-        channel: 'Website',
-        items: [
-          { product: catalog[2] || { name: 'Small Bow Clip', price: 249 }, quantity: 2, lineTotal: 498 },
-          { product: catalog[0] || { name: 'Hibiscus Clip', price: 299 }, quantity: 1, lineTotal: 299 }
-        ],
-        subtotal: 797, tax: 40, shipping: 0, discount: 0, total: 797, status: 'Delivered'
-      },
-      {
-        id: 'RA-ORD-881720',
-        date: new Date(Date.now() - 3600000 * 52).toISOString(),
-        customer: { name: 'Ritika Sen', phone: '98301 22490', address: 'Salt Lake Sector 5, Kolkata - 700091' },
-        channel: 'Amazon',
-        items: [
-          { product: catalog[0] || { name: 'Hibiscus Clip', price: 299 }, quantity: 3, lineTotal: 897 }
-        ],
-        subtotal: 897, tax: 45, shipping: 0, discount: 0, total: 897, status: 'Shipped'
-      },
-      {
-        id: 'RA-ORD-881452',
-        date: new Date(Date.now() - 3600000 * 76).toISOString(),
-        customer: { name: 'Sneha Patel', phone: '99201 44510', address: 'A-12, Navrangpura, Ahmedabad, Gujarat - 380009' },
-        channel: 'Meesho',
-        items: [
-          { product: catalog[2] || { name: 'Small Bow Clip', price: 249 }, quantity: 2, lineTotal: 498 }
-        ],
-        subtotal: 498, tax: 25, shipping: 0, discount: 0, total: 498, status: 'Delivered'
-      },
-      {
-        id: 'RA-ORD-881180',
-        date: new Date(Date.now() - 3600000 * 120).toISOString(),
-        customer: { name: 'Meera Iyer', phone: '98401 77320', address: 'Anna Nagar, Chennai - 600040' },
-        channel: 'Instagram DM',
-        items: [
-          { product: catalog[1] || { name: 'Floral Dotted Clip', price: 279 }, quantity: 2, lineTotal: 558 },
-          { product: catalog[0] || { name: 'Hibiscus Clip', price: 299 }, quantity: 2, lineTotal: 598 }
-        ],
-        subtotal: 1156, tax: 58, shipping: 50, discount: 100, total: 1106, status: 'Delivered'
-      },
-      {
-        id: 'RA-ORD-880940',
-        date: new Date(Date.now() - 3600000 * 180).toISOString(),
-        customer: { name: 'Divya Sharma', phone: '98112 33490', address: 'DLF Phase 4, Gurugram, Haryana - 122002' },
-        channel: 'In-Store',
-        items: [
-          { product: catalog[0] || { name: 'Hibiscus Clip', price: 299 }, quantity: 1, lineTotal: 299 }
-        ],
-        subtotal: 299, tax: 15, shipping: 0, discount: 0, total: 299, status: 'Delivered'
-      },
-      {
-        id: 'RA-ORD-880620',
-        date: new Date(Date.now() - 3600000 * 260).toISOString(),
-        customer: { name: 'Swati Kulkarni', phone: '98220 99410', address: 'Kothrud, Pune, Maharashtra - 411038' },
-        channel: 'WhatsApp',
-        items: [
-          { product: catalog[0] || { name: 'Hibiscus Clip', price: 299 }, quantity: 2, lineTotal: 598 },
-          { product: catalog[1] || { name: 'Floral Dotted Clip', price: 279 }, quantity: 1, lineTotal: 279 }
-        ],
-        subtotal: 877, tax: 44, shipping: 50, discount: 0, total: 927, status: 'Delivered'
-      }
-    ];
-
-    localStorage.setItem('ruha-aura-orders', JSON.stringify(initialSeed));
-    return initialSeed;
+    // Clean initial state: no dummy mock orders
+    localStorage.setItem('ruha-aura-orders', JSON.stringify([]));
+    return [];
   }
 
   function saveOrders() {
@@ -2447,12 +2383,41 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
     if (elInsta) elInsta.textContent = formatPrice(instaTotal);
     if (elMeesho) elMeesho.textContent = formatPrice(meeshoTotal);
     if (elMarket) elMarket.textContent = formatPrice(meeshoTotal + marketTotal);
-    if (badgeCount) badgeCount.textContent = orders.length;
+    if (badgeCount) {
+      badgeCount.textContent = orders.length;
+      badgeCount.style.display = orders.length > 0 ? 'inline-flex' : 'none';
+    }
   }
 
   function renderOrdersTable() {
     const tbody = document.getElementById('admin-orders-tbody');
     if (!tbody) return;
+
+    if (!orders.length) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="7" style="text-align:center; padding:54px 20px; color:var(--admin-muted);">
+            <div style="max-width:420px; margin:0 auto;">
+              <div style="width:48px; height:48px; border-radius:50%; background:rgba(74,21,37,0.06); display:flex; align-items:center; justify-content:center; margin:0 auto 14px; color:var(--admin-plum);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+              </div>
+              <h4 style="font-family:'Playfair Display', serif; font-size:1.15rem; color:var(--admin-plum); margin:0 0 6px;">No Sales Recorded Yet</h4>
+              <p style="font-size:0.84rem; line-height:1.5; color:var(--admin-muted); margin:0 0 16px;">
+                All dummy mock data has been removed. Original sales will appear here as orders are placed via POS, Online Storefront, or Marketplace channels.
+              </p>
+              <button type="button" class="btn-admin btn-admin-plum" id="empty-state-record-sale-btn" style="padding:8px 18px; font-size:0.85rem; margin:0 auto;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                Record First Sale
+              </button>
+            </div>
+          </td>
+        </tr>
+      `;
+      document.getElementById('empty-state-record-sale-btn')?.addEventListener('click', () => {
+        document.getElementById('record-sale-shortcut')?.click();
+      });
+      return;
+    }
 
     const channelFilter = document.getElementById('filter-order-channel')?.value || 'all';
     const q = (document.getElementById('order-search')?.value || '').toLowerCase().trim();
@@ -2546,6 +2511,22 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
 
   document.getElementById('order-search')?.addEventListener('input', renderOrdersTable);
   document.getElementById('filter-order-channel')?.addEventListener('change', renderOrdersTable);
+
+  // Clear all dummy/recorded orders button
+  document.getElementById('clear-orders-btn')?.addEventListener('click', async () => {
+    if (confirm('Clear all recorded sales?\n\nThis will remove all orders and reset revenue to ₹0 so you start completely clean with original live data.')) {
+      orders = [];
+      saveOrders();
+      if (window.RuhaDB && window.RuhaDB.isConfigured()) {
+        try {
+          await window.RuhaDB.purgeDummyOrders();
+        } catch (e) {
+          console.warn(e);
+        }
+      }
+      showToast('All sales records cleared. Multi-Channel Hub is clean and ready for original live data.');
+    }
+  });
 
   // Import Marketplace CSV modal / prompt
   document.getElementById('import-marketplace-csv-btn')?.addEventListener('click', () => {
@@ -2758,6 +2739,10 @@ AMZN-402-9921,2026-10-28,Amazon,Rahul Jain,9876543210,"Civil Lines, Jaipur",RA-0
   function initDashboard() {
     catalog = getCatalog();
     orders = getOrders();
+    // Auto-clean any dummy orders from remote database if connected
+    if (window.RuhaDB && window.RuhaDB.isConfigured() && window.RuhaDB.purgeDummyOrders) {
+      window.RuhaDB.purgeDummyOrders().catch(() => {});
+    }
     updateDBStatusUI();
     renderAnalyticsDashboard();
     renderKPIs();

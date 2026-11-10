@@ -329,6 +329,20 @@
       return urlData.publicUrl;
     },
 
+    // Helper to detect dummy/mock test orders
+    isDummyOrder(o) {
+      if (!o || typeof o !== 'object') return true;
+      const id = String(o.id || '');
+      const name = String(o.customer?.name || '').toLowerCase();
+      const isMockId = /^RA-ORD-88\d+/.test(id) || /^RA-ORD-87\d+/.test(id) || /^RA-ORD-89\d+/.test(id) || /^RA-ORD-90\d+/.test(id);
+      const isMockName = [
+        'ananya', 'pooja', 'kavita', 'ritika', 'sneha', 'meera', 'divya',
+        'swati', 'valued customer', 'deepa rao', 'rahul jain', 'walk-in customer',
+        'aanya sharma', 'priya nair', 'rhea kapoor'
+      ].some(n => name.includes(n));
+      return isMockId || isMockName;
+    },
+
     // --- Orders API ---
     async getOrders() {
       if (this.isConfigured()) {
@@ -362,11 +376,14 @@
               }))
             }));
 
+            // Filter out dummy/mock orders
+            const cleanOrders = mappedOrders.filter(o => !this.isDummyOrder(o));
+
             // Sync to local cache
             try {
-              localStorage.setItem('ruha-aura-orders', JSON.stringify(mappedOrders));
+              localStorage.setItem('ruha-aura-orders', JSON.stringify(cleanOrders));
             } catch {}
-            return mappedOrders;
+            return cleanOrders;
           }
         } catch (e) {
           console.warn('[RuhaDB] Orders fetch from Supabase failed, using local:', e);
@@ -376,7 +393,29 @@
       // Fallback
       try {
         const stored = localStorage.getItem('ruha-aura-orders');
-        if (stored) return JSON.parse(stored);
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed)) {
+            return parsed.filter(o => !this.isDummyOrder(o));
+          }
+        }
+      } catch {}
+      return [];
+    },
+
+    // --- Purge Dummy / Test Orders from Cloud and Local ---
+    async purgeDummyOrders() {
+      if (this.isConfigured()) {
+        try {
+          await supabaseClient.from('order_items').delete().neq('order_id', '__none__');
+          await supabaseClient.from('orders').delete().neq('id', '__none__');
+          console.log('[RuhaDB] Remote orders table cleared of dummy data.');
+        } catch (e) {
+          console.warn('[RuhaDB] Remote orders purge note:', e);
+        }
+      }
+      try {
+        localStorage.setItem('ruha-aura-orders', JSON.stringify([]));
       } catch {}
       return [];
     },
@@ -491,11 +530,16 @@
 
       if (onProgress) onProgress(80, 'Products synced! Syncing initial multi-channel orders...');
 
-      // Seed orders
+      // Seed orders (only authentic live orders, no dummy mock data)
       let orders = [];
       try {
         const stored = localStorage.getItem('ruha-aura-orders');
-        if (stored) orders = JSON.parse(stored);
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed)) {
+            orders = parsed.filter(o => !this.isDummyOrder(o));
+          }
+        }
       } catch {}
 
       if (orders.length > 0) {

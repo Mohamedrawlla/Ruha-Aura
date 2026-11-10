@@ -227,25 +227,6 @@ ON CONFLICT (id) DO UPDATE SET
     updated_at = NOW();
 
 -- ====================================================================
--- 10. SEED SAMPLE MULTI-CHANNEL ORDERS
+-- 10. NO DUMMY ORDERS SEEDED (Clean original data only)
 -- ====================================================================
-INSERT INTO public.orders (id, order_number, date, channel, customer, subtotal, tax, shipping, discount, total, status, payment_status)
-VALUES
-    ('RA-ORD-882194', 'RA-ORD-882194', NOW() - INTERVAL '1 hour', 'Instagram DM', '{"name":"Aanya Sharma", "phone":"98711 23456", "address":"Bandra West, Mumbai, MH - 400050", "email":"aanya@example.com"}'::jsonb, 598, 50, 0, 0, 648, 'Pending', 'Paid'),
-    ('RA-ORD-882041', 'RA-ORD-882041', NOW() - INTERVAL '4 hours', 'WhatsApp', '{"name":"Priya Nair", "phone":"98450 11223", "address":"Koramangala 4th Block, Bangalore, KA - 560034", "email":"priya.nair@gmail.com"}'::jsonb, 749, 38, 0, 0, 787, 'Packed', 'Paid'),
-    ('RA-ORD-881903', 'RA-ORD-881903', NOW() - INTERVAL '8 hours', 'Website', '{"name":"Rhea Kapoor", "phone":"98190 77654", "address":"Alipore, Kolkata, WB - 700027", "email":"rhea.k@outlook.com"}'::jsonb, 759, 38, 0, 0, 797, 'Shipped', 'Paid'),
-    ('RA-ORD-881720', 'RA-ORD-881720', NOW() - INTERVAL '1 day', 'Amazon', '{"name":"Sneha Patel", "phone":"99250 88712", "address":"Vastrapur, Ahmedabad, GJ - 380015", "email":"sneha.p@amazon.in"}'::jsonb, 854, 43, 0, 0, 897, 'Shipped', 'Paid'),
-    ('RA-ORD-881452', 'RA-ORD-881452', NOW() - INTERVAL '2 days', 'Meesho', '{"name":"Kavita Verma", "phone":"94150 44321", "address":"Gomti Nagar, Lucknow, UP - 226010", "email":"kavita.v@meesho.com"}'::jsonb, 498, 0, 0, 0, 498, 'Delivered', 'Paid'),
-    ('RA-ORD-881180', 'RA-ORD-881180', NOW() - INTERVAL '3 days', 'Instagram DM', '{"name":"Divya Menon", "phone":"98470 66554", "address":"Panampilly Nagar, Kochi, KL - 682036", "email":"divya.m@gmail.com"}'::jsonb, 1048, 58, 0, 0, 1106, 'Delivered', 'Paid'),
-    ('RA-ORD-880940', 'RA-ORD-880940', NOW() - INTERVAL '5 days', 'In-Store', '{"name":"Walk-in Customer", "phone":"98200 12345", "address":"Boutique Store, Colaba, Mumbai", "email":""}'::jsonb, 299, 0, 0, 0, 299, 'Delivered', 'Paid'),
-    ('RA-ORD-880620', 'RA-ORD-880620', NOW() - INTERVAL '10 days', 'WhatsApp', '{"name":"Swati Kulkarni", "phone":"98220 99410", "address":"Kothrud, Pune, Maharashtra - 411038", "email":"swati.k@yahoo.com"}'::jsonb, 877, 44, 50, 0, 927, 'Delivered', 'Paid')
-ON CONFLICT (id) DO NOTHING;
 
--- Seed items for sample orders
-INSERT INTO public.order_items (order_id, product_id, sku, product_name, quantity, unit_price, line_total)
-VALUES
-    ('RA-ORD-882194', 'RA-TY-01', 'RA-TY-01', '5-in-1 Hammer Toy', 2, 899, 1798),
-    ('RA-ORD-882041', 'RA-TY-02', 'RA-TY-02', 'Weather Busy Book', 1, 749, 749),
-    ('RA-ORD-881903', 'RA-TY-01', 'RA-TY-01', '5-in-1 Hammer Toy', 1, 899, 899),
-    ('RA-ORD-881720', 'RA-TY-03', 'RA-TY-03', 'Vehicle Busy Book', 2, 749, 1498)
-ON CONFLICT DO NOTHING;
