@@ -3,7 +3,7 @@
   'use strict';
 
   // Set your store's WhatsApp number here (include country code without + or spaces).
-  const STORE_WHATSAPP_NUMBER = '919876543210'; 
+  const STORE_WHATSAPP_NUMBER = '918220431210'; 
   const FREE_SHIPPING_THRESHOLD = 999;
   const STANDARD_SHIPPING_FEE = 60;
 
