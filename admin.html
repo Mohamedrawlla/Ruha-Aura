@@ -3914,13 +3914,45 @@
 
           <!-- Customer Info & Billed To -->
           <div class="invoice-meta-grid">
-            <div class="invoice-meta-box">
-              <span class="invoice-meta-title">BILLED &amp; DELIVERED TO:</span>
+            <div class="invoice-meta-box" id="inv-cust-display-box">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <span class="invoice-meta-title">BILLED &amp; DELIVERED TO:</span>
+                <button type="button" id="inv-edit-cust-toggle-btn" class="row-btn" style="padding:2px 8px; font-size:0.75rem; border:1px solid #ebdcd0; cursor:pointer;" title="Edit customer details for this order">
+                  ✏️ Edit Details
+                </button>
+              </div>
               <div style="font-weight:700; font-size:1rem; color:#111; margin:4px 0;" id="inv-display-cust-name">Priya Sharma</div>
               <div style="font-size:0.85rem; color:#444;" id="inv-display-cust-phone">Phone: +91 98765 43210</div>
               <div style="font-size:0.82rem; color:#666; margin-top:2px;" id="inv-display-cust-email">priya@example.com</div>
               <div style="font-size:0.82rem; color:#555; margin-top:6px; line-height:1.4;" id="inv-display-cust-address">
                 124, Lotus Greens, Indiranagar, Bengaluru, Karnataka - 560001
+              </div>
+
+              <!-- Inline Quick Edit Customer Box -->
+              <div id="inv-cust-edit-form" style="display:none; margin-top:10px; padding:10px; background:#faf5f0; border:1px solid #e8dbd0; border-radius:6px;">
+                <div style="font-size:0.8rem; font-weight:700; color:var(--admin-plum); margin-bottom:8px;">Correct Customer Information:</div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+                  <div>
+                    <label style="font-size:0.72rem; color:#666; display:block; margin-bottom:2px;">Full Name</label>
+                    <input type="text" id="inv-edit-input-name" style="width:100%; padding:5px 8px; font-size:0.82rem; border:1px solid #ccc; border-radius:4px; box-sizing:border-box;" placeholder="Full Name">
+                  </div>
+                  <div>
+                    <label style="font-size:0.72rem; color:#666; display:block; margin-bottom:2px;">Mobile Phone</label>
+                    <input type="tel" id="inv-edit-input-phone" style="width:100%; padding:5px 8px; font-size:0.82rem; border:1px solid #ccc; border-radius:4px; box-sizing:border-box;" placeholder="e.g. 7708542509">
+                  </div>
+                </div>
+                <div style="margin-bottom:8px;">
+                  <label style="font-size:0.72rem; color:#666; display:block; margin-bottom:2px;">Email Address</label>
+                  <input type="email" id="inv-edit-input-email" style="width:100%; padding:5px 8px; font-size:0.82rem; border:1px solid #ccc; border-radius:4px; box-sizing:border-box;" placeholder="user@example.com">
+                </div>
+                <div style="margin-bottom:8px;">
+                  <label style="font-size:0.72rem; color:#666; display:block; margin-bottom:2px;">Delivery Address</label>
+                  <input type="text" id="inv-edit-input-address" style="width:100%; padding:5px 8px; font-size:0.82rem; border:1px solid #ccc; border-radius:4px; box-sizing:border-box;" placeholder="Street, City, State, PIN">
+                </div>
+                <div style="display:flex; justify-content:flex-end; gap:6px;">
+                  <button type="button" id="inv-edit-cancel-btn" class="btn-admin btn-admin-outline" style="padding:4px 10px; font-size:0.75rem;">Cancel</button>
+                  <button type="button" id="inv-edit-save-btn" class="btn-admin btn-admin-plum" style="padding:4px 12px; font-size:0.75rem;">💾 Save &amp; Sync to Cloud</button>
+                </div>
               </div>
             </div>
 
@@ -4108,6 +4140,44 @@
         </div>
         <div id="db-seed-status" style="font-size:0.8rem; margin-top:8px; color:var(--admin-plum); font-weight:600; display:none;"></div>
       </div>
+    </div>
+  </div>
+
+  <!-- Edit Customer Profile Modal -->
+  <div class="admin-modal-backdrop" id="customer-edit-modal" style="display:none; z-index:1150;">
+    <div class="admin-modal" style="max-width:500px;">
+      <div class="admin-modal-header">
+        <div>
+          <h3 style="font-family:'Playfair Display', serif; margin:0 0 4px; color:var(--admin-plum); font-size:1.35rem;">Customer Details</h3>
+          <span style="font-size:0.83rem; color:var(--admin-muted);">Update authentic customer information &amp; sync to cloud</span>
+        </div>
+        <button type="button" class="admin-modal-close" id="customer-edit-close-btn">&times;</button>
+      </div>
+      <form id="customer-edit-form">
+        <div class="admin-modal-body" style="padding:20px 24px;">
+          <input type="hidden" id="cust-modal-id">
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; margin-bottom:5px; color:#333;">Full Name</label>
+            <input type="text" id="cust-modal-name" required placeholder="e.g. Priya Sharma" style="width:100%; padding:9px 12px; border:1px solid var(--admin-border); border-radius:6px; font-size:0.9rem; box-sizing:border-box;">
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; margin-bottom:5px; color:#333;">Email Address</label>
+            <input type="email" id="cust-modal-email" required placeholder="user@example.com" style="width:100%; padding:9px 12px; border:1px solid var(--admin-border); border-radius:6px; font-size:0.9rem; box-sizing:border-box;">
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; margin-bottom:5px; color:#333;">Mobile Phone</label>
+            <input type="tel" id="cust-modal-phone" required placeholder="e.g. 7708542509" style="width:100%; padding:9px 12px; border:1px solid var(--admin-border); border-radius:6px; font-size:0.9rem; box-sizing:border-box;">
+          </div>
+          <div style="margin-bottom:18px;">
+            <label style="display:block; font-size:0.84rem; font-weight:700; margin-bottom:5px; color:#333;">Delivery Address</label>
+            <textarea id="cust-modal-address" rows="3" placeholder="Door No, Street, City, State, PIN" style="width:100%; padding:9px 12px; border:1px solid var(--admin-border); border-radius:6px; font-size:0.88rem; box-sizing:border-box;"></textarea>
+          </div>
+          <div style="display:flex; gap:10px; justify-content:flex-end;">
+            <button type="button" class="btn-admin btn-admin-outline" id="customer-edit-cancel-btn">Cancel</button>
+            <button type="submit" class="btn-admin btn-admin-plum" id="customer-edit-save-btn">💾 Save &amp; Sync</button>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 

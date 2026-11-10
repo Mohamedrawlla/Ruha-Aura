@@ -2305,6 +2305,99 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
           waBtn.style.display = 'none';
         }
       }
+
+      // Inline Customer Edit Form handlers
+      const editBox = document.getElementById('inv-cust-edit-form');
+      const toggleBtn = document.getElementById('inv-edit-cust-toggle-btn');
+      const cancelBtn = document.getElementById('inv-edit-cancel-btn');
+      const saveBtn = document.getElementById('inv-edit-save-btn');
+      const nameInput = document.getElementById('inv-edit-input-name');
+      const phoneInput = document.getElementById('inv-edit-input-phone');
+      const emailInput = document.getElementById('inv-edit-input-email');
+      const addressInput = document.getElementById('inv-edit-input-address');
+
+      if (editBox) editBox.style.display = 'none';
+
+      if (toggleBtn && editBox) {
+        toggleBtn.onclick = () => {
+          const isHidden = editBox.style.display === 'none';
+          if (isHidden) {
+            editBox.style.display = 'block';
+            if (nameInput) nameInput.value = cust.name || '';
+            if (phoneInput) phoneInput.value = cust.phone || '7708542509';
+            if (emailInput) emailInput.value = cust.email || '';
+            if (addressInput) addressInput.value = cust.address || '';
+            nameInput?.focus();
+          } else {
+            editBox.style.display = 'none';
+          }
+        };
+      }
+
+      if (cancelBtn && editBox) {
+        cancelBtn.onclick = () => {
+          editBox.style.display = 'none';
+        };
+      }
+
+      if (saveBtn && editBox) {
+        saveBtn.onclick = async () => {
+          const newName = (nameInput?.value || '').trim() || 'Customer';
+          const newPhone = (phoneInput?.value || '').trim();
+          const newEmail = (emailInput?.value || '').trim();
+          const newAddress = (addressInput?.value || '').trim();
+
+          order.customer = {
+            ...order.customer,
+            name: newName,
+            phone: newPhone,
+            email: newEmail,
+            address: newAddress
+          };
+
+          // Update local orders
+          const ordIdx = orders.findIndex(o => o.id === order.id);
+          if (ordIdx >= 0) orders[ordIdx] = order;
+          saveOrders();
+
+          // Sync order to Supabase Cloud
+          if (window.RuhaDB && window.RuhaDB.createOrder) {
+            window.RuhaDB.createOrder(order, order.items).catch(() => {});
+          }
+
+          // Update or insert into customers directory
+          let custTarget = customers.find(c => (newEmail && c.email && c.email.toLowerCase() === newEmail.toLowerCase()) || (newPhone && c.phone && c.phone === newPhone));
+          if (custTarget) {
+            custTarget.name = newName;
+            custTarget.phone = newPhone;
+            custTarget.email = newEmail;
+            if (newAddress) custTarget.address = newAddress;
+          } else {
+            custTarget = {
+              id: 'CUST-' + Math.floor(100000 + Math.random() * 900000),
+              name: newName,
+              email: newEmail,
+              phone: newPhone,
+              address: newAddress,
+              role: 'customer',
+              orders_count: 1,
+              total_spent: order.total || 0,
+              joined_date: order.date || new Date().toISOString(),
+              last_active: new Date().toISOString()
+            };
+            customers.unshift(custTarget);
+          }
+          saveCustomers();
+
+          // Sync customer to Supabase Cloud
+          if (window.RuhaDB && window.RuhaDB.saveCustomer) {
+            window.RuhaDB.saveCustomer(custTarget).catch(() => {});
+          }
+
+          showToast('Customer information updated and synced to Supabase Cloud!');
+          openInvoiceModal(order, isAutoBilled);
+        };
+      }
     } catch (err) {
       console.error('Invoice modal population note:', err);
     }
@@ -2428,6 +2521,76 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
     return /^RA-ORD-88\d+/.test(id) || /^RA-ORD-87\d+/.test(id) || /^RA-ORD-89\d+/.test(id) || /^RA-ORD-90\d+/.test(id);
   }
 
+  function getAuthenticCustomer() {
+    let authCust = null;
+    try {
+      const auth = localStorage.getItem('ruha-aura-auth');
+      if (auth) {
+        const u = JSON.parse(auth);
+        if (u && u.email && u.role !== 'admin') {
+          authCust = {
+            name: u.name || (u.email ? u.email.split('@')[0] : 'Customer'),
+            email: u.email,
+            phone: u.phone || '7708542509',
+            address: u.address || 'Delivery on Call (Cash on Delivery)'
+          };
+        }
+      }
+    } catch {}
+
+    if (!authCust) {
+      try {
+        const stored = localStorage.getItem('ruha-aura-customers');
+        if (stored) {
+          const list = JSON.parse(stored);
+          if (Array.isArray(list)) {
+            const found = list.find(c => c && c.role !== 'admin' && c.name !== 'Ruha Aura Customer' && c.email !== 'ruhaaura.store@gmail.com');
+            if (found) {
+              authCust = {
+                name: found.name || 'Customer',
+                email: found.email || '',
+                phone: found.phone || '7708542509',
+                address: found.address || 'Delivery on Call (Cash on Delivery)'
+              };
+            }
+          }
+        }
+      } catch {}
+    }
+
+    if (!authCust) {
+      authCust = {
+        name: 'Customer',
+        email: '',
+        phone: '7708542509',
+        address: 'Delivery on Call (Cash on Delivery)'
+      };
+    }
+    return authCust;
+  }
+
+  function sanitizeOrderCustomer(o) {
+    if (!o || typeof o !== 'object') return;
+    if (!o.customer) o.customer = {};
+    const name = (o.customer.name || '').trim();
+    const email = (o.customer.email || '').trim().toLowerCase();
+    const phone = String(o.customer.phone || '').trim();
+
+    // If order has the placeholder fallback credentials, upgrade to authentic customer
+    if (name === 'Ruha Aura Customer' || email === 'ruhaaura.store@gmail.com' || phone === '8220431210' || !phone) {
+      const auth = getAuthenticCustomer();
+      if (name === 'Ruha Aura Customer' || !name) {
+        o.customer.name = auth.name !== 'Customer' ? auth.name : (o.customer.name || 'Customer');
+      }
+      if (email === 'ruhaaura.store@gmail.com' || !email) {
+        o.customer.email = auth.email || '';
+      }
+      if (phone === '8220431210' || !phone) {
+        o.customer.phone = auth.phone || '7708542509';
+      }
+    }
+  }
+
   function getOrders() {
     try {
       const stored = localStorage.getItem('ruha-aura-orders');
@@ -2436,6 +2599,7 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
         if (Array.isArray(parsed) && parsed.length > 0) {
           const clean = parsed.filter(o => !isDummyOrder(o));
           if (clean.length > 0) {
+            clean.forEach(sanitizeOrderCustomer);
             localStorage.setItem('ruha-aura-orders', JSON.stringify(clean));
             return clean;
           }
@@ -2443,16 +2607,16 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
       }
     } catch {}
 
-    // Seed customer's recent live order RA-140103 so it is immediately visible
+    const auth = getAuthenticCustomer();
     const defaultLiveOrders = [
       {
         id: 'RA-140103',
         date: new Date().toISOString(),
         customer: {
-          name: 'Ruha Aura Customer',
-          phone: '8220431210',
-          email: 'ruhaaura.store@gmail.com',
-          address: 'Delivery on Call (Cash on Delivery)'
+          name: auth.name || 'Customer',
+          phone: auth.phone || '7708542509',
+          email: auth.email || '',
+          address: auth.address || 'Delivery on Call (Cash on Delivery)'
         },
         channel: 'Website',
         items: [{
@@ -2727,11 +2891,21 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
   // CUSTOMERS & REGISTERED USERS DIRECTORY SYSTEM
   // ========================================================
   function getCustomers() {
+    const auth = getAuthenticCustomer();
     try {
       const stored = localStorage.getItem('ruha-aura-customers');
       if (stored) {
         const parsed = JSON.parse(stored);
         if (Array.isArray(parsed) && parsed.length > 0) {
+          parsed.forEach(c => {
+            if (c.name === 'Ruha Aura Customer' || c.email === 'ruhaaura.store@gmail.com' || c.phone === '8220431210') {
+              if (auth.name && auth.name !== 'Customer') c.name = auth.name;
+              if (auth.email) c.email = auth.email;
+              c.phone = auth.phone || '7708542509';
+              if (auth.address) c.address = auth.address;
+            }
+          });
+          localStorage.setItem('ruha-aura-customers', JSON.stringify(parsed));
           return parsed;
         }
       }
@@ -2741,10 +2915,10 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
     const defaultCusts = [
       {
         id: 'CUST-1001',
-        name: 'Ruha Aura Customer',
-        email: 'ruhaaura.store@gmail.com',
-        phone: '8220431210',
-        address: 'Delivery on Call (Cash on Delivery)',
+        name: auth.name || 'Customer',
+        email: auth.email || '',
+        phone: auth.phone || '7708542509',
+        address: auth.address || 'Delivery on Call (Cash on Delivery)',
         role: 'customer',
         orders_count: 1,
         total_spent: 258,
@@ -2872,13 +3046,37 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
             ${formattedDate}
           </td>
           <td style="text-align:right;">
-            <button type="button" class="row-btn" data-cust-view-orders="${c.email || c.phone || ''}" title="Filter Multi-Channel Hub to this customer's orders">
-              View Orders
-            </button>
+            <div style="display:flex; justify-content:flex-end; gap:6px;">
+              <button type="button" class="row-btn" data-cust-edit-id="${c.id}" title="Edit customer details">
+                ✏️ Edit
+              </button>
+              <button type="button" class="row-btn" data-cust-view-orders="${c.email || c.phone || ''}" title="Filter Multi-Channel Hub to this customer's orders">
+                View Orders
+              </button>
+            </div>
           </td>
         </tr>
       `;
     }).join('');
+
+    tbody.querySelectorAll('[data-cust-edit-id]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.dataset.custEditId;
+        const cust = customers.find(x => x.id === id);
+        if (!cust) return;
+
+        const modal = document.getElementById('customer-edit-modal');
+        if (!modal) return;
+
+        document.getElementById('cust-modal-id').value = cust.id;
+        document.getElementById('cust-modal-name').value = cust.name || '';
+        document.getElementById('cust-modal-email').value = cust.email || '';
+        document.getElementById('cust-modal-phone').value = cust.phone || '7708542509';
+        document.getElementById('cust-modal-address').value = cust.address || '';
+
+        modal.style.display = 'flex';
+      });
+    });
 
     tbody.querySelectorAll('[data-cust-view-orders]').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -2892,6 +3090,67 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
       });
     });
   }
+
+  // Customer Edit Modal listeners
+  const custModal = document.getElementById('customer-edit-modal');
+  const closeCustModal = () => { if (custModal) custModal.style.display = 'none'; };
+  document.getElementById('customer-edit-close-btn')?.addEventListener('click', closeCustModal);
+  document.getElementById('customer-edit-cancel-btn')?.addEventListener('click', closeCustModal);
+  custModal?.addEventListener('click', e => {
+    if (e.target === custModal) closeCustModal();
+  });
+
+  document.getElementById('customer-edit-form')?.addEventListener('submit', async e => {
+    e.preventDefault();
+    const id = document.getElementById('cust-modal-id')?.value;
+    const name = document.getElementById('cust-modal-name')?.value.trim() || 'Customer';
+    const email = document.getElementById('cust-modal-email')?.value.trim();
+    const phone = document.getElementById('cust-modal-phone')?.value.trim() || '7708542509';
+    const address = document.getElementById('cust-modal-address')?.value.trim();
+
+    const cust = customers.find(x => x.id === id);
+    if (!cust) return;
+
+    const oldPhone = cust.phone;
+    const oldEmail = cust.email;
+
+    cust.name = name;
+    cust.email = email;
+    cust.phone = phone;
+    cust.address = address;
+
+    saveCustomers();
+
+    if (window.RuhaDB && window.RuhaDB.saveCustomer) {
+      await window.RuhaDB.saveCustomer(cust);
+    }
+
+    // Also update any orders associated with this customer
+    let ordersUpdated = false;
+    orders.forEach(o => {
+      if (
+        (oldEmail && o.customer?.email && o.customer.email.toLowerCase() === oldEmail.toLowerCase()) ||
+        (oldPhone && o.customer?.phone && o.customer.phone === oldPhone) ||
+        o.customer?.name === 'Ruha Aura Customer'
+      ) {
+        o.customer.name = name;
+        o.customer.email = email;
+        o.customer.phone = phone;
+        if (address) o.customer.address = address;
+        ordersUpdated = true;
+        if (window.RuhaDB && window.RuhaDB.createOrder) {
+          window.RuhaDB.createOrder(o, o.items).catch(() => {});
+        }
+      }
+    });
+
+    if (ordersUpdated) {
+      saveOrders();
+    }
+
+    closeCustModal();
+    showToast('Customer profile & matching orders updated and synced to cloud!');
+  });
 
   // Customer search filter listener
   document.getElementById('customer-search')?.addEventListener('input', () => {

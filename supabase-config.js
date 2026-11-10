@@ -418,6 +418,54 @@
       return isMockId || isMockName;
     },
 
+    getAuthenticCustomer() {
+      let authCust = null;
+      try {
+        const auth = localStorage.getItem('ruha-aura-auth');
+        if (auth) {
+          const u = JSON.parse(auth);
+          if (u && u.email && u.role !== 'admin') {
+            authCust = {
+              name: u.name || (u.email ? u.email.split('@')[0] : 'Customer'),
+              email: u.email,
+              phone: u.phone || '7708542509',
+              address: u.address || 'Delivery on Call (Cash on Delivery)'
+            };
+          }
+        }
+      } catch {}
+
+      if (!authCust) {
+        try {
+          const stored = localStorage.getItem('ruha-aura-customers');
+          if (stored) {
+            const list = JSON.parse(stored);
+            if (Array.isArray(list)) {
+              const found = list.find(c => c && c.role !== 'admin' && c.name !== 'Ruha Aura Customer' && c.email !== 'ruhaaura.store@gmail.com');
+              if (found) {
+                authCust = {
+                  name: found.name || 'Customer',
+                  email: found.email || '',
+                  phone: found.phone || '7708542509',
+                  address: found.address || 'Delivery on Call (Cash on Delivery)'
+                };
+              }
+            }
+          }
+        } catch {}
+      }
+
+      if (!authCust) {
+        authCust = {
+          name: 'Customer',
+          email: '',
+          phone: '7708542509',
+          address: 'Delivery on Call (Cash on Delivery)'
+        };
+      }
+      return authCust;
+    },
+
     // --- Orders API ---
     async getOrders() {
       if (this.isConfigured()) {
@@ -471,6 +519,23 @@
             });
 
             const merged = Array.from(orderMap.values()).sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+
+            // Upgrade any placeholder names/emails on orders with authentic customer details
+            const authCust = this.getAuthenticCustomer();
+            merged.forEach(o => {
+              if (o.customer) {
+                if (o.customer.name === 'Ruha Aura Customer' || !o.customer.name) {
+                  o.customer.name = authCust.name !== 'Customer' ? authCust.name : (o.customer.name || 'Customer');
+                }
+                if (o.customer.email === 'ruhaaura.store@gmail.com' || !o.customer.email) {
+                  o.customer.email = authCust.email || '';
+                }
+                if (o.customer.phone === '8220431210' || !o.customer.phone) {
+                  o.customer.phone = authCust.phone || '7708542509';
+                }
+              }
+            });
+
             try {
               localStorage.setItem('ruha-aura-orders', JSON.stringify(merged));
             } catch {}
@@ -519,6 +584,18 @@
             });
 
             const merged = Array.from(map.values());
+
+            // Upgrade placeholder records with authentic customer details
+            const authCust = this.getAuthenticCustomer();
+            merged.forEach(c => {
+              if (c.name === 'Ruha Aura Customer' || c.email === 'ruhaaura.store@gmail.com' || c.phone === '8220431210') {
+                if (authCust.name && authCust.name !== 'Customer') c.name = authCust.name;
+                if (authCust.email) c.email = authCust.email;
+                c.phone = authCust.phone || '7708542509';
+                if (authCust.address) c.address = authCust.address;
+              }
+            });
+
             try {
               localStorage.setItem('ruha-aura-customers', JSON.stringify(merged));
             } catch {}
@@ -553,7 +630,7 @@
 
       if (this.isConfigured() && cust) {
         try {
-          await supabaseClient.from('customers').upsert([{
+          const payload = {
             id: cust.id,
             name: cust.name || 'Customer',
             email: cust.email || null,
@@ -564,7 +641,11 @@
             total_spent: cust.total_spent || 0,
             joined_date: cust.joined_date || new Date().toISOString(),
             last_active: new Date().toISOString()
-          }], { onConflict: 'id' });
+          };
+          const { error } = await supabaseClient.from('customers').upsert([payload], { onConflict: 'id' });
+          if (error && error.message && error.message.includes('customers_email_key')) {
+            await supabaseClient.from('customers').update(payload).eq('email', cust.email);
+          }
         } catch (e) {
           console.warn('[RuhaDB] Customer cloud upsert note:', e);
         }
@@ -736,7 +817,8 @@
 
       if (onProgress) onProgress(80, 'Products synced! Syncing initial multi-channel orders...');
 
-      // Seed orders (only authentic live orders, no dummy mock data)
+      // Seed orders (only authentic live orders, dynamically resolved from active customer session)
+      const authUser = this.getAuthenticCustomer();
       let orders = [];
       try {
         const stored = localStorage.getItem('ruha-aura-orders');
@@ -753,10 +835,10 @@
           id: 'RA-140103',
           date: new Date().toISOString(),
           customer: {
-            name: 'Ruha Aura Customer',
-            phone: '8220431210',
-            email: 'ruhaaura.store@gmail.com',
-            address: 'Delivery on Call (Cash on Delivery)'
+            name: authUser.name || 'Customer',
+            phone: authUser.phone || '7708542509',
+            email: authUser.email || '',
+            address: authUser.address || 'Delivery on Call (Cash on Delivery)'
           },
           channel: 'Website',
           items: [{
@@ -781,6 +863,14 @@
         try {
           localStorage.setItem('ruha-aura-orders', JSON.stringify(orders));
         } catch {}
+      } else {
+        orders.forEach(o => {
+          if (o.customer) {
+            if (o.customer.name === 'Ruha Aura Customer' || !o.customer.name) o.customer.name = authUser.name;
+            if (o.customer.email === 'ruhaaura.store@gmail.com' || !o.customer.email) o.customer.email = authUser.email;
+            if (o.customer.phone === '8220431210' || !o.customer.phone) o.customer.phone = authUser.phone;
+          }
+        });
       }
 
       for (const ord of orders) {
@@ -798,10 +888,10 @@
       if (!Array.isArray(custs) || custs.length === 0) {
         custs = [{
           id: 'CUST-1001',
-          name: 'Ruha Aura Customer',
-          email: 'ruhaaura.store@gmail.com',
-          phone: '8220431210',
-          address: 'Delivery on Call (Cash on Delivery)',
+          name: authUser.name || 'Customer',
+          email: authUser.email || null,
+          phone: authUser.phone || '7708542509',
+          address: authUser.address || 'Delivery on Call (Cash on Delivery)',
           role: 'customer',
           orders_count: orders.length || 1,
           total_spent: 258,
@@ -811,6 +901,14 @@
         try {
           localStorage.setItem('ruha-aura-customers', JSON.stringify(custs));
         } catch {}
+      } else {
+        custs.forEach(c => {
+          if (c.name === 'Ruha Aura Customer' || c.email === 'ruhaaura.store@gmail.com' || c.phone === '8220431210') {
+            if (authUser.name && authUser.name !== 'Customer') c.name = authUser.name;
+            if (authUser.email) c.email = authUser.email;
+            c.phone = authUser.phone || '7708542509';
+          }
+        });
       }
 
       for (const c of custs) {
