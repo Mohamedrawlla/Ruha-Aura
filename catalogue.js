@@ -80,7 +80,10 @@
       moreBtn.innerHTML = `Show ${Math.min(12, Math.max(0, filtered.length - limit))} more products ${S.icon('plus')}`;
     }
 
-    const collLabel = collection === 'toys' ? 'Kids’ toys' : (collection === 'jewellery' ? 'Jewellery' : 'Hair accessories');
+    const collLabel = collection === 'toys' ? 'Kids’ toys' : (collection === 'jewellery' ? 'Jewellery' : (collection === 'accessories' ? 'Hair accessories' : 'All products'));
+    const bcEl = $('#breadcrumb-current-collection');
+    if (bcEl) bcEl.textContent = collLabel;
+
     const chips = [
       ...(collection !== 'all' ? [{ key: 'collection', label: collLabel }] : []),
       ...[...selectedTypes].map(t => ({ key: 'type:' + t, label: t })),
