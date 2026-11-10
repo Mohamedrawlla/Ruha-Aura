@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const CATALOG_CACHE_VERSION = 'v4.0_split_categories_2026';
+  const CATALOG_CACHE_VERSION = 'v4.1_offline_photos_2026';
   try {
     if (localStorage.getItem('ruha_catalog_version') !== CATALOG_CACHE_VERSION) {
       localStorage.removeItem('ruha-aura-custom-catalog');

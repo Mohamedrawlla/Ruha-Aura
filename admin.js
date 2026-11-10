@@ -136,7 +136,8 @@
       p.id === 'daisy' ||
       (p.sku && p.sku.startsWith('RA-HC-')) ||
       (p.sku && p.sku.startsWith('RA-JW-')) ||
-      (p.sku && p.sku.startsWith('RA-0') && Number(p.sku.replace('RA-', '')) <= 17);
+      (p.sku && p.sku.startsWith('RA-0') && Number(p.sku.replace('RA-', '')) <= 17) ||
+      (p.src && p.src.includes('yentto.com'));
 
     const defaultCat = window.RUHA_CATALOG || [];
     if (Array.isArray(list) && (list.some(isOldData) || list.length < defaultCat.length)) {
