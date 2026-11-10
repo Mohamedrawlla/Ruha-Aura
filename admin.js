@@ -2395,11 +2395,11 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
 
   function renderOrdersKPIs() {
     const total = orders.reduce((s, o) => s + (Number(o.total) || 0), 0);
-    const instaTotal = orders.filter(o => o.channel.toLowerCase().includes('insta') || o.channel.toLowerCase().includes('whats'))
+    const instaTotal = orders.filter(o => (o.channel || '').toLowerCase().includes('insta') || (o.channel || '').toLowerCase().includes('whats'))
                              .reduce((s, o) => s + (Number(o.total) || 0), 0);
-    const meeshoTotal = orders.filter(o => o.channel.toLowerCase().includes('meesho'))
+    const meeshoTotal = orders.filter(o => (o.channel || '').toLowerCase().includes('meesho'))
                               .reduce((s, o) => s + (Number(o.total) || 0), 0);
-    const marketTotal = orders.filter(o => o.channel.toLowerCase().includes('amazon') || o.channel.toLowerCase().includes('website'))
+    const marketTotal = orders.filter(o => (o.channel || '').toLowerCase().includes('amazon') || (o.channel || '').toLowerCase().includes('website'))
                               .reduce((s, o) => s + (Number(o.total) || 0), 0);
 
     const elTotal = document.getElementById('stat-channel-total');
@@ -2410,10 +2410,10 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
     const badgeCount = document.getElementById('orders-count-badge');
 
     if (elTotal) elTotal.textContent = formatPrice(total);
-    if (elCount) elCount.textContent = `${orders.length} recorded orders`;
+    if (elCount) elCount.textContent = `${orders.length} ${orders.length === 1 ? 'recorded order' : 'recorded orders'}`;
     if (elInsta) elInsta.textContent = formatPrice(instaTotal);
     if (elMeesho) elMeesho.textContent = formatPrice(meeshoTotal);
-    if (elMarket) elMarket.textContent = formatPrice(meeshoTotal + marketTotal);
+    if (elMarket) elMarket.textContent = formatPrice(marketTotal);
     if (badgeCount) {
       badgeCount.textContent = orders.length;
       badgeCount.style.display = orders.length > 0 ? 'inline-flex' : 'none';
@@ -2451,22 +2451,30 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
     }
 
     const channelFilter = document.getElementById('filter-order-channel')?.value || 'all';
+    const statusFilter = document.getElementById('filter-order-status')?.value || 'all';
     const q = (document.getElementById('order-search')?.value || '').toLowerCase().trim();
 
     const filtered = orders.filter(o => {
-      if (channelFilter !== 'all' && o.channel.toLowerCase() !== channelFilter.toLowerCase()) return false;
+      if (channelFilter !== 'all' && (o.channel || '').toLowerCase() !== channelFilter.toLowerCase()) return false;
+      if (statusFilter !== 'all' && (o.status || 'Pending').toLowerCase() !== statusFilter.toLowerCase()) return false;
       if (q) {
-        const text = `${o.id} ${o.customer?.name || ''} ${o.customer?.phone || ''} ${o.channel}`.toLowerCase();
+        const text = `${o.id} ${o.customer?.name || ''} ${o.customer?.phone || ''} ${o.channel || ''}`.toLowerCase();
         if (!text.includes(q)) return false;
       }
       return true;
     });
 
+    const countPill = document.getElementById('orders-filter-count');
+    if (countPill) {
+      countPill.textContent = `${filtered.length} of ${orders.length} orders`;
+    }
+
     if (!filtered.length) {
       tbody.innerHTML = `
         <tr>
-          <td colspan="7" style="text-align:center; padding:40px 20px; color:var(--admin-muted);">
-            No orders found for this search or channel filter.
+          <td colspan="7" style="text-align:center; padding:50px 20px; color:var(--admin-muted);">
+            <div style="font-size:1rem; font-weight:600; margin-bottom:4px; color:var(--admin-plum);">No matching orders found</div>
+            <div style="font-size:0.82rem;">Try adjusting your search terms or clearing channel/status filters.</div>
           </td>
         </tr>
       `;
@@ -2475,41 +2483,66 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
 
     tbody.innerHTML = filtered.map(o => {
       let chanClass = 'channel-direct';
-      const c = o.channel.toLowerCase();
+      const c = (o.channel || '').toLowerCase();
       if (c.includes('insta')) chanClass = 'channel-instagram';
       else if (c.includes('web')) chanClass = 'channel-website';
       else if (c.includes('meesho')) chanClass = 'channel-meesho';
       else if (c.includes('amazon')) chanClass = 'channel-amazon';
+      else if (c.includes('whats')) chanClass = 'channel-whatsapp';
 
-      const itemsSummary = o.items.map(i => `${i.product.name} (×${i.quantity})`).join(', ');
+      const itemsArr = Array.isArray(o.items) ? o.items : [];
+      const cleanPhone = (o.customer?.phone || '').replace(/[^0-9]/g, '');
 
       return `
         <tr>
           <td>
-            <strong style="display:block; font-family:monospace; font-size:0.88rem;">${o.id}</strong>
-            <span style="font-size:0.75rem; color:var(--admin-muted);">${new Date(o.date).toLocaleDateString('en-IN', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' })}</span>
+            <strong class="order-id-code" style="display:block;">${o.id}</strong>
+            <span style="font-size:0.75rem; color:var(--admin-muted); display:block; margin-top:3px;">
+              ${new Date(o.date).toLocaleDateString('en-IN', { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' })}
+            </span>
           </td>
           <td>
-            <span class="channel-badge ${chanClass}">${o.channel}</span>
+            <span class="channel-badge ${chanClass}">${o.channel || 'Website'}</span>
           </td>
           <td>
-            <strong>${o.customer?.name || 'Customer'}</strong>
-            <span style="display:block; font-size:0.75rem; color:var(--admin-muted);">${o.customer?.phone || '—'}</span>
+            <strong style="display:block; color:#221b19; font-size:0.86rem;">${o.customer?.name || 'Customer'}</strong>
+            <div style="display:flex; align-items:center; gap:8px; margin-top:3px;">
+              <span style="font-size:0.78rem; color:var(--admin-muted);">${o.customer?.phone || '—'}</span>
+              ${cleanPhone.length >= 10 ? `
+                <a href="https://wa.me/91${cleanPhone.slice(-10)}" target="_blank" class="order-wa-link" title="Chat on WhatsApp with ${o.customer?.name || 'Customer'}">
+                  💬 Chat
+                </a>
+              ` : ''}
+            </div>
           </td>
-          <td style="max-width:240px; font-size:0.8rem; color:#444;" title="${itemsSummary}">
-            ${itemsSummary.length > 50 ? itemsSummary.slice(0, 48) + '...' : itemsSummary}
-          </td>
-          <td style="font-weight:700; font-size:0.95rem; color:var(--admin-plum);">
-            ${formatPrice(o.total || 0)}
+          <td style="max-width:260px;">
+            <div style="display:flex; flex-direction:column; gap:4px;">
+              ${itemsArr.slice(0, 2).map(i => `
+                <div style="font-size:0.82rem; font-weight:600; color:#332826; line-height:1.3;">
+                  ${i.product?.name || i.name || 'Product'}
+                  <span style="font-size:0.72rem; font-weight:700; color:var(--admin-plum); background:rgba(74,21,37,0.06); padding:1px 6px; border-radius:4px; margin-left:4px;">×${i.quantity || 1}</span>
+                </div>
+              `).join('')}
+              ${itemsArr.length > 2 ? `
+                <span style="font-size:0.72rem; color:var(--admin-muted);">+ ${itemsArr.length - 2} more item(s)</span>
+              ` : ''}
+            </div>
           </td>
           <td>
-            <button type="button" class="status-badge status-${(o.status || 'pending').toLowerCase()}" data-order-action="status" data-id="${o.id}" title="Click to cycle status: Pending → Packed → Shipped → Delivered" style="cursor:pointer; border:none;">
+            <div style="font-weight:700; font-size:1.02rem; color:var(--admin-plum);">${formatPrice(o.total || 0)}</div>
+            <span style="display:block; font-size:0.72rem; color:#8c7e7b; margin-top:2px;">
+              ${o.payment_method === 'cod' ? 'Cash on Delivery' : (o.payment_method === 'upi' ? 'Direct UPI' : 'WhatsApp / UPI')}
+            </span>
+          </td>
+          <td>
+            <button type="button" class="status-badge status-${(o.status || 'pending').toLowerCase()}" data-order-action="status" data-id="${o.id}" title="Click to cycle status: Pending → Packed → Shipped → Delivered">
               ● ${o.status || 'Pending'}
             </button>
           </td>
           <td>
-            <div class="row-actions" style="justify-content:flex-end;">
+            <div class="row-actions" style="display:flex; justify-content:flex-end;">
               <button type="button" class="row-btn" data-order-action="view" data-id="${o.id}">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                 Bill &amp; Slip
               </button>
             </div>
@@ -2542,6 +2575,7 @@ RA-SC-01,Pure Mulberry Silk Scrunchie,Hair accessories,Silk Scrunchie,199,80,25,
 
   document.getElementById('order-search')?.addEventListener('input', renderOrdersTable);
   document.getElementById('filter-order-channel')?.addEventListener('change', renderOrdersTable);
+  document.getElementById('filter-order-status')?.addEventListener('change', renderOrdersTable);
 
   // Clear all dummy/recorded orders button
   document.getElementById('clear-orders-btn')?.addEventListener('click', async () => {

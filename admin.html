@@ -1724,6 +1724,141 @@
       color: var(--admin-success);
     }
 
+    /* ========================================================
+       MULTI-CHANNEL ORDERS TABLE & BADGES
+       ======================================================== */
+    .channel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+    .channel-website {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+    }
+    .channel-instagram {
+      background: #fdf2f8;
+      color: #be185d;
+      border: 1px solid #fbcfe8;
+    }
+    .channel-whatsapp {
+      background: #f0fdf4;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+    .channel-meesho {
+      background: #fffbeb;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+    .channel-amazon {
+      background: #f8fafc;
+      color: #0f172a;
+      border: 1px solid #e2e8f0;
+    }
+    .channel-direct {
+      background: #faf5ff;
+      color: #6b21a8;
+      border: 1px solid #e9d5ff;
+    }
+
+    /* Status Badges */
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      border: none;
+      white-space: nowrap;
+    }
+    .status-badge:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+    .status-pending {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fcd34d;
+    }
+    .status-packed {
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+    .status-shipped {
+      background: #ede9fe;
+      color: #5b21b6;
+      border: 1px solid #ddd6fe;
+    }
+    .status-delivered {
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+    }
+
+    /* Row Action Buttons */
+    .row-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: #ffffff;
+      color: var(--admin-plum);
+      border: 1px solid rgba(74, 21, 37, 0.22);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-decoration: none;
+    }
+    .row-btn:hover {
+      background: var(--admin-plum);
+      color: #ffffff;
+      border-color: var(--admin-plum);
+      box-shadow: 0 2px 6px rgba(74, 21, 37, 0.2);
+    }
+    .order-wa-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 10px;
+      background: #f0fdf4;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .order-wa-link:hover {
+      background: #15803d;
+      color: #ffffff;
+    }
+
+    .order-id-code {
+      font-family: monospace, monospace;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--admin-plum);
+      letter-spacing: -0.01em;
+    }
+
     /* Modal Backdrop */
     .admin-modal-backdrop {
       position: fixed;
@@ -2971,79 +3106,129 @@
 
     <!-- VIEW 4: MULTI-CHANNEL SALES HUB -->
     <div id="view-multichannel" class="admin-view" hidden>
-      <!-- Channel Revenue KPIs -->
+      <!-- Page Title & Header Actions -->
+      <div class="page-header-row">
+        <div>
+          <h1 class="page-title">Orders &amp; Multi-Channel Sales</h1>
+          <p class="page-subtitle">Track, dispatch and manage customer orders across Website, WhatsApp, POS &amp; Marketplaces.</p>
+        </div>
+        <div class="page-header-actions">
+          <button type="button" class="btn-admin btn-admin-outline" id="sync-orders-cloud-btn" title="Refresh orders from Supabase cloud database">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+            <span>Sync Orders</span>
+          </button>
+          <button type="button" class="btn-admin btn-admin-outline" id="import-marketplace-csv-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <span>Import CSV</span>
+          </button>
+          <button type="button" class="btn-admin btn-admin-plum" id="record-sale-shortcut">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span>Record New Sale</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 Channel Revenue KPIs (Exact Match to Clean Design System) -->
       <section class="admin-stats-grid">
-        <div class="admin-stat-card">
-          <span class="admin-stat-label">Total Multi-Channel Sales</span>
-          <span class="admin-stat-value" id="stat-channel-total">₹0</span>
-          <span class="admin-stat-sub" id="stat-order-count">0 recorded orders</span>
+        <div class="stat-card-clean card-plum-highlight">
+          <div class="stat-card-header">
+            <span class="stat-label">Total Multi-Channel Sales</span>
+            <span class="stat-top-icon" style="font-weight:700; font-size:1rem;">₹</span>
+          </div>
+          <div>
+            <div class="stat-value" id="stat-channel-total">₹258</div>
+            <div class="stat-sub" id="stat-order-count">1 recorded order</div>
+          </div>
         </div>
-        <div class="admin-stat-card">
-          <span class="admin-stat-label">📸 Instagram / WhatsApp</span>
-          <span class="admin-stat-value" id="stat-channel-insta" style="color:#be185d;">₹0</span>
-          <span class="admin-stat-sub">Social commerce orders</span>
+
+        <div class="stat-card-clean">
+          <div class="stat-card-header">
+            <span class="stat-label">Instagram / WhatsApp</span>
+            <span class="stat-top-icon">📸</span>
+          </div>
+          <div>
+            <div class="stat-value" id="stat-channel-insta" style="color:#be185d;">₹0</div>
+            <div class="stat-sub">Social &amp; direct chat orders</div>
+          </div>
         </div>
-        <div class="admin-stat-card">
-          <span class="admin-stat-label">📦 Meesho Orders</span>
-          <span class="admin-stat-value" id="stat-channel-meesho" style="color:#b45309;">₹0</span>
-          <span class="admin-stat-sub">Supplier portal dispatch</span>
+
+        <div class="stat-card-clean">
+          <div class="stat-card-header">
+            <span class="stat-label">Meesho Orders</span>
+            <span class="stat-top-icon">📦</span>
+          </div>
+          <div>
+            <div class="stat-value" id="stat-channel-meesho" style="color:#b45309;">₹0</div>
+            <div class="stat-sub">Supplier portal dispatches</div>
+          </div>
         </div>
-        <div class="admin-stat-card">
-          <span class="admin-stat-label">🛒 Amazon &amp; Website</span>
-          <span class="admin-stat-value" id="stat-channel-marketplaces" style="color:#0369a1;">₹0</span>
-          <span class="admin-stat-sub">Amazon SP-API &amp; Storefront</span>
+
+        <div class="stat-card-clean">
+          <div class="stat-card-header">
+            <span class="stat-label">Website &amp; Marketplaces</span>
+            <span class="stat-top-icon">🛒</span>
+          </div>
+          <div>
+            <div class="stat-value" id="stat-channel-marketplaces" style="color:#0369a1;">₹258</div>
+            <div class="stat-sub">Online storefront &amp; Amazon</div>
+          </div>
         </div>
       </section>
 
-      <!-- Multi-Channel Actions Toolbar -->
-      <div class="admin-toolbar">
-        <div class="admin-filters">
-          <div class="admin-search-box">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="text" id="order-search" placeholder="Search orders by ID, customer, phone...">
-          </div>
-          <select id="filter-order-channel" class="admin-select">
-            <option value="all">All Channels</option>
-            <option value="Instagram DM">Instagram DM</option>
-            <option value="WhatsApp">WhatsApp</option>
-            <option value="Website">Website Storefront</option>
-            <option value="Meesho">Meesho</option>
-            <option value="Amazon">Amazon</option>
-            <option value="In-Store">In-Store / Direct</option>
-          </select>
+      <!-- Sub Header with Filter Count & Clear Orders -->
+      <div class="catalog-sub-header" style="margin-top: 10px;">
+        <div class="catalog-sub-title-wrap">
+          <h2 class="catalog-sub-title">Customer Orders</h2>
+          <span class="catalog-count-pill" id="orders-filter-count">1 total</span>
         </div>
-
-        <div style="display:flex; align-items:center; gap:10px;">
-          <button type="button" class="btn-admin btn-admin-plum" id="record-sale-shortcut">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            Record New Sale
-          </button>
-          <button type="button" class="btn-admin btn-admin-outline" id="import-marketplace-csv-btn">
-            Import CSV Report
-          </button>
-          <button type="button" class="btn-admin btn-admin-outline" id="sync-orders-cloud-btn" title="Refresh orders from Supabase cloud database">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
-            Sync Orders
-          </button>
-          <button type="button" class="btn-admin btn-admin-outline" id="clear-orders-btn" title="Clear all recorded test/dummy sales" style="color:#b91c1c; border-color:rgba(185,28,28,0.25);">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+        <div>
+          <button type="button" class="btn-admin btn-admin-outline" id="clear-orders-btn" title="Clear all recorded test sales" style="color:#b91c1c; border-color:rgba(185,28,28,0.25); padding:7px 14px; font-size:0.78rem;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
             Clear Orders
           </button>
         </div>
       </div>
 
-      <!-- Orders Table -->
-      <div class="admin-table-container">
-        <table class="admin-table">
+      <!-- Modern Search & Filter Toolbar -->
+      <div class="catalog-search-toolbar">
+        <div class="catalog-toolbar-filters" style="width: 100%;">
+          <div class="catalog-search-wrap" style="flex: 1; max-width: 420px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="order-search" placeholder="Search orders by ID, customer name, phone, channel...">
+          </div>
+
+          <select id="filter-order-channel" class="catalog-filter-dropdown">
+            <option value="all">All Channels</option>
+            <option value="Website">Website Storefront</option>
+            <option value="WhatsApp">WhatsApp</option>
+            <option value="Instagram DM">Instagram DM</option>
+            <option value="Meesho">Meesho</option>
+            <option value="Amazon">Amazon</option>
+            <option value="In-Store">In-Store / Direct</option>
+          </select>
+
+          <select id="filter-order-status" class="catalog-filter-dropdown">
+            <option value="all">All Statuses</option>
+            <option value="Pending">Pending</option>
+            <option value="Packed">Packed</option>
+            <option value="Shipped">Shipped</option>
+            <option value="Delivered">Delivered</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Clean High-Density Orders Table -->
+      <div class="clean-table-container">
+        <table class="clean-product-table">
           <thead>
             <tr>
-              <th>Order ID &amp; Date</th>
-              <th>Channel</th>
-              <th>Customer</th>
-              <th>Items</th>
-              <th>Total Amount</th>
-              <th>Status</th>
-              <th style="text-align: right;">Actions</th>
+              <th style="width: 150px;">Order ID &amp; Time</th>
+              <th style="width: 130px;">Channel</th>
+              <th style="min-width: 180px;">Customer Information</th>
+              <th style="min-width: 200px;">Items Ordered</th>
+              <th style="width: 120px;">Total Amount</th>
+              <th style="width: 130px;">Order Status</th>
+              <th style="text-align: right; width: 170px;">Invoice &amp; Actions</th>
             </tr>
           </thead>
           <tbody id="admin-orders-tbody">
@@ -3706,9 +3891,9 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://unpkg.com/html5-qrcode"></script>
-  <script src="catalogue-data.js?v=3.7"></script>
-  <script src="supabase-config.js?v=3.7"></script>
-  <script src="shop-core.js?v=3.7"></script>
-  <script src="admin.js?v=3.7"></script>
+  <script src="catalogue-data.js?v=3.8"></script>
+  <script src="supabase-config.js?v=3.8"></script>
+  <script src="shop-core.js?v=3.8"></script>
+  <script src="admin.js?v=3.8"></script>
 </body>
 </html>
